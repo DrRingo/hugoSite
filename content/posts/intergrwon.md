@@ -1,7 +1,7 @@
 +++
 title = "Biến số của Intergrowth-21 trong SymjaBlog nghiêm túc của tôi"
 author = ["Ringo Stark"]
-lastmod = 2024-04-13T19:22:35+07:00
+lastmod = 2024-04-13T19:28:03+07:00
 draft = false
 +++
 
