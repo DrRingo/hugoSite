@@ -1,45 +1,49 @@
-#+Title: Ringo's blog
-#+AUTHOR: Ringo Stark
-#+DATE: \today
-#+COMMENT: 
+% Created 2024-04-13 Sat 19:19
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Ringo Stark}
+\date{\today}
+\title{Ringo's blog}
+\hypersetup{
+ pdfauthor={Ringo Stark},
+ pdftitle={Ringo's blog},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.1 (Org mode 9.6)}, 
+ pdflang={Vietnamese}}
+\usepackage{biblatex}
 
-#+SETUPFILE: "./assets/latex/report-main.org"
+\begin{document}
 
-#+DESCRIPTION: 
-#+KEYWORDS: 
-#+LANGUAGE: vi
+\maketitle
+\tableofcontents
 
-#+EXCLUDE_TAGS: noexport
 
-#+hugo_auto_set_lastmod: t
-#+hugo_base_dir: .
-#+hugo_section: .
-
-* Posts
-:properties:
-:export_hugo_section: posts
-:end:
-** Hello There!                   :some:tags:
-:properties:
-:export_file_name: hello
-:end:
+\section{Posts}
+\label{sec:org6423547}
+\subsection{Hello There!\hfill{}\textsc{some:tags}}
+\label{sec:orgf094663}
 General Kenobi
-** ther post
-:properties:
-:export_file_name: other-post
-:end:
+\subsection{ther post}
+\label{sec:orgca7659c}
 Keep bloggin
 
-** Biến số của Intergrowth-21 trong SymjaBlog nghiêm túc của tôi 
-:PROPERTIES:
-:CREATED: [2024-04-13 Sat 14:15]
-:export_file_name: intergrwon
-:END:
+\subsection{Biến số của Intergrowth-21 trong SymjaBlog nghiêm túc của tôi}
+\label{sec:org3449bcb}
+Tôi quyết định sử dụng Intergrowth-21 làm chỉ số tham khảo chính, và lấy số liệu từ trang web chính thức ở đây \href{https://intergrowth21.tghn.org/fetal-growth/\#fg1}{Intergrowth-21 tables}. Từ các bảng số này, tham khảo cả bảng giá trị và z-score, tôi chỉ giữ lại 2 chỉ số cơ bản của phân phối là \texttt{mean} và \texttt{sd}. Sau đó tôi chuyển qua dạng Associations của Symja thì được các số liệu như sau.
 
-Tôi quyết định sử dụng Intergrowth-21 làm chỉ số tham khảo chính, và lấy số liệu từ trang web chính thức ở đây [[https://intergrowth21.tghn.org/fetal-growth/#fg1][Intergrowth-21 tables]]. Từ các bảng số này, tham khảo cả bảng giá trị và z-score, tôi chỉ giữ lại 2 chỉ số cơ bản của phân phối là ~mean~ và ~sd~. Sau đó tôi chuyển qua dạng Associations của Symja thì được các số liệu như sau.
-
-#+NAME: Intergrowth-21 constants (mean,sd) for bpd, hc, fl, ac, weight
-#+BEGIN_SRC symja
+\begin{verbatim}
 {
 bpdI21 = <| 14->{29.6,1.8}, 15->{32.6,1.8}, 16->{35.6,2}, 17->{38.8,2}, 18->{42,2.1}, 19->{45.2,2.2}, 20->{48.4,2.3}, 21->{51.7,2.4}, 22->{55,2.4}, 23->{58.2,2.6}, 24->{61.4,2.6}, 25->{64.5,2.8}, 26->{67.6,2.8}, 27->{70.6,2.9}, 28->{73.5,2.9}, 29->{76.3,3}, 30->{78.9,3.1}, 31->{81.4,3.1}, 32->{83.8,3.1}, 33->{85.9,3.3}, 34->{87.9,3.3}, 35->{89.7,3.4}, 36->{91.2,3.5}, 37->{92.5,3.6}, 38->{93.6,3.6}, 39->{94.4,3.8}, 40->{94.9,3.9} |>,
 
@@ -51,27 +55,20 @@ acI21 = <| 14->{80.6,4.1}, 15->{91.9,4.8}, 16->{103.2,5.4}, 17->{114.4,6}, 18->{
 
 weightI21 = <| 14->{ 0.01, 0.01}, 15->{ 0.01, 0.01}, 16->{ 0.01, 0.01}, 17->{ 0.01, 0.01}, 18->{ 0.01, 0.01}, 19->{ 0.01, 0.01}, 20->{ 0.01, 0.01}, 21->{ 0.01, 0.01}, 22->{525,40}, 23->{592,50}, 24->{668,63}, 25->{756,77}, 26->{856,94}, 27->{969,114}, 28->{1097,137}, 29->{1239,163}, 30->{1396,192}, 31->{1568,224}, 32->{1755,256}, 33->{1954,290}, 34->{2162,323}, 35->{2378,353}, 36->{2594,380}, 37->{2806,401}, 38->{3006,415}, 39->{3186,420}, 40->{3338,416} |>
 }
-#+END_SRC
+\end{verbatim}
 
 Lưu ý là trong Intergrowth-21, các tuổi thai từ 14 đến 21 tuần không có phân bố cân nặng thai, nên nếu các tính toán ở tuổi thai này sẽ sinh ra lỗi do không tồn tại giá trị. Vì vậy tôi đồng nhất hóa các biến số ở đây bằng 0.01 (không thể bằng 0 được, vì khi đó cũng sinh ra lỗi) để các tính toán được thông suốt, nhưng hoàn toàn không có ý nghĩa nữa.
 
-** Hàm Hadlock có so sánh tuổi thai theo tiêu chuẩn Intergrowth-21
-:PROPERTIES:
-:CREATED: [2024-04-13 Sat 14:16]
-:export_file_name: hadlock
-:END:
-
+\subsection{Hàm Hadlock có so sánh tuổi thai theo tiêu chuẩn Intergrowth-21}
+\label{sec:org42f3810}
 Việc tính toán cân nặng thai sẽ không có ý nghĩa, nếu không biết cân nặng đó có đúng chuẩn so với tuổi thai hiện tại hay không. Vì vậy, nhất thiết phải có một hàm so sánh cân nặng thai hiện tại và suy ra bách phân vị mà thai đang đứng.
 
 Tiêu chuẩn số liệu nên dựa vào chuẩn nào, Intergrowth-21 chăng?
 
-EDITED: [2024-02-26 Mon 21:12]
+EDITED: \textit{[2024-02-26 Mon 21:12]}
 Đây là đoạn mã hoàn chỉnh của hàm Hadlock mở rộng có tính percentiles theo tiêu chuẩn Intergrowth-21 cho thai
 
-#+NAME: extended Hadlock
-#+PARAMETERS: age, bpd, hc, fl, ac
-#+COMMENT: tính cân nặng thai theo công thức Hadlock và phân bố của các chỉ số
-#+BEGIN_SRC symja
+\begin{verbatim}
 {
 {
 m = 1,
@@ -123,30 +120,7 @@ acPercentile = Round(100 * CDF(NormalDistribution(acI21[ageI21][[m]],acI21[ageI2
 weightPercentile = Round(100 * CDF(NormalDistribution(weightI21[ageI21][[m]],weightI21[ageI21][[s]]),WEIGHT))
 }[[14]],
   hcPercentile, flPercentile, acPercentile, WEIGHT, weightPercentile}
-#+END_SRC
+\end{verbatim}
 
 NOTE: Ở đây tôi sử dụng một thủ thuật để giải quyết vấn đề chuỗi lệnh của symja chưa được hoàn thiện. Chuỗi lệnh của symja được nối tiếp nhau bằng dấu chấm phẩy ";", và câu lệnh cuối cùng sẽ được in ra màn hình, điều đó ẩn ý là câu lệnh cuối là câu lệnh in ra các biến số cần in. Nhưng trong phiên bản trên điện thoại, nó lại in ra câu lệnh đầu tiên, tôi thử chèn câu lệnh in lên đầu, nhưng không đạt được kết quả mong muốn. Vì vậy, tôi sử dụng một thủ thuật trong List, nghĩa là toàn bộ chương trình này chỉ là một chuỗi, chuỗi đầu tiên tính toán tất cả các công thức cần thiết và in ra biến số đầu tiên, các biến số sau đó được tùy chọn để in ra tiếp theo, nhờ đã có kết quả tính toán ở chuỗi trước.
-** Cấu hình vật chất - tinh thần
-:PROPERTIES:
-:CREATED: [2024-04-12 Fri]
-:export_file_name: custom-material
-:END:
-*** Các công việc tôi đang làm với orgmode, hypersnippets giống như đọc tất cả và chọn lọc, nhưng vẫn không làm mất đi tính kiểm soát đối với toàn diện ngôn ngữ
-:PROPERTIES:
-:CREATED: [2024-04-08 Mon 15:38]
-:END:
-
-Cách này rất hay, nó làm tôi tăng năng suất vì đi lại lối mòn, nhưng vẫn không giới hạn và ràng buộc tôi vào một vài mẫu hình, tôi vẫn toàn quyền đối với toàn bộ hệ thống, nhờ vào các documentation chặt chẽ câu lệnh tùy chỉnh.
-**** Suy nghĩ về cấu hình vật chất mà tôi thiết đặt
-:PROPERTIES:
-:CREATED: [2024-04-09 Tue 07:00]
-:LOCATION:
-:END:
-**** Suy nghĩ về các phương pháp lưu trữ toàn bộ thông tin để tra cứu và áp dụng ngay, trong khi vẫn duy trì được tính tinh gọn của các thiết đặt và tinh chỉnh
-:PROPERTIES:
-:CREATED: [2024-04-09 Tue 09:18]
-:END:
-
-Điều này chính là nguyên tắc lazy của haskell mà tôi đã nhắc [[id:1400f5b4-ecda-4f1f-af4d-aadf3d7c0f06][ở đây]], đó cũng là vai trò của một cái thư viện. Tuy nhiên, điều tôi muốn đạt được khác cái thư viện ở chỗ, nó phải có một hệ thống query hiệu quả. Bởi vì, dù tôi có đọc nhiều đến đâu, nhưng tôi không thể query lại để tham khảo chính xác thì điều đó cũng trỏ nên vô ích.
-
-Chỉ có thể nhờ cậy vào AI trong phương án query này.
+\end{document}
