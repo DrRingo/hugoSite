@@ -6,42 +6,55 @@ canonifyurls = true
 relativeURLS = false
 
 theme = "diary"
-title = "Ringo's site"
+title = "Maximilian's blog"
 languageCode = "vi-vn"
 summaryLength = 42
 
-copyright = "copyright info, like license, year, author name, e.t.c."
+copyright = "Maximilian de Cato, writing with love, 2024"
 
 [author]
-name = "Ringo Stark"
+name = "Maximilian de Cato"
 
 [params]
 description = "My personal blog and academic info"
 showFooterCredits = true
-math = false
+math = true
+enableLaTeX = true
 useIcon = true
+enableReadingTime = true
+googleSearchCode = "83a0b058839eb4182"
 
 [outputFormats]
 [outputFormats.RSS]
 mediatype = "application/rss+xml"
 baseName = "feed"
 
-[[params.links]]
-[[params.links.link]]
-name = "Github"
-href = "https://github.com/andreyorst/"
-[[params.links.link]]
-name = "Tags"
-href = "/tags"
-[[params.links.link]]
+[[menu.main]]
+url = "/categories"
 name = "Categories"
-href = "/categories"
-[[params.links.link]]
+weight = 3
+
+[[menu.main]]
+url = "/tags"
+name = "Tags"
+weight = 2
+
+[[menu.main]]
+url = "/posts"
 name = "Archive"
-href = "/posts"
-[[params.links.link]]
-name = "About"
-href = "/about"
+weight = 1
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
 
 [module]
   [module.hugoVersion]
