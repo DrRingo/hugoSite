@@ -1,0 +1,49 @@
+baseurl = "/"
+contentdir = "content"
+publishdir = "public"
+
+canonifyurls = true
+relativeURLS = false
+
+theme = "diary"
+title = "Ringo's site"
+languageCode = "vi-vn"
+summaryLength = 42
+
+copyright = "copyright info, like license, year, author name, e.t.c."
+
+[author]
+name = "Ringo Stark"
+
+[params]
+description = "My personal blog and academic info"
+showFooterCredits = true
+math = false
+useIcon = true
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss+xml"
+baseName = "feed"
+
+[[params.links]]
+[[params.links.link]]
+name = "Github"
+href = "https://github.com/andreyorst/"
+[[params.links.link]]
+name = "Tags"
+href = "/tags"
+[[params.links.link]]
+name = "Categories"
+href = "/categories"
+[[params.links.link]]
+name = "Archive"
+href = "/posts"
+[[params.links.link]]
+name = "About"
+href = "/about"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = '0.111.0'
