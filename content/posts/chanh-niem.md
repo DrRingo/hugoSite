@@ -5,7 +5,7 @@ publishDate: 2023-08-26
 lastmod: 2024-04-14T17:36:48+07:00
 categories: ["think"]
 draft: false
-featured_image: "/assets/img/mangthaichanhniem.jpg"
+featured_image: "/assets/img/mangthaichanhniem.JPG"
 ---
 
 > Đức Phật đã nói, chánh niệm là đức hạnh duy nhất tồn tại
