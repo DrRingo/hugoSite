@@ -2,7 +2,7 @@
 title: "Một kỉ niệm với Euler"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2021-06-20T09:22:00+07:00
-lastmod: 2024-04-14T17:36:49+07:00
+lastmod: 2024-04-14T20:46:46+07:00
 categories: ["math"]
 draft: false
 featured_image: "/assets/img/daiso2.jpg"

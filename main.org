@@ -10580,3 +10580,984 @@ nhất em ơi Dẫu không hương sắc lại bằng mười sắc hương.
 trên. Tuy nhiên sợ mọi người không hiểu thâm ý của tác giả nên ghi thêm
 chú thích. (hehe)
 
+** Ngày 10 - Thích nghi sinh học
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-21
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+[[http://helen.drbinhthanh.com/data/img/ngay10.jpg]] Có một điều mà mình
+cần lưu ý cho chính mình và các bạn đang cách ly. Rằng cơ thể con người
+nó có một cơ chế thích nghi, tương tự như khi ta vào nhà vệ sinh, lúc
+đầu thì thấy không thể ở nổi, nhưng lâu dần, bạn ngồi bấm điện thoại
+hàng giờ trong đó. COVID cũng vậy, vượt qua những bỡ ngỡ ban đầu. Chúng
+ta sẽ nhận ra bệnh này không gây tử vong cao như mình nghĩ. F0 thì đã
+sao, nhiều F0 quanh ta có triệu chứng gì đâu. Thế là, ngày qua ngày, ta
+lơi lỏng cảnh giác, sinh hoạt thoải mái hơn một chút, rồi sẽ đến lúc ta
+sẽ quá thoải mái và bung lụa. Đó là những gì mình đang thấy trong khu
+cách ly này, nhiều nhân viên chống dịch đang quá tự do mà quên đi mất họ
+đang ở trong một môi trường virus chưa tìm được thuốc trị. Không như HIV
+lây qua đường sung sướng, con này lây qua đường không khí, chỉ cần hít
+thở, chưa được sướng tí nào cũng đã dính.
+
+Cơ thể con người không được thiết kế để chịu đựng được áp lực lâu dài.
+Tạo hóa đã xây dựng chúng ta chỉ phải stress trong lúc săn con nai trong
+rừng thôi, còn hầu hết thời gian khác ta đi dạo trong rừng và tối về thì
+ngồi nhìn đống lửa. Ta từng là bá chủ, chẳng có gì ta phải sợ quá lâu
+cả.
+
+Thế nên, chắc chắn đến một lúc, các bạn sẽ buông lơi, và đó là lúc con
+virus lại hành động (biến thể Delta là một ví dụ, nó xuất hiện sau một
+mùa đông 2020 yên lặng ít ca nhiễm).
+
+P/S: hình dưới là hình mình chụp mấy con bướm trong rừng Mã Đà, chiến
+khu D. Những con bướm sặc sỡ sẽ dễ tìm được bạn tình và có cơ hội để lại
+gene di truyền cao hơn, nhưng bù lại màu sắc sặc sỡ của nó sẽ thu hút
+loài thiên địch và có nguy cơ chết trẻ hơn trước khi có cơ hội nhân
+giống, cho nên những con bướm ít sặc sỡ hơn vẫn có cơ hội tồn tại -
+thích nghi và cân bằng sinh học.
+
+** Ngày 34 - mới ra tù tập leo núi
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-08-14
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+[[http://helen.drbinhthanh.com/data/img/ngay11-2.jpg]] Như vậy là mình
+đã về đến nhà. Sáng nay, xe của bệnh viện chở người lên thay thế. Do lúc
+đi, mình đi có một mình nên hôm nay họ chở đúng một bác sĩ lên thay thế.
+Không sai một ngày, và không thiếu một người nào, chính xác và gọn gàng.
+Mình có 30 phút để gom đồ đạc, bàn giao lại công việc cho tay bác sĩ mới
+và chào tạm biệt mọi người ở khu chống dịch. Chở mình về là một chiếc xe
+của hãng Phương Trang được trưng dụng để vận chuyển bệnh nhân và vật
+dụng chống dịch. Mình ngồi chung với tay tài xế cũng dân Nghĩa Dũng,
+Quảng Ngãi. Nói rất nhiều chuyện, từ chuyện Quảng Ngãi không cho người
+dân quay về tỉnh nhà, cho tới đời sống dân tình dạo này ra sao. Hơn một
+tháng ở đây, mình như ở trong trại cải tạo, trừ lúc đi chuyển bệnh hôm
+trước thì mình hoàn toàn cắt đứt với đời sống thường nhật. Đường phố Sài
+Gòn lướt qua vắng ngắt, xe chạy từ Thủ Đức vào mà có cảm giác như chạy
+vào một thành phố hậu tận thế. Mình vào bệnh viện, trao trả vài dụng cụ
+chống dịch rồi lấy xe chạy về nhà.
+
+Trong hơn một tháng vừa rồi, mình đã trực tiếp quản lý hơn 400 F0 trong
+một khu nhà gồm 4 tầng lầu, hầu hết là có triệu chứng nhẹ và xuất viện.
+Hơn chục ca chuyển nặng và phải cấp cứu. Trong chục ca đó, chỉ có 2 ca
+hồi phục và quay về khu cách ly. Hơn nữa, mình cũng sử dụng ít kiến thức
+thống kê cơ bản, để nắm được chính xác tình trạng bệnh mình đang quản lý
+vào mọi thời điểm, người nào đã làm xét nghiệm, người nào chưa, kết quả
+thế nào, bao nhiêu phần trăm bệnh lớn tuổi, bệnh nền... Như đã nói ở bài
+trước, mình cũng thật bất ngờ là đã chống chọi được đến bây giờ, dù chỉ
+có trong tay lượng tài nguyên rất ít ỏi và phải nhận hàng chục cuộc điện
+thoại của bệnh nhân mỗi ngày. Chiến lược chống dịch đã thay đổi, bệnh
+viện dã chiến hiện đã hạn chế nhận những F0 không triệu chứng. Thay vào
+đó, người ta sẽ nhận những F0 bắt đầu trở nặng và hạn chế số tử vong ở
+mức thấp nhất.
+
+Một tháng ở trại, mình đã học được rất nhiều kinh nghiệm về điều trị, về
+cách sống và cả nghệ thuật lãnh đạo. Đại dịch này không chỉ làm mỗi
+người trong chúng ta nhìn lại cuộc sống từ trước đến giờ, mà mình tin
+rằng đại dịch cũng làm cho anh em trong lực lượng y tế của Sài Gòn có cơ
+hội trưởng thành hơn, thay vì cứ mãi làm một quy trình được hướng dẫn
+sẵn như thường nhật.
+
+Cuộc chiến của mình như vậy đã xong, mình đã chống dịch trong tâm thế
+của người thiện nguyện, làm hết những gì có thể cho Sài Gòn, nhưng cuộc
+chiến của Sài Gòn vẫn tiếp diễn, và có thể phải còn rất lâu nữa mới kết
+thúc.
+
+** Ngày 16 - tình người trong đại dịch
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-27
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Làm sản khoa, chúng tôi có tiết mục đẻ không đau, thường sản phụ khi đau
+đẻ không mấy người chịu đựng được, nhất là sau khi đã trải qua hết những
+tiện nghi hiện đại. Đẻ không đau là kĩ thuật gây tê cột sống, trong đó
+mình phải tiêm 1 cây kim rất nhỏ vào cột sống và truyền thuốc tê liên
+tục qua đó. Kĩ thuật khó, thuốc mắc, nên tùy chọn đẻ không đau tốn thêm
+của sản phụ khoảng 1 triệu, và phải có sự đồng ý của gia đình đang chờ
+bên ngoài. Và khi xin phép sự đồng ý của gia đình thì có rất nhiều
+chuyện bi hài xảy ra, nhiều ông chồng sợ tốn tiền nên nhất quyết không
+đồng ý cho vợ mình đẻ không đau, hoặc có khi ông chồng đồng ý rồi nhưng
+bà mẹ chồng không chịu, làm như bà đó chưa đau đẻ lần nào hay là bà đã
+quên. Những trường hợp như vậy, đầu tiên sẽ nhận được cái lườm nguýt của
+các em nữ hộ sinh, sau đó mới đến các bà bầu. Các anh dại lắm, chuyện
+tốn là một chuyện, con vợ mình cứ mỗi giây nó đau đẻ sau quyết định đó
+của các anh, nó sẽ ghim chuyện này tận trong tim. Đẻ xong, nó cũng chẳng
+lấy thế làm lý do li dị đâu, gái đẻ con tã người rồi đào đâu ra trai trẻ
+nữa, nhưng mỗi lần nhà có chuyện, nó sẽ nhắc đi nhắc lại cho đến lúc anh
+ân hận thà lúc xưa ấy mình bỏ mịa ra 1 triệu cho xong.
+
+COVID cũng không khác, mới hôm qua, bà vợ phòng đó còn gọi mình khóc lóc
+kể lể chồng em giờ khó thở lắm. Mà giờ thì các bệnh viện cấp cứu đầy hết
+cả, những ca khó thở như vầy có chuyển đi cũng không nơi nào nhận. Mình
+cho bệnh nhân xuống dưới tầng trệt, ngồi thở cái bình oxy to như cái
+bình khí đá hôm trước. Thở một lúc, đo SpO2 ổn ổn rồi cho lên lại phòng.
+Đến sáng hôm nay, bà vợ lại than chồng em tối hôm qua không thở được
+phải ngủ ngồi cả đêm, đo SpO2 chỉ có 62%. Mình đang đi khám bệnh giữa
+chừng, nên dặn khoảng 15ph nữa bác khám xong em dắt chồng xuống chỗ hôm
+qua để thở oxy tiếp. Khám xong, chẳng thấy ma nào chờ mình. Mình gọi lên
+bảo xuống, bà vợ nói chồng em giờ khỏe rồi, không đi nữa đâu. Mình nhắc
+lại đến lần thứ 3, lần cuối mình phải dọa rằng nếu đêm nay chồng chị khó
+thở, có gọi bác cũng không đến đâu. Bà đó mới cho ông chồng đi xuống một
+mình qua 4 tầng lầu - một mình đó các bạn, trong khi mới 15ph trước bà
+đó còn nói chồng em khó thở phải ngủ ngồi, và tận mắt thấy SpO2 chỉ có
+62%. Mấy chuyện này chẳng phải lần đầu mình gặp, nên cũng chẳng gợn chút
+gì trong lòng. Sắp xếp cho tay kia ngồi thở oxy, đo lại thấy ổn ổn chút
+rồi dặn dò kĩ lưỡng trước khi về phòng.
+
+Lòng người là giấy, đốt là cháy. Đại dịch là một mồi lửa. Nó có thể đốt
+cháy những thứ mà ta tưởng chừng như vững chãi nhất.
+
+P/S: cô đó cũng dại lắm, dù mình không còn thiết tha gì thằng kia nữa,
+nhưng giờ đang là lúc đại dịch. Mình và đứa con nhỏ cần có 1 người đàn
+ông khỏe mạnh để nương tựa qua lúc khó khăn, lo cho tay đó cũng là lo
+cho mình. Đại dịch hỗn mang mà, trai trẻ đâu còn lởn vởn ngoài đường như
+thường ngày để dụ thế chỗ cho cây xúc xích kia nữa.
+
+#+caption: enter image description here
+[[http://helen.drbinhthanh.com/data/img/ngay16.jpg]]
+
+** Ngày 12 - F0 nên tự chuẩn bị những gì
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-23
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Những ngày gần đây, F0 được phát hiện ngày càng nhiều, và điều hiển
+nhiên là hệ thống y tế có những giới hạn của nó. Không phải tất cả F0
+nào cũng sẽ được nhập viện theo dõi. Vì vậy, trong khi chờ để được đi
+cách ly, trước mắt là mình tự theo dõi triệu chứng của mình và điều trị
+những dấu hiệu nhẹ tại nhà. Bạn bè mình cũng đã có nhiều người có người
+nhà có F0, mọi người hay gọi mình nên chuẩn bị những gì. Nên mình liệt
+kê ở đây để mọi người tham khảo luôn.
+
+Xin lưu ý là danh sách chuẩn bị sau đây chỉ là những quan sát của mình,
+không có giá trị như một khuyến cáo y khoa. Trước khi dùng thuốc, bạn
+nên gọi hỏi ý kiến một người làm trong ngành y trước, để khi họ cho chỉ
+định thì bạn đã có sẵn thuốc ở nhà rồi, đó là mục đích của danh sách
+này, bởi vì mọi thuốc dù chỉ là viên paracetamol thông thường cũng có
+liều ngộ độc của nó.
+
+- Efferalgan hoặc paracetamol 500mg
+- Vitamin C 500mg
+- Vitamin D 1000UI (Vitamin D được chứng minh là có hiệu quả ngăn ngừa
+  Sar-Cov-2)
+- Bromhexin 4mg
+- Eucalyptin 100mg
+- Chlorpheniramine 4mg (thuốc chống dị ứng, nhưng sử dụng chủ yếu là tác
+  dụng phụ an thần của nó)
+- Nước súc miệng Medoral chai 250ml dùng súc họng, súc miệng (không
+  uống) hoặc nước súc họng có chất Chlorhexidine
+
+Những thuốc liệt kê ở trên là rất thông thường, dễ kiếm và rẻ tiền. Các
+bạn ở nhà theo dõi triệu chứng, sốt, ho, đau họng thì có thể sử dụng
+thuốc. Nếu thấy khó thở, đau ngực, đừng tự can thiệp, nên gọi ngay cho
+cơ quan y tế đang quản lý F0 như các bạn để được hướng dẫn.
+
+Nếu đi cách ly thì nên mang đồ dùng cá nhân cơ bản thôi, đừng mang quá
+nhiều đồ đạc. Nên mang theo kem chống muỗi, một cái quạt điện nhỏ (F0
+không nên nằm phòng máy lạnh, phòng kín dễ lây nhiễm chéo với nhau), và
+vật dụng để giải trí (ở liền một chỗ trong nửa tháng rất ức chế tinh
+thần, nếu bạn không phải là gamer thì nên xem xét chơi 1 game nào cũng
+được)
+
+Đó là danh sách của mình, anh em đồng nghiệp có góp ý về thuốc men hay
+vật dụng cần chuẩn bị, vui lòng ghi trong comment nhé.
+
+** Ngày 4
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-15
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+[[https://www.youtube.com/watch?v=zFkK-lUHVwg][[[https://img.youtube.com/vi/zFkK-lUHVwg/0.jpg]]]]
+
+[[http://helen.drbinhthanh.com/data/img/ngay4-bsnhon.jpg]] Khu cách ly
+F0 tạm chia làm 2 khu, khu cho người bệnh và khu nhân viên. Khu người
+bệnh thì như mọi người thấy trong video, khá hoang vắng và có cảm giác
+như một viễn cảnh hậu tận thế, với bàn ghế ngổn ngang và chẳng một bóng
+người đi lại. Ở đây, chúng tôi có một kho dược dã chiến trong khu bệnh,
+như mọi người thấy, có sẵn các loại thuốc thông dụng và thiết bị cấp cứu
+cần dùng. Bởi vì nhiều khi, bệnh nhân lên cơn khó thở trong đêm, đòi hỏi
+anh em mặc đồ bảo hộ xong là lao ra ngay, là có sẵn đồ chơi cần thiết
+ngay. Cái túi phát thuốc hàng ngày của tôi là một cái hộp các tông, đục
+4 lỗ rồi xỏ thành quai xách. Đúng là dã chiến đích thực, haha.
+
+Khu nhân viên được cho là khu sạch và mọi người sinh hoạt tự do hơn, tuy
+nhiên, ra vào khu nhân viên sẽ phải tuân thủ nghiêm ngặt các quy tắc
+phòng dịch. Cho là vậy thôi, chẳng ai có thể kiểm soát hết con virus có
+bay qua bay lại hay không.
+
+Khung cảnh này làm mình nhớ đến game Fallout 4 kinh khủng, đó là game kể
+về những người sống sót sau chiến tranh hạt nhân. Họ cũng tổ chức thành
+những cụm dân cư và sinh hoạt khá an toàn bên trong. Tuy nhiên ra khỏi
+đó, mỗi bước đi là một hiểm họa nhiễm xạ chực chờ. Trong game, tôi hay
+ra ngoài săn thú và nhặt nhạnh những thứ hữu ích của thế giới cũ. Tôi
+cũng có nhiều nơi bí mật của riêng mình ở bên ngoài, để những đồ vật tôi
+nhặt được. Còn ở đây, tôi có cái kho thuốc trong khu nhà hoang, chỉ
+thiếu mấy con thú bị biến hình do phóng xạ.
+
+P/S: cái kho thuốc này, chúng tôi chẳng sợ mất cắp, haha, vì có ai dám
+bén mảng tới đâu, trừ mấy con mèo hoang.
+
+P/S 2: hình bs đập chai chỉ mang tính chất dìm hàng.
+
+** Ngày 20
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-31
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+[[http://helen.drbinhthanh.com/data/img/ngay20.jpg]] Chuyện dài kì nhiều
+tập. Sáng hôm nay mình đã cho xuất viện bà vợ và đứa con của ông chồng
+khó thở tội nghiệp mà mình đã kể vào ngày 16 và 18. Xuất viện vào buổi
+chiều, đến tối thì mình nhận được tin nhắn như hình. Qua trường hợp của
+gia đình này, các bạn cũng thấy, dù cùng một gia đình, nhưng có người
+chuyển nặng, có người thì trở lại âm tính rồi xuất viện, dù chắc rằng họ
+đã tiếp xúc rất rất gần, hehe. Cũng cần lưu ý là đứa con gái nhỏ 3 tuổi
+của họ là âm tính ngay từ đầu, nhưng do ở nhà không có ai chăm sóc nên
+họ bắt buộc phải đem theo vào khu cách ly F0. Cháu nó không có triệu
+chứng gì trong suốt thời gian cách ly.
+
+Trong 3 tuần vừa qua, mình đã tiếp nhận tổng cộng 262 F0, theo dõi và
+điều trị cho họ hết các triệu chứng thông thường, hạn chế các trường hợp
+trở nặng hết mức. Đến nay mình đã cho xuất viện tổng cộng 156 trường
+hợp. Tất nhiên, những F0 xuất viện sẽ tiếp tục cách ly tại nhà và tự
+theo dõi triệu chứng của mình, nhưng nhìn chung giai đoạn nguy hiểm của
+họ đã qua (thông thường người ta sẽ trở nặng trong khoảng 7 ngày sau khi
+phát hiện bệnh). Nói số liệu cụ thể như vậy, để các bạn hiểu, không phải
+ai cũng trở nặng, hầu hết chúng ta sẽ vượt qua đợt dịch này một cách nhẹ
+nhàng. Dù tổng số tử vong là không ít, nhưng nếu xét tỉ lệ tử vong trên
+tổng dân số mắc, thì nó cũng không quá cao như những biến cố khác mà
+người ta thường so sánh, như: chiến tranh, thảm họa tự nhiên...
+
+Dù chuyện gì xảy ra đi nữa, hầu hết chúng ta sẽ vượt qua đợt dịch này,
+và chúng ta sẽ vẫn sống. Nhưng điều mình tự hỏi là, liệu chúng ta vẫn sẽ
+sống như trước, như chẳng có điều gì xảy ra? Hay mỗi người trong chúng
+ta sẽ tự vấn chính mình, liệu chúng ta có sống đủ tử tế, không phải tử
+tế với nhau, mà với mẹ thiên nhiên, để xứng đáng với vận may mà ta đã có
+hay không?
+
+** Cách ly có giá trị đến đâu
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-08-31
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Từ năm ngoái, từ những ngày đầu của dịch COVID-19 bùng phát, đó là một
+cơ hội bằng vàng cho những nhà khoa học để thi triển kĩ năng học thuật
+của mình. Rất nhanh, chúng ta đã có câu trả lời cho gần như mọi thứ: từ
+đặc tính virus, hệ số lây lan và thậm chí
+[[https://www.ncbi.nlm.nih.gov/sars-cov-2/][bản đồ gen của virus]]. Cái
+bản đồ gen ấy là cơ sở để chúng ta có vaccine theo công nghệ RNA như
+hiện nay (nếu công nghệ này được áp dụng, sẽ không lâu nữa chúng ta sẽ
+có cả vaccine cho HIV). Nhưng ở đây, mình sẽ chỉ thảo luận về chuyện
+cách ly có giá trị đến mức độ nào.
+
+Đây là một [[https://www.youtube.com/watch?v=gxAaO2rsdIs][video đăng từ
+tận năm ngoái mô phỏng một đại dịch]] (video này có phụ đề tiếng Việt
+nha các bạn), khi các số liệu mắc mới và tử vong vẫn chưa có nhiều. Nó
+hoàn toàn dựa vào mô phỏng và toán học, đó là điểm mạnh nhất của video
+này, bởi vì số liệu thực tế nhiều khi không đáng tin (nhất là số liệu
+của VN, hehe). Trong video đã xét đến mọi kịch bản khác nhau, như thay
+đổi hệ số lây truyền của virus, mọi người thực hiện 5K nghiêm ngặt, cách
+ly nghiêm ngặt, hoặc mọi người vẫn cách ly nhưng lại đến cùng 1 nơi (như
+siêu thị, trường học...), hoặc cách ly theo từng vùng (như vùng xanh,
+vùng đỏ của chúng ta hiện nay). Nói chung xem video mô phỏng này xong,
+mỗi người trong chúng ta sẽ tự có nhận xét riêng của mình, riêng mình
+thì mình có mấy nhận xét sau:
+
+- Các biện pháp phòng ngừa 5K nghiêm ngặt đến đâu cũng chỉ làm giảm hệ
+  số lây truyền của virus. Đến cuối cùng, tất cả chúng ta đều nhiễm
+  bệnh, chỉ khác nhau ở thời gian cần thiết để toàn bộ dân số nhiễm bệnh
+  mà thôi (điều này liên hệ với thuật ngữ "flatten the curve" mà ta hay
+  nhắc từ năm ngoái: tất cả mọi người sẽ nhiễm bệnh, nhưng nếu thời gian
+  để toàn bộ dân số nhiễm bệnh càng dài thì đường cong bệnh tật càng
+  phẳng, nghĩa là trong 1 thời điểm nào bất kì càng có ít người nhiễm
+  bệnh và chuyển nặng, giảm tải bớt cho năng lực điều trị của bên y tế).
+  Chứ nếu tất cả SG đều nhiễm bệnh cùng lúc thì chắc giới bác sĩ chạy
+  dài.
+
+- Cách ly chỉ làm kéo dài thời gian toàn bộ dân số nhiễm bệnh như trên.
+  Chứ không thể tránh được sự thật rằng tất cả chúng ta rồi sẽ nhiễm
+  hết. Cách ly càng dài, đánh đổi bằng kinh tế càng lớn. Mà đó là cách
+  ly nghiêm ngặt, chỉ cần chúng ta vẫn còn đi siêu thị hay đến trường
+  (có 1 điểm đến chung) thì mọi công sức cách ly đều vô nghĩa. Thường
+  thì điều này rất khó thực hiện, shipper hay chiến sĩ quân đội cầm AK
+  cũng có thể hiểu như là một người tiếp xúc với rất nhiều người, một
+  cái siêu thị di động.
+
+- Cách duy nhất để đẩy lùi bệnh tật là sức đề kháng của chúng ta đối với
+  virus đó, nghĩa là phải có vaccine. Còn liệu khi nào có đủ vaccine cho
+  tất cả người SG thì đó là một câu chuyện khác.
+
+P/S: chê chính phủ chống dịch bằng AK và tuyên truyền thì cũng nhiều
+rồi, đáng lẽ chống dịch bằng nhà virus học và tri thức thì không thấy.
+Trong khi đợi nhà virus học đó xuất hiện, thực tế ở nước ngoài đã viết
+rất nhiều về COVID-19 và Sar-Cov-2 rồi (họ đã có nguyên 1 năm ngoái ngồi
+nhà cách ly và viết lận). [[https://covidreference.com/][Mình đề xuất bộ
+tài liệu này]] (đã có nhóm của đại học Oxford và đại học y Huế dịch ra
+tiếng Việt). Trong tài liệu dài 500 trang này, có đủ mọi thứ mà ta cần,
+từ đặc tính virus, đến hiệu quả lan truyền, và thảo luận hiệu quả của
+tất cả phương pháp điều trị mà người ta đã xem xét đến, từ năm ngoái đến
+nay.
+
+--------------
+
+[1]:
+[[https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DgxAaO2rsdIs%26fbclid%3DIwAR2R-1nXCWN93rQ1n-YpJ1jXZushH66c5sZvnQVVHtOljbX9-sO4rv_hXeo&h=AT3Qe6LKITXP1JE7WmTLJxtHSKguglsKxPQ3L8Ni3torctOmPxQFr7lncMC_Ho-GiQ9yavdCoyWz29bWXoZh-rFoGR3WZBFx0dYyshJy7lgQowZGaGaXXPiMYudfF0LyjQ&__tn__=-UK-R&c%5B0%5D=AT2i-Ir7njP8_8ZShQXf52s7XiEYtOvTqpVDRJQiO2WUDy1De-KS_Nj5LWAV7g-pi0PAUgq5wKXcWzmkzTvaNINBQWpaREOlHfHJzryHyzislKRCBWGibLm4uVh5E_0GTb8Mk9rPpc9TWc5JpPMgUOtol0s][https://www.youtube.com/watch?v=gxAaO2rsdIs]]
+
+[2]:
+[[https://www.ncbi.nlm.nih.gov/sars-cov-2/?fbclid=IwAR0M3M84pQrE5crbi4tuav_7vZ4MlnaBxJgDCUoq0mC7SRN4-hD9SCOJDqE][https://www.ncbi.nlm.nih.gov/sars-cov-2/]]
+
+[3]:
+[[https://covidreference.com/?fbclid=IwAR3HhkkSjhvJQ2LM2UqbkEG6awWih_Eujgl8kNv9unjAxJEX-0vl-_GnYM8][https://covidreference.com/]]
+
+** Ngày 2 - nhân sự mùa dịch
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-13
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+[[http://helen.drbinhthanh.com/data/img/ngay2-1.jpg]][[http://helen.drbinhthanh.com/data/img/ngay2-2.jpg]]
+Có bao giờ các bác tự hỏi là bệnh viện cử những người nào đi chống dịch.
+Đây, mình giới thiệu một em trai, mới vô bệnh viện, được hơn 1 năm. Dân
+Đà Nẵng, học y Huế, không biết học hành kiểu gì, em nó tốt nghiệp Y6
+xong thì kiếm cái học bổng qua học bác sĩ nội trú ở Pháp (diện FFI). Sau
+về xin việc làm ở Từ Dũ, ngày em nó lót tót lên phòng trực nam thì gặp
+mình đầu tiên. Em nó thuê nhà trọ gần bệnh viện, sống và ngủ gắn với
+bệnh viện luôn, coi như là bắt đầu cuộc sống tự lập, giữa cái chốn SG mà
+mọi đứa trẻ lớn lên đều được trang bị đến tận răng.
+
+Rồi ko biết em nó khám kiểu gì mà sáng nay có bệnh nhân tặng tranh,
+phòng đó có 3 cô gái, chắc họ mang vải mang màu vô vẽ cho đỡ buồn, giờ
+vẽ xong thì tặng ai, tặng cái anh chàng sáng nào cũng vấn an sức khỏe
+mình cho chắc.
+
+Mình thì lạ gì cái tâm lý này nữa, 10 năm chinh chiến liên tục, giờ
+trong ngành mình như con cú già. Mình chỉ hỏi khi thật cần thiết, bằng
+những câu rất ngắn gọn. Chỉ cần nhìn bệnh nhân họ bước đi cũng có thể
+đoán định được họ đang có vấn đề ở đâu. Phụ nữ họ khó chịu với mình,
+mình biết ngay là chẳng phải anh làm gì nên tội, mà còn phân biệt được
+họ khó chịu do tới tháng hay đang bị lạc nội mạc tử cung hành hạ liên
+miên. Nhưng em nó thì khác, con chym non hót véo von lúc nào cũng thấy
+xao xuyến khi có bệnh nhân cần đến mình, câu hỏi bệnh thế nào cũng ân
+cần hơn hẳn, quan tâm hơn hẳn mối quan hệ đơn thuần giữa người với
+người. Và chuyện gì đến sẽ đến thôi.
+
+*P/S:* hình sau mờ hơn so với bình thường, bởi vì tranh đó chúng tôi để
+ở phòng thuốc trong khu bệnh chứ không dám đem về phòng, thành thử chụp
+bằng điện thoại đã được bọc kín qua một lớp nylon rất dày.
+
+** Ngày 11 - Những chuyện không đầu không cuối
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-22
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Như các bác cũng nhớ vào ngày thứ 2, mình có viết bài về một bác sĩ trẻ,
+không biết mình có lăng xê quá mức không. Sau đó thì em nó nhận được khá
+nhiều tin làm quen, các chị đòi sống đòi chết, một phần sau khi đọc bài
+viết đó của mình.
+
+Nhưng các bạn có biết, bạn bác sĩ ấy giờ chỉ muốn toàn tâm toàn ý chống
+dịch. Toàn tâm hết mức cho bệnh nhân, đến nỗi ở khu A5 có cô bác sĩ ở
+bệnh viện đa khoa Sài Gòn đi cách ly, mới chỉ có 26t. Thế là tấm chiếu
+mới ấy gom một đống trái cây mà người dân ủng hộ đội ngũ chống dịch, cun
+cút đem cho cô bệnh nhân đặc biệt. Rồi cô kia cũng đâu vừa, biến anh
+chàng bác sĩ thành shipper tình nguyện, vác nguyên một thùng hàng nhờ
+người nhà gởi vào lên phòng trong bộ đồ bảo hộ giữa buổi trưa mùa hè.
+Chu choa là nó dại dột!
+
+Gởi mọi người một vài bức hình nơi bệnh viện COVID số 1 (cũng là khu ktx
+ĐHQG), để mọi người thấy không gian rộng lớn, thoáng đãng và trống vắng
+nơi đây. Mình ở đây thiếu thốn lắm các bác ạ!
+
+P/S: người ta gọi một người là chung thủy khi người đó sống có chung và
+có thủy, nghĩa là có khởi đầu và có kết thúc. Những chuyện ở nơi đây còn
+chưa bắt đầu, nên mình gọi đó là những chuyện không đầu không cuối.
+
+[[http://helen.drbinhthanh.com/data/img/ngay11-1.jpg]][[http://helen.drbinhthanh.com/data/img/ngay11-2.jpg]][[http://helen.drbinhthanh.com/data/img/ngay11-3.jpg]][[http://helen.drbinhthanh.com/data/img/ngay11-4.jpg]][[http://helen.drbinhthanh.com/data/img/ngay11-5.jpg]]
+
+** Ngày 5 - 5 phút quảng cáo
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-16
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+[[http://helen.drbinhthanh.com/data/img/ngay5-1.jpg]][[http://helen.drbinhthanh.com/data/img/ngay5-2.jpg]][[http://helen.drbinhthanh.com/data/img/ngay5-4.jpg]][[http://helen.drbinhthanh.com/data/img/ngay5-5.jpg]][[http://helen.drbinhthanh.com/data/img/ngay5-6.jpg]]
+Một điều khá rõ ràng là dù dịch dã có diễn tiến đến đâu, thì mọi người
+chẳng ngừng sanh được. Việc phong tỏa bệnh viện là điều cuối cùng phải
+làm, nhất là bệnh viện sản. Hiện nay, bệnh viện Từ Dũ đã mở hẳn một khu
+tách biệt (khu M - bên kia đường Cống Quỳnh, không chung với khu chính)
+dành riêng cho điều trị bệnh nhân F0 liên quan đến sản phụ khoa. Cần lưu
+ý là đây không phải là bệnh viện dã chiến, nên chất lượng vẫn đảm bảo
+tiêu chuẩn Từ Dũ nhé mọi người, đầy đủ đồ chơi và tiêu chuẩn chuyên môn
+(chỉ cộng thêm yếu tố COVID thôi)
+
+Mọi người ở nhà, nhớ ăn nhiều rau răm, siêng tập thể dục để hạ hỏa, đừng
+quá trớn, năm sau bác sĩ sản làm thấy mịa luôn. Rồi khi con cái lớn lên
+phải chạy trường chạy lớp, tới lúc nó thi đại học tỉ lệ chọi cao ngất
+ngưởng (cũng vì yếu tố COVID)
+
+P/S: thực ra mình biết, khi đã có trớn thì không dừng lại được đâu :)),
+nếu không kịp mua bao, mua thuốc hay chưa có kĩ năng canh ngày thì chắc
+phải nhờ các bác sĩ y học cổ truyền tư vấn bấm huyệt sao để tránh thai
+quá.
+
+** Ngày 8 - ngắm mưa
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-19
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+[[https://www.youtube.com/watch?v=0y7eLxwRFpY][[[https://img.youtube.com/vi/0y7eLxwRFpY/0.jpg]]]]
+
+Do mấy bài viết gần đây nên mình nhận được khá nhiều cuộc gọi của anh em
+bạn bè hỏi thăm, rằng tao lo lắng cho mày lắm, mày khỏe không, cẩn thận
+nha người anh em, muốn ăn gì tao gởi vô, dù mấy năm rồi không thấy tụi
+nó gọi điện rủ nhậu. giờ mình đi vô chốn nguy hiểm một cái là tình anh
+em đồng đội có cơ hội thể hiện liền. Thật cảm động.
+
+Thực ra thì, công việc của mình cũng không quá nặng nhọc như mọi người
+nghĩ. Mình làm ở bệnh viện COVID số 1, công việc chính của mình là theo
+dõi khoảng 100 ca F0 ở đây. Mỗi ngày mình đi thăm bệnh 1 lần, hầu hết
+bệnh nhân ok, chỉ rất ít bệnh trở nặng, khó thở này nọ thì họ gọi mình,
+mình lao ra ngay, nặng quá thì chuyển viện. Vì đây là một bệnh mới hoàn
+toàn, phác đồ điều trị nay thay mai đổi, chưa có thuốc đặc trị, trong
+tay mình chỉ có những loại thuốc hết sức thông thường. Nhưng làm gì thì
+làm, khi mình vẫn còn ở đây, thì bằng mọi cách mình sẽ giảm thiểu hết
+mức lượng bệnh trở nặng.
+
+Do đây là bệnh viện COVID thành lập đầu tiên nên nó cũng quy củ hơn
+những bệnh viện mới thành lập khác, dù mọi thứ vẫn còn rất hỗn mang, dã
+chiến mà. Lợi thế lớn ở đây so với những nơi khác là không gian kí túc
+xá ĐHQG rất rộng rất thoáng đãng, hơn hẳn những chung cư được trưng dụng
+làm bệnh viện dã chiến. Không khí bí bách sẽ dễ lây truyền bệnh tật hơn.
+
+Chỉ vậy thôi, còn lại thời gian trong ngày, hầu hết là đọc sách, và như
+hôm nay là ngắm mưa. Thực ra thì trước khi đi chống dịch, mình đã có 3
+tuần cách ly ở nhà. Những ngày ở lì trong phòng một mình đó thật chẳng
+thể nào ngủ được. Mình chơi hết game này đến game khác, thậm chí lấy vô
+lăng lái một vòng châu Âu trong Euro Truck Simulator. Chỉ duy có giấc
+ngủ là không thể. Rồi mình phát hiện ra trên youtube có mấy video về
+thiên nhiên, kiểu như đi dạo trong rừng, ngắm mưa trong căn nhà cổ,
+tiếng sóng biển rì rào. Nghe những âm thanh quen thuộc mà rất xa lạ chốn
+thị thành này, giấc ngủ lại đến tự nhiên hơn bao giờ hết.
+
+Cho nên, cơn mưa chiều nay thế nào cũng làm cho SG ngập nặng, dù chẳng
+còn mấy ai lưu thông ngoài đường. Nhưng mình đã nhận ra một giá trị khác
+của nó. Mời các bạn thưởng thức và chúc các bạn ngủ ngon.
+
+#+begin_quote
+“Ngủ đi vầng trán yêu thương
+
+Bức tranh đã ngủ mặt tường lặng im
+
+Ngủ đi, hòn đá thì mềm
+
+Bàn chân thì cứng ngọn đèn thì xa
+
+Thời gian như gió thoảng qua
+
+Tình yêu là cánh đồng hoa giữa trời
+
+Tay ta nắm lấy tay người
+
+Dẫu qua trăm suối ngàn đồi cũng qua.”
+#+end_quote
+
+** Ngày 25 - âm dương lẫn lộn
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-08-05
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+[[http://helen.drbinhthanh.com/data/img/ngay25.jpg]][[http://helen.drbinhthanh.com/data/img/ngay25-2.jpg]]
+Hãy nhìn người phụ nữ này, SpO2 của bà ấy cứ duy trì 70 - 75% 7 ngày nay
+rồi, ngày đầu tiên mình khám sau nhập viện bà đi đứng rất chậm, hỏi trả
+lời được, còn cười khi mình hỏi bệnh. Ông chồng thì khỏe re, đi đứng
+hoạt bát, dù cả 2 cũng đã khá lớn tuổi. Mình dặn dò, chú phải để ý chăm
+sóc cho cô, có thấy điều gì lạ phải gọi cho bác sĩ ngay.
+
+Nhưng chẳng có cuộc gọi nào, thành thử mỗi lần thăm bệnh, mình dừng lại
+ở phòng của 2 người lâu hơn bình thường, quan sát họ lâu hơn, một phần
+để đảm bảo họ có đủ sức khỏe cho đến lượt khám ngày hôm sau, một phần
+cũng để giấc ngủ của mình đêm hôm đó được ngon hơn thôi. Thế rồi, ngày
+qua ngày, chẳng có điều gì xảy ra cả, dù mức SpO2 chỉ duy trì ở 70%. Và
+ngày xét nghiệm cũng đến, mình đích thân lấy mẫu cho 2 người. Dù mình
+chẳng phải là bàn tay vàng trong làng ngoáy mũi, nhưng mình đã nhớ là đã
+đâm đủ sâu, êm ái và sung sướng :)). Kết quả, bà vợ âm còn ông chồng
+dương tính.
+
+Đời tréo ngoe vậy đó, cái người mà mình để ý mỗi ngày lại âm, còn người
+tỉnh táo nói cười thì lại dương. Bỏ qua khả năng về chất lượng của mẫu
+thử, dù có rất nhiều điều đề nói về vấn đề này. Việc cơ thể người phụ nữ
+này vượt qua được một đợt suy hô hấp và duy trì ở mức ổn định, sau đó
+thì virus đã thoái lui để trở về âm tính, đã là một kì tích.
+
+Người phụ nữ này sẽ xuất viện, với 2 lá phổi chỉ còn SpO2 70%. Liệu chức
+năng phổi sẽ phục hồi trở lại? Từ năm ngoái đã có những
+[[https://www.hopkinsmedicine.org/health/conditions-and-diseases/coronavirus/what-coronavirus-does-to-the-lungs][báo
+cáo về sự suy giảm chức năng hô hấp mãn tính sau khi khỏi COVID]] [1].
+Lá phổi sẽ phục hồi chức năng của nó, giống như xương gãy cũng sẽ tự
+lành, nhưng nó cần thời gian tính theo tháng chứ không phải ngày một
+ngày hai.
+
+Chúng ta chẳng ai giống ai cả, dù có là vợ chồng anh em thân thiết đi
+nữa, sâu trong bản chất mỗi người là sự khác biệt đến từng tế bào. Chúng
+ta khác nhau ở từng hơi thở, ở khả năng chịu đựng với sức ép mà đời ném
+đến. Để đến cuối cùng, một vài người trong chúng ta sẽ tự nhiên vượt
+qua, và một vài người khác ở lại mãi mãi.
+
+** Ngày 14 - ca khó thở đầu tiên
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-25
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Mình đi đến nay đã 2 tuần, và may mắn là trong thời gian đó mình chưa có
+một ca bệnh trở nặng nào. Có thể do mình may mắn, hoặc cũng có thể do
+tiêu chí điều trị của mình là dập tắt bất kì con sóng nhỏ nào vừa nhú,
+để nó không bao giờ có cơ hội đe dọa. Cho đến tối hôm qua.
+
+Mình đi ngủ lúc 12h đêm, đến 1h30 sáng thì điện thoại reng. Số lạ. Bệnh
+nhân gọi, nhưng lần này không phải mấy lời than phiền ho, sốt, đau ngực
+thông thường. Lần này cậu bệnh nhân nhờ bạn cùng phòng gọi. Cậu kia nói
+thằng đó không thở được, người tím tái hết, bác sĩ tới gấp đi.
+
+Mặc nhanh bộ đồ bảo hộ, mình đi bộ một đoạn khoảng 300 mét mới đến khu
+nhà bệnh nnân. Cậu bệnh nhân gọi điện lúc nãy đã chờ sẵn ở tầng trệt.
+Mình lên đến phòng thấy bệnh nhân ngồi thở gấp, đầu ngón tay tím hết cả,
+SpO2 chỉ có 45% (người bình thường từ 98 nến 100%). Mình quát 2 đứa bạn
+cùng phòng dìu bệnh nhân xuống dưới tầng trệt. Ở cái mức oxy trong máu
+chỉ còn một nửa so với bình thường, ý thức con người còn nhận biết ai là
+ai trước mặt mình cũng đã là kì tích. Cũng cần nói thêm là, cậu bệnh
+nhân này nếu nói là phì lũ thì hơi quá, nhưng ú nụ cũng không sai, 2
+người dìu đi đã phải rất vất vả.
+
+Khi bước đến hết cầu thang thì bệnh nhân bắt đầu thở ngáp, mình lao tới
+cái bình oxy, nó to như cái bình khí đá của mấy ông hàn xì, lăn nó tới
+một cái giường dã chiến làm bằng bìa cạc tông, cắm van thở và vặn oxy xả
+ra hết mức. Thực sự, cho tới trước thời điểm này, mình vẫn không tin oxy
+có vai trò quan trọng đến như vậy. Chỉ vài giây hít cái khí thần thánh
+ấy thôi, sắc mặt của bệnh nhân đã tỉnh táo hẳn. Hít khoảng 15 phút thì
+Sp02 từ 45% lên đến 77%, bệnh nhân bắt đầu nói, thôi cho em về phòng.
+Thôi đi cậu, giờ mà cậu về rồi khó thở tiếp thì 2 thằng kia không dám
+khiêng cậu xuống đây nữa đâu.
+
+Mình gọi tiếp viện, 1 tay bác sĩ nữa chạy chiếc wave tới, mang theo 1
+cái cáng. May là cái cáng đó màu xanh dương, chứ nếu nó màu xanh lục thì
+chẳng khác gì khung cảnh vác thương binh thời chiến hết. Giữa thế kỉ 21,
+thời đại mà người ta tới phòng tập thể hình chỉ để lấy le, con người
+suốt ngày cắm mặt vào màn hình và tay bệnh nhân quá khổ, thì cái cáng
+đáng lẽ 2 người khiêng đã chia ra đến 4 người (2 bác sĩ đi trước và 2 F0
+khác khiêng ở sau). Cứ đi được 100 mét, cả nhóm phải thả phịch cái cáng
+xuống rồi thở dốc.
+
+Trầy trật mãi cũng đến khu cấp cứu. Mình giao bệnh nhân lại cho nhóm cấp
+cứu, thay bỏ đồ bảo hộ và quay về phòng, lúc này là 3h sáng và trời bắt
+đầu đổ một cơn mưa đêm.
+
+Thế giới này được xây dựng trên những điều dối trá. Ai cũng biết như
+vậy. Có những điều dối trá nhỏ làm cho cuộc sống thêm hương sắc và thi
+vị. Nhưng có những điều dối trá thâm sâu mà phải vùi công suy ngẫm mới
+nhận ra được. Nhưng một khi lằn chỉ đỏ của sự thật bị phá vỡ, ta có đắp
+lên người bao nhiêu dối trá cũng không bao giờ đủ. Ai còn cần thêm 1
+chai nước hoa để thể hiện đẳng cấp thanh lịch, khi chẳng còn tí oxy nào
+để thở cơ chứ.
+
+** Ngày 7 - những bông hoa vùng dịch
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-18
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Như các bác cũng thấy hình mình chụp, ở phía dưới phòng mình ở là một
+vườn hoa dại đang nở. Tháng 7 mưa ngâu, sau mỗi cơn mưa những bông hoa
+đó dường như khó phai tàn hơn.
+
+Cuối tuần rồi, xõa thôi các bác ơi.
+
+P/S; hình chụp bằng Redmi note 10 cùi bắp, các bác xem đỡ vại
+
+[[http://helen.drbinhthanh.com/data/img/ngay7-1.jpg]][[http://helen.drbinhthanh.com/data/img/ngay7-2.jpg]][[http://helen.drbinhthanh.com/data/img/ngay7-3.jpg]][[http://helen.drbinhthanh.com/data/img/ngay7-4.jpg]][[http://helen.drbinhthanh.com/data/img/ngay7-5.jpg]][[http://helen.drbinhthanh.com/data/img/ngay7-6.jpg]][[http://helen.drbinhthanh.com/data/img/ngay7-7.jpg]][[http://helen.drbinhthanh.com/data/img/ngay7-8.jpg]]
+
+** Ngày 29 - nghệ thuật điều trị, phần 2
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-08-09
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Mình sẽ bú fame một chút, về chuyện đang được lan truyền về tay nào được
+gọi là bs rút ổng thở của người thân mình. Nghe qua câu chuyện sặc mùi
+phi lí này, đáng lẽ chúng ta sẽ bỏ qua nó như bỏ qua một câu chuyện nhảm
+nữa mà ta gặp trên mạng. Ấy vậy mà thời nay dường như chẳng còn ai có óc
+suy xét, ta lan truyền nó, nhận xét nó, trưng ra hàng đống lí luận để tô
+vẽ hợp lí hóa nó, làm như câu chuyện đó là có thật, và làm như lực lượng
+y tế sẽ sẵn lòng hi sinh mọi thứ của bản thân để cứu đời cứu người. Sặc
+mùi cánh tả. Khi người ta kể một câu chuyện phi lí đến không tưởng về sự
+hi sinh, rằng người lính sẵn sàng lấy thân mình lấp lỗ châu mai, ấy là
+lúc người ta đang hợp thức hóa cho sự hi sinh đến mức phi lí và phi luân
+ấy và yêu cầu một hành động tương tự từ các bạn. Người ta đang cần đến
+máu của bạn đó.
+
+Như các bạn cũng thấy, từ lúc bắt đầu đi chống dịch đến giờ, rất nhiều
+anh em bạn bè nhắn gởi mình cẩn thận, giữ sức khỏe. Mình thực lòng cảm
+ơn những tấm lòng ấy, nhưng rất ít khi mình trả lời. Bởi vì điều đó là
+thừa thãi. Bỏ công học y khoa để làm gì nếu không tự lo cho sức khỏe của
+mình trước tiên. Nhân tiện dạo này anh em đồng nghiệp đã có nhiều người
+trở thành F0. Mình muốn nhắc lại rằng, lực lượng y tế trước hết cũng là
+con người, rằng khi một người đến lúc nguy nan, người đó sẽ sử dụng mọi
+nguồn lực mình có (kiến thức, tiền bạc, quan hệ, quyền lực...) để vượt
+qua chúng. Đó mới là suy nghĩ hợp lý của một người bình thường.
+
+Còn sau đây là phần mình viết về chuyện thực tế, rằng bệnh nhân COVID
+đang thực sự được điều trị ra sao, chứ không phải là chuyện giành phần
+ống thở của người khác (chuyện đó có khác gì cái bánh bao chấm máu người
+mà mình đã viết về lúc phải đưa ra lựa chọn trong bài trước đâu)
+
+Nếu các bạn tự hỏi người bệnh COVID được điều trị những gì tại khu dã
+chiến, thì đây, đây là cái giỏ thuốc mình sử dụng hàng ngày. Nó là cái
+hộp các tông, xỏ 4 lỗ để làm thành 2 cái quai. Trong đó chỉ có vài loại
+thuốc thông dụng chữa các triệu chứng như: ho, sốt, đau đầu, tiêu chảy,
+nhiễm trùng... Sar-cov-2 là một chủng virus mới, chưa có thuốc đặc trị,
+và vì vậy mọi phương pháp điều trị đang được thảo luận đều không phải là
+phương pháp chính xác (tất nhiên là chúng có hiệu quả ở một mức nào đó).
+Thật lạ lùng là dù chỉ nắm trong tay một nhúm thuốc như trên, cộng thêm
+cái bình oxy dạng hàn xì, mà mình lại không cảm thấy quá thiếu thốn. Có
+lẽ "không đau vì quá đau", không thiếu thốn vì chẳng có liều thuốc nào
+là chính xác trong tình hình hiện nay cả.
+
+Bệnh nhân không phải chỉ có triệu chứng của COVID: ho, sốt, đau ngực,
+đau dạ dày... mà họ còn có cả tá những thứ khác, như những người bình
+thường khác: từ cậu bé tuổi teen bị chín mé ở tay, anh chàng trung niên
+bị mụt lẹo, cho tới bà mẹ trẻ bị chảy sữa mới sanh con xong phải để con
+lại bệnh viện và nhớ con đến nỗi có cảm giác ghì nặng trong lồng ngực.
+Tính cách và sức chịu đựng của mỗi người là một trời khác biệt: từ những
+bà cụ có sức chịu đựng ở tầm Việt Nam anh hùng, nhưng lại có những ông
+bố bà mẹ liên tục gọi điện vào yêu cầu bác sĩ phải làm cho đứa con bé
+bỏng sinh năm 80 của họ thứ này thứ kia, chứ nó khó thở lắm, SpO2 thấp
+lắm, dù bệnh nhân bé bỏng tuy dỗi bố mẹ ấy nhưng chưa một lần dám than
+phiền với bác sĩ lần nào. Thật không thể tưởng tượng là mình đã vượt qua
+hết tất cả những điều trên trong 1 tháng vừa qua, chỉ bằng cái hộp thuốc
+bằng bìa cạc tông.
+
+Mọi thứ rồi sẽ qua, hầu hết chúng ta sẽ qua được sông, một số người đi
+tàu cao tốc, số khác đi thuyền độc mộc, thậm chí có người tự bơi qua
+sông. Những người không qua được rồi sẽ đi vào quên lãng, như là một
+phần của số phận. Nhưng các bạn có biết điều gì sẽ ở lại mãi không? Đó
+là sự lựa chọn của bạn ở giây phút nguy nan ấy, sự lựa chọn của bạn sẽ
+ám ảnh bạn mãi mãi, và thay đổi số phận của bạn kể từ lúc đó.
+
+[[http://helen.drbinhthanh.com/data/img/ngay29.jpg]][[http://helen.drbinhthanh.com/data/img/ngay29-2.jpg]]
+
+** Vẫn rất đẹp
+
+Khi tôi tốt nghiệp trường y, tôi đã tự nhủ rằng thế là thôi nhé, đừng
+hành hạ nhau nữa, tôi sẽ không quay lại ngôi trường hắc ám này nữa đâu.
+Sau đó thì tôi có dịp trải nghiệm qua nhiều trường đại học khác nhau, cả
+trong và ngoài nước, thì tôi càng củng cố thêm nhận định ở trên. Thế
+rồi, sau gần 10 năm lăn lộn trong nghề, tôi lại cắp vở quay lại trường
+một lần nữa.
+
+#+caption: trường y trong tôi
+[[/assets/img/truongy2018bw.jpg]]
+
+Và ngôi trường vẫn rất đẹp, như những ấn tượng từ những ngày đầu. Không
+phải bởi con người, tất nhiên, mà là kiến trúc. Có thể các bạn không
+tin, nhưng sống và làm việc trong một công trình có kiến trúc tốt có thể
+cứu rỗi linh hồn của một người, và từ đó thay đổi vận mệnh của anh ta.
+Một người bình thường cũng có thể hiểu rằng, xây một ngôi nhà sẽ khác
+với xây một trường học, hay một ngôi chùa. Nhưng chắc chưa ai hỏi tại
+sao các công trình xây dựng gần đây chỉ là các khối hộp bê tông sáu cạnh
+xếp chồng lên nhau, khác chăng chỉ là phần trang trí bên ngoài, để tăng
+diện tích sử dụng? Từ đó có nhiều lợi nhuận hơn? Who care...
+
+#+caption: thư viện mới
+[[/assets/img/thuvientruongy2018.jpg]]
+
+Ấn tượng thứ 2 là thư viện, nó vượt trội so với các thư viện còn lại của
+thành phố này, và tương phản về mặt vật chất so với hiện thực nghèo nàn
+của đất nước. Những năm đầu đại học, tôi thường ngồi lại đến tối khuya
+mới về, bởi vì đó là nơi duy nhất giống với tinh thần đại học mà tôi
+tưởng tượng khi còn ở phổ thông. Chỉ cho đến khi lâm sàng từ năm 3, và
+khi đi làm, đối mặt với hiện thực y khoa của đất nước, và những mặt xấu
+xí trong lối sống của người Việt. Khi đó, tôi đã thôi tưởng tượng và hi
+vọng.
+
+Muốn biết thêm về cuộc sống y khoa của tôi thời đại học? Hãy đọc bài
+[[https://drringo.github.io/2009/nganh-y-nhu-toi-da-thay/][ngành y, như
+tôi đã thấy]])
+
+** Đêm trên vùng đất lạ
+
+Mình ở SG mười mấy năm rồi, mà vẫn thấy nó xa lạ, có lẽ ở đây chẳng có
+gì làm cho mình vương vấn cả
+
+#+caption: kí túc xá về đêm
+[[/assets/img/kitucxa2018.jpg]]
+
+Hồi ở Quảng Châu, đó cũng là một buổi tối cuối tuần, trời cũng mưa bất
+chợt. Chúng tôi ghé trú mưa ở hiên 1 quán trà sữa. Do trời mưa lâu quá
+nên cả đám kéo vào quán luôn. Mình ngồi một hồi, hok hiểu sao nói chuyện
+ngon lành với em gái người Hoa kế bên, cuối buổi còn xin được cái
+sticker trên túi xách cô đó làm kỉ niệm. Mấy bà trong đoàn nói: mày mà ở
+thêm 1 thời gian nữa, thế nào cũng có chuyện lớn xảy ra.
+
+Thực ra thì, trong tất cả các thành phố mình đi qua cho tới giờ, mình đã
+ghé Quảng Châu 2 lần và cảm thấy thoải mái nhất ở đó. Mỗi tội giá nhà
+mắc quá, hic.
+
+** Ngày 22
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-08-02
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Bệnh trở nặng bắt đầu nhiều các bác ạ, 2 ngày nay đã chuyển 2 ca rồi
+
+Bây giờ đang ngồi chuyển ca nữa
+
+P/S: cái giường cạc tông huyền thoại
+
+#+caption: enter image description here
+[[http://helen.drbinhthanh.com/data/img/ngay22.jpg]]
+
+** Ngày 1
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-12
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Ngày đầu tiên nên anh em hướng dẫn cho tôi cách mặc đồ bảo hộ, chỉ cho
+tôi các bí kíp để phòng ngừa lây nhiễm rất kĩ. Mặc dù tôi đã biết cách
+sử dụng đồ bảo hộ trước đó, nhưng thực sự so với những gì anh em đang
+thực chiến ở đây, những kiến thức tôi được đào tạo chẳng là gì cả. Nó
+giống như một kẻ suốt ngày tập kendo với thanh kiếm tre, nay ra trận lần
+đầu với thanh kiếm thật trong tay vậy, cảm giác rất khác.
+
+Anh bạn đồng nghiệp hướng dẫn tôi cách khám ca đầu tiên, ảnh bảo tôi
+đứng ra xa, cách 10 mét. Rồi tôi quan sát, từng cử chỉ, cách hỏi bệnh,
+bằng những câu rất ngắn nhưng đủ thông tin (bạn phải hạn chế mở riệng ra
+tối đa), rồi tư thế bệnh nhân sao cho khi lỡ họ có ho nó cũng không ảnh
+hưởng nhiều đến mình.
+
+Đo nhiệt độ xong, hỏi có triệu chứng gì ko. Sốt hả, cho thuốc hạ sốt, có
+ho? chơi thêm vài viên thuốc ho nữa, tối hôm qua bác không ngủ được, ở
+đây không có thuốc ngủ hay an thần, nhưng chúng tôi sử dụng tác dụng phụ
+của một loại thuốc khác, nó gây buồn ngủ. Đơn giản, chẳng có gì đặc
+biệt, chữa COVID thôi mà, chứ có phải khoa học tên lửa đâu. Cứ như vậy,
+cho đến khi hết 80 đến 100 bệnh nhân.
+
+Một điều lưu ý nữa, nếu các bạn có người nhà đang đi cách ly, hãy thường
+xuyên facetime nói chuyện với họ, cho họ bớt cảm giác cô đơn. Khi con
+người ta ở một mình trong căn phòng tồi tàn, không được ra ngoài, không
+có gì để làm cũng như giải trí. Trong tình huống như vậy rất ít người có
+thể vượt qua về mặt tinh thần. Đâu phải ai cũng có thể cầm 1 khối rubic
+và vui vẻ với nó suốt cả ngày như mình đâu. Nhớ nhé, luôn luôn facetime.
+
+** Ngày 23 - cắt tóc mùa dịch
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-08-03
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Trước khi đi chống dịch, mình đã có 3 tuần cách ly ở nhà, và các bác có
+biết tự lấy cái tông đơ, soi gương rồi tự cà lên đầu nó khó cỡ nào
+không.
+
+Hôm nay, có một đợt nhân viên mới đến khu chống dịch, thay cho 1 đợt cũ
+ra về, mình chọn 1 cậu đập chai, nói em đẩy giúp a cái tông đơ. Em chưa
+cắt tóc lần nào, không sao, a tin chú. Thực ra trong đầu mình nghĩ, cùng
+lắm thì cạo trọc chứ gì. Trước giờ mình chưa cạo trọc đầu lần nào, dù
+nhiều lần có ý định, dù gì thì để đời đưa đẩy cho có trải nghiệm.
+
+Ai dè cậu đó cầm cái tông đơ cắt cái đầu mình mất nửa tiếng, rất có tâm.
+Kết quả là mình khá hài lòng. Mời các bác chiêm ngưỡng.
+
+P/S: mùa dịch khó khăn nên bạn mình bị hack fb rồi nhắn tin lừa mượn
+tiền nhiều lắm, mọi người cẩn thận.
+
+[[http://helen.drbinhthanh.com/data/img/ngay23.jpg]]
+[[http://helen.drbinhthanh.com/data/img/ngay23-2.jpg]]
+
+** Ngày 6 - nghệ thuật điều trị, phần 1
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-17
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Tôi là một người học toán từ nhỏ, tình cờ bước vào trường y và ở lại đó
+cho đến giờ. Ấn tượng đầu tiên của tôi đối với mọi người trong môi
+trường y khoa các bạn biết là gì không? Mọi người ở đây dường như chẳng
+có tư duy logic, họ rất dễ dàng tin vào những kiến thức không được kiểm
+chứng hay chưa được hiểu cặn kẽ, thậm chí có những niềm tin đi ngược lại
+các định luật vật lý. Đó là sự bất tương thích mà tôi phải chịu đựng
+hàng ngày trong suốt gần 20 năm qua.
+
+Và rồi, sống càng lâu và tiếp xúc càng nhiều người, tôi nhận thấy rằng
+chẳng có nơi nào mà mọi tri thức đã được xây dựng chặt chẽ và tường minh
+như toán học. Mọi người chỉ cần dừng lại ở cấp độ quan sát bề mặt, thấy
+nó hoạt động có hiệu quả và nhân rộng mô hình đó là đủ. Đó cũng là cách
+thông thường mà xã hội và y khoa đang hoạt động. Và thông thường thì nó
+hiệu quả trong phần lớn các trường hợp.
+
+Một ví dụ có lẽ phù hợp nhất là về vaccine. Vaccine đầu tiên xuất hiện
+vào năm 1700, khi đó bệnh đậu mùa đang hoành hành trên toàn châu Âu. Có
+một bác sĩ tên là Edward Jenner quan sát thấy những con bò cũng mắc một
+bệnh tương tự, gọi là bệnh đậu bò. Những người làm nghề vắt sữa bò khi
+đó sẽ bị bệnh đậu bò, có triệu chứng nhẹ hơn và không bị đậu mùa nữa.
+Vậy nên ý tưởng là lây truyền bệnh đậu bò trong quần thể người, nhưng bù
+lại bệnh đậu mùa sẽ biến mất. Cần lưu ý là lúc này người ta còn chưa
+biết khái niệm vi khuẩn là gì, và mãi hơn 150 năm sau, Louis Pasteur mới
+hoàn thành các lý luận về miễn dịch để giải thích các cơ chế hoạt động
+của vaccine.
+
+Trong những trường hợp khác, bệnh tật có thể bị đẩy lùi, trước khi người
+ta tìm được bản chất của căn bệnh và thuốc chữa đặc trị. Ví dụ như bệnh
+lao vào đầu thế kỉ 20, nếu như ở phương Đông, người ta trị bệnh lao bằng
+bánh bao chấm máu người như trong truyện của Lõ Tấn, thì ở phương Tây,
+họ lập nên những viện dưỡng lao trên núi, đưa bệnh nhân lên núi hít thở
+không khí trong lành. Chỉ vậy thôi, nhưng số lượng bệnh lao đến những
+năm 1940 đã thực sự giảm, trước khi Koch phân lập được trực khuẩn lao,
+và kháng sinh được phát minh. (Ở Việt Nam không có các viện dưỡng lao,
+nhưng Pháp đã xây các trại tương tự cho bệnh phong (một bệnh anh em với
+bệnh lao) để cách ly người bệnh, thi sĩ bán cả mặt trăng Hàn Mặc Tử đã
+trải qua những ngày cuối cùng ở đây)
+
+Mẹ thiên nhiên chính là kẻ giết người hàng loạt, không ai có thể giỏi và
+sáng tạo hơn được. Cũng giống như bọn giết người hàng loạt, bà ta không
+cưỡng lại được cái thôi thúc bị bắt gặp. Tội ác tinh xảo để làm gì nếu
+không có ai biết đến? Nên bà ta sẽ để lại... những dấu vết. Và trong
+phần lớn trường hợp trong lịch sử, ta chỉ cần lần theo dấu vết và thành
+công. Liệu rằng lần này chúng ta cũng sẽ thành công? Hay ta đang đối mặt
+với một kẻ thù khác?
+
+P/S: nếu đến lúc lựa chọn, liệu các bạn sẽ chọn lên núi, hít thở khí
+trời, hay chọn cái bánh bao chấm máu người?
+
+** Ngày 3
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-14
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Hôm nay mình sẽ không đăng suy nghĩ gì, một phần vì khá bức xúc status
+hôm qua đăng lăng xê đứa em, thì bà con lại nhào vô dìm hàng mình. Đây,
+mọi người xem, mặc đồ như thế này rồi, ai đẹp trai hơn chứ.
+[[http://helen.drbinhthanh.com/data/img/ngay3-2bs.jpg]][[http://helen.drbinhthanh.com/data/img/ngay3-2bs-2.jpg]]
+P/S: đố các bác biết đâu là mình, còn đâu là em nó
+
+** Ngày 18 - hậu sự
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-07-29
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Anh chồng tội nghiệp mà mình kể trong ngày 16 đã chuyển viện, lần này bà
+vợ gọi mình vào 1h sáng (lại 1h sáng, hic). Lại thêm một cậu trai trẻ
+lên đường, to con, sinh năm 1989, có vợ và 1 con nhỏ. Mình cho thở oxy
+bằng cái bình hàn xì không ăn thua nữa, gọi tiếp viện, nhắn cho bà vợ
+chuẩn bị đồ đạc cho chồng lên đường. Và lần này mình có hẳn 1 chiếc xe
+cứu thương cho đoạn đường 300m. Trước khi xe cứu thương đến, người điều
+phối của mình nhắn bệnh nhân đem theo 1 cái ghế bố để nằm trong khu cấp
+cứu vì đến ghế bố cũng đã hết rồi (bệnh nhân làm gì có ghế bố ông nội!),
+bà vợ nói thôi em lên phòng coi có chiếc chiếu nào sạch đem cho chồng,
+nhưng xe cứu thương đến nhanh, mình nói tay bệnh nhân lấy đại 1 chiếc
+chiếu cũ của bệnh nhân xuất viện bỏ lại rồi cặp theo lên xe. Vợ chồng họ
+chưa kịp chào từ biệt, và theo mình quan sát qua 3 tuần ở đây thì hiện
+chưa có ca nào chuyển đi điều trị ổn rồi chuyển lại cả.
+
+Trong hành trang anh đó mang theo có giấy tờ tùy thân, 1 cái ba lô đồ
+đạc và 1 cái điện thoại. Cái điện thoại là mình nhấn mạnh, họ sẽ còn giữ
+tin về nhau, chừng nào cái điện thoại còn pin và tay đó còn đủ tỉnh táo
+để bấm nút. Theo mình thấy thì nhiều gia đình đã mất liên lạc với nhau,
+giờ không biết liên hệ ai trong bệnh viện để biết về tình hình của người
+thân của mình. Vô phương. Bọn mình chuyển viện đến bệnh viện nào, cũng
+phải liên lạc trực tiếp bác sĩ nào đã chịu trách nhiệm nhận, chứ không
+phải liên lạc chung với bệnh viện, thì một người nhà bình thường biết
+lấy ai để gọi, mà nếu có gọi được thì người kia làm gì đủ thẩm quyền để
+trả lời. Giữa thế kỉ 21 đầy tiện nghi, nhưng ta vẫn rất dễ lạc mất nhau
+như thời người ta còn dùng bồ câu đưa thư. Tại sao người ta không làm
+một hệ thống thông tin người bệnh Sar-Cov-2 để người ta có thể tra cứu
+như cả triệu thí sinh tra điểm đại học, trong khi nhân viên y tế đang
+phải nhập liệu cùng một dữ liệu cho 3 hệ thống khác nhau. Về mặt kĩ
+thuật, những chuyện này đâu có gì khó, dễ dàng hơn điều trị COVID rất
+nhiều.
+
+Một lưu ý nữa là nếu người bệnh tử vong, bệnh viện sẽ thông báo cho
+người nhà theo số điện thoại đăng kí và thiêu xác chỉ trong 24 giờ.
+Nhưng ngặt một nỗi, nhiễm COVID đâu phải nhiễm từng người, mà là cả gia
+đình đang đi cách ly. Nên nhiều khả năng, nhiều gia đình sẽ chỉ nghe tin
+báo tử qua điện thoại từ nơi cách ly và rất lâu sau mới nhận tro của
+người nhà mình về.
+
+Trong một diễn biến khác,
+[[https://laodong.vn/kinh-te/tphcm-lap-to-tu-van-chinh-sach-chong-dich-va-phuc-hoi-kinh-te-935185.ldo%29][TpHCM đã thành lập tổ tư vấn chính sách chống dịch]]. Anh em đồng nghiệp của
+mình thắc mắc, trong danh sách này chẳng có người nào bên ngành y, thực
+ra có thầy Đỗ Văn Dũng, nhưng thầy bên y tế công cộng và chỉ chuyên về
+thống kê. Tại sao không có một người chuyên về virus học. Con virus này
+có đặc tính sinh học thế nào, nhóm bệnh nhân nào hay trở nặng, vaccine
+nên phân bổ thế nào để hạn chế tử vong, phác đồ điều trị và hồi sức mới
+nhất là gì và nên thống nhất ở mức độ nào... toàn những câu hỏi sát sườn
+trong phòng chống dịch, từ đó mới sinh ra chính sách phù hợp. Một danh
+sách toàn những chuyên gia kinh tế đi chống dịch, chắc các bạn cũng hiểu
+từ xưa đến giờ, người ta xem người làm trong ngành y có trọng lượng đến
+đâu, và người lãnh đạo họ trọng sinh mạng hơn hay chỉ tiêu thu thuế phải
+đạt trong năm hơn.
+
+Người Liên Xô đã từng có câu thế này về xã hội và nghệ thuật lao động
+của họ "chúng nó giả vờ quyết liệt chỉ đạo, chúng tao giả vờ làm việc và
+chúng mày giả vờ trả lương". Nếu trừ chuyện trả lương ra, thì mọi thứ ở
+đây chẳng có gì khác. Đến viên thuốc ho cũng hết rồi.
+
+P/S: thực ra, do đã từng học qua đại học kinh tế TpHCM, mình chẳng lạ gì
+việc các chuyên gia kinh tế nhảy vào các lãnh vực phi kinh tế và đề xuất
+chính sách. Họ ăn nói rất thuyết phục, rằng ta nên làm cái này nên làm
+cái kia. Nhưng đó là cho những lãnh vực dính dáng nhiều đến xã hội, như:
+giao thông, xây dựng...Lần này, mình cho rằng họ đã quá tự tin. Y khoa
+là một nghệ thuật kết hợp giữa khoa học và nhân học. Trước hết, y khoa
+là một khoa học chính xác (nó đã có những lý luận đi từ phân tử lên con
+virus rất chặt chẽ, mà trường y ở VN vẫn chưa dạy cho sv). Nếu bỏ khoa
+học ra khỏi y khoa, thì mọi chỉ đạo dù thành tâm đến mấy cũng chỉ là giả
+vờ quyết liệt chỉ đạo mà thôi.
+
+** Ngày 27 - đừng bao giờ đếm tiền trên chiếu bạc
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-08-07
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Mấy hôm nay bệnh viện có nhiều nhóm bác sĩ hoàn thành thời hạn rồi ra
+về, thay bằng loạt người mới, làm mình cảm thấy nao nao. Mình sắp được
+về nhà rồi, chỉ còn đúng 1 tuần nữa thôi. Anh em oánh bài cũng biết,
+oánh bài tới gần sáng là lúc quyết định thắng thua nhất. Trước đợt dịch
+lần này có 1 tháng, mình ngồi chơi bài Uno nguyên đêm với đám đệ tử con
+nhang, lúc đầu giờ mình thắng 3 ván liên tiếp mà đến lúc gần cuối lại bị
+vượt qua, hận.
+
+Khu của bệnh viện Từ Dũ chuẩn bị thu gọn lại số giường gần một nửa, để
+chuyển người sang làm chuyên về hồi sức bệnh nặng. Dù ở đây chỉ là bệnh
+viện thu dung dã chiến, chuyên theo dõi bệnh không có triệu chứng, nhưng
+đã bắt đầu nhận hồi sức các bệnh trở nặng, chứ không cố gắng chuyển viện
+lòng vòng như trước nữa. Điều này là một dấu hiệu cho thấy chiến lược
+chống dịch đã thay đổi, từ hạn chế số lượng ca mắc sang giảm thiểu số
+lượng tử vong ở mức thấp nhất. Hầu hết mọi người nhiễm Sar-Cov-2 sẽ
+không có triệu chứng, chỉ những ca trở nặng mới cần hồi sức đặc biệt và
+tiêu tốn nguồn lực y khoa cực lớn. (Tuy nhiên, như trong bài trước mình
+đã nói, ca không có triệu chứng không có nghĩa là virus không làm suy
+giảm chức năng các cơ quan của bạn)
+
+Số liệu cũng có khả quan hơn, lần đầu tiên kể từ đợt dịch này, cả số ca
+mới mắc và số tử vong bắt đầu đi ngang. Đó là một dấu hiệu tốt, để có
+thể xây dựng mô hình dự đoán thời điểm kết thúc của đợt dịch (chứ biểu
+đồ lúc nào cũng đi lên hết thì biết đâu là điểm dừng). Phải chăng ta đã
+lên đến đỉnh? Phải chăng thời điểm khó khăn nhất đã qua?
+
+P/S: có rất nhiều điều để nói về số liệu, chỉ cần thay đổi chiến lược
+lấy mẫu thôi cũng đã có tác động mạnh đến số liệu.
+
+P/S 2: Hầu hết các mẫu test nhanh mình làm ở đây đều âm tính.

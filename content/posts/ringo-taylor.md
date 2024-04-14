@@ -2,7 +2,7 @@
 title: "Ringo Taylor"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2020-07-30
-lastmod: 2024-04-14T17:47:18+07:00
+lastmod: 2024-04-14T20:46:46+07:00
 categories: ["think"]
 draft: false
 ---

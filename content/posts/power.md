@@ -3,7 +3,7 @@ title: "Cấu trúc của quyền lực"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2014-11-15T15:13:00+07:00
 expiryDate: 2024-01-01
-lastmod: 2024-04-14T17:36:48+07:00
+lastmod: 2024-04-14T20:46:45+07:00
 categories: ["think"]
 draft: false
 ---

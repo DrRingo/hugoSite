@@ -2,7 +2,7 @@
 title: "Tình yêu con người"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2021-02-20T22:21:00+07:00
-lastmod: 2024-04-14T17:36:48+07:00
+lastmod: 2024-04-14T20:46:45+07:00
 categories: ["think"]
 draft: false
 featured_image: "/assets/img/tinh_yeu_con_nguoi.jpg"
