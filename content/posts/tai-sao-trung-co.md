@@ -2,7 +2,7 @@
 title: "Tại sao Trung Cổ"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2019-02-05
-lastmod: 2024-04-14T12:31:44+07:00
+lastmod: 2024-04-14T17:36:48+07:00
 categories: ["think"]
 draft: false
 featured_image: "/assets/img/flowerseller.jpg"

@@ -2,7 +2,8 @@
 title: "Các phương trình của Maxwell"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2020-01-01
-lastmod: 2024-04-14T12:31:44+07:00
+expiryDate: 2024-01-01
+lastmod: 2024-04-14T17:36:49+07:00
 categories: ["math"]
 draft: false
 ---

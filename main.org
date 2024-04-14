@@ -307,6 +307,7 @@ rondo.
 ** Về Huyền Chip và tất cả các em chip chip
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2013-10-04 12:47:10 Z
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/huyenchip.webp"
 :export_file_name: huyen-chip
 :END:
 
@@ -422,11 +423,9 @@ thanhgo, đại bàng không biết bay
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2023-08-26
 :export_file_name: chanh-niem
-:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/mangthaichanhniem.jpg"
 :END:
-
-#+caption: Sách "mang thai chánh niệm"
-[[/assets/img/mangthaichanhniem.JPG]]
+# :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 
 #+begin_quote
 Đức Phật đã nói, chánh niệm là đức hạnh duy nhất tồn tại
@@ -612,7 +611,6 @@ Và lúc đó bạn chẳng đủ sức lực để quay lại nữa.
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-08-29
 :export_file_name: bon-lan-hon-nhan
-:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
 #+begin_quote
@@ -667,6 +665,7 @@ chiếc ghế mây, nhìn ra biển lớn
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-01-01
 :export_file_name: maxwell-equations
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
 Và Chúa phán
@@ -685,9 +684,8 @@ lập tức xuất hiện
 :EXPORT_HUGO_PUBLISHDATE: 2021-06-20 09:22:05
 :export_hugo_custom_front_matter: :featured_image "/assets/img/daiso2.jpg"
 :export_file_name: ki-niem-voi-euler
+:END:
 # :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
-:END:
-:END:
 
 Như các bạn cũng biết, dạo này em có xách vở đi học ngành toán cao cấp.
 Nhưng các bác cũng biết, em làm 1 cái bv công, 1 cái bv tư, và 2 phòng
