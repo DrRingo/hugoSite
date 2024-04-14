@@ -151,7 +151,7 @@ vì đó là một cột trụ quyền lực.
 ** Tình yêu con người
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2021-02-20 22:21:59
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "./assets/img/tinh_yeu_con_nguoi.jpg"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/tinh_yeu_con_nguoi.jpg"
 :export_file_name: love-human
 :END:
 
