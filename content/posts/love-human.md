@@ -2,12 +2,11 @@
 title: "Tình yêu con người"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2021-02-20T22:21:00+07:00
-lastmod: 2024-04-14T10:28:14+07:00
+lastmod: 2024-04-14T10:57:50+07:00
 categories: ["think"]
 draft: false
+featured_image: "./assets/img/tinh_yeu_con_nguoi.jpg"
 ---
-
-{{< figure src="/ox-hugo/tinh_yeu_con_nguoi.jpg" >}}
 
 Thưở mới xa nhà, ý tôi là cái thời năm nhất đại học ấy, như bất kì đứa
 sinh viên y nào, tôi phải chọn cho mình một cuốn atlas giải phẫu. Do
