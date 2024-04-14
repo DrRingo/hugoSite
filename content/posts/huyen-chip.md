@@ -2,7 +2,7 @@
 title: "Về Huyền Chip và tất cả các em chip chip"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2013-10-04T12:47:00+07:00
-lastmod: 2024-04-14T12:20:47+07:00
+lastmod: 2024-04-14T12:31:44+07:00
 categories: ["think"]
 draft: false
 ---

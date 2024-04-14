@@ -138,7 +138,8 @@ P/S: mới mua cuốn sách giải phẫu nên dâng trào cảm hứng, hehe
 
 ** Chuyện tình của ông Nobi
 :PROPERTIES:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/ong-bo.chuan-muc.jpg"
+:EXPORT_HUGO_PUBLISHDATE: 2017-05-06
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/ong-bo-chuan-muc.jpg"
 :export_file_name: mr-nobi-love-story
 :END:
 #+caption: Ong Nobi
@@ -218,6 +219,7 @@ P/S: hãy thử áp dụng những điều trên vào Putin và chủ nghĩa c�
 
 ** Tại sao Trung Cổ
 :PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2019-02-05
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/flowerseller.jpg"
 :export_file_name: tai-sao-trung-co
 :END:
@@ -509,6 +511,7 @@ con đường xưa. Còn chuyện gì đến sau đó, sẽ đến, whatever, wh
 
 ** Chuyện một cái cây và viện triết học mùa hè
 :properties:
+:EXPORT_HUGO_PUBLISHDATE: 2018-04-09
 :export_hugo_custom_front_matter: :featured_image "/assets/img/myhomefront.jpg"
 :export_file_name: cay-trang-leo
 :end:

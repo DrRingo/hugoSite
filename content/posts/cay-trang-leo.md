@@ -1,7 +1,8 @@
 ---
 title: "Chuyện một cái cây và viện triết học mùa hè"
 author: ["Nguyễn Bình Thành"]
-lastmod: 2024-04-14T12:20:47+07:00
+publishDate: 2018-04-09
+lastmod: 2024-04-14T12:31:44+07:00
 categories: ["think"]
 draft: false
 featured_image: "/assets/img/myhomefront.jpg"

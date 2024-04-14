@@ -1,10 +1,11 @@
 ---
 title: "Chuyện tình của ông Nobi"
 author: ["Nguyễn Bình Thành"]
-lastmod: 2024-04-14T12:20:46+07:00
+publishDate: 2017-05-06
+lastmod: 2024-04-14T12:31:43+07:00
 categories: ["think"]
 draft: false
-featured_image: "/assets/img/ong-bo.chuan-muc.jpg"
+featured_image: "/assets/img/ong-bo-chuan-muc.jpg"
 ---
 
 {{< figure src="/assets/img/ong-bo-chuan-muc.jpg" caption="<span class=\"figure-number\">Figure 1: </span>Ong Nobi" >}}
