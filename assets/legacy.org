@@ -1,203 +1,5 @@
-#+DESCRIPTION: 
-#+KEYWORDS: 
-#+LANGUAGE: vi
+* Waiting...
 
-#+EXCLUDE_TAGS: noexport
-
-#+hugo_front_matter_format: yaml
-
-#+hugo_auto_set_lastmod: t
-#+hugo_base_dir: .
-#+hugo_section: .
-
-* Shell  :@shell:
-:properties:
-:export_hugo_section: posts
-:end:
-** Các tác vụ thông thường về text
-:PROPERTIES:
-:CREATED: [2023-08-20 Sun]
-:export_file_name: hello
-:EXPORT_DATE: 2024-04-13 Sat 21:38
-:END:
-Tất cả mọi thế giới của IT đều có thể quy về text, nên tác vụ text có vai trò lớn trong việc nâng cao năng suất.
-*** Thay thế đoạn văn bản bị gãy dòng thành văn bản có dòng dài hơn, như tiêu chuẩn :shell:vim:
-:PROPERTIES:
-:CREATED: [2023-05-21 Sun 09:16]
-:END:
-
-#+BEGIN_SRC search and replace
-SEARCH STRING: ((?:[^.?\n]$|\n(?!.?$)))\n
-REPLACE STRING: $1
-#+END_SRC
-
-Lưu ý là có dấu cách " " ở cuối dòng replace string
-
-EDITED: [2023-06-08 Thu 20:43]
-Hoặc có thể viết theo lệnh ~sed~ như sau
-#+NAME: enstring
-#+BEGIN_SRC sh
-sed 's/((?:[^.?\n]$|\n(?!.?$)))\n/$1 /g' FILENAME.ext
-#+END_SRC
-*** Căn chỉnh file timedot :emacs:hledger:
-:PROPERTIES:
-:CREATED: [2023-05-07 Sun 22:45]
-:END:
-
-File timedot là một file hledger đặc biệt, nó gồm nhiều kí tự dot "." và cũng nhiều dòng chú thích theo sau. Vì vậy nó có thể căn chỉnh bằng lệnh align-regexp trong emacs để nhìn trật tự hơn. Và vì thế cũng giúp cho người ghi tự do hơn mà không sợ mất đi tính trật tự của file, miễn là vẫn đảm bảo được cấu trúc ngữ pháp.
-
-#+BEGIN_SRC emacs
-M-x align-regexp RET [[:space:]]\. RET
-M-x align-regexp RET [;] RET
-M-x align-regexp RET \([0-9]+h\) RET
-#+END_SRC
-*** Công thức thay thế ngày SCHEDULED bằng PROPERTIES :orgmode:regex:
-
-Khi tôi viết orgmode trên android, rất khó để viết đầy đủ các thủ tục tiêu chuẩn orgmode, vì vậy tôi sử dụng chức năng SCHEDULED để tạo lập 1 ngày tháng viết cho nhanh, sau này trên máy tính sẽ sử dụng chức năng *'Find and Replace'* có /regex/ để thay thế toàn bộ 1 lần. Cụ thể như sau
-
-#+BEGIN_SRC find_and_replace
-FIND: SCHEDULED: <(\d*-\d*-\d* \w*)>
-REPLACE: :PROPERTIES:\n:CREATED: [$1]\n:END:
-#+END_SRC
-
-EDITED:[2023-02-10 Fri]
-Tôi đã tạo được một snippet đáng tin cậy trong vscode về việc ngày tháng, nên nếu tôi không ở trong vscode để tạo snippet thì tôi có thể viết đoạn snippet đó theo nguyên mẫu, để sau này tôi tạo lại chúng sau bằng vscode. Từ nay nên tránh dùng SCHEDULED vì sẽ dễ gây nhầm lẫn đâu là schedule thật, đâu là chỉ để thay thế thời gian tạo mục. Và cũng để tận dụng chức năng schedule tốt hơn.
-
-EDITED: [2023-05-11 Thu]
-Công thức vim hoặc emacs subtitute cho thay đổi ở trên, lợi thế là nó one-liner, chỉ cần copy và paste vô là hoạt động hiệu quả
-
-#+BEGIN_SRC vim
-%s/SCHEDULED: <\(.*\)>/:PROPERTIES:\n:CREATED: [\1]\n:END:/gc
-#+END_SRC
-
-* Think   :@think:
-:properties:
-:export_hugo_section: posts
-:end:
-** Cấu trúc của quyền lực
-:PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: 2014-11-15 15:13:47 Z
-:export_file_name: power
-:END:
-
-Quyền lực, hiểu theo một phương diện, cũng giống như một cấu trúc nâng
-đỡ, như là một tòa tháp, một công trình kiến trúc hay một tổ hợp cơ khí
-phức tạp. Nhìn bề ngoài, quyền lực thật huyền diệu. Nó mang lại cho một
-người hay một tổ chức nhiều khả năng phi thường khi có thể điều khiển
-được ý chí và hành động của một nhóm người khác. Tuy nhiên, bỏ qua những
-thứ hoa hòe rối mắt bề ngoài ấy, quyền lực của một cá nhân hay tổ chức
-thông thường chỉ có một hoặc hai trụ đỡ chính, thông thường sẽ là sức
-mạnh khởi thủy tạo nên quyền lực và phương cách xuyên suốt nhằm duy trì
-quyền lực đó. Các trụ đỡ này rất đa dạng: có thể là sức mạnh quân đội,
-kĩ nghệ mới, cấu trúc tổ chức, văn hóa công ty, bí quyết kinh doanh, cho
-đến kĩ năng cốt yếu, sự thân hữu hoặc tính cách đặc biệt đối với cá
-nhân. Ví dụ như: khi Lưu Bang lập nên nhà Hán, ông ta không có quân đội
-thiện chiến như Hạng Vũ, ông chiến thắng bằng khả năng khiển tướng của
-mình. Trương Lương, Tiêu Hà, Hàn Tín nắm công đầu trong việc thống nhất
-thiên hạ, tất cả đều nằm dưới trướng của Lưu Bang. Một khi đã nắm quyền,
-nhà Hán đã cho thi hành Khổng giáo, nhằm đảm bảo sự trung thành của quan
-lại và duy trì quyền lực của triều đại được hơn 400 năm. Như vậy, ta
-thấy ở đây chỉ có 2 cột trụ của quyền lực: thuật dụng nhân và Khổng
-giáo.
-
-Lẽ thường, người ta xây dựng quyền lực bằng phương cách nào thì cũng sẽ
-xuống theo thế ấy. Có thể có sự khác nhau trong cách cai trị, nhưng thời
-điểm hạ bệ của một triều đại hay một vị lãnh đạo, hay sự suy thoái của
-một công ty đều xảy ra ngay tại thời điểm mà các trụ cột quyền lực trên
-trở nên phai nhòa. Dĩ nhiên, các trụ cột vật lí thì dễ bị đánh bại hơn
-các trụ cột tâm lí, vì tiến bộ công nghệ hoặc cưỡng bách tòng quân dễ
-làm hơn là thay đổi một ý tưởng đã ăn sâu vào cộng đồng. Đó cũng là
-nguyên nhân mà đạo Phật được tiếng là hiện thân của sự từ bi, còn Thiên
-Chúa là tình yêu, cũng như các công ty chi hàng tỉ đô la để thuyết phục
-người tiêu dùng rằng sứ mệnh của công ty họ gắn liền với một khái niệm
-nào đó của xã hội.
-
-Trong ví dụ trên, nhà Hán đã sụp đổ bắt đầu từ sự bất tuân của hệ thống
-quan lại. Vua Hán không còn có thể điều khiển các tướng lãnh của mình và
-bị Tào Tháo quản thúc. Có thể có nhiều biểu hiện bề ngoài khác trong quá
-trình sụp đổ của nhà Hán, cũng như có nhiều trường hợp suy thoái quyền
-lực bắt nguồn từ cấp dưới bất tuân lệnh. Tuy nhiên, nhà Hán đã không tan
-rã vì ngoại xâm hay các cuộc khởi nghĩa của nông dân. Bởi vì khi quan
-lại hoành hành và Khổng giáo suy thoái báo hiệu cho sự vỡ vụn của những
-trụ cột chính yếu, nhà Hán đơn giản là không biết làm gì hơn để tiếp tục
-cai trị khi những thế mạnh của họ không còn nữa. Đó là lúc họ buông xuôi
-và tan rã.
-
-Tất cả chúng ta đều chỉ là con người, chứ không phải là một trí tuệ toàn
-năng. Chúng ta chỉ có thể tập trung vào một hoặc hai mục tiêu xuyên suốt
-trong sự nghiệp của mình mà thôi. Hãy chọn những mục tiêu này cẩn thận,
-bởi vì khi chúng mất đi cũng có nghĩa là bạn đã hoàn thành sứ mệnh của
-mình và cán cân quyền lực đã dịch chuyển đến nơi khác, cho dù bạn vẫn
-còn nắm quyền trên danh nghĩa đi chăng nữa. Bạn có thể lên chức trưởng
-phòng bằng sự thân hữu, quen biết, sau đó bạn nâng cao kĩ năng chuyên
-môn để duy trì vị trí đó. Hãy coi chừng thời điểm mà thế lực chống lưng
-cho bạn suy yếu cũng như các kĩ năng của bạn dễ dàng bị thay thế. Đó là
-nguyên nhân vì sao mà tôi luôn cho rằng đi lên bằng sự thân hữu là
-phương pháp đạt được quyền lực kém chắc chắn nhất (cho dù đó có thể là
-cách dễ nhất)
-
-Để kết thúc, tôi xin đưa ra sự kiện sau: trong đại hội lần thứ 4 của
-Quốc tế Cộng sản, V.I. Lenin đã có một bài diễn văn tựa đề "những đỉnh
-cao chỉ huy" để nói về những ngành kinh tế có thể kiểm soát được hiệu
-quả bởi nhà nước và từ đó hỗ trợ cho các ngành khác. Ông ta gọi khái
-niệm này là chủ nghĩa tư bản nhà nước, mà sau này được triển khai thành
-hàng loạt các "quả đấm thép" trong các ngành sản xuất trọng yếu, thay vì
-phải kiểm soát toàn bộ hoạt động kinh tế đất nước như trước đó. Bất chấp
-những yếu kém và không hiệu quả lộ rõ của cơ chế này, vì nhiều nguyên
-nhân như tham nhũng, xóa bỏ cạnh tranh, độc quyền sản xuất, lãng phí tài
-nguyên; những người cộng sản vẫn khăng khăng bảo vệ nó. Vì sao vậy? Bởi
-vì đó là một cột trụ quyền lực.
-
-** Tình yêu con người
-:PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: 2021-02-20 22:21:59
-:export_file_name: love-human
-:END:
-
-[[./assets/img/tinh_yeu_con_nguoi.jpg]]
-
-Thưở mới xa nhà, ý tôi là cái thời năm nhất đại học ấy, như bất kì đứa
-sinh viên y nào, tôi phải chọn cho mình một cuốn atlas giải phẫu. Do
-chẳng có anh chị nào để sách lại hay tư vấn gì, tôi đã ấn tượng và chọn
-cho mình cuốn giải phẫu của 2 ông người Nhật. Không giống tụi sinh viên
-khác thường chọn sách của Netter, toàn hình vẽ, sách của tôi là hình
-người thật, xác thật, thịt thật và xương thật, giá 400k (lương ba tôi
-gởi mỗi tháng hồi đó là 700k, huhu). Bà bán sách lúc đó cũng can ngăn,
-nói cuốn đó chỉ dành cho bác sĩ phẫu thuật thôi, sinh viên nên chọn mấy
-cuốn hình vẽ cho dễ hiểu, nhưng tôi không chịu.
-
-Rốt cục thì bà bán sách nói đúng thật, cuốn đó chẳng giúp ích gì được
-cho con đường học y khoa tăm tối của tôi. Học kì 1 năm đó, tôi đã thi
-lại môn giải phẫu, hic. Chỉ có một điều bổ ích, như cuốn sách đó nói, để
-tự biện minh cho sự tồn tại của một cuốn sách giải phẫu người thật trong
-một rừng sách hình vẽ: là tình yêu con người. Các tác giả hi vọng khi ta
-lật từng trang sách và tham quan thực tế cấu trúc cơ thể người được mổ
-xẻ tỉ mỉ qua từng lớp rõ ràng. Trong ta sẽ bừng lên tình yêu tinh khiết
-nhất với một sinh vật đang nằm trên bàn tiêu bản kia, và nó có tên gọi
-là con người. Bất chấp khi còn sống nó có làm gì đi nữa, nó xứng đáng
-được yêu, với tư cách là một sinh vật đã từng sống.
-
-Và những lời nói ấy trong cuốn sách đầu đời ấy thực sự thì nó có ám ảnh
-tôi thật. Nhất là khi tôi nhìn các em gái, ấn tượng đầu tiên không phải
-là ngoại hình, mà là tình yêu phổ quát của tôi đối với sinh vật đối diện
-đó.
-
-Và khi bắt đầu cầm máy ảnh, tôi đã có một dự án riêng cho mình, đặt tên
-nó là *"tình yêu con người"*, chuyên bắt những khuôn hình ngẫu nhiên
-nhất của những khuôn mặt người đang sống hết mình trong khoảnh khắc của
-chính họ.
-
-Và tình yêu đó vẫn tiếp diễn mỗi ngày...bất chấp những gì xảy ra đi
-nữa...
-
-P/S: mới mua cuốn sách giải phẫu nên dâng trào cảm hứng, hehe
-
-* Legacy post
-:PROPERTIES:
-:export_hugo_section: legacy
-:END:
-
-** Waiting...
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-02-03 13:36:50 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -208,7 +10,8 @@ P/S: mới mua cuốn sách giải phẫu nên dâng trào cảm hứng, hehe
 Trích "Đợi anh về" của *KONXTANH XIMONOV*, Tố Hữu dịch (đã đăng vào
 [[http://drbinhthanh.wordpress.com/2005/04/][tháng 4/2005]])
 
-** Văn chương và lý thuyết mất trinh - Nguyễn Hoàng Văn
+* Văn chương và lý thuyết mất trinh - Nguyễn Hoàng Văn
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2012-03-03 13:23:36 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -457,7 +260,8 @@ mặt trăng đã làm người tiền sử sợ hãi và tôn thờ; chỉ sau 
 kỵ. Tục cắt đầu dương vật cho chảy máu của thổ dân Úc là một nỗ lực bắt
 chước hiện tượng này của phụ nữ.
 
-** Làm thế nào để tạo nên một người mẹ
+* Làm thế nào để tạo nên một người mẹ
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2012-04-26 15:33:37 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -599,7 +403,8 @@ Dẫu qua trăm suối ngàn đồi cũng qua”
 
 /-- Hát ru --/ Xuân Quỳnh
 
-** Chuyện cũ ngẫm lại
+* Chuyện cũ ngẫm lại
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2012-05-15 16:13:28 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -710,7 +515,8 @@ akido"
   </blockquote>
 #+end_html
 
-** Giọt biển
+* Giọt biển
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-06-02 09:42:36 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -736,14 +542,90 @@ Hãy khát khao điều giản dị biết cười
 
 Và tất cả mãi mãi lãng quên.
 
-** Trường sinh linh giá
+* Cấu trúc của quyền lực
+
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2014-11-15 15:13:47 Z
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Quyền lực, hiểu theo một phương diện, cũng giống như một cấu trúc nâng
+đỡ, như là một tòa tháp, một công trình kiến trúc hay một tổ hợp cơ khí
+phức tạp. Nhìn bề ngoài, quyền lực thật huyền diệu. Nó mang lại cho một
+người hay một tổ chức nhiều khả năng phi thường khi có thể điều khiển
+được ý chí và hành động của một nhóm người khác. Tuy nhiên, bỏ qua những
+thứ hoa hòe rối mắt bề ngoài ấy, quyền lực của một cá nhân hay tổ chức
+thông thường chỉ có một hoặc hai trụ đỡ chính, thông thường sẽ là sức
+mạnh khởi thủy tạo nên quyền lực và phương cách xuyên suốt nhằm duy trì
+quyền lực đó. Các trụ đỡ này rất đa dạng: có thể là sức mạnh quân đội,
+kĩ nghệ mới, cấu trúc tổ chức, văn hóa công ty, bí quyết kinh doanh, cho
+đến kĩ năng cốt yếu, sự thân hữu hoặc tính cách đặc biệt đối với cá
+nhân. Ví dụ như: khi Lưu Bang lập nên nhà Hán, ông ta không có quân đội
+thiện chiến như Hạng Vũ, ông chiến thắng bằng khả năng khiển tướng của
+mình. Trương Lương, Tiêu Hà, Hàn Tín nắm công đầu trong việc thống nhất
+thiên hạ, tất cả đều nằm dưới trướng của Lưu Bang. Một khi đã nắm quyền,
+nhà Hán đã cho thi hành Khổng giáo, nhằm đảm bảo sự trung thành của quan
+lại và duy trì quyền lực của triều đại được hơn 400 năm. Như vậy, ta
+thấy ở đây chỉ có 2 cột trụ của quyền lực: thuật dụng nhân và Khổng
+giáo.
+
+Lẽ thường, người ta xây dựng quyền lực bằng phương cách nào thì cũng sẽ
+xuống theo thế ấy. Có thể có sự khác nhau trong cách cai trị, nhưng thời
+điểm hạ bệ của một triều đại hay một vị lãnh đạo, hay sự suy thoái của
+một công ty đều xảy ra ngay tại thời điểm mà các trụ cột quyền lực trên
+trở nên phai nhòa. Dĩ nhiên, các trụ cột vật lí thì dễ bị đánh bại hơn
+các trụ cột tâm lí, vì tiến bộ công nghệ hoặc cưỡng bách tòng quân dễ
+làm hơn là thay đổi một ý tưởng đã ăn sâu vào cộng đồng. Đó cũng là
+nguyên nhân mà đạo Phật được tiếng là hiện thân của sự từ bi, còn Thiên
+Chúa là tình yêu, cũng như các công ty chi hàng tỉ đô la để thuyết phục
+người tiêu dùng rằng sứ mệnh của công ty họ gắn liền với một khái niệm
+nào đó của xã hội.
+
+Trong ví dụ trên, nhà Hán đã sụp đổ bắt đầu từ sự bất tuân của hệ thống
+quan lại. Vua Hán không còn có thể điều khiển các tướng lãnh của mình và
+bị Tào Tháo quản thúc. Có thể có nhiều biểu hiện bề ngoài khác trong quá
+trình sụp đổ của nhà Hán, cũng như có nhiều trường hợp suy thoái quyền
+lực bắt nguồn từ cấp dưới bất tuân lệnh. Tuy nhiên, nhà Hán đã không tan
+rã vì ngoại xâm hay các cuộc khởi nghĩa của nông dân. Bởi vì khi quan
+lại hoành hành và Khổng giáo suy thoái báo hiệu cho sự vỡ vụn của những
+trụ cột chính yếu, nhà Hán đơn giản là không biết làm gì hơn để tiếp tục
+cai trị khi những thế mạnh của họ không còn nữa. Đó là lúc họ buông xuôi
+và tan rã.
+
+Tất cả chúng ta đều chỉ là con người, chứ không phải là một trí tuệ toàn
+năng. Chúng ta chỉ có thể tập trung vào một hoặc hai mục tiêu xuyên suốt
+trong sự nghiệp của mình mà thôi. Hãy chọn những mục tiêu này cẩn thận,
+bởi vì khi chúng mất đi cũng có nghĩa là bạn đã hoàn thành sứ mệnh của
+mình và cán cân quyền lực đã dịch chuyển đến nơi khác, cho dù bạn vẫn
+còn nắm quyền trên danh nghĩa đi chăng nữa. Bạn có thể lên chức trưởng
+phòng bằng sự thân hữu, quen biết, sau đó bạn nâng cao kĩ năng chuyên
+môn để duy trì vị trí đó. Hãy coi chừng thời điểm mà thế lực chống lưng
+cho bạn suy yếu cũng như các kĩ năng của bạn dễ dàng bị thay thế. Đó là
+nguyên nhân vì sao mà tôi luôn cho rằng đi lên bằng sự thân hữu là
+phương pháp đạt được quyền lực kém chắc chắn nhất (cho dù đó có thể là
+cách dễ nhất)
+
+Để kết thúc, tôi xin đưa ra sự kiện sau: trong đại hội lần thứ 4 của
+Quốc tế Cộng sản, V.I. Lenin đã có một bài diễn văn tựa đề "những đỉnh
+cao chỉ huy" để nói về những ngành kinh tế có thể kiểm soát được hiệu
+quả bởi nhà nước và từ đó hỗ trợ cho các ngành khác. Ông ta gọi khái
+niệm này là chủ nghĩa tư bản nhà nước, mà sau này được triển khai thành
+hàng loạt các "quả đấm thép" trong các ngành sản xuất trọng yếu, thay vì
+phải kiểm soát toàn bộ hoạt động kinh tế đất nước như trước đó. Bất chấp
+những yếu kém và không hiệu quả lộ rõ của cơ chế này, vì nhiều nguyên
+nhân như tham nhũng, xóa bỏ cạnh tranh, độc quyền sản xuất, lãng phí tài
+nguyên; những người cộng sản vẫn khăng khăng bảo vệ nó. Vì sao vậy? Bởi
+vì đó là một cột trụ quyền lực.
+
+* Trường sinh linh giá
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2019-09-14 22:36:21
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
 #+caption: cửa sổ kí túc xá Q8
-[[./assets/img/cuasoktx.jpg]]
+[[/assets/img/cuasoktx.jpg]]
 
 Đây là cửa sổ căn phòng của tôi ở kí túc xá viện y tế công cộng. Nó đại
 khái là một cái hộp bằng gạch xây đã 50 năm, cái cửa sổ chiếm hẳn một
@@ -761,7 +643,8 @@ bình thường mà chúa tể hắc ám Voldemort đã chia nhỏ linh hồn m�
 vào các vật thể đó. Tôi đã hiểu vì sao Voldemort làm vậy và tôi cũng đã
 biết mình sẽ gởi linh hồn mình vào những điều gì trong đời.
 
-** SixthSense - một xu hướng mới của điện toán?
+* SixthSense - một xu hướng mới của điện toán?
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-12-14 09:55:56 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -773,13 +656,14 @@ Không có từ ngữ nào để mô tả sự thán phục cả, xem thì biế
 
 [youtube=http://www.youtube.com/watch?v=j5VDy66eRKk&hl=en_US&fs=1&color1=0x3a3a3a&color2=0x999999]
 
-** Trần Đức Thảo và Phạm Công Thiện
+* Trần Đức Thảo và Phạm Công Thiện
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-09-24 10:34:15
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
-[[./assets/img/tranducthao.jpg]]
+[[/assets/img/tranducthao.jpg]]
 
 Nếu các bạn đọc hồi kí của các tướng lĩnh miền Bắc, các bạn sẽ thấy được
 họ mô tả cuộc đời mình ra sao, cách họ bào chữa cho việc phải đưa ra
@@ -808,7 +692,8 @@ hắn giới thiệu cho tôi cuốn "ý thức mới trong văn nghệ và tri�
 
 Ôi, trường đời!
 
-** Sinh viên
+* Sinh viên
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-11-24 00:17:10 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -822,7 +707,8 @@ chưa biết "mùi" sinh viên là gì. Xin ngài cho con hưởng "mùi" sinh v
 Diêm Vương: Được! Được! Bay đâu, bưng ra đây một tô... mì tôm! Sinh
 viên: Hả...a...a! (bất tỉnh)
 
-** Từ nhà tôi đến viện toán học còn bao xa hay là tôi đang ghen tị
+* Từ nhà tôi đến viện toán học còn bao xa hay là tôi đang ghen tị
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-08-29 12:21:03 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -878,7 +764,8 @@ một người bạn của tôi đã đi đến đó, tôi có nên đến đó 
 Có lẽ mãi mãi tôi cũng chỉ là một "đứa trẻ biết làm toán" hay là...Gô
 con, "trái tim đập những điều không thể nói".
 
-** Thư gửi người yêu
+* Thư gửi người yêu
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-03-07 09:21:28 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -1037,10 +924,10 @@ thôi.
 
 50/ Em đòi anh hiểu em, thế mà em chẳng hiểu anh gì hết.
 
-** Chuyện tình của ông Nobi
+* Chuyện tình của ông Nobi
 
 #+caption: Ong Nobi
-[[./assets/img/ong-bo-chuan-muc.jpg]]
+[[/assets/img/ong-bo-chuan-muc.jpg]]
 
 Ông Nobi là bố của Nobita, nhà nghèo, bố mẹ không có gì để lại cho con.
 Ông vẽ rất đẹp, có nhà giàu khi ấy muốn tài trợ ông ra nước ngoài học
@@ -1071,7 +958,8 @@ dự, bạn bè không đứa nào tới, chỉ có mình là người thân duy
 bên chú rể hôm ấy. Một năm sau, nó bỏ chạy trong đêm, theo đúng nghĩa
 đen.
 
-** 9 sự kiện y học quan trọng của năm 2006
+* 9 sự kiện y học quan trọng của năm 2006
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-01-20 02:38:38 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -1119,7 +1007,8 @@ chết phôi.*
 
 [[http://i94.photobucket.com/albums/l86/japanest_2006/brain_atlas.jpg]]
 
-** 100 bài thơ hay thế kỷ XX
+* 100 bài thơ hay thế kỷ XX
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-01-26 00:29:25 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -1172,7 +1061,8 @@ nông nỗi Hãy chỉ cho em cái kém Ðể em nên người tốt lành Hãy 
 cái xấu Ðể em chăm chút đời anh Anh ơi anh có biết không Vì anh em buồn
 biết mấy Tình yêu khắt khe thế đấy Anh ơi anh đừng khen em.
 
-** Tài sản của tôi - tiêu sản của tôi: (tính đến ngày 15/12/2009)
+* Tài sản của tôi - tiêu sản của tôi: (tính đến ngày 15/12/2009)
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-12-15 11:57:26 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -1203,13 +1093,14 @@ biết mấy Tình yêu khắt khe thế đấy Anh ơi anh đừng khen em.
 11. Một loạt các trang web, blog, code, tự truyện và những thứ linh tinh
     khác
 
-** Thu ấm áp
+* Thu ấm áp
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-08-28 11:34:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
-*** *Đợi*
+** *Đợi*
 :PROPERTIES:
 :CUSTOM_ID: đợi
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -1227,7 +1118,7 @@ tắt, còn em đứng mãi đây! Em đứng trên cầu đợi anh Đứng m�
 thành quen Đứng một đời em quen thành lạ Nước chảy... kìa anh, em đợi
 anh.
 
-** Tình yêu con người
+* Tình yêu con người
 
 #+caption: Sach giai phau
 [[./assets/img/tinh_yeu_con_nguoi.jpg]]
@@ -1268,7 +1159,8 @@ nữa...
 
 P/S: mới mua cuốn sách giải phẫu nên dâng trào cảm hứng, hehe
 
-** Tiếng đàn môi sau bờ rào đá
+* Tiếng đàn môi sau bờ rào đá
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2010-07-12 09:33:09 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -1290,7 +1182,7 @@ Cũng để lưu lại cảm xúc, các bạn hãy thử nghe bài nhạc này t
 
 [audio http://www.fileden.com/files/2007/12/8/1633615/Chua-Ai.mp3]
 
-*** *Tiếng đàn môi sau bờ rào đá*
+** *Tiếng đàn môi sau bờ rào đá*
 :PROPERTIES:
 :CUSTOM_ID: tiếng-đàn-môi-sau-bờ-rào-đá
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -1747,7 +1639,8 @@ của nó.
 Cũng để lưu lại cảm xúc, các bạn hãy thử nghe bài nhạc này trong khi
 đọc.
 
-** Gia Sư
+* Gia Sư
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2006-05-11 12:46:29 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -1850,20 +1743,20 @@ Tôi dằn khay xuống, nện chân đi ra.
 -- o O o --
 
 #+begin_example
-  - Tôi biết vậy là không hay...
-  Hắn nói nho nhỏ, vẻ cam chịu, bàn tay bóp mạnh ghi đông xe. Cái xe của hắn cũ mèm, màu sơn bạc thếch. Yên xe chỉ còn trơ khung bọc lớp da nhiều vết rạn.
-  -... Tôi sẽ thôi không dạy nữa - Hắn nhìn tôi, mặt đỏ rần.
-  - Chạy trốn à? - Tôi nặng giọng đốp lại
-  Hắn mở to mắt nhìn tôi, vẻ cam chịu biến mất, thay vào đó là sự phẫn nộ khiến tôi bất giác sờ sợ.
-  - Xưng là sinh viên thì dễ kiếm việc hơn. Và tôi cũng định nhận giấy báo thi đậu thì sẽ nói thật. Tôi đâu muốn nói dối. Điều quan trọng nhất là em của bạn có học khá hơn không. Tôi tin là tôi kèm được.
-  Quai hàm hắn bạnh ra vừa tức giận, vừa chua chát, vừa mệt mỏi. Khuôn mặt hắn chùng xuống.
-  Ra vậy. Hắn không lừa đảo. Hắn chỉ nói dối một chút thôi.
-  - Dù sao thì tôi cũng có lỗi - Hắn thở dài - Cho tôi xin lỗi, tôi sẽ tìm việc khác làm.
-  - Bạn định làm gì? - Tôi buột miệng hỏi, nhận ra cơn tức giận của mình vơi đi rất nhiều.
-  - Bất cứ việc gì, miễn là kiếm sống lương thiện.
-  Á... à.. với câu trả lời này, mẹ tôi sẽ mời hắn làm gia sư cho cả tôi nữa cho mà xem. Môi tôi bỗng nhiên cười :
-  - Dạy kèm em tôi không lương thiện à?
-  Hắn ngẩng nhìn tôi, mắt hắn sáng lên.
+  - Tôi biết vậy là không hay...  
+  Hắn nói nho nhỏ, vẻ cam chịu, bàn tay bóp mạnh ghi đông xe. Cái xe của hắn cũ mèm, màu sơn bạc thếch. Yên xe chỉ còn trơ khung bọc lớp da nhiều vết rạn.  
+  -... Tôi sẽ thôi không dạy nữa - Hắn nhìn tôi, mặt đỏ rần.  
+  - Chạy trốn à? - Tôi nặng giọng đốp lại  
+  Hắn mở to mắt nhìn tôi, vẻ cam chịu biến mất, thay vào đó là sự phẫn nộ khiến tôi bất giác sờ sợ.  
+  - Xưng là sinh viên thì dễ kiếm việc hơn. Và tôi cũng định nhận giấy báo thi đậu thì sẽ nói thật. Tôi đâu muốn nói dối. Điều quan trọng nhất là em của bạn có học khá hơn không. Tôi tin là tôi kèm được.  
+  Quai hàm hắn bạnh ra vừa tức giận, vừa chua chát, vừa mệt mỏi. Khuôn mặt hắn chùng xuống.  
+  Ra vậy. Hắn không lừa đảo. Hắn chỉ nói dối một chút thôi.  
+  - Dù sao thì tôi cũng có lỗi - Hắn thở dài - Cho tôi xin lỗi, tôi sẽ tìm việc khác làm.  
+  - Bạn định làm gì? - Tôi buột miệng hỏi, nhận ra cơn tức giận của mình vơi đi rất nhiều.  
+  - Bất cứ việc gì, miễn là kiếm sống lương thiện.  
+  Á... à.. với câu trả lời này, mẹ tôi sẽ mời hắn làm gia sư cho cả tôi nữa cho mà xem. Môi tôi bỗng nhiên cười :  
+  - Dạy kèm em tôi không lương thiện à?  
+  Hắn ngẩng nhìn tôi, mắt hắn sáng lên.  
 #+end_example
 
 Tội chưa. Rõ ràng là hắn thất nghiệp trăm phần trăm. Vả lại, hắn có lý,
@@ -1891,15 +1784,15 @@ gái..."
 -- o O o --
 
 #+begin_example
-  "Nếu a chia hết cho b và b chia hết cho c thì... " cốc cốc cốc...
-  Tôi bưng nước vào. Gia sư ngừng giảng. Tôi mĩm cười. Gia sư cũng cười. Hắn trọ ở khu nhà lụp xụp xa tít bên kia phố. Trưa đạp xe cọc cạch qua đến được đây thì đủ chết. Tôi không cần canh đồng hồ nữa, đầu giờ, tôi đặt sẵn trên bàn của gia sư một ly cam vắt. Cuối giờ, tôi la lớn :
-  - Tú ơi, ăn cháo gà không?
-  Mẹ la khẽ :
-  - Em đang học, sao con vô ý vậy?
-  - Ơ... lỡ rồi mẹ ơi, thôi, hai tô cho cả hai thầy trò nghe mẹ?
-  Ban đầu hắn đỏ mặt lắc đầu. Tôi năn nỉ có, hăm dọa cũng có... dần dần hắn không từ chối nữa. Tôi đọc thấy lời cám ơn trong mắt hắn. Thật kỳ lạ khi tôi và hắn có thể hiểu nhau nhanh đến như vậy. Hiểu chẳng cần nhiều lời.
-  Nếu tôi là con trai, tôi sẽ đem cái xe đạp của hắn đi sơn sửa lại. Nhưng thôi, chuyện sửa không tiện tí nào. Đợi đến ngày trở thành sinh viên, tôi sẽ giới thiệu hắn vài chỗ dạy kèm nữa. Bạn tôi, đứa nào cũng có em, cả bầy lóc nhóc.
-  Tròn một tháng. Mẹ tôi đã dặn hôm nay nhớ nhắc mẹ trả lương cho gia sư. Lo canh giờ bà bán cháo gà gánh qua, tôi quên mất điều quan trọng này.
+  "Nếu a chia hết cho b và b chia hết cho c thì... " cốc cốc cốc...  
+  Tôi bưng nước vào. Gia sư ngừng giảng. Tôi mĩm cười. Gia sư cũng cười. Hắn trọ ở khu nhà lụp xụp xa tít bên kia phố. Trưa đạp xe cọc cạch qua đến được đây thì đủ chết. Tôi không cần canh đồng hồ nữa, đầu giờ, tôi đặt sẵn trên bàn của gia sư một ly cam vắt. Cuối giờ, tôi la lớn :  
+  - Tú ơi, ăn cháo gà không?  
+  Mẹ la khẽ :  
+  - Em đang học, sao con vô ý vậy?  
+  - Ơ... lỡ rồi mẹ ơi, thôi, hai tô cho cả hai thầy trò nghe mẹ?  
+  Ban đầu hắn đỏ mặt lắc đầu. Tôi năn nỉ có, hăm dọa cũng có... dần dần hắn không từ chối nữa. Tôi đọc thấy lời cám ơn trong mắt hắn. Thật kỳ lạ khi tôi và hắn có thể hiểu nhau nhanh đến như vậy. Hiểu chẳng cần nhiều lời.  
+  Nếu tôi là con trai, tôi sẽ đem cái xe đạp của hắn đi sơn sửa lại. Nhưng thôi, chuyện sửa không tiện tí nào. Đợi đến ngày trở thành sinh viên, tôi sẽ giới thiệu hắn vài chỗ dạy kèm nữa. Bạn tôi, đứa nào cũng có em, cả bầy lóc nhóc.  
+  Tròn một tháng. Mẹ tôi đã dặn hôm nay nhớ nhắc mẹ trả lương cho gia sư. Lo canh giờ bà bán cháo gà gánh qua, tôi quên mất điều quan trọng này.  
 #+end_example
 
 _ Tội nghiệp, chắc hắn mong lắm. Tôi sẽ chuộc lỗi bằng cách ngay bây giờ
@@ -1926,21 +1819,22 @@ nhiều quá mẹ biết thì sao.
 -- o O o --
 
 #+begin_example
-  Tôi đậu, Thành rớt.
-  Đầu giờ chiều thứ ba, thứ năm, thứ bảy tôi vẫn đặt một ly cam vắt trên bàn của gia sư. Tú đợi. Tôi cũng đợi. Một tuần, hai tuần....
-  - Sao cậu sinh viên không đến dạy nữa?
-  Mẹ hỏi.
-  Biết trả lời mẹ sao đây?
-  Tôi phì phò đạp xe qua khu nhà lụp xụp bên kia phố, Thành đã đi rồi. Tôi nhận ra mình thật vô tình, quên hỏi quê Thành ở đâu. Giờ Thành đã về quê gánh vác công việc ruộng rẫy hay vẫn ở lại nơi đây tiếp tục giấc mơ chắt chiu không những cho mình mà cho cả đàn em?
-  Những con đường dọc ngang dài thẳm, biết tìm Thành ở đâu giữa thành phố mênh mông này? Tôi tháo kính ra lau, đeo kính vào. Lại tháo ra lau, đeo vào... bụi đầy mắt mà vẫn không thấy thành đâu.
-  Ước gì sang năm tôi gặp bạn ở trường đại học. Gia sư! Đừng bỏ cuộc nhé! - Tôi lẩm bẩm với gió, biết rằng trên đời này có những giấc mơ tuyệt đẹp và cũng có những con đường gập ghềnh xiết bao.
-  - Tìm người khác dạy cho em Tú thôi - Mẹ nói.
-  -... Mẹ để con kèm em cho - Tôi nói thật nhanh.
-  Mắt mẹ đầy nỗi ngạc nhiên và vui sướng. Tôi muốn ôm mẹ vào chân lại ngượng ngùng quay chạy về phòng. Tú le lưỡi " Chị Thanh có biết giảng bài không? Không biết giảng, rồi chê học trò dốt là không được đó nghe ".
+  Tôi đậu, Thành rớt.  
+  Đầu giờ chiều thứ ba, thứ năm, thứ bảy tôi vẫn đặt một ly cam vắt trên bàn của gia sư. Tú đợi. Tôi cũng đợi. Một tuần, hai tuần....  
+  - Sao cậu sinh viên không đến dạy nữa?  
+  Mẹ hỏi.  
+  Biết trả lời mẹ sao đây?  
+  Tôi phì phò đạp xe qua khu nhà lụp xụp bên kia phố, Thành đã đi rồi. Tôi nhận ra mình thật vô tình, quên hỏi quê Thành ở đâu. Giờ Thành đã về quê gánh vác công việc ruộng rẫy hay vẫn ở lại nơi đây tiếp tục giấc mơ chắt chiu không những cho mình mà cho cả đàn em?  
+  Những con đường dọc ngang dài thẳm, biết tìm Thành ở đâu giữa thành phố mênh mông này? Tôi tháo kính ra lau, đeo kính vào. Lại tháo ra lau, đeo vào... bụi đầy mắt mà vẫn không thấy thành đâu.  
+  Ước gì sang năm tôi gặp bạn ở trường đại học. Gia sư! Đừng bỏ cuộc nhé! - Tôi lẩm bẩm với gió, biết rằng trên đời này có những giấc mơ tuyệt đẹp và cũng có những con đường gập ghềnh xiết bao.  
+  - Tìm người khác dạy cho em Tú thôi - Mẹ nói.  
+  -... Mẹ để con kèm em cho - Tôi nói thật nhanh.  
+  Mắt mẹ đầy nỗi ngạc nhiên và vui sướng. Tôi muốn ôm mẹ vào chân lại ngượng ngùng quay chạy về phòng. Tú le lưỡi " Chị Thanh có biết giảng bài không? Không biết giảng, rồi chê học trò dốt là không được đó nghe ".  
   Mọi hôm, nói năng kểu này thì một cuộc chiến tranh xảy ra là điều không thể tránh khỏi. Nhưng hôm nay thì....
 #+end_example
 
-** Prototype 1.5 ra mắt
+* Prototype 1.5 ra mắt
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-03-01 11:14:28 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -1957,7 +1851,8 @@ JavaScript. Hàng loạt các thư viện Javascript khác như
 [[http://moofx.mad4milk.net/][moo.fx]] (tạo các hiệu ứng giao diện), hay
 [[http://dojotoolkit.org/][Dojo]] và [[http://jquery.com/][jQuery]]
 
-** Môn đồ và thánh đường
+* Môn đồ và thánh đường
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2022-02-25
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2000,7 +1895,8 @@ một người chẳng phải đàn ông, các bạn sẽ lãng phí cả một 
 P/S: hãy thử áp dụng những điều trên vào Putin và chủ nghĩa cộng sản mà
 ông ta vẫn còn giữ trong tim.
 
-** Ông Trăng Xuống Chơi - Phạm Duy
+* Ông Trăng Xuống Chơi - Phạm Duy
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-09-13 04:26:41 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2012,12 +1908,12 @@ nằm giữa sân, ba chỉ cho tôi về các ngôi sao, về con mèo leo cây
 sao, bóng hai cây cau trong sân nhà bà nội đung đưa vì gió, rồi ba hát
 cho tôi nghe bài này.
 
-**** Ông Trăng Xuống Chơi
+*** Ông Trăng Xuống Chơi
 :PROPERTIES:
 :CUSTOM_ID: ông-trăng-xuống-chơi
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
-***** Phạm Duy
+**** Phạm Duy
 :PROPERTIES:
 :CUSTOM_ID: phạm-duy
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2044,7 +1940,8 @@ bưởi Trả lưỡi cần câu Trả tầu cho ngựa Trả nhựa cây sung T
 chõ Trả mõ ông chánh Trả lính nhà vua Trả chùa cho bụt Trả bút học trò
 Trả mo cây cau Trả mo cây cau Trả mo cây cau Trả mo cây cau...
 
-** Googling, là gì?
+* Googling, là gì?
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-04-21 08:56:33 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2073,11 +1970,12 @@ Dường như còn nghi ngờ tay bồi bàn này, bạn nói thêm:
 Tạm an tâm bạn cho tay bồi bàn đi, nhưng vừa mới đi không quá hai dãy
 bàn, bạn nghe hắn nói to: "Cho một bít tết bàn số 6"
 
-
+ 
 
 Tìm kiếm trên Google cũng như câu chuyện trên.
 
-** AFB (+) hay Bk(+)
+* AFB (+) hay Bk(+)
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-02-21 02:22:31 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2147,7 +2045,8 @@ một dân tộc nào đó, bệnh than không phải là một phương pháp h
 đưa vài chục con bệnh lao kháng thuốc, thả chúng vào một thành phố đông
 dân nào đó có lẽ sẽ hay hơn nhiều.
 
-** Ngành Y - như tôi đã thấy
+* Ngành Y - như tôi đã thấy
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-08-30 12:23:18 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2278,7 +2177,8 @@ khoa" thôi là đã có 5 điểm rồi ^^)
 
 Ôi, những ngày tháng này đang làm cho ta say.
 
-** Chúc xuân Đinh Hợi
+* Chúc xuân Đinh Hợi
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-02-19 06:50:36 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2287,7 +2187,8 @@ khoa" thôi là đã có 5 điểm rồi ^^)
 Cung chúc tân niên Vạn sự bình yên Hạnh phúc vô biên Vui vẻ triền miên
 Kiếm được nhiều tiền Sung sướng như tiên.
 
-** Xuân Oán
+* Xuân Oán
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2010-02-22 14:21:35 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2298,7 +2199,8 @@ ngủ giật mình Chẳng yên giấc mộng tới thành Liêu Tây
 
 *Kim Xương Tự*
 
-** Nội quy ăn nhậu
+* Nội quy ăn nhậu
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-08-09 10:07:30 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2381,7 +2283,8 @@ chưa có thì là phụ huynh,ông bà nội,ngoại...
 được "lấy bia rượu làm càng"...tất cả mọi người bình đẳng trên bàn
 nhậu..
 
-** Quốc tế lao động
+* Quốc tế lao động
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-05-01 15:35:13
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2426,13 +2329,14 @@ Nhưng thôi, tôi sẽ nói về chúng ở một dịp khác
 Còn status này nói về lao động, và những cơ hội mà nó mang lại, tiền bạc
 chỉ là tác dụng phụ của quá trình đó mà thôi.
 
-** Vàng y
+* Vàng y
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2018-07-09 08:37:52
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
-[[./assets/img/hinhxuavangy.jpg]]
+[[/assets/img/hinhxuavangy.jpg]]
 
 Hãy nhìn bức ảnh này,
 
@@ -2444,8 +2348,9 @@ Rồi hãy suy nghĩ vì sao giữa lúc chiến tranh thương mại, đáng l�
 người ta nên rút tiền về nơi an toàn, thì tại sao giá đô la tăng mà vàng
 lại giảm
 
-** Tài sản của tôi, tiêu sản của tôi (tuổi 30, Thống kê ngày
+* Tài sản của tôi, tiêu sản của tôi (tuổi 30, Thống kê ngày
 20/11/2016)
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2016-11-20 11:43:19 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2479,7 +2384,8 @@ lại giảm
 11. Một bộ đồng hồ gồm 06 cái (trong đó 01 cái đầu tiên anh em đại học
     tặng ko hoạt động nữa)
 
-** Gioi thieu truyen "Hanh trinh ve phuong Dong"
+* Gioi thieu truyen "Hanh trinh ve phuong Dong"
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-06-25 03:33:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2495,7 +2401,8 @@ mình vào thế giới của tâm linh và những điều hấp dẫn của th
 tôi hi vọng các bạn sẽ thích truyện này. Và chúng ta hãy bắt đầu cuộc
 hành trình...
 
-** Ngôi sao phương bắc
+* Ngôi sao phương bắc
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2014-04-20 16:14:57 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2571,7 +2478,8 @@ Thổ Nhĩ Kì... Và tôi gọi đó là THỜI KÌ TRUNG CỔ THỨ 2.
 Tất cả bắt nguồn chỉ từ một bộ luật không thể phân biệt tốt đâu là khám
 phá và đâu là phát minh!
 
-** Luận về chính trị
+* Luận về chính trị
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2011-08-01 11:48:47 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2596,7 +2504,8 @@ Sức mạnh dựa vào thủ đoạn để thăng hoa.
 
 Thủ đoạn dựa vào sức mạnh để bền vững.
 
-** [Lối thoát nào cho chúng ta] Thành Thật Với Tình Yêu
+* [Lối thoát nào cho chúng ta] Thành Thật Với Tình Yêu
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2012-03-18 13:59:30 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2675,7 +2584,8 @@ Hãy luôn nhớ!
 
 Chúc tất cả các chú ngon chym!
 
-** thanhgo on edge
+* thanhgo on edge
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2010-05-07 10:55:59 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2742,7 +2652,8 @@ tới giới hạn cao nhất và mãi mãi lầm lũi. Tôi cho rằng, mỗi n
 chúng ta là duy nhất. Hãy đi tìm cái giới hạn của bạn và đẩy nó tới chỗ
 cực đoan.
 
-** Farewell Helen 03
+* Farewell Helen 03
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2019-10-06 22:36:21
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2765,7 +2676,8 @@ mới hết được.
 
 Hoặc có khi Helen chẳng có hứng thú nào để đọc nữa...
 
-** Mùa cỏ ngắng
+* Mùa cỏ ngắng
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-10-27 03:18:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2934,7 +2846,8 @@ Lời nguyền xưa truyền tụng trong làng... Ai tìm được ba đọt c�
 lên trong đêm giông đầu tiên của mùa hè trên đồi Ngắng, người ấy sẽ tìm
 được điều ước linh thiêng ứng nghiệm cho mình !...
 
-** Một khởi đầu mới
+* Một khởi đầu mới
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2018-04-07 00:00:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -2960,9 +2873,10 @@ S01E07)
 #+end_quote
 
 #+caption: me
-[[./assets/img/me.jpeg]]
+[[/assets/img/me.jpeg]]
 
-** Cyborg hay là một lối đi mới cho ngành vi phẫu
+* Cyborg hay là một lối đi mới cho ngành vi phẫu
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2011-02-13 09:56:13 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3026,13 +2940,14 @@ tưởng về phát minh này làm rạo rực tôi đến nỗi, tôi sẵn lò
 lợi nhuận vào bất kì dự án nào nghiên cứu về một dụng cụ như thế, sẵn
 lòng đóng góp tất cả các ý tưởng và kĩ năng của tôi về lĩnh vực này.
 
-** "Xin lỗi, em chỉ là con đĩ"
+* "Xin lỗi, em chỉ là con đĩ"
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-01-15 07:33:40 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
-*** "Xin lỗi, em chỉ là con đĩ"
+** "Xin lỗi, em chỉ là con đĩ"
 :PROPERTIES:
 :CUSTOM_ID: xin-lỗi-em-chỉ-là-con-đĩ
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3074,7 +2989,8 @@ Bạn có thể tải truyện về
 [[http://cid-f813e62a87e860b1.skydrive.live.com/self.aspx/Public/XinloiEmchilacondi-TrangHa.pdf][tại
 đây]]. Nguyên tác tiếng hoa của Bảo Thê, Trang Hạ dịch.
 
-** Lần đầu uống bia ôm
+* Lần đầu uống bia ôm
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-05-31
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3111,7 +3027,8 @@ Lỡ có thì có ai bên đó pass qua Từ Dũ cho tôi dc hok.
 Cuộc sống vô thường, thằng bạn tôi die sớm. Nhưng mày đừng lo, Tùng ah,
 tao sẽ ăn chơi bù cho đủ phần của cả 2 thằng. Nhớ mày nhiều!
 
-** Đời là cái đinh, tình là cái que, bé Thúy là con vịt què...
+* Đời là cái đinh, tình là cái que, bé Thúy là con vịt què...
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-06-19 23:33:10 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3145,7 +3062,7 @@ mình. Tôi chẳng biết viết gì hơn nữa, có lẽ tôi nên nghe một 
 [audio
 http://www.fileden.com/files/2007/12/8/1633615/Romeo-Juliet-Tan-Thoi.mp3]
 
-** Chân trời mới
+* Chân trời mới
 
 [Tôi thường tự hỏi nếu mình không phải là người Việt thì cuộc đời của
 mình sẽ như thế nào, và tôi không thể đợi đến kiếp sau để thấy điều đó]
@@ -3169,7 +3086,8 @@ năng mà tổ tiên ta không thể hình dung nổi, hay không muốn chúng 
 dung.
 #+end_quote
 
-** Nhớ em ngay cả khi ở bên em
+* Nhớ em ngay cả khi ở bên em
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2022-02-14
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3236,7 +3154,8 @@ vẫn còn vương vấn ở quãng đời đã qua mà chưa đi được.
 *Hệ quả 2:* tình yêu là sự sống (phần chứng minh xin nhường cho bạn đọc
 như một bài tập triết học)
 
-** Bao giờ em biết
+* Bao giờ em biết
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-09-14 08:49:55 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3290,7 +3209,8 @@ Cho em được biết tình tôi...
 
 --------------+++--------------
 
-** Truyen doc 60 giay
+* Truyen doc 60 giay
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-03-20 09:38:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3350,7 +3270,8 @@ hoàng vừa như tiếc nuối...
 
 trích từ trang văn học của [[http://hanoi.vnn.vn]]
 
-** Một Tỉ Khách Hàng
+* Một Tỉ Khách Hàng
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-01-18 08:01:25 +0000
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3456,7 +3377,8 @@ một đất nước mà "...tương đương với câu “Giáng Sinh vui vẻ
 phát tài"...” và "...phần chủ yếu của tang lễ ở Trung Quốc là việc đốt
 giấy tiền để gửi tài sản xuống âm phủ cho người qua đời..."
 
-** November's Chopin
+* November's Chopin
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2010-11-19 03:08:56 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3466,8 +3388,9 @@ giấy tiền để gửi tài sản xuống âm phủ cho người qua đời..
 một dòng rap, cuộc sống là một chuỗi hard rock, còn tình yêu
 là một bài dân ca
 
-** 发现 - Fa Xian (Phát Hiện) (nhạc phim Kinh Hoa Yên Vân - Moment
+* 发现 - Fa Xian (Phát Hiện) (nhạc phim Kinh Hoa Yên Vân - Moment
 In Perking)
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-02-05 12:42:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3521,7 +3444,8 @@ Trên con đường tình yêu, nếu không đối mặt với những trở ng
 ấy có thể tìm thấy sự hạnh phúc, ngay cả khi nước mắt phải rơi Từ khóe
 mắt ai đó, nước mắt rơi.
 
-** "Thành, em có dễ nuôi không?"
+* "Thành, em có dễ nuôi không?"
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-06-24 10:37:11 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3539,7 +3463,7 @@ Tối nay tôi có một cuộc hẹn với cô ấy (sau rất nhiều năm kh�
 
 Chúc tôi may mắn đi nào!
 
-** Drbinhthanh.com
+* Drbinhthanh.com
 
 Như các bác cũng biết, em cũng đã quyết định cai fb và chuyển qua blog
 và [[https://minds.com][minds.com]]. Nói là làm, em đã chăm chỉ học git,
@@ -3573,7 +3497,8 @@ Vậy đó, góp mặt với đời thêm 1 dự án mới,
 PS: để hình chần dần vại có hút khách vô xem blog được hok :v
 #+end_quote
 
-** Thơ Nguyễn Qua Truông hay là một sự trăn trở về số phận
+* Thơ Nguyễn Qua Truông hay là một sự trăn trở về số phận
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-02-04 14:41:24 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3598,12 +3523,12 @@ thường ngày. Không bài nào về tình yêu đôi lứa. Tôi xin trích r
 bài thơ, theo cảm nhận của mình (đã được sự đồng ý của cô Hảo, vợ
 *Nguyễn Qua Truông**)
 
-***
+** 
 :PROPERTIES:
 :CUSTOM_ID: section
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
-*** */Ba La/*
+** */Ba La/*
 :PROPERTIES:
 :CUSTOM_ID: ba-la
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3624,7 +3549,7 @@ Ngửa mặt trên sông thấy mây trắng\\
 Úp mặt trên sông hề quê nhà\\
 Công danh mấy độ hề Ba La
 
-*** */Bình thường/*
+** */Bình thường/*
 :PROPERTIES:
 :CUSTOM_ID: bình-thường
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3650,7 +3575,7 @@ và ngủ\\
 Tôi nhìn\\
 và bước đi.
 
-*** */Xanh/*
+** */Xanh/*
 :PROPERTIES:
 :CUSTOM_ID: xanh
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3671,10 +3596,10 @@ Chiều nghiêng xanh một nét mây\\
 Chào em trang trọng tháng ngày\\
 `                                               đương xanh.
 
-** Tại sao Trung Cổ
+* Tại sao Trung Cổ
 
 #+caption: The flower seller
-[[./assets/img/flowerseller.jpg]]
+[[/assets/img/flowerseller.jpg]]
 
 Khi đọc về lịch sử trung cổ, tôi không khỏi đặt ra trong đầu một câu
 hỏi: tại sao thời kì này lại diễn ra, tại sao những người La Mã hùng
@@ -3753,7 +3678,8 @@ diễn ra như thế này, hay tôi chỉ muốn như một anh nông dân lù k
 đồng, dụ khi mấy cô thôn nữ trong bụi rơm và tới ngày mùa thì nhảy điệu
 rondo.
 
-** Xuan Duong
+* Xuan Duong
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-03-31 09:06:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3764,7 +3690,8 @@ Mây Trắng chiều nay sao bật khóc, Phải rồi, Mây Trắng khóc vì y
 
 Viết lại theo giọng đọc của chị *Xuân Đường.*
 
-** Tương lai của web
+* Tương lai của web
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-02-14 00:40:41 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -3804,7 +3731,7 @@ cần.
   <td width="12" height="213">
 #+end_html
 
-
+ 
 
 #+begin_html
   </td>
@@ -3929,7 +3856,7 @@ nhân mà bạn có thể chia sẻ với bạn bè.
   <td width="12" height="152">
 #+end_html
 
-
+ 
 
 #+begin_html
   </td>
@@ -3975,7 +3902,7 @@ làm việc với Microsoft Access hay Adobe Dreamweaver.
   <td width="14" height="215">
 #+end_html
 
-
+ 
 
 #+begin_html
   </td>
@@ -4078,7 +4005,7 @@ chính và việc này sẽ hoàn tất trong 12-18 tháng nữa.
   <td width="12" style="border-right:1px solid;" rowspan="2" height="299">
 #+end_html
 
-
+ 
 
 #+begin_html
   </td>
@@ -4088,7 +4015,7 @@ chính và việc này sẽ hoàn tất trong 12-18 tháng nữa.
   <td bgcolor="#ffffff" style="border-top:10px solid;border-left:10px solid;border-bottom:medium none;" width="6" height="29">
 #+end_html
 
-
+ 
 
 #+begin_html
   </td>
@@ -4135,7 +4062,7 @@ trong việc truy cập web.
   <td bgcolor="#ffffff" style="border-right:medium none;border-top:medium none;border-left:10px solid;border-bottom:medium none;" width="6" height="269">
 #+end_html
 
-
+ 
 
 #+begin_html
   </td>
@@ -4167,7 +4094,8 @@ nghiệp thì sẽ làm nhiệm vụ hoàn tất bài viết được chọn.
 Web sẽ tiếp tục định hình để phục vụ tất cả mọi người chứ không chỉ
 những người chuyên nghiệp.
 
-** "Nghĩ tới tương lai mà lạnh toát mồ hôi"
+* "Nghĩ tới tương lai mà lạnh toát mồ hôi"
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-09-28 04:05:06 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -4175,7 +4103,8 @@ những người chuyên nghiệp.
 
 Entry này không có nội dung.
 
-** Mùa hạ còn đâu (Phú Quang)
+* Mùa hạ còn đâu (Phú Quang)
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-07-01 09:07:57 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -4190,7 +4119,8 @@ lắm Nhưng mùa hạ đã ra đi Chân trời xa không ngấn nắng Sao em c
 áo mỏng Có còn mùa hạ nữa đâu Sao em làm lòng ta đau Nhớ ngọn lửa hè đã
 tắt Đường phố trong anh mùa đông Hãy để mùa hạ yên nghỉ
 
-** Sinh năm 1986
+* Sinh năm 1986
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2011-05-07 04:32:59 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -4221,7 +4151,7 @@ chúng ta nhất thiết phải tự tìm ra con đường cho riêng mình...
 
 ...hay là chết.
 
-** Các phương trình của Maxwell
+* Các phương trình của Maxwell
 
 Và Chúa phán
 
@@ -4234,7 +4164,8 @@ Và Chúa phán
 thế là ánh sáng\\
 lập tức xuất hiện
 
-** Thien su chet
+* Thien su chet
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-03-18 07:20:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -4551,7 +4482,8 @@ thật mà loài người đã khám phá ra. Tôi đã không hiểu ra đượ
 Tôi còn lại một mình. Một con người duy nhất sẽ phải chết trên Trái Đất
 này.
 
-** Sự khác nhau giữa Sài gòn và Hà nội
+* Sự khác nhau giữa Sài gòn và Hà nội
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-03-07 09:21:49 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -4736,7 +4668,8 @@ Sài Gòn : nhiều vô kể, giá rẻ , không đến nỗi nào nhưng không
 Hà nội: Nhiều em cave trông như sinh viên\\
 Sài gòn: Nhiều em SV trông như cave
 
-** 10 quy định của bố vợ tương lai
+* 10 quy định của bố vợ tương lai
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-11-24 00:19:21 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -4794,7 +4727,8 @@ ngày hôm đó tôi vừa trúng xổ số. Chớ vội mừng!
 
 Nếu ko chịu được thì đừng nghĩ đến chuyện có bạn gái nhá.
 
-** Bai tho trong ngoi mo co
+* Bai tho trong ngoi mo co
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-04-14 03:38:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -4809,7 +4743,8 @@ Chàng buồn vì thiếp sinh sau Bởi chàng sinh sớm thiếp sầu ngàn t
 
 *Mai Văn Tạo* dịch
 
-** Ở biên giới của tri thức
+* Ở biên giới của tri thức
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2016-09-05 12:20:05 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -4847,7 +4782,7 @@ quyền lực tập trung và xem đó là phương thức tổ chức hiệu qu
 nghĩa tư bản đi đến mức vô cùng cực đoan hiện nay so với tất cả các thời
 kì trong lịch sử.
 
-**** Điều này có ý nghĩa như thế nào?
+*** Điều này có ý nghĩa như thế nào?
 :PROPERTIES:
 :CUSTOM_ID: điều-này-có-ý-nghĩa-như-thế-nào
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -4893,7 +4828,8 @@ mất, dù trong lòng chàng bão tố vẫn đang gào. Chàng mặc kệ, đ�
 nổi trong lòng mình như một niềm vui thú chỉ riêng chàng biết. Đã quá đủ
 cho một thời tuổi trẻ mộng mơ!
 
-** [2012] Vận hội chỉ đến khi ta nhìn thấy nó
+* [2012] Vận hội chỉ đến khi ta nhìn thấy nó
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2012-01-27 13:24:08 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -4929,7 +4865,8 @@ dậy và vụt cháy.
 
 Ngày mà tôi chấm dứt bài du ca, là ngày tôi qua đời.
 
-** Tiễn em lấy chồng
+* Tiễn em lấy chồng
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-08-23 08:33:22 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5062,7 +4999,8 @@ Sưu tập từ giang hồ:
     c­ười hô hố: đứa nào ngông ? Có thằng lãnh nợ anh mừng húm Phủi sạch
     còn theo những bóng hồng !
 
-** Farewell Helen 02
+* Farewell Helen 02
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-02-14 15:16:27
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5090,7 +5028,8 @@ thì có vài cái bánh không ăn được nữa. Nàng hỏi tôi "sao nhữn
 anh đem về nhà em đều hư hết vậy", tôi đã trả lời "bởi vì những thứ từ
 anh đều thật, mà những điều thật sự đều có thể hư, và có hạn sử dụng"
 
-** "Xin cáo lỗi cùng bạn đọc!"
+* "Xin cáo lỗi cùng bạn đọc!"
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-11-24 01:13:21 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5157,8 +5096,9 @@ hoá ở Trái Đất. Sẽ bàn luận sâu hơn ở một entry khác.
 
 Hãy đọc Sơn Nam, một thiên tài bình dân!
 
-** Giới thiệu sách "Không tuổi tác, không thời gian" của Deepak
+* Giới thiệu sách "Không tuổi tác, không thời gian" của Deepak
 Chopra
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-10-27 09:51:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5179,7 +5119,8 @@ niệm chỉ mang tính nhất thời trong lịch sử của vũ trụ.\\
 Nếu bạn không có thời gian đọc sách, hãy đón xem những bài tóm tắt của
 tôi trên blog này.
 
-** Tình yêu có từ nơi đâu??? (một bài viết hay của Paul)
+* Tình yêu có từ nơi đâu??? (một bài viết hay của Paul)
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-04-15 09:43:48 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5395,14 +5336,15 @@ tin...are u okie?
 Và em - người anh yêu, anh sẽ hát cho em nghe bài này./.( Who are u??? ^
 ^ )
 
-** Căn nhà màu vàng
+* Căn nhà màu vàng
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-01-24 20:18:53
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
 #+caption: Căn nhà màu vàng
-[[./assets/img/cannhamauvang.jpg]]
+[[/assets/img/cannhamauvang.jpg]]
 
 Đang ở đường sách Nguyễn Văn Bình, ở đây ngày nào cũng có các em gái
 chưng diện, rồi nhe răng ẹo người vào bất cứ góc hình nào mà họ thấy
@@ -5429,7 +5371,8 @@ em, thần thái của em, phong cách của em, nụ cười e ấp của em, n
 gọi mà nửa như muốn đẩy tôi ra xa. Đó mới là nước sơn màu vàng son mà em
 đang sơn.
 
-** Lemonade Tycoon -- có ai cần một ly nước chanh không?
+* Lemonade Tycoon -- có ai cần một ly nước chanh không?
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-08-16 11:26:23 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5503,7 +5446,8 @@ về [[http://www.rarlab.com/download.htm][tại đây]].
 Hãy làm giàu đi, dù chỉ là bán một vài ly nước chanh. "Thiên địa" sẽ ủng
 hộ bạn.
 
-** Những ngày cuối cùng ở trường Y
+* Những ngày cuối cùng ở trường Y
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2010-06-14 18:21:39 +0000
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5558,7 +5502,8 @@ tất cả những điều trên là một kỉ niệm.
 
 Ta làm gì trong cả một cuộc đời dài?
 
-** Kỉ nguyên của các giá trị bị xóa mòn
+* Kỉ nguyên của các giá trị bị xóa mòn
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2017-03-08 13:24:34 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5632,7 +5577,8 @@ lượng GS, TS đến cả sự bùng nổ các ngôi sao ca nhạc trong giớ
 /(đón đọc kì tới)/ Trong một thời đại của sự thừa mứa, liệu sự kiêng
 khem và tiết chế có còn có ý nghĩa?
 
-** Noel 2006
+* Noel 2006
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2006-12-24 04:13:46 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5719,7 +5665,8 @@ __
 Chúc mọi người một đêm Noel an bình.
 #+end_quote
 
-** Chiếc giường
+* Chiếc giường
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-06-01 03:34:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5736,7 +5683,8 @@ hết.
 Rồi chị lên xe hoa, về nhà chồng. Ðêm đầu tiên, em ngủ một mình. Chiếc
 giường bây giờ rộng, thoải mái. Nhưng em vẫn trằn trọc, khó ngủ...
 
-** Người thương
+* Người thương
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-01-18 20:18:53
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5757,13 +5705,14 @@ nếu cứ quanh quẩn mãi ở lũy tre làng, làm sao ta có thể sống v�
 Nhưng, làm gì thì làm, bỏ qua các giá trị mới học được qua một bên, ta
 cũng luôn nhớ trong tâm, đâu mới là lối đưa ta về nhà.
 
-** Làm gì có chuyện đời như ý!
+* Làm gì có chuyện đời như ý!
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2010-05-21 15:58:59 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
-*** Đời Như Ý
+** Đời Như Ý
 :PROPERTIES:
 :CUSTOM_ID: đời-như-ý
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5980,7 +5929,8 @@ nhưng chọc mãi, chọc mãi, chú không bao giờ thức nữa.
 
 ​** 4.** Làm gì có chuyện đời như ý?
 
-** Ngay nhu moi ngay
+* Ngay nhu moi ngay
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-03-02 12:33:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -5991,7 +5941,7 @@ và trái đất vẫn đều quay.\\
 Mà sao tôi bỗng thấy,\\
 cuộc sống thật đáng yêu.
 
-** DAY 1 - chính trị, cộng sản và tôi
+* DAY 1 - chính trị, cộng sản và tôi
 
 Tôi có thằng bạn thân, hồi chúng tôi cỡ 20 - 22, nó lên mạng kiếm kèo
 với mấy em gái rồi hú tôi theo cho có tụ, chứ mới gặp gái gần đầu, đi
@@ -6019,7 +5969,8 @@ chưa?". Thay vì nhìn tôi như một sinh vật lạ, cô ấy bình thản t
 
 Tình đầu thường không thành. Ôi, thế mới biết, tình là tình nhẹ như tơ.
 
-** thanhgo - nghĩ về sự hỗn loạn
+* thanhgo - nghĩ về sự hỗn loạn
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-10-11 18:28:20 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6053,7 +6004,7 @@ trên sẽ giúp ích một điều gì đó cho các bạn.
 Xin hãy cầu nguyện cho tôi bình yên và thanh thản (nếu điều này không
 quá xa xỉ đối với bạn)
 
-** Về sự tiến bộ
+* Về sự tiến bộ
 
 Nếu các bạn quen biết tôi lâu ngày, hẳn các bạn sẽ biết tôi là đứa tình
 cờ đi lạc vào trường y. Vậy nên, những năm đầu đại học ấy, nhìn tôi rất
@@ -6111,7 +6062,53 @@ cách chúng ta thấy, cho dòng diện chạy qua chạy lại trong CPU, rồ
 vọng bài toán tự nó sẽ được giải quyết, cuộc sống con người rồi sẽ thăng
 hoa. Ôi, thật ấu trĩ biết bao! Nhưng đó là điều mà chúng ta đang tin.
 
-** Người con giai đến phòng em chiều thu
+* Tình yêu con người
+
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-02-20 22:21:59
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+[[/assets/img/tinh_yeu_con_nguoi.jpg]]
+
+Thưở mới xa nhà, ý tôi là cái thời năm nhất đại học ấy, như bất kì đứa
+sinh viên y nào, tôi phải chọn cho mình một cuốn atlas giải phẫu. Do
+chẳng có anh chị nào để sách lại hay tư vấn gì, tôi đã ấn tượng và chọn
+cho mình cuốn giải phẫu của 2 ông người Nhật. Không giống tụi sinh viên
+khác thường chọn sách của Netter, toàn hình vẽ, sách của tôi là hình
+người thật, xác thật, thịt thật và xương thật, giá 400k (lương ba tôi
+gởi mỗi tháng hồi đó là 700k, huhu). Bà bán sách lúc đó cũng can ngăn,
+nói cuốn đó chỉ dành cho bác sĩ phẫu thuật thôi, sinh viên nên chọn mấy
+cuốn hình vẽ cho dễ hiểu, nhưng tôi không chịu.
+
+Rốt cục thì bà bán sách nói đúng thật, cuốn đó chẳng giúp ích gì được
+cho con đường học y khoa tăm tối của tôi. Học kì 1 năm đó, tôi đã thi
+lại môn giải phẫu, hic. Chỉ có một điều bổ ích, như cuốn sách đó nói, để
+tự biện minh cho sự tồn tại của một cuốn sách giải phẫu người thật trong
+một rừng sách hình vẽ: là tình yêu con người. Các tác giả hi vọng khi ta
+lật từng trang sách và tham quan thực tế cấu trúc cơ thể người được mổ
+xẻ tỉ mỉ qua từng lớp rõ ràng. Trong ta sẽ bừng lên tình yêu tinh khiết
+nhất với một sinh vật đang nằm trên bàn tiêu bản kia, và nó có tên gọi
+là con người. Bất chấp khi còn sống nó có làm gì đi nữa, nó xứng đáng
+được yêu, với tư cách là một sinh vật đã từng sống.
+
+Và những lời nói ấy trong cuốn sách đầu đời ấy thực sự thì nó có ám ảnh
+tôi thật. Nhất là khi tôi nhìn các em gái, ấn tượng đầu tiên không phải
+là ngoại hình, mà là tình yêu phổ quát của tôi đối với sinh vật đối diện
+đó.
+
+Và khi bắt đầu cầm máy ảnh, tôi đã có một dự án riêng cho mình, đặt tên
+nó là *"tình yêu con người"*, chuyên bắt những khuôn hình ngẫu nhiên
+nhất của những khuôn mặt người đang sống hết mình trong khoảnh khắc của
+chính họ.
+
+Và tình yêu đó vẫn tiếp diễn mỗi ngày...bất chấp những gì xảy ra đi
+nữa...
+
+P/S: mới mua cuốn sách giải phẫu nên dâng trào cảm hứng, hehe
+
+* Người con giai đến phòng em chiều thu
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2010-10-23 09:04:37 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6142,9 +6139,9 @@ em Hắn không phải là tấm hình trong sách Hắn chỉ là dãy phố ng
 Là con thuyền Luôn luôn kiếm tìm luôn luôn từ bỏ Với cuộc đời thường em
 còn bao mối dây gắn bó Em đi được với hắn không?
 
-** Kurt Gödel và định lí bất toàn
+* Kurt Gödel và định lí bất toàn
 
-[[./assets/img/kurtgodel.png]]
+[[/assets/img/kurtgodel.png]]
 
 Mấy hôm nay mình đang chơi game Assasin's Creed Odyssey, đóng vai một
 anh hùng Hi Lạp cổ đại, là hậu duệ trực tiếp của người anh hùng Leonidas
@@ -6207,7 +6204,8 @@ Các bạn xem thêm bài này để hiểu thêm về Kurt Gödel:
 [[https://www.prospectmagazine.co.uk/magazine/kurt-godel-and-the-romance-of-logic?fbclid=IwAR1MJFKufTb5YkdZfcvus5nFM4qBOHbLfJaMwPz8HybYYn8WyWPnv2IWhZ0][Kurt
 Gödel and the romance of logic]]
 
-** Mùa vải
+* Mùa vải
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-06-23 02:54:30 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6216,21 +6214,21 @@ Gödel and the romance of logic]]
 Buổi tối, ký túc xá, một mình, trong phòng 304C, không làm gì cả, thấy
 vô vị, tôi chợt thèm một cái gì đó không rõ. Đúng rồi, vải, bây giờ đang
 là đầu mùa vải. Mới đầu mùa nhưng lúc sáng trên radio nói chỉ có 6 nghìn
-1 kg. Không chần chừ, phóng xe ra chợ.
+1 kg. Không chần chừ, phóng xe ra chợ.  
 
 Chợ vắng người, chỉ còn vài cửa hàng còn mở, và chỉ một số trong đó có
 vải. Tôi bị chém đến 10 nghìn 1 kg, đôi vợ chồng già người bán hàng nói
 bây giờ vải lên giá rồi. Lúc đầu, chỉ dự định mua nửa kg, nhưng không
 hiểu sao tôi đưa 10 nghìn cho bà bán hàng.
 
-
+ 
 
 ................
 
 (đã ăn xong nửa kg, bây giờ tôi nhâm nhi số còn lại trong khi lấy cảm
 hứng ngồi viết bài này)
 
-
+ 
 
 Với hàng tấn trái cây đủ loại đã đi qua cái dạ dày của tôi (và ra ngoài
 bằng...cái gì thì tự nghĩ đi), nhưng thật kì lạ, tôi chỉ ấn tượng với
@@ -6257,11 +6255,11 @@ thứ quả dại trên rừng chưa được thuần hoá hoàn toàn. Cảm gi
 cũng thật dễ chịu, vải nhẹ nhàng nhắc nhở khi nào ta đã ăn quá nhiều và
 đã đi quá xa rồi, phải dừng lại thôi, bởi vì vải yêu thích sự từ tốn.
 
-** Nhiều tiền để làm gì?
+* Nhiều tiền để làm gì?
 
-[[./assets/img/sanktxquan8.jpg]]
+[[/assets/img/sanktxquan8.jpg]]
 
-**** Lịch sử bãi cỏ
+*** Lịch sử bãi cỏ
 :PROPERTIES:
 :CUSTOM_ID: lịch-sử-bãi-cỏ
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6302,7 +6300,8 @@ Một người được kính trọng không phải chỉ những điều anh ta
 những điều anh ta KHÔNG làm
 #+end_quote
 
-** Sài Gòn đã chết rồi
+* Sài Gòn đã chết rồi
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-05-17
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6331,7 +6330,8 @@ Như cuộc đời chực sẵn sự tình cờ, sáng nay có em gái hỏi tô
 thích Sài Gòn không?" Và tôi đã trả lời chẳng ngại ngần "Sài Gòn đã chết
 rồi", giờ nó chỉ còn là một lũ người sống đè lên nhau mà thôi.
 
-** Mẹ ơi! Hãy yêu con lần nữa!
+* Mẹ ơi! Hãy yêu con lần nữa!
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2010-03-15 05:25:30 +0000
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6385,9 +6385,9 @@ cô bạn trực cùng tôi vẫn lặng lẽ đi khám bệnh. Điều an ủi 
 tôi hôm nay là tối nay tôi sẽ được ngủ chung với P.A, chỉ có 2 đứa trong
 1 phòng, suốt từ 6 năm trước tới giờ chỉ có một lần này.
 
-** Chất men
+* Chất men
 
-[[./assets/img/lqvvaxq.jpg]]
+[[/assets/img/lqvvaxq.jpg]]
 
 Lưu Quang Vũ là nhà thơ có chất nam tính cuối cùng của Việt Nam, còn lại
 phảng phất mùi pê đê hết
@@ -6414,7 +6414,8 @@ khả. Với cách sống của phụ nữ hiện đại bây giờ, thà làm p
 /PS: "Sài Gòn này, con đường nào cũng đẹp, nhưng đẹp nhất là con đường
 dẫn đến nhà em"/
 
-** Tản mạn trước ngày chạy
+* Tản mạn trước ngày chạy
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-01-04 20:18:53
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6450,7 +6451,7 @@ của cả hai ở Sa Đéc, Đồng Tháp. Á đù! Phải chăng mọi em gái
 sinh người Pháp nào qua Việt Nam đều đã nghĩ đến chuyện này, nghĩ đến
 cuộc tình huyền thoại này?
 
-** Những món quà
+* Những món quà
 
 
 #+begin_html
@@ -6498,7 +6499,8 @@ bolero mãi, đừng tung hứng cảm xúc hoài với rock, nhiều lúc mình
 trôi theo dòng nước như "dòng sông lười" ở công viên Đầm Sen, đời sẽ
 không bao giờ làm ta thất vọng.
 
-** Trong phòng sanh
+* Trong phòng sanh
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-08-31 07:50:26 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6539,7 +6541,8 @@ lần này cái mặt đối diện tôi thì lại không đỏ
   đối thôi, nghĩa là anh chàng đó có thể hành sự, nhưng phải biết bảo vệ
   cho vợ.
 
-** Ngoại khoa
+* Ngoại khoa
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2011-03-20 17:29:56 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6552,7 +6555,8 @@ gọi điện vừa suy nghĩ về thị trường chứng khoán, đó gọi l�
 ta mổ 3000 ca, ta thấy mình chẳng biết gì về kĩ thuật này cả, ta đã đạt
 tới một cái trạng thái vô ngã vô ưu, hay còn gọi là NGỘ KHÔNG.
 
-** Farewell Helen 04
+* Farewell Helen 04
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2019-10-07 22:36:21
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6575,7 +6579,8 @@ tồn qua thời gian và giá trị dễ dàng đo đếm. Nhưng khi các bạ
 chọn đó, tôi đảm bảo các bạn chưa bao giờ sống trong một cái hộp bê tông
 qua năm tháng, vô hình và một mình.
 
-** Hoa Cỏ May
+* Hoa Cỏ May
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-04-21 08:57:44 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6598,7 +6603,8 @@ Khắp nẻo dâng đầy hoa cỏ may\\
 Lời yêu mỏng mảnh như màu khói\\
 Ai biết lòng anh có đổi thay?
 
-** Về Huyền Chip và tất cả các em chip chip
+* Về Huyền Chip và tất cả các em chip chip
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2013-10-04 12:47:10 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6712,7 +6718,8 @@ thành một con thú nào đó. Lạy các bạn!
 
 thanhgo, đại bàng không biết bay
 
-** Nói xấu vợ
+* Nói xấu vợ
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-01-25 04:08:06 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6726,7 +6733,8 @@ quả là đại tài, thật đáng khâm phục, khâm phục!
 hoặc tải về
 [[http://www.freewebtown.com/binhthanhgo/audio/noi_xau_vo.MP3][tại đây]]
 
-** Thuong ve Quang Ngai
+* Thuong ve Quang Ngai
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-04-13 08:32:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6760,7 +6768,7 @@ nhớ thương nhau luyến thương qua nhịp cầu. Rồi luyến tiếc gi�
 
 Viết lại theo ký ức của: bác *Diệu Đức*
 
-** Farewell Helen 01
+* Farewell Helen 01
 
 Có một lần sau khi từ Đà Lạt về, chúng tôi cãi nhau dữ dội. Ánh mắt cô
 ấy lúc đó thật ngoa ngoắt và cự tuyệt. Đưa Helen về nhà xong, tôi quay
@@ -6781,14 +6789,15 @@ cảm thấy cần thiết hay không. Làm sao Helen biết được, dù khôn
 là một bác sĩ ngoại khoa, rằng bản năng sát thủ của tôi đã được đẩy lên
 đến mức độ nào.
 
-** Chánh niệm là đức hạnh duy nhất tồn tại
+* Chánh niệm là đức hạnh duy nhất tồn tại
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2023-08-26
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
 #+caption: Sách "mang thai chánh niệm"
-[[./assets/img/mangthaichanhniem.JPG]]
+[[/assets/img/mangthaichanhniem.JPG]]
 
 #+begin_quote
 Đức Phật đã nói, chánh niệm là đức hạnh duy nhất tồn tại
@@ -6833,6 +6842,7 @@ giá tri của người đối diện.
 
 Và đó là lý do tại sao, đức Phật đã nói chánh niệm là đức hạnh duy nhất
 tồn tại. (còn mọi thứ khác chỉ là trò chơi)
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-07-30
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6871,7 +6881,8 @@ Như vậy, sau rất nhiều biến cố và đổi thay trong đời, Brook Ta
 người đàn ông tôi đã mang họ trong suốt mười mấy năm, đã đưa tôi trở lại
 con đường xưa. Còn chuyện gì đến sau đó, sẽ đến, whatever, who care?
 
-** Giới hạn của ngôn ngữ
+* Giới hạn của ngôn ngữ
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2016-11-30 16:48:30 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6928,7 +6939,8 @@ con người còn có các công cụ mạnh mẽ khác để hỗ trợ tư duy
 Và câu hỏi tôi đặt ra ở đây: liệu tôi có bỏ sót công cụ nào không và
 loại hình nào sẽ là mẫu hình mô tả tự nhiên tiếp theo?
 
-** Tôn Trọng Thực Tại
+* Tôn Trọng Thực Tại
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2015-10-18 01:18:51 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -6993,7 +7005,8 @@ vô hạn của ý thức độc lập. Nó chỉ là một phương cách để
 trình phù hợp hơn và đạt được nhiều thành công hơn. Và trên hết, nó vui
 hơn!
 
-** Pourquoi notre cœur fait tic-tac ?
+* Pourquoi notre cœur fait tic-tac ?
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-12-09 03:49:24 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7130,7 +7143,8 @@ hạnh phúc khi ở bên ông*
   </blockquote>
 #+end_html
 
-** Dòng sông thuở ấy (Phạm Lợi)
+* Dòng sông thuở ấy (Phạm Lợi)
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-05-21 03:50:53 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7188,9 +7202,9 @@ Khuyến mãi thêm một bài nữa nè 13. Nắng vàng, biển xanh và anh -
 Nhung [audio
 http://www.freewebtown.com/binhthanhgo/audio/Nang%20vang,%20bien%20xanh%20va%20anh%20-%20Hong%20Nhung.MP3]
 
-** Chuyện một cái cây và viện triết học mùa hè
+* Chuyện một cái cây và viện triết học mùa hè
 
-[[./assets/img/myhomefront.jpg]]
+[[/assets/img/myhomefront.jpg]]
 
 [Chuyện 1 cái cây]
 
@@ -7237,7 +7251,8 @@ Tây Phương. Chúng ta đi copy cũng được thôi, như Trung Cộng và Vi
 đã làm với Marx. Nhưng rồi, chính cái hệ tư tưởng đó quay trở lại làm
 thành một trở lực trong mọi điều phát triển.
 
-** "Sống tháng năm bàn tay trắng trơn"
+* "Sống tháng năm bàn tay trắng trơn"
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-07-21 09:28:31 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7256,7 +7271,8 @@ sống lại cơ cầu Bữa đói bữa no cậy nhờ bè bạn Lây lất ch�
   </blockquote>
 #+end_html
 
-** Hạnh phúc cũng như...tiền!
+* Hạnh phúc cũng như...tiền!
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-05-20 07:24:44 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7311,14 +7327,15 @@ Hạnh phúc mỗi ngày của tôi bây giờ đều đến từ hai người �
 
 Xem thêm bài viết của Đông Vy tại [[http://www.luanvy.com/dongvy.html]]
 
-** Lại bắt đầu từ những trang giấy trắng
+* Lại bắt đầu từ những trang giấy trắng
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2019-07-03 22:45:53
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
 #+caption: hoa cúc
-[[./assets/img/hoacuc.jpg]]
+[[/assets/img/hoacuc.jpg]]
 
 “Đường em về lận đận chuyến tàu trưa
 
@@ -7328,7 +7345,8 @@ Chiếc cốc rơi, mọi điều tan vỡ hết
 
 Em có còn mong ước nữa không em?”
 
-** Quản trị động lực
+* Quản trị động lực
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2016-01-29 16:33:24 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7356,7 +7374,8 @@ nghiệm cuộc đời qua thời gian ngắn ngủi của mình. Vậy tại sa
 không có cảm giác gì khi một mốc thời gian đang đến (một thứ tương đối
 hiếm hoi, chỉ có vài chục lần trong đời)‎
 
-** Đất mẹ không thể nuôi nổi những đứa con của mình
+* Đất mẹ không thể nuôi nổi những đứa con của mình
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2021-10-04
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7413,7 +7432,8 @@ bản?" và "ở Quảng Châu này, các bạn có biết người ta ăn nhữ
 hay không?". Câu trả lời cho câu thứ 2 là: "mọi thứ, kể cả gián, chuột
 và sâu bọ". Ôi, đất mẹ!
 
-** Vitamin Y
+* Vitamin Y
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-03-13 04:22:25 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7477,12 +7497,12 @@ hoặc tải về
 [[http://www.freewebtown.com/binhthanhgo/audio/11%20Romance.wma][tại
 đây]]
 
-** Đồng sàng dị mộng
+* Đồng sàng dị mộng
 
 Đang ở Hội An nhưng lại có hứng kể chuyện xưa
 
 #+caption: The girl
-[[./assets/img/cogaitrunghoa2011.jpg]]
+[[/assets/img/cogaitrunghoa2011.jpg]]
 
 Đó là mùa xuân năm 2011, lúc tôi vừa nghỉ việc sau một thời gian ngắn
 mới ra trường và làm ở 115, mọi thứ còn đầy sắc màu và cái gì cũng có
@@ -7509,7 +7529,7 @@ mỗi người rốt cục vẫn rất khác nhau (y như cái câu "đồng sà
 nằm chung một giường nhưng mỗi người mơ một giấc mơ khác nhau)
 
 #+caption: Núi đôi sông Li, Quế Lâm
-[[./assets/img/nuidoiquelam2011.jpg]]
+[[/assets/img/nuidoiquelam2011.jpg]]
 
 P/S: tôi sẽ chỉ cho bạn 1 bí kíp, cách thu phục tiểu yêu. Như các chàng
 thợ săn trẻ cô đơn khi lang thang trong rừng, nếu muốn thu phục con tiểu
@@ -7521,7 +7541,8 @@ trắng chiết suất từ cây anh túc, đường là thứ hiếm có trong 
 P/S lần 2: với sơn nữ thì có phức tạp hơn chút nhưng chung quy lại thì
 cũng là đường vậy.
 
-** Lãng mạn toán học
+* Lãng mạn toán học
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2019-07-15 22:45:53
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7546,7 +7567,8 @@ nguời như chúng ta thôi, nhưng vuợt lên trên sự tầm thuờng của
 hàng ngày, họ đã tự dẫn dắt chính mình và thế hệ trẻ đến những bến bờ
 sâu thẳm của tự nhiên xung quanh.
 
-** Bạn có thể học để nghĩ sáng tạo
+* Bạn có thể học để nghĩ sáng tạo
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2006-12-06 03:47:14 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7622,7 +7644,8 @@ nhiều ý tưởng hơn là chỉ nghĩ đến nó.
   lên mà không cần hồ dán; Sổ có thể dịch từ tiếng Việt sang tiếng
   Anh...
 
-** Tâm sự của gái ế (bài viết của Trang Hạ)
+* Tâm sự của gái ế (bài viết của Trang Hạ)
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2012-05-19 16:23:03 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7758,7 +7781,8 @@ Trang Hạ
 
 2012
 
-** Nghề y
+* Nghề y
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-06-23 02:51:45 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7768,7 +7792,8 @@ Trang Hạ
 xung quanh, tôi chợt thấy đầu óc sáng suốt và tinh thần yên tĩnh một
 cách lạ thường.
 
-** Một sự thật dễ chịu
+* Một sự thật dễ chịu
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2011-06-19 14:14:06 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7863,8 +7888,9 @@ Bạn có chấp nhận được sự thật dễ chịu này không?
 
 thanhgo, đại bàng không biết bay
 
-** Vài suy nghĩ về thương vụ Google mua DoubleClick (bài viết của
+* Vài suy nghĩ về thương vụ Google mua DoubleClick (bài viết của
 nguoitapviet.info)
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-04-21 09:10:42 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -7911,7 +7937,7 @@ lúc đó, người mua lại là nhóm đầu tư
 [[http://www.imediaconnection.com/news/5569.asp][Hellman & Friedman với
 cái giá 1.1 tỉ dola]]. So với cái giá mà Google phải trả hiện tại là 3.1
 tỉ thì cái giá 1.1 tỉ dola lúc đó là quá hời mà cả Google và
-Microsoft đều không "nghĩ" đến việc mua DoubleClick vào thời điểm đó.
+Microsoft đều không "nghĩ" đến việc mua DoubleClick vào thời điểm đó. 
 
 Bạn có thể nói tại thời điểm đó, Google không có tiền - nhưng điều này
 không đúng. Google chính thức đưa cổ phiếu của mình lên thị trường chứng
@@ -7950,7 +7976,7 @@ rỉnh 11.4 tỉ cuối năm vừa rồi]]) và Microsoft (vốn có truyền th
 tiền mặt, và ngay cả khi lượng tiền mặt mà họ giữ
 [[http://seattlepi.nwsource.com/business/309852_software02.html][xuống
 thấp nhất từ trước đến nay năm ngoái]] thì nó cũng là một con số khổng
-lồ - 29 tỉ).
+lồ - 29 tỉ). 
 
 Khi mà cái giá không thật sự là vấn đề thì thời gian chẳng có ý nghĩa
 gì - tiền mua được thời gian. Bạn có cho rằng nếu Microsoft đã hạ quyết
@@ -8144,7 +8170,8 @@ là những gì chúng ta có thể thấy trong những thương vụ vừa r�
 gian sẽ trả lời ai đúng, ai sai. Còn chúng ta chỉ việc nhìn và học lấy
 bài học cho riêng mình.
 
-** Neu dang dem bach duong
+* Neu dang dem bach duong
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-03-23 11:12:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8164,7 +8191,8 @@ Cũng chỉ để cho anh Suốt đời yêu em đấy.
 
 *Thái Bá Tân* dịch
 
-** Một chuyện buồn
+* Một chuyện buồn
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-07-16 02:01:59 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8174,7 +8202,8 @@ Cũng chỉ để cho anh Suốt đời yêu em đấy.
 
 trích /"Long thành cầm giả ca"/ - *Nguyễn Du*
 
-** Tại sao phải trọng nam khinh nữ?
+* Tại sao phải trọng nam khinh nữ?
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-10-04 13:46:49
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8252,7 +8281,8 @@ khi những đứa con trai lớn xác đó qua tuổi 30 -- 40, chúng sẽ b�
 các hành vi tự hủy hoại bản thân, như mọi thứ tệ nạn mà con người có thể
 tưởng tượng.
 
-** Tao Windows co ban quyen
+* Tao Windows co ban quyen
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-06-08 04:17:20 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8316,7 +8346,8 @@ Vay la Windows da co ban quyen rui đo.
 
 Chuc ban thanh cong!
 
-** Trích một câu trong "99 F" của Fédéric Beigbeder
+* Trích một câu trong "99 F" của Fédéric Beigbeder
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-05-22 04:02:35 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8324,7 +8355,8 @@ Chuc ban thanh cong!
 
 "Tôi chi tiền, vậy tôi tồn tại!"
 
-** Em bao anh di di
+* Em bao anh di di
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-03-23 11:46:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8348,7 +8380,8 @@ Mà không nhìn mắt em?
 
 *Huyền Anh* dịch
 
-** Phấn son
+* Phấn son
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-06-01 03:37:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8364,7 +8397,8 @@ anh đó, mẹ bị nám hết anh thấy không..."\\
 Chợt giật mình. Mẹ cả đời lam lũ, nắng gió với cái ăn, nào đã biết phấn
 son màu gì.
 
-** Mùa hạ còn đâu (Phú Quang)
+* Mùa hạ còn đâu (Phú Quang)
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-07-01 09:08:01 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8372,7 +8406,8 @@ son màu gì.
 
 No Content Found
 
-** Gửi VB
+* Gửi VB
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-01-15 07:30:05 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8402,7 +8437,8 @@ thổi cho
          xiêu vẹo.
 #+end_example
 
-** Doi anh ve
+* Doi anh ve
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-04-14 03:21:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8457,7 +8493,8 @@ Biết như em chờ đợi.
 
 *Tố Hữu* dịch
 
-** Thích Ca
+* Thích Ca
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2011-05-20 13:13:18 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8468,7 +8505,8 @@ của Alexander the Great, Napoleon, Hitler; nhưng có mấy ai kể về
 câu chuyện của một người đàn ông trầm lặng, ngồi dưới một cái
 cây, suy nghĩ, và thay đổi thế giới mãi mãi
 
-** Su tro lai cua ly thuyet "Dong van ban"
+* Su tro lai cua ly thuyet "Dong van ban"
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-04-14 03:11:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8518,12 +8556,12 @@ thuyết này....bởi vì toán học không còn là mối quan tâm hàng đ�
 còn dày vò tôi hàng ngày nữa, và tôi đã là sinh viên năm nhất của đại
 học y khoa TpHCM.
 
-** Tuổi 17 cuồng si
+* Tuổi 17 cuồng si
 
 [Đang ở Huế, cafe Gác Trịnh]
 
 #+caption: cafe Gac Trinh
-[[./assets/img/gactrinh2018.jpg]]
+[[/assets/img/gactrinh2018.jpg]]
 
 Có một câu hỏi tôi thường hay sử dụng để hỏi một cô gái mới quen, dưới
 hình thức này hay hình thức khác, đó là:** "em đã ở đâu khi anh trải qua
@@ -8555,7 +8593,7 @@ Steve giàu bao nhiêu thì thầy tôi ngược lại bấy nhiêu. Một ngh�
 nghĩa.
 
 #+caption: Dao Ánh
-[[./assets/img/daoanh.jpg]]
+[[/assets/img/daoanh.jpg]]
 
 Thời của Trịnh, ông bắt đầu với Dao Ánh bằng thư tình và âm nhạc và kết
 thúc với Hồng Nhung cũng bằng thư tình và âm nhạc. Trong thế giới đi
@@ -8568,7 +8606,7 @@ và phê phán tới cùng. Chúng ta là những người đang sống, và b�
 bản nhất của sự sống là thay đổi. Để chúng ta còn mở rộng biên giới của
 mình đến những khẩu vị phong phú hơn.
 
-** DAY 30: Thời kỳ đã qua
+* DAY 30: Thời kỳ đã qua
 
 Ở Quảng Ngãi có một cái thư viện tỉnh, phòng đọc rộng thênh thang và kho
 sách của phòng mượn rộng đến 2 tầng hầm. Tôi có lẽ là độc giả duy nhất
@@ -8623,7 +8661,8 @@ thực tại mới. Các ý tưởng như một giống loài virus, một khi �
 tâm trí con người, người ta sẽ thích nghi với nó, hoạt động theo đúng ý
 muốn của nó và tìm cách lan truyền nó cho những người khác.
 
-** Ngày Xưa Hoàng Thị
+* Ngày Xưa Hoàng Thị
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-04-05 09:43:03 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8727,7 +8766,8 @@ Ai mang bụi đỏ đi rồi\\
 Ai mang bụi đỏ đi rồi\\
 Ai mang bụi đỏ đi rồi
 
-** Hắc Tây Du
+* Hắc Tây Du
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2021-09-14
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8762,7 +8802,8 @@ những thứ họ chẳng muốn đụng tay. Xét cho cùng thì cho đến l�
 kinh, Tôn Ngộ Không cũng chẳng thoát được bàn tay Phật Tổ, cũng chỉ là
 con khỉ múa may quay cuồng theo ý chí của họ mà thôi.
 
-** Tôi cần thêm một chút ánh sáng cho niềm tin
+* Tôi cần thêm một chút ánh sáng cho niềm tin
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-12-15 13:53:50 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8826,7 +8867,8 @@ là *Jesus*, đang cố gắng hết sức chỉ để duy trì cuộc s
 hàng ngày và chờ đợi một chút ánh sáng loé lên từ giữa
 những đám mây.
 
-** Người đẹp
+* Người đẹp
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-04-28 16:47:59 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8840,18 +8882,19 @@ Treo trước mắt mọi người...”
 
 Trích "Người đẹp" của Lò Ngân Sủn
 
-** Triết lí của điệu múa
+* Triết lí của điệu múa
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2014-02-08 14:43:25 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
-*** (hay là một minh chứng về sự không thể tách rời giữa tinh thần và thể xác)*
+** (hay là một minh chứng về sự không thể tách rời giữa tinh thần và thể xác)*
 :PROPERTIES:
 :CUSTOM_ID: hay-là-một-minh-chứng-về-sự-không-thể-tách-rời-giữa-tinh-thần-và-thể-xác
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
-*** Nhảy múa là gì?
+** Nhảy múa là gì?
 :PROPERTIES:
 :CUSTOM_ID: nhảy-múa-là-gì
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8868,7 +8911,7 @@ hỏi "nhảy múa là gì?" mà không cần hy vọng có một câu trả l�
 Chỉ một câu hỏi ấy cũng đủ cho ta bước vào điệu múa, vào sự quay cuồng
 và mê đắm của múa.
 
-*** Sự phân định giữa sân khấu và khán phòng
+** Sự phân định giữa sân khấu và khán phòng
 :PROPERTIES:
 :CUSTOM_ID: sự-phân-định-giữa-sân-khấu-và-khán-phòng
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8896,7 +8939,7 @@ lập bất động và bất lực bên này bờ sông (khán phòng), xem ng�
 múa ở bờ bên kia (sân khấu). Nhưng từ sân khấu, vũ công luôn cổ vũ khán
 giả vượt con sông trong tưởng tượng còn đang chia cắt họ.
 
-*** Sự hợp nhất giữa tinh thần và thể xác trong điệu múa
+** Sự hợp nhất giữa tinh thần và thể xác trong điệu múa
 :PROPERTIES:
 :CUSTOM_ID: sự-hợp-nhất-giữa-tinh-thần-và-thể-xác-trong-điệu-múa
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -8985,9 +9028,9 @@ trào nhất, tức là khi tinh thần đã áp đặt hoàn toàn lên cơ th�
 sau này ta gọi là /múa cổ điển/. Chính ông đã áp đặt dứt khoát sự chia
 cắt giữa sân khấu và khán phòng.
 
+ 
 
-
-*** Sự thần thánh hóa điệu múa
+** Sự thần thánh hóa điệu múa
 :PROPERTIES:
 :CUSTOM_ID: sự-thần-thánh-hóa-điệu-múa
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9010,9 +9053,9 @@ như tỏa ra một kích tấc siêu hình. Đó là thứ ngôn ngữ toàn n�
 thể truyền tải. Nhưng đó cũng là một ngôn ngữ không cho phép ta chuyển
 dịch mọi cử chỉ thành lời.
 
+ 
 
-
-*** Cái duyên (liệu robot có thể tự nó nhảy múa?)
+** Cái duyên (liệu robot có thể tự nó nhảy múa?)
 :PROPERTIES:
 :CUSTOM_ID: cái-duyên-liệu-robot-có-thể-tự-nó-nhảy-múa
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9047,9 +9090,9 @@ giữa thể xác và tinh thần đó, đã làm ta bật cười. Điệu múa
 hỏi phải có sự hiện hữu tích cực của tinh thần trong cơ thể, một ý thức
 nhạy bén với mọi cử chỉ điệu bộ.
 
+ 
 
-
-*** Kết luận
+** Kết luận
 :PROPERTIES:
 :CUSTOM_ID: kết-luận
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9062,7 +9105,8 @@ một khúc nhạc, khung cảnh, trang phục để diễn đạt, mà chỉ c�
 có thể múa trên sa mạc và múa trong im lặng, bởi múa vốn là một ngôn ngữ
 tự nó đã thỏa mãn đầy đủ mọi ý nghĩa.
 
-** Dự án thiên mệnh
+* Dự án thiên mệnh
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-08-29
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9108,7 +9152,8 @@ trở thành ác mộng khi nó thành hiện thực, rồi bạn chợt nhận 
 không phải là điều mình mong muốn, để gắn với nó cả quãng đời còn lại.
 Và lúc đó bạn chẳng đủ sức lực để quay lại nữa.
 
-** Mưa
+* Mưa
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-11-24 01:29:28 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9175,14 +9220,14 @@ Nhà
 [Người ta hay noí rằng những người ở thiên đường khóc sẽ thành mưa,
 thành những giọt nước mắt không hề có vị muối...!]
 
-** Smells like teen spirit
+* Smells like teen spirit
 
 
 #+begin_quote
 Đang ở openshare nghe vài giai điệu tuổi trẻ...
 #+end_quote
 
-[[./assets/img/quaniopenshare2018.jpg]]
+[[/assets/img/quaniopenshare2018.jpg]]
 
 Người ta nói rằng đời người giống như những đốt tre, cứ đều đặn vài năm
 thì thay đổi qua một giai đoạn mới. Cổ nhân nói rằng chu kì đối với nam
@@ -9223,7 +9268,8 @@ hai còn muốn đi cùng nhau khi mỗi người bước vào giai đoạn mớ
 mình, đó thường sẽ là sự thoả hiệp hoặc cái gì khác thì mình không biết,
 hehe
 
-** Vũ khúc tháng 10
+* Vũ khúc tháng 10
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2010-10-18 13:40:39 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9288,7 +9334,8 @@ chết ở biển, dù nó không được thiết kế phù hợp cho cơ thể
 
 Đó là một khúc luân vũ của biển.
 
-** Đấu tranh
+* Đấu tranh
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-10-03 01:58:58 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9303,11 +9350,12 @@ nắm lấy tay người Dẫu qua muôn suối ngàn đồi cũng qua"
 
 "Mục tiêu của chúng ta không phải là tiết kiệm tiền, mà là làm ra tiền"
 
-
+ 
 
 Tôi thực sự muốn làm điều gì trong cuộc đời?
 
-** Hát ru chồng những đêm khó ngủ
+* Hát ru chồng những đêm khó ngủ
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2011-05-16 15:54:05 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9410,7 +9458,8 @@ Ngủ đi anh, hãy ngủ đi...
 
 `                                                             1974
 
-** thanhgo -- bàn về thiên tài
+* thanhgo -- bàn về thiên tài
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-04-18 04:14:24 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9448,11 +9497,11 @@ Vào thế kỉ 23, một thằng nhóc nữa, nhận ra làm thiên tài ở nh
 trước dễ quá, nó tự chế ra chiếc máy thời gian theo cuốn _"Technology
 Cookbook" _để quay về làm thiên tài cho thỏa chí.
 
-
+ 
 
 Vậy, thiên tài thực sự, anh ở đâu? /Où es tu? (Marc Levy)/
 
-** Toxoplasma
+* Toxoplasma
 
 Nói trước nhé, mình là người yêu chó hơn yêu mèo, bọn chó có mấy trò mèo
 vui vẻ hơn mấy con mèo chảnh chó. Nhưng từ khi chuyển vô kí túc xá ở, lũ
@@ -9488,7 +9537,8 @@ lợi. Móa ơi...
 Từ đó tôi không đọc báo khoa học nữa, tôi đi hun mấy con mèo hoang trong
 kí túc xá đây...
 
-** Quan hang phu thuy
+* Quan hang phu thuy
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-04-14 03:36:00 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9505,7 +9555,8 @@ chúng tôi chỉ bán cây non Còn quả chín, anh phải trồng, không bá
 
 *Thái Bá Tân* dịch.
 
-** Luân vũ
+* Luân vũ
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2011-06-17 08:56:48 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9542,7 +9593,8 @@ nghĩ của chính mình == == == == ==
 =Ngày nay, chúng ta đang đứng trước một cơ hội lớn để thay đổi= == ` Hay
 là chết
 
-** Những người đói
+* Những người đói
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2014-01-19 14:20:23 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9665,7 +9717,8 @@ trong một nhà hàng sang trọng, hay khi mua được một chiếc áo em v
 mươi năm trước, hay cả nghìn năm về trước, cho đến tận bây giờ, đất nước
 mình vẫn còn đói khổ.
 
-** Sao kê
+* Sao kê
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2021-09-07
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9735,7 +9788,8 @@ tốn bao nhiêu công sức và tiền bạc nhưng chẳng ai làm, các bạn
 sao không? Còn rất nhiều thứ khác để ta làm từ thiện và phân bổ lại
 nguồn lực xã hội, không chỉ miền trung.
 
-** Mỹ
+* Mỹ
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-11-02 09:54:12 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9743,7 +9797,8 @@ nguồn lực xã hội, không chỉ miền trung.
 
 Làm sao có thể hô /*"Mỹ chết đi!",*/ trong khi anh đang mặc quần Jean?
 
-** Mèng mén
+* Mèng mén
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2018-09-09 23:20:03
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9780,7 +9835,8 @@ của chính nhạc sĩ cộng sản Lưu Hữu Phước này sáng tác. Đủ 
 phức tạp của cuộc chiến tương tàn, nó không trắng đen rõ ràng như bạn
 nghĩ đâu.
 
-** Người Việt chúng ta
+* Người Việt chúng ta
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-12-11 12:34:51 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9807,7 +9863,8 @@ xem những tính chất ấy là bất di bất dịch.
 
 trích từ *"Việt Nam văn hóa sử cương"* của *Đào Duy Anh*
 
-** Vũng lầy của chúng ta
+* Vũng lầy của chúng ta
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2011-01-03 08:48:21 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9869,7 +9926,8 @@ lặng để không bị tổn thương thêm nữa.
 
 Tôi ơi, đứng dậy, và đi tiếp đi!
 
-** Blog của em tui
+* Blog của em tui
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-05-21 04:02:36 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9902,7 +9960,8 @@ comment động viên nó, nhớ ghé thăm nhé.
 Địa chỉ của blog là: [[http://khanhhan.wordpress.com]]. Ah! có cả hình
 của nó nữa đấy! Em tui khá xinh! (lại hãnh diện nữa rồi!!!)
 
-** Bà mẹ! Việt Nam anh hùng!
+* Bà mẹ! Việt Nam anh hùng!
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-12-17 13:28:58 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -9943,7 +10002,8 @@ tiếc một trận bão lớn của người hâm mộ mà thôi, còn với 11
 xin hãy về nhà, đọc vài cuốn sách thiền, và nghĩ mình là ai, để hôm sau
 chơi cho chuyên nghiệp hơn.
 
-** "Hãy nói yêu thôi, đừng nói yêu mãi mãi!"
+* "Hãy nói yêu thôi, đừng nói yêu mãi mãi!"
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2009-05-16 06:31:24 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -10032,7 +10092,8 @@ giờ quên được:
 *Xem thêm bài viết của Phạm Lữ Ân tại đây:*
 http://www.luanvy.com/loinhochoem.htm
 
-** Nguyên tắc sống cho năm 2008
+* Nguyên tắc sống cho năm 2008
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-01-03 09:08:35 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -10046,7 +10107,8 @@ Không tuổi tác,
 
 Không thời gian.
 
-** Những công trình từ đầu năm học tới nay
+* Những công trình từ đầu năm học tới nay
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-11-29 03:09:20 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -10059,7 +10121,7 @@ Thôi thì up lên một vài bài viết trình sermina mà tôi viết cho t�
 mình từ đầu năm tới nay, hi vọng có thể phổ cập một ít kiến thức y học
 cho mọi mgười:
 
-**** 1. Lao hạch
+*** 1. Lao hạch
 :PROPERTIES:
 :CUSTOM_ID: lao-hạch
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -10077,12 +10139,12 @@ Tại về
 [[http://cid-f813e62a87e860b1.skydrive.live.com/self.aspx/Public/lao%20hach.pdf][tại
 đây]]
 
-****
+*** 
 :PROPERTIES:
 :CUSTOM_ID: section
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
-**** 2. Sơ cấp cứu bệnh nhân chấn thương sọ não ngoài đường phố
+*** 2. Sơ cấp cứu bệnh nhân chấn thương sọ não ngoài đường phố
 :PROPERTIES:
 :CUSTOM_ID: sơ-cấp-cứu-bệnh-nhân-chấn-thương-sọ-não-ngoài-đường-phố
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -10097,7 +10159,7 @@ Tải về
 [[http://cid-f813e62a87e860b1.skydrive.live.com/self.aspx/Public/Chuyen%20de%20ngoai%20than%20kinh.pdf][tại
 đây]]
 
-**** 3. Khám thần kinh
+*** 3. Khám thần kinh
 :PROPERTIES:
 :CUSTOM_ID: khám-thần-kinh
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -10110,7 +10172,8 @@ Tải về
 [[http://cid-f813e62a87e860b1.skydrive.live.com/self.aspx/Public/Kham%20than%20kinh.pdf][tại
 đây]]
 
-** Rồi sẽ yêu ai
+* Rồi sẽ yêu ai
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2006-10-11 04:47:34 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -10243,14 +10306,15 @@ con mẹ ạ! Con bạn con..." Mẹ ngủ rồi, tờ báo rơi bên cạnh. Ng
 sẽ mua một quyển sổ làm nhật kí. Không thể tâm sự cùng ai những trò ấm ớ
 này.
 
-** Chúa ở trong tôi
+* Chúa ở trong tôi
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2023-12-23
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
 #+caption: Cô gái mặc áo choàng
-[[./assets/img/aochoang.jpeg]]
+[[/assets/img/aochoang.jpeg]]
 
 Tôi sẽ kể cho các bạn trải nghiệm du lịch đáng nhớ nhất trong chuyến du
 lịch Ấn Độ vừa rồi, và cũng là trải nghiệm đáng nhớ nhất trong năm nay,
@@ -10334,7 +10398,7 @@ mọi vinh quang đều thuộc về Chúa trời.
 
 P/S 2: lần sau, khi bạn ăn, hãy nhìn đến tâm tư của người nấu hôm ấy.
 
-** Bốn lần hôn nhân
+* Bốn lần hôn nhân
 
 
 #+begin_quote
@@ -10378,7 +10442,8 @@ chướng mà những bà vợ đã gây ra cho cách mạng cộng sản Trung 
 điều trái khoáy là bìa cuốn sách lại để hình Mao ngồi một mình trên
 chiếc ghế mây, nhìn ra biển lớn
 
-** Đừng vò nát thư em
+* Đừng vò nát thư em
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-01-15 07:26:36 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -10406,7 +10471,8 @@ Anh thân yêu, đừng vò nát thư em\\
 Trong hành trang nghèo, chỉ giàu kỷ niệm\\
 Tận đáy túi của mình, anh hãy giữ thư em.
 
-** Sự cáo chung của lịch sử
+* Sự cáo chung của lịch sử
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2010-08-31 11:25:10 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -10484,14 +10550,15 @@ Vậy mỗi người chúng ta phải làm gì cho bản thân trong một thờ
 biệt như thế này, khi mà tương lai trở nên khó tiên đoán hơn bao giờ hết
 còn lịch sử thì đi đến chỗ cáo chung.
 
-** Nước và đá
+* Nước và đá
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2019-08-18 22:45:53
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
 #+caption: nuoc va da
-[[./assets/img/nuocvada.jpg]]
+[[/assets/img/nuocvada.jpg]]
 
 Đây là bức tranh mình mới nhận, đặt hàng từ ý tưởng về hình ảnh một con
 sóng đánh vào ghềnh đá. Ông hoạ sĩ đã 70 tuổi, từng nhận giải thưởng mỹ
@@ -10517,7 +10584,8 @@ có hùng mạnh đến đâu đi nữa, cũng chỉ như con cá mập quẫy �
 cỏ hay như chó sói vùng vẫy giữa biển khơi, bởi vì một khi đã bước qua
 giới hạn đó, là cả một đại dương thù địch.
 
-** TRĂM HOA
+* TRĂM HOA
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2012-03-03 13:03:37 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -10569,7 +10637,8 @@ nhất em ơi Dẫu không hương sắc lại bằng mười sắc hương.
    đường/ /Ước gì nổi gió bốn phương/ /Để cho Hoa Gạo rơi xuống mặt
    đường, đâm phải cỏ may./
 
-** Đại bản doanh
+* Đại bản doanh
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-10-20 04:07:08 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -10581,12 +10650,14 @@ nhất em ơi Dẫu không hương sắc lại bằng mười sắc hương.
 trên. Tuy nhiên sợ mọi người không hiểu thâm ý của tác giả nên ghi thêm
 chú thích. (hehe)
 
-** Một kỉ niệm với Euler
+* Một kỉ niệm với Euler
+
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2021-06-20 09:22:05
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
-[[./assets/img/daiso2.jpg]]
+[[/assets/img/daiso2.jpg]]
 
 Như các bạn cũng biết, dạo này em có xách vở đi học ngành toán cao cấp.
 Nhưng các bác cũng biết, em làm 1 cái bv công, 1 cái bv tư, và 2 phòng

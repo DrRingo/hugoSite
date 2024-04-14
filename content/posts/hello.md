@@ -1,8 +1,9 @@
 ---
 title: "Các tác vụ thông thường về text"
-author: ["Ringo Stark"]
+author: ["Nguyễn Bình Thành"]
 date: 2024-04-13T21:38:00+07:00
-lastmod: 2024-04-13T21:47:31+07:00
+lastmod: 2024-04-14T10:28:14+07:00
+categories: ["shell"]
 draft: false
 ---
 
