@@ -14,69 +14,14 @@
 :properties:
 :export_hugo_section: posts
 :end:
-** Các tác vụ thông thường về text
-:PROPERTIES:
-:CREATED: [2023-08-20 Sun]
-:export_file_name: hello
-:EXPORT_DATE: 2024-04-13 Sat 21:38
-:END:
-Tất cả mọi thế giới của IT đều có thể quy về text, nên tác vụ text có vai trò lớn trong việc nâng cao năng suất.
-*** Thay thế đoạn văn bản bị gãy dòng thành văn bản có dòng dài hơn, như tiêu chuẩn :shell:vim:
-:PROPERTIES:
-:CREATED: [2023-05-21 Sun 09:16]
-:END:
-
-#+BEGIN_SRC search and replace
-SEARCH STRING: ((?:[^.?\n]$|\n(?!.?$)))\n
-REPLACE STRING: $1
-#+END_SRC
-
-Lưu ý là có dấu cách " " ở cuối dòng replace string
-
-EDITED: [2023-06-08 Thu 20:43]
-Hoặc có thể viết theo lệnh ~sed~ như sau
-#+NAME: enstring
-#+BEGIN_SRC sh
-sed 's/((?:[^.?\n]$|\n(?!.?$)))\n/$1 /g' FILENAME.ext
-#+END_SRC
-*** Căn chỉnh file timedot :emacs:hledger:
-:PROPERTIES:
-:CREATED: [2023-05-07 Sun 22:45]
-:END:
-
-File timedot là một file hledger đặc biệt, nó gồm nhiều kí tự dot "." và cũng nhiều dòng chú thích theo sau. Vì vậy nó có thể căn chỉnh bằng lệnh align-regexp trong emacs để nhìn trật tự hơn. Và vì thế cũng giúp cho người ghi tự do hơn mà không sợ mất đi tính trật tự của file, miễn là vẫn đảm bảo được cấu trúc ngữ pháp.
-
-#+BEGIN_SRC emacs
-M-x align-regexp RET [[:space:]]\. RET
-M-x align-regexp RET [;] RET
-M-x align-regexp RET \([0-9]+h\) RET
-#+END_SRC
-*** Công thức thay thế ngày SCHEDULED bằng PROPERTIES :orgmode:regex:
-
-Khi tôi viết orgmode trên android, rất khó để viết đầy đủ các thủ tục tiêu chuẩn orgmode, vì vậy tôi sử dụng chức năng SCHEDULED để tạo lập 1 ngày tháng viết cho nhanh, sau này trên máy tính sẽ sử dụng chức năng *'Find and Replace'* có /regex/ để thay thế toàn bộ 1 lần. Cụ thể như sau
-
-#+BEGIN_SRC find_and_replace
-FIND: SCHEDULED: <(\d*-\d*-\d* \w*)>
-REPLACE: :PROPERTIES:\n:CREATED: [$1]\n:END:
-#+END_SRC
-
-EDITED:[2023-02-10 Fri]
-Tôi đã tạo được một snippet đáng tin cậy trong vscode về việc ngày tháng, nên nếu tôi không ở trong vscode để tạo snippet thì tôi có thể viết đoạn snippet đó theo nguyên mẫu, để sau này tôi tạo lại chúng sau bằng vscode. Từ nay nên tránh dùng SCHEDULED vì sẽ dễ gây nhầm lẫn đâu là schedule thật, đâu là chỉ để thay thế thời gian tạo mục. Và cũng để tận dụng chức năng schedule tốt hơn.
-
-EDITED: [2023-05-11 Thu]
-Công thức vim hoặc emacs subtitute cho thay đổi ở trên, lợi thế là nó one-liner, chỉ cần copy và paste vô là hoạt động hiệu quả
-
-#+BEGIN_SRC vim
-%s/SCHEDULED: <\(.*\)>/:PROPERTIES:\n:CREATED: [\1]\n:END:/gc
-#+END_SRC
-
-* Think   :@think:
+* Think :@think:
 :properties:
 :export_hugo_section: posts
 :end:
 ** Cấu trúc của quyền lực
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2014-11-15 15:13:47 Z
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :export_file_name: power
 :END:
 
@@ -191,6 +136,613 @@ nữa...
 
 P/S: mới mua cuốn sách giải phẫu nên dâng trào cảm hứng, hehe
 
+** Chuyện tình của ông Nobi
+:PROPERTIES:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/ong-bo.chuan-muc.jpg"
+:export_file_name: mr-nobi-love-story
+:END:
+#+caption: Ong Nobi
+[[/assets/img/ong-bo-chuan-muc.jpg]]
+
+Ông Nobi là bố của Nobita, nhà nghèo, bố mẹ không có gì để lại cho con.
+Ông vẽ rất đẹp, có nhà giàu khi ấy muốn tài trợ ông ra nước ngoài học
+hỏi, nhưng họ cũng gài cái điều kiện, là hốt xác giùm đứa con gái chảnh
+chọe chưng diện của họ với, lỡ một mai họ mất rồi, còn có thằng có chút
+tài lẻ gánh nợ.
+
+Ông "say no", tự dặn trong lòng rằng Nobi này sống được thì cũng tiến
+thân được, ông ưng cô nữ sinh đầu tiên ông gặp sau khi từ nhà kia trở về
+(đàn ông phong tình như vậy trên đời dễ có mấy tay). Rốt cục đời ông
+chìm trong đen tối, không hành nghề vẽ vời đã đành, ông chỉ làm chân kế
+toán quèn, đi làm bằng tàu điện ngầm. Cô nữ sinh hiền thục giờ đã hiện
+nguyên hình là con sư tử, đẻ được có mỗi 1 đứa con, thằng đó lại hậu
+đậu, học dốt, ngoài bắn súng giỏi ra thì cái gì cũng về chót, lại thêm
+con mèo máy màu xanh vô nhà ăn chực, bày đủ trò quậy phá.
+
+Ông cân hết...
+
+P/S: mình đã từng suy nghĩ nhiều về chuyện tình của ông Nobi này, ai dè
+bữa nay gặp 1 tay khác đồng điệu
+
+[[https://redpillvn.com/ong-bo-chuan-muc/?fbclid=IwAR3IYZcFFQZEYVqaom1KoIuHDHgzIq6jC4jt4-KA29W9jH1Xvxib6jvu6So][Chuyện
+tình của ông Nobi - # Ông bố chuẩn mực - Redpill VN]]
+
+P/S: mình đã từng chứng kiến cảnh lao đầu ưng gái nhà giàu ngoài đời
+thực, đám cưới của nó ở Bình Dương, gia đình ngoài Quảng Ngãi không vô
+dự, bạn bè không đứa nào tới, chỉ có mình là người thân duy nhất đứng
+bên chú rể hôm ấy. Một năm sau, nó bỏ chạy trong đêm, theo đúng nghĩa
+đen.
+
+** Môn đồ và thánh đường
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2022-02-25
+:export_file_name: mon-do-va-thanh-duong
+:END:
+
+Giá trị của một người đàn ông nằm ở điều anh ta sẵn sàng tranh đấu và
+chết vì nó. Anh ta sẵn sàng chết vì băng đảng, giá trị của anh là một
+tướng cướp. Anh ta tranh đấu cho đất nước, đó là một anh hùng. Còn khi
+anh ta dành toàn bộ tâm trí cho gia đình và người phụ nữ của mình, anh
+ta là một người tình, người chồng tốt.
+
+Người đàn ông càng nam tính, sự sẵn sàng tranh đấu vì niềm tin này càng
+cao, ngược lại ở cái giống loài ẻo lả, bạn sẽ thấy sự cam kết sống còn
+này rất yếu hoặc hay thay đổi. Cuộc đời của người đàn ông thực thụ,
+giống như cuộc đời của một môn đồ, tranh đấu cả đời cho chánh nghĩa của
+mình, dù người đời có nhìn nhận về nó ra sao, về băng đảng của anh, về
+cái đất nước hủ bại của anh, về người tình thiếu sắc của anh. Đàn ông
+đơn giản chỉ có vậy.
+
+Lẽ dĩ nhiên, người đàn ông khôn ngoan sẽ không đặt niềm tin cốt tử của
+mình vào những điều không chắc chắn và hay thay đổi. Một ví dụ thường
+gặp là đặt niềm tin vào người tình trẻ, những cô gái bồng bột ấy còn
+chưa biết chắc được hôm nay mình sẽ mặc gì ra đường, nói chi đến làm
+điểm tựa cho lý tưởng của một người đàn ông thực thụ.
+
+Phụ nữ nên biết điều này, người đàn ông của bạn có thể không đặt toàn
+tâm của mình vào bạn đâu. Đừng đòi hỏi điều sến súa phi lý mà truyền
+thông đang cài cắm vào bạn hàng ngày như thế. Trước khi gặp bạn, cuộc
+đời đã cho anh ta những điều tuyệt vời hơn bạn rất nhiều, và anh ta đã
+cam kết những điều còn sắt máu hơn cả cuộc hôn nhân của 2 người. Đó mới
+chính là người đàn ông tuyệt vời các bạn cần tìm.
+
+Như mọi thời, các bạn có biết tiêu chí lựa chọn đàn ông tệ nhất là gì
+không? Đó là lựa chọn chỉ đơn thuần vì tiền bạc. Trong thời đại ngày
+nay, nghèo khó chẳng khác gì một loại khuyết tật. Nhưng nếu phải ở với
+một người chẳng phải đàn ông, các bạn sẽ lãng phí cả một đời trong ảo
+ảnh tiện nghi, mà không một ngày nào thực sự sống, thực sự thấy mình là
+đàn bà.
+
+P/S: hãy thử áp dụng những điều trên vào Putin và chủ nghĩa cộng sản mà
+ông ta vẫn còn giữ trong tim.
+
+** Tại sao Trung Cổ
+:PROPERTIES:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/flowerseller.jpg"
+:export_file_name: tai-sao-trung-co
+:END:
+
+#+caption: The flower seller
+[[/assets/img/flowerseller.jpg]]
+
+Khi đọc về lịch sử trung cổ, tôi không khỏi đặt ra trong đầu một câu
+hỏi: tại sao thời kì này lại diễn ra, tại sao những người La Mã hùng
+mạnh lại chịu khuất phục và tình trạng trì trệ về kinh tế và khoa học
+kéo dài cả ngàn năm, mà người ta thường hay gọi là đêm trường Trung Cổ.
+Hay tại sao lịch sử lại diễn ra như vậy, sao không để cho kỉ nguyên của
+La Mã phát triển rực rỡ hơn nữa, mà thay vào đó bằng các quốc gia lãnh
+chúa cát cứ và con người chìm trong u tối.
+
+Nhưng thực ra, nếu nhìn kĩ, các tiến bộ khoa học vẫn diễn ra trong đêm
+trường ngàn năm ấy, dù rất chậm. Các công trình kiến trúc, đền đài, lâu
+đài vẫn nguy nga tráng lệ đâu thua kém gì thời kì trước kia. Chỉ khác
+nhau ở chỗ các công trình La Mã mang tính phô trương nhiều hơn và các
+công trình trung cổ mang đậm tính tôn giáo và phòng thủ giữa thời đại
+phong kiến cát cứ ấy. Đến đây thì tôi tự hỏi, liệu chúng ta lấy tiêu chí
+phát triển khoa học và kinh tế để đo độ phát triển của một xã hội liệu
+có đúng không? Liệu lịch sử có quan tâm gì đến việc chúng ta xây được
+đền Pathenon hay phóng tàu vũ trụ lên mặt trăng? Nếu xét trên các tiêu
+chí ấy thì thời trung cổ thua xa thời kì La Mã trước đó.
+
+Thế nhưng mạch đời vẫn trôi, con người vẫn sống và lịch sử vẫn tiếp
+diễn. Có bao giờ bạn tự hỏi, tại sao hầu hết các game đều lấy bối cảnh
+trung cổ, những phim truyền hình ăn khách nếu không phải bối cảnh hiện
+đại thì cũng là trung cổ? Tại sao những câu chuyện cổ tích mà bạn nghe,
+về ông vua và lâu đài, hiệp sĩ đi cứu công chúa, con rồng phun lửa, phù
+thủy làm phép và đủ thứ quái vật trong rừng sâu... đều là từ thời trung
+cổ không? Nếu xét về mặt thời gian, thời trung cổ nếu so với thời La Mã
+thì đâu có cổ xưa hơn. Đã bao giờ bạn nghe một câu chuyện cổ tích về
+thời La Mã chưa? Để ý sâu hơn, những câu chuyện về đế chế La Mã hay xa
+hơn nữa, đều là các câu chuyện thần thoại. Thứ thực sự sống trong câu
+chuyện đó là các thần, chứ không phải con người. Thần thoại có tác dụng
+hiệu triệu mọi người, tin vào một ý niệm chung, từ đó tạo nên một quốc
+gia hay một tổ chức làm việc cho một mục tiêu chung (thấy quen không, ở
+thời đại chúng ta có tư tưởng này, chủ nghĩa kia, văn hóa công ty, bla
+bla). Trong khi đó, những câu chuyện cổ tích, dù có rồng có rắn, đều là
+câu chuyện về con người, trong đó con người thực sự sống, thực sự yêu và
+thực sự đam mê chế cháo những điều phù thủy. Khi làm việc trong một tổ
+chức, chúng ta chỉ đóng một vai diễn của mình, diễn xong 8 tiếng rồi
+quay về chuồng, coi vài chương trình tivi rồi lên giường để rồi lại mai
+đóng tiếp vai đó. Đó là cuộc sống của người nô lệ La Mã, tin vào đủ điều
+thần thoại và xây dựng các công trình vĩ đại, những nghiên cứu vĩ đại,
+và những tư tưởng vĩ đại.
+
+Fuck tất cả những thứ vĩ đại!
+
+Ấy thế, xã hội càng phát triển, quyền quyết định chỉ phụ thuộc vào một
+vài người, rất ít người được chơi trò chơi toàn năng của mình, tất cả số
+đông còn lại đều phụ thuộc vào trò chơi ấy. Chẳng ai thực sự sống cả!
+Nếu con người không sống thì làm game, đóng phim truyền hình kể về con
+người thời La Mã liệu có ăn khách? Xét về khía cạnh nào đó, thời trung
+cổ tiên tiến hơn các thời đại trước đó? Câu trả lời cũng đã có người
+giải rồi, cái nước Bhutan ấy các bạn, người ta không coi trọng việc kinh
+tế hay khoa học, người ta lấy việc tối đa hóa chỉ số hạnh phúc của người
+dân làm kim chỉ nam.
+
+--------------
+
+Có người so sánh trí tuệ con người chẳng khác gì cái lông của con chim
+công, nó chỉ để làm đẹp, và hấp dẫn bạn tình. Để rồi sau đó, cũng cái
+con chim công ấy phải lội vào vũng bùn để mổ thức ăn. Cái lông công tươi
+đẹp ấy có giúp được nó kiếm thức ăn nhiều hơn hay chỉ là để nó cảm thấy
+kiêu hãnh hơn các con vật khác, cũng trong vũng bùn?
+
+Đến một trình độ nhất định, thì trí tuệ của con người chẳng kiếm thêm
+được thức ăn và chả khác gì thứ làm cảnh, như lông con chim.
+
+--------------
+
+Thời tôi còn chơi guitar, có một bài tập luyện ngón của Carulli, chơi
+một điệu rondo. Rondo là vũ khúc ngày mùa, sau khi nông dân thu hoạch
+lúa mì xong, họ cuộn các bó lúa mì lại, đốt một vài bó thành một đống
+lửa, tổ chức party và cùng nhau nhảy múa xung quanh đống lửa ấy.
+
+Nhiều lúc mệt mỏi quá, tôi tự hỏi liệu mình có muốn cuộc sống của mình
+diễn ra như thế này, hay tôi chỉ muốn như một anh nông dân lù khù trên
+đồng, dụ khi mấy cô thôn nữ trong bụi rơm và tới ngày mùa thì nhảy điệu
+rondo.
+
+** Về Huyền Chip và tất cả các em chip chip
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2013-10-04 12:47:10 Z
+:export_file_name: huyen-chip
+:END:
+
+Lúc đầu cũng không định viết về Huyền Chip, nhưng bởi vì đã lỡ mua và lỡ
+đọc sách của em ấy rồi (cuốn tập 1, chỉ vì thấy bìa sách thiết kế ấn
+tượng, chứng tỏ tác giả có chú tâm biên tập tử tế vào cuốn sách của
+mình) và tôi thấy sự việc ngày càng nhuốm màu chính trị xã hội nên điều
+đó thúc giục tôi phải viết vài lời.
+
+Tôi ngờ rằng Huyền Chip đang là nạn nhân của một chiến dịch làm nhục và
+hạ uy tín cá nhân (trẻ trâu bây giờ gọi là "dìm hàng") một cách kinh
+điển nhất của Tổ Chức. Ban đầu sẽ là một bè lũ thiên lôi, ma quỷ không
+biết từ đâu xuất hiện moi móc từ câu từng chữ của đối tượng nhằm tìm ra
+cái sai, cái vô lí trong đó. Tất nhiên là ai cũng có đôi lúc sai, hoặc
+không nhất quán trong hành động và tư tưởng (nhất là đối với Huyền Chip,
+em ấy vừa mới chớm tuổi hai mươi, viết một cuốn sách dài cả mấy trăm
+trang như thế, chuyện sai sót là điều khó mà tránh khỏi, mà sách của em
+nó, em nó có quyền thêm thắt và lược bỏ). Từ những bới móc trên, chúng
+mở rộng ra công kích đời tư cá nhân vốn không liên quan gì đến sự việc,
+lôi kéo cả một cộng đồng rộng lớn vốn trước đây không biết đối tượng là
+người nào bu vào tấn công đánh hội đồng như ruồi bu mật (các bạn trước
+vụ này xảy ra có biết Huyền Chip là con khỉ gió nào chưa). Điều này có
+thể lôi kéo theo cả những người thân xung quanh đối tượng tham gia, họ
+vô tình hay cố ý sẽ có thái độ và hành động nghi ngờ và phủ nhận đối
+tượng, làm đối tượng bị cô lập thêm, sẽ rất đau khổ dằn vặt. Sau đó, một
+vài vị nào đó bước ra, tự xưng là người trí thức uy tín (giáo sư, tiến
+sĩ, viện sĩ...này nọ, tất nhiên cũng là người của Tổ Chức), vị này phán
+những lời như thôi rồi, viện dẫn ra những lí luận vô cùng uyên thâm và
+trừu tượng, sau đó nhân danh nhân dân cộng đồng phán rẳng đối tượng có
+tội cần phải xét xử, mà không cần phải qua tòa án xét xử (trong trường
+hợp này có thể là Foolbrighter Trần Ngọc Thịnh, tay này tự xưng là đi du
+học ở Mỹ về mà trong cách ăn nói không có lấy một chút Mỹ tính nào, toàn
+những lời giáo điều như từ trường chính trị bước ra, như là: "đất nước
+còn nghèo, thế hệ trẻ phải lo làm ăn và đóng thuế, không được đi du lịch
+này nọ, như vậy là hưởng thụ, là sống vị kỷ cá nhân"). Cuối cùng, một vị
+nào đó từ chính quyền hay Tổ Chức xuất hiện, cũng không phải thẩm phán
+hay quan tòa mà thực sự cũng không cần những người đó, vị này nói là vụ
+việc trên đã gây ảnh hưởng đến sự ổn định xã hội và sự an bình của nhân
+dân. Người này cũng không cần biết đối tượng đúng hay sai, nhưng chân lí
+thuộc về số đông, nhất là trên đất nước của nhân dân vì nhân dân này, vì
+vậy đối tượng sẽ phải vui lòng mà nhận tội. Đến đây, đối tượng sau bao
+nhiêu bão táp và cũng đã quá mệt mỏi vì bị đánh hội đồng, thường sẽ chịu
+nhận cho xong, coi như mình đã hi sinh vì nhân dân, còn nếu đối tượng
+vẫn ngoan cố thì sẽ dùng các chế tài bạo lực thực sự (nóng hoặc nguội).
+
+Vì sao Tổ Chức phải tốn công tốn sức tổ chức cả chiến dịch trên nhằm vào
+một con bé ham ăn, ham chơi vừa mới qua tuổi hai mươi? Bởi vì Tổ Chức
+vẫn còn rất ám ảnh với nạn thuyền nhân. Sau bao nhiêu năm đã trôi qua,
+sau bao nhiêu buổi chiều héo hắt trên quê hương, nạn thuyền nhân (hay
+chính xác là chảy máu nhân lực) vẫn luôn diễn ra, có chăng là bây giờ nó
+âm thầm hơn mà thôi, dưới hình thức du học, xuất khẩu lao động, cưới
+chồng nước ngoài, hay làm vận động viên đi du đấu rồi trốn luôn ở ngoại
+quốc. Với tư cách là một người đã từng đi bụi 14 ngày ở Trung Quốc chỉ
+với tổng cộng 14 triệu đồng, tôi xin khẳng định là không có nhiều sự
+khác nhau giữa người đi phượt như Huyền Chip và những người liều mình
+chèo con thuyền nan lao ra biển khơi mịt mù. Đó là cách làm thế nào để
+đi đến một nước khác, hòa nhập và tìm cách nhận sự giúp đỡ của cộng đồng
+sở tại, với một chi phí ban đầu rất khiêm tốn. Thực sự, Tổ Chức rất lo
+ngại phong trào đi phượt trong giới trẻ hiện nay, nhất là phượt ở nước
+ngoài. Đi phượt, không giống như du lịch cưỡi ngựa xem hoa với chi phí
+cao ngất ngưỡng, các bạn trẻ đi phượt với chi phí khiêm tốn, sẽ có cơ
+hội sống cùng với dân bản địa, tìm hiểu tư tưởng lối sống của họ, cũng
+như chế độ chính trị của các nước khác. Từ đó không tránh khỏi sự so
+sánh qua lại giữa nước ngoài và nước mình, rằng ở đâu mới đích thực là
+thiên đường trần thế và đi đến đó sống cũng không quá tốn kém như vẫn
+tưởng.
+
+Các bạn có thấy khi Ngô Thị Giáng Uyên viết "Ngón tay mình còn thơm mùi
+oải hương" hay Dương Thụy viết "Venise và những cuộc tình Gondola", cũng
+là dạng kí sự kể về những nơi đã đi qua, những người đã gặp và những kỉ
+niệm đã trải qua giống như Huyền Chip đã viết. Cũng có thể các cô này
+cũng có thêm thắt chút đỉnh cho sách của mình hoàn thiện hơn, vậy tại
+sao lúc đó không có phong trào đả kích này nọ. Tại vì các cô này may
+mắn? tại lúc đó chưa có mạng xã hội như bây giờ? Tại các cô này đẹp gái
+hơn Huyền Chip nên dễ lấy được thiện cảm hơn? Tôi cho rằng bởi vì châu
+Âu dưới ngòi bút của các cô này hiện ra như là một vùng đất thơ mộng,
+huyền ảo và thần tiên. Đọc các cuốn sách trên, người ta thường có một
+cảm giác lãng mạn lâng lâng, như là đọc truyện cổ tích, nhưng đọc xong
+rồi thôi, còn phải trở về với đời sống thường nhật. Châu Âu là châu Âu,
+cơm áo vẫn là cơm áo, cố gắng làm việc và đóng thuế để có ngày nào đó đủ
+tiền đi đến đó du lịch. Còn Huyền Chip đã viết rất cụ thể những gì đã
+trải qua, về cách cô ta xin chỗ ngủ qua đêm, bị bỏ rơi như thế nào, tìm
+sự giúp đỡ của những người bạn địa phương như thế nào và cả những cách
+kiếm tiền trên đường đi ra sao. Các bạn có để ý những nước Huyền Chip đã
+đi qua chưa bao giờ là châu Âu hay Bắc Mỹ không? Có thể là vì việc xin
+visa đối với một đứa đi bụi VN vào các nước đó rất khó khăn, mà không
+phải qua con đường du học như Dương Thụy đã làm, phần nữa là vì chi phí
+sinh hoạt đi lại ở đây khá đắt đỏ, dân mới đi phượt ít kinh nghiệm
+thường không chọn những nước này. Như vậy, thực ra Huyền Chip đã khá là
+chân thật trong cuốn sách của mình.
+
+#+begin_html
+  <blockquote>
+#+end_html
+
+Cuộc đời không phải là một bộ phim, vì vậy nó không cần phải mạch lạc,
+dễ hiểu và làm hài lòng số đông công chúng.
+
+#+begin_html
+  </blockquote>
+#+end_html
+
+Qua việc này, tôi cũng muốn có đôi lời gởi đến các bạn trẻ. Lẽ thường,
+làm người mới khó, chứ làm thú thì quá dễ. Thú thì có nhiều loại: cừu,
+sói, heo, chó, đại bàng, cánh cụt...Cha mẹ các bạn đã tốn bao khó nhọc
+sinh ra các bạn trong một đất nước độc lập, tự do, hạnh phúc này. Hãy
+sống như một con người độc lập và tự do, đừng cố gắng gán ghép mình trở
+thành một con thú nào đó. Lạy các bạn!
+
+thanhgo, đại bàng không biết bay
+
+** Chánh niệm là đức hạnh duy nhất tồn tại
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2023-08-26
+:export_file_name: chanh-niem
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+#+caption: Sách "mang thai chánh niệm"
+[[/assets/img/mangthaichanhniem.JPG]]
+
+#+begin_quote
+Đức Phật đã nói, chánh niệm là đức hạnh duy nhất tồn tại
+#+end_quote
+
+Lúc sáng mình thấy cuốn sách này trên tiki, thoạt nhìn, mình nghĩ cái
+tựa đề sách gì mà kì khôi. Nhưng 5 phút sau, mình đã đặt mua cuốn sách.
+Nếu các lý thuyết của nhà Phật là đúng, thì quá trình mang thai là sự
+tiếp nhận chuyển sanh của một linh hồn khác vào chung sống với gia đình,
+thì khi đó, những đức hạnh của người mẹ trong lúc mang thai sẽ quyết
+định rất lớn đến tính cách và cuộc sống của đứa con sau này.
+
+P/S: vì sự hạn chế của ngôn ngữ, chữ "chánh niệm" rất dễ làm ta nghĩ đến
+những thứ phủ định của nó, ví dụ như "tà niệm". Nhưng thực sự không
+phải, chỉ có chánh niệm hay không có chánh niệm mà thôi.
+
+Chánh niệm là sự nhận thức về sự tồn tại của bản thân mình trong mọi
+khoảnh khắc của cuộc sống. Đó là điều duy nhất mà một sinh vật sống có ý
+thức có thể làm để cho cuộc đời mình có ý nghĩa. Vì vậy, đức Phật đã nói
+nó là đức hạnh duy nhất tồn tại.
+
+Nhiều người sẽ phản đối ý trên, sẽ nói là để làm cho cuộc sống có ý
+nghĩa, thì tôi phải kiếm được thật nhiều tiền, hay phải thật tài giỏi về
+mặt nào đó của cuộc sống. Thật ra thì không phải đâu, chắc hẳn các bạn
+sống đến tuổi trưởng thành ít nhiều cũng đã trải qua những cảm giác bất
+lực khi mình đã cố gắng hết mức có thể rồi, đã vái thần phật tứ phương
+rồi mà chẳng thể giàu hay chẳng thể giỏi bằng đứa bạn mình được. Có
+những người, sự thành công về mặt tiền bạc hay tri thức đến với họ thật
+nhẹ nhàng, chẳng bù cho ta đã phải cày cuốc hộc máu ra mà chẳng được gì.
+Và trong công cuộc tìm kiếm ảo ảnh tiền bạc hay tri thức đó, ta không
+thực sự sống, ta chỉ lao đầu đi trong một mục tiêu hẹp đã định trước.
+Không ít người khi đã lên đến thành công đỉnh cao, lại muốn quay đầu trở
+lại thời trẻ. Đó là vì họ đã cảm thấy cuộc sống của mình mất đi ý nghĩa
+từ rất lâu, vì họ đã không thực sống trong rất lâu rồi.
+
+Vì vậy, điều duy nhất một sinh vật có ý thức có thể làm để cảm thấy cuộc
+đời mình có ý nghĩa hay không, chính là bằng số lượng thời gian sinh vật
+đó thực sự cảm nhận được sự tồn tại của mình trên cuộc đời như một sinh
+vật tự chủ và tự do. Số lượng thời gian chánh niệm đó cũng rất dễ nhận
+ra bằng bản năng giao tiếp của con người, mà ta sẽ cảm nhận được ngay
+giá tri của người đối diện.
+
+Và đó là lý do tại sao, đức Phật đã nói chánh niệm là đức hạnh duy nhất
+tồn tại. (còn mọi thứ khác chỉ là trò chơi)
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2020-07-30
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Cách đây mấy tuần, do covid nên tôi rảnh rỗi sinh nông nổi, nộp đơn vô
+thi đầu vào cao học toán
+
+Thi gồm 3 phần, 1 phần toán thi viết, 1 phần toán vấn đáp và tiếng anh.
+Thi viết có các phần đại số tuyến tính, giải tích hàm và lý thuyết độ
+đo, toàn những thứ cơ bản cả. Vấn đáp là bàn luận về 1 tình huống tính
+lợi nhuận kinh doanh, trong đó có sử dụng khai triển Taylor để đơn giản
+hoá quá trình tính toán.
+
+Giám khảo của tôi lớn hơn tôi 2 tuổi, đã lên đến phó giáo sư, tỏ vẻ rất
+ngạc nhiên vì sao một bác sĩ đỡ đẻ lại có thể biết về khai triển Taylor,
+thậm chí hiểu rõ về bản chất xấp xỉ hàm tại điểm khai triển định trước.
+
+Như các bạn cũng biết, tên của tôi trong tiếng anh là Ringo. Nhưng các
+bạn để ý mới thấy họ của tôi là Stark. Đó là họ tôi mới đổi trong 3 năm
+trở lại đây thôi, do hâm mộ nàng Sansa của nhà Stark trong Game of
+Thrones, the true north - nơi đất lạnh nhưng tình nồng. Trước họ Stark,
+họ của tôi là Taylor, Ringo Taylor. Thường một người Việt lấy tên tiếng
+Anh, người ta sẽ chọn một cái tên sang chảnh như Sexton, Cato hay
+Maximilian... chẳng ai lại đi lựa chọn Smith (thợ rèn) hay Taylor
+(tailor: thợ may) cả.
+
+Đối với các bạn, khai triển Taylor chỉ là một nhúm kiến thức nữa trong
+hành trình toán học dài như vô tận, thậm chí các bạn chẳng còn nhớ hình
+thù nó như thế nào. Nhưng đối với một đứa trẻ học phổ thông, khai triển
+Taylor là một điểm giác ngộ nho nhỏ, nó đã làm tôi say mê trong nhiều
+ngày liền, và theo như tôi nhớ, sự thay đổi bản chất hàm của nó đã làm
+tôi có cảm giác như đã chạm đến bản chất của toán học.
+
+Như vậy, sau rất nhiều biến cố và đổi thay trong đời, Brook Taylor,
+người đàn ông tôi đã mang họ trong suốt mười mấy năm, đã đưa tôi trở lại
+con đường xưa. Còn chuyện gì đến sau đó, sẽ đến, whatever, who care?
+
+** Chuyện một cái cây và viện triết học mùa hè
+:properties:
+:export_hugo_custom_front_matter: :featured_image "/assets/img/myhomefront.jpg"
+:export_file_name: cay-trang-leo
+:end:
+
+[Chuyện 1 cái cây]
+
+Khi bạn gái cũ mình nó về nhà lần đầu, nó đứng giữa căn bếp và nói "nhìn
+anh có vẻ biết hưởng thụ, nhưng căn nhà này thì không có sức sống"
+
+Trong khi thằng cha hàng xóm làm thợ hồ có 4 vợ và nuôi 1 bầy chó, thì
+trong nhà của tôi chỉ toàn máy móc và sách vở. Vậy là, tôi nghe lời em
+nó cuối tuần phải bỏ công bỏ việc, vô mấy cái nhà vườn tìm cây giống rồi
+hì hục đào đào lấp lấp. Tôi không ở căn nhà đó nữa, nên cái cây thường
+sẽ được tưới nước mưa, hoặc lòng thương của hàng xóm. Cũng may, nắng gió
+miền nam không quá khắc nghiệt nên cái cây đó ra hoa quanh năm và cái
+giống đó rụng lá dã man, làm cái sân nhỏ của tôi giờ dầy cả chục phân
+mùn lá. Năm nay, sau 1 đợt ngập lụt và tiết lạnh kéo dài, cái cây đó bị
+sâu ăn rất nặng. Cũng cha hàng xóm đó, thấy tội cho cái cây, trèo qua
+hàng rào và cắt bớt lá sâu. Hôm qua tôi về thì thấy em nó đã bị sâu làm
+tèo 1 nhánh lớn, hic
+
+[Viện triết học mùa hè]
+
+Nếu các bạn quen tôi lâu năm, có lẽ sẽ không lạ gì với danh từ này, mà
+tôi thường nhắc đi nhắc lại đôi lần. Ý tưởng này bắt đầu có lẽ từ khoảng
+2010 - 2011.
+
+Trong cuốn "Lời thú tội của một sát thủ kinh tế", John Perkins có đề cập
+về các viện "ngôn ngữ mùa hè" mà Mỹ đã xây dựng rải rác ở khắp châu Mỹ
+la tinh. Đó là một tổ chức phi chính phủ nhưng thực chất là một tổ chức
+gián điệp, mà nhiệm vụ chính là trao đổi ngôn ngữ với các sắc dân bản
+địa, mà thực chất chỉ là dạy tiếng Anh cho họ, nhằm xoá mòn bản sắc văn
+hoá địa phương, thao túng chính trị và gây ảnh hưởng lên các ngành kinh
+tế then chốt của quốc gia đó.
+
+Trung Cộng đã có một mô hình bắt chước và triển khai dưới các viện Khổng
+Tử. Nhưng bọn tàu thường cho mình là thâm nho, tuổi gì so với tây lông.
+Các viện Khổng Tử được thành lập ở khắp nơi trên thế giới, Hà Nội cũng
+có 1 cái, nhưng bị vạch trần và phản đối nhiều nhất ở Mỹ và Canada.
+
+Còn vì sao là triết học? Đó là bởi vì em ưa thích suy nghĩ hơn tất cả
+các hoạt động khác trên đời. Chỉ cần một suy nghĩ nền tảng khác đi, mọi
+thành quả chính trị và xã hội của ngày hôm qua sẽ trở thành thứ chẳng
+khác gì trò hề. Và vì ở phương Đông, kể cả từ thời Khổng Tử, người Á
+Châu chưa bao giờ có một hệ tư tưởng vững mạnh và xây dựng đầy đủ như
+Tây Phương. Chúng ta đi copy cũng được thôi, như Trung Cộng và Việt Cộng
+đã làm với Marx. Nhưng rồi, chính cái hệ tư tưởng đó quay trở lại làm
+thành một trở lực trong mọi điều phát triển.
+
+** Dự án thiên mệnh
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2020-08-29
+:export_file_name: du-an-thien-menh
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+Đó là năm 2006, tôi lúc đó 20 tuổi. Sau một thất bại về chuyện tình cảm,
+tôi hiểu rằng với vẻ ngoài như vậy, với địa vị như vậy, tôi chẳng thể
+nào có được người phụ nữ mà tôi mong muốn. Tôi còn cả một cuộc đời phía
+trước, mọi thứ đều có thể xảy ra. Với tâm thế của một người tình cờ bước
+vào trường y, tôi lúc đó chưa sẵn sàng cho một cuộc đời y nghiệp. Tôi
+đặt ra cho mình một dự án, rằng trong 1 năm, tôi sẽ trả lời rằng tôi
+thực sự muốn làm gì.
+
+Tôi đặt tên là "dự án thiên mệnh" và thậm chí ghi câu motto trong sổ lâm
+sàng của tôi khi đó là "ta làm gì trong cả một cuộc đời dài?" (nếu các
+bạn chưa biết, mọi sinh viên y nghiêm túc đều có 1 cuốn sổ ghi chép các
+lần thăm bệnh, các kỉ niệm tại bệnh viện). Một cuộc đời thực sự không
+quá dài để làm tất cả mọi thứ, nhưng nó cũng không quá ngắn để chỉ thờ
+một vị thần duy nhất.
+
+Chính xác là trong năm đó tôi chẳng làm gì nhiều, tôi chỉ để câu hỏi đó
+lơ lửng trong đầu. Nó đi theo tôi trong mọi sinh hoạt. Tôi thả lòng mình
+theo nó để hiểu mình thực sự muốn gì trong đời. Đến hạn chót, tôi chẳng
+nhớ nổi dòng suy luận khi đó là gì, nhưng nó đã đưa tôi đến một kết
+luận: để sống một cuộc đời trọn vẹn, tôi sẽ dấn thân vào 4 ngành.
+
+Đó chỉ là suy nghĩ của một đứa trẻ 20, chưa từng trải sự đời, thậm chí
+chưa từng trải qua chuyện tình cảm nào sâu nặng. Tôi biết rõ như thế,
+nhưng thật lạ kì, trong những năm sau, tôi lại thực hiện đúng như bản kế
+hoạch mà chàng thanh niên 20 tuổi ấy vạch ra, bằng một sự cố chấp, ngoan
+cố và lì đòn đến mức tôi cũng phải ngạc nhiên với khả năng của mình.
+Thực hiện bản kế hoạch đó không phải là không có những chi phí cơ hội,
+thậm chí là lớn.
+
+Nếu bạn quen tôi đủ lâu, có lẽ bạn cũng đã nhận ra 4 ngành đó là gì và
+sự sắp xếp của nó không phải chỉ là đam mê. Và mọi thứ vẫn đang tiếp
+diễn...
+
+Điều tôi chỉ muốn nói ở đây là, hãy cẩn thận với điều bạn ước mơ. Liệu
+rằng bạn có thực sự muốn nó hay không. Bởi vì, chỉ cần bạn có năng lực,
+ước mơ đó bằng cách này hay cách khác, sẽ thành hiện thực. Và giấc mơ
+trở thành ác mộng khi nó thành hiện thực, rồi bạn chợt nhận ra rằng đó
+không phải là điều mình mong muốn, để gắn với nó cả quãng đời còn lại.
+Và lúc đó bạn chẳng đủ sức lực để quay lại nữa.
+
+** Bốn lần hôn nhân
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2020-08-29
+:export_file_name: bon-lan-hon-nhan
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+
+#+begin_quote
+Vì sao đất mẹ không thể nuôi nổi những đứa con của mình?
+#+end_quote
+
+Hàng xóm của tôi ở Bình Dương là một tay thợ hồ, 47 tuổi. Theo như hắn
+kể thì ngày xưa gia đình thuộc hàng đại gia ở Đà Nẵng, nên được hân hạnh
+bị đánh tư sản mại bản năm 1978. Sau lần đó, đại gia đình tứ tán khắp
+nơi, còn hắn lang bạt từ Đà Nẵng, Huế, Phan Thiết cho tới Sài Gòn, Bình
+Phước, Bình Dương. Cũng như theo hắn nói, hắn đã từng làm giáo viên,
+thầu xây dựng, thư kí cho chủ trang trại, quản lí khách sạn và bây giờ
+là thợ hồ theo kiểu người ta nhờ gì làm nấy.
+
+Khi tôi mới chân ướt chân ráo về Bình Dương, hàng xóm của tôi là bà vợ
+thứ 3 cùng 4 đứa con nhỏ, trong đó có 1 đứa con trai mới sanh. Còn hắn ở
+với bà vợ thứ 4, tuổi chắc còn nhỏ hơn đứa con trai đầu, cách đó khoảng
+1 km, cùng với đứa con gái, cũng mới sanh. Sau đó 2 năm, do hục hặc với
+bên bà kia, hắn dọn về ở luôn với bà thứ 3.
+
+Bà vợ đầu là một người hiền dịu, quen nhau từ thời học sinh, có chung
+với nhau 1 đứa con trai bằng tuổi tôi, li dị nhau lúc đứa con mới 2
+tuổi. Chị Thu, bà vợ thứ 3, kể với tôi, bà vợ đầu này mới bị bắt hồi đầu
+năm vì buôn bán thuốc nổ trái phép, làm hắn lo ảnh hưởng đến lí lịch của
+đứa con trai đầu (được cưng nhất nhà) đang làm đầu bếp tại Hàn Quốc.
+
+Bà thứ 2 là người Quảng Nam, đã mất vì ung thư vú, có với hắn 1 đứa con
+trai chưa bao giờ được nằm trong vòng tay của cha. Đứa này phải nói là
+du côn, làm đủ mọi chuyện trái khoáy. Khi say, cả 2 cha con đều dọa giết
+nhau.
+
+Có thể tôi chẳng thể hiểu được những người hàng xóm này, cũng như số
+mệnh của họ. Mà cũng có thể tôi chẳng thể hiểu nổi con người trong thời
+đại hiện nay và cả số mệnh của mình. Tuy thế, tôi biết rằng, một người
+sẽ làm những gì anh ta có thể cho đến khi vận số của anh ta được sáng
+tỏ!
+
+P/S: "Bốn lần hôn nhân" là một cuốn truyện lịch sử mà tôi đã từng đọc từ
+thời trẻ trâu, nói về những cuộc hôn nhân của Mao Trạch Đông và nghiệp
+chướng mà những bà vợ đã gây ra cho cách mạng cộng sản Trung Hoa. Nhưng
+điều trái khoáy là bìa cuốn sách lại để hình Mao ngồi một mình trên
+chiếc ghế mây, nhìn ra biển lớn
+
+:properties:
+:export_hugo_section: posts
+:end:
+* Math  :@math:
+:properties:
+:export_hugo_section: posts
+:end:
+** Các phương trình của Maxwell
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2020-01-01
+:export_file_name: maxwell-equations
+:END:
+
+Và Chúa phán
+
+\[ \nabla\cdotp D=\rho\\
+\nabla\cdot B=0\\
+\nabla\times E=-\frac{\partial B}{\partial t}\\
+\nabla\times H=J+\frac{\partial D}{\partial t}
+\]
+
+thế là ánh sáng\\
+lập tức xuất hiện
+
+** Một kỉ niệm với Euler
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-06-20 09:22:05
+:export_hugo_custom_front_matter: :featured_image "/assets/img/daiso2.jpg"
+:export_file_name: ki-niem-voi-euler
+# :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+:END:
+:END:
+
+Như các bạn cũng biết, dạo này em có xách vở đi học ngành toán cao cấp.
+Nhưng các bác cũng biết, em làm 1 cái bv công, 1 cái bv tư, và 2 phòng
+khám để chạy vạy kiếm bữa mì tôm cho qua ngày đoạn tháng. Nên thời gian
+em có cho toán học bằng 0 ở hầu khắp nơi. Ông thầy dạy em môn đại số là
+thầy Bùi Xuân Hải, đang kẹt ở Pháp cả 2 năm nay vì COVID, nên thầy hay
+gởi bài tập cho đám đệ tử con nhang ở bên này, giúp cho thầy đỡ buồn
+những ngày cách ly bên xứ sở sông Seine. Thường thì em chẳng trả lời bài
+tập, em cùi mà, lở thêm nữa có sao đâu. Nhưng đến một ngày, ông thầy gởi
+bài tập chứng minh định lý về hàm phi Euler, một định lý về đồng dư mà
+tụi em đã học và chứng minh từ thời cấp 2, những chắc ông thầy không cần
+cái chứng minh sơ cấp kia đâu, lớn rồi ai làm vậy.
+
+Nếu các bác chưa biết, 2 công trình thời phổ thông của em là: mở rộng
+hàm Euler trong đánh dấu vị trí phần tử trong tập hợp (một cái hàm khác
+của Euler, ông này có nhiều hàm nên cạp đất nhiều vãi ra) và cái thứ hai
+là hàm modulo trên máy tính bỏ túi và những hệ quả của nó. Thực ra đọc
+cái đề xong, em biết lời giải nó nằm ở đâu. Các bác cũng biết, em già
+rồi, đầu óc không còn nhạy bén như xưa nữa, nhưng được cái em còn có trí
+nhớ cũng không tệ. Bài toán này nằm trong cuốn sách đại số 1 của
+Jean-Marie Monier mà em đã đọc cách đây 20 năm. Tức tốc chạy về Bình
+Dương, lao lên cái thư viện tìm cuốn sách, hi vọng không bị mọt gặm mất,
+rồi tỉ mẩn đánh latex và hí hửng gởi cho ông thầy.
+
+Thầy Hải chấm bài làm của em được 9.5 điểm, đương nhiên, sách làm mà chứ
+có phải em làm đâu. Thầy trừ em nửa điểm vì cái tội sử dụng kí hiệu toán
+quá cổ lổ sĩ. 20 năm, đối với toán học chỉ là cái nháy mắt, ngày nay bọn
+trẻ con vẫn đang vật lộn với cái định lý Pitago tìm ra cách đây hơn 2000
+năm. Nhưng 20 năm lại biến một trung niên ở tuổi 35 (số đẹp, hehe) trở
+thành một người tối cổ trong nền toán học hiện đại. Buồn!
+
+Thực ra thì, em đồ rằng, khi tìm ra định lý thú vị này, Euler chắc cũng
+chỉ chứng minh nó bằng cái cách mà tụi em đã làm những năm cấp 2, trong
+khi Euler vui thú điền viên cùng với mười mấy đứa con lóc nhóc của mình.
+Bởi vì sau Euler gần 100 năm, Galois mới khai sinh ra lý thuyết nhóm và
+ngành đại số hiện đại. Cách chứng minh em gởi cho ông thầy nó dựa nên
+những thành quả cơ bản nhất của cấu trúc đại số trên trường Z này. So
+với thời cấp 2 mông muội, cũng là cái định lý đó thôi, nhưng lần này ta
+đã tiến đến gần Chúa hơn một chút. Ta hiểu rằng cha nội tên là Chúa ấy,
+khi xây dựng hiện thực này, ông ấy đã sử dụng những công cụ nào. Điều đó
+cho ta cảm giác bình yên và chân phúc.
+
+P/S 1: vào những ngày cuối cùng của thời phổ thông, em có gặp thầy
+Nguyễn Minh Hà, ông này dạy chuyên toán ở ĐHSP Hà Nội, chuyên về hình
+học phẳng. Em có trình bày cho ông thầy vài khúc mắc sâu trong em lúc
+ấy, nhưng có lẽ cách trình bày của em không trôi chảy hay ông thầy không
+có cảm hứng lắm với câu hỏi của cậu học trò nhỏ. Ổng trả lời em rằng:
+"này cậu, hãy làm toán như những người đàn ông". Sau đó đời em rẽ ngang,
+em đi vào y khoa và chìm ngập trong đống phân đó một thời gian khá lâu.
+Cái câu "làm toán như những người đàn ông" ấy tưởng đã chìm sâu trong vô
+thức lại trỗi dậy và em đã cảm nhận sâu sắc rằng mình đã là 1 người đàn
+ông thực thụ chỉ sau khi được công nhận bằng điểm 9.5 bằng cái chứng
+minh hàm phi Euler ấy.
+
+P/S 2: toán học là mãi mãi, nó sẽ còn tồn tại khi chúng ta, lũ chó mèo,
+hươu nai, sử tử và gấu... không còn tồn tại trên đời. Nó thậm chí sẽ vẫn
+ở đó khi các định luật vật lý không còn chính xác. Nó là sự bắt chước
+ngôn ngữ của Chúa. Và đó là triết học của tôi!
 * Legacy post
 :PROPERTIES:
 :export_hugo_section: legacy
@@ -742,7 +1294,7 @@ Và tất cả mãi mãi lãng quên.
 :END:
 
 #+caption: cửa sổ kí túc xá Q8
-[[./assets/img/cuasoktx.jpg]]
+[[/assets/img/cuasoktx.jpg]]
 
 Đây là cửa sổ căn phòng của tôi ở kí túc xá viện y tế công cộng. Nó đại
 khái là một cái hộp bằng gạch xây đã 50 năm, cái cửa sổ chiếm hẳn một
@@ -778,7 +1330,7 @@ Không có từ ngữ nào để mô tả sự thán phục cả, xem thì biế
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
-[[./assets/img/tranducthao.jpg]]
+[[/assets/img/tranducthao.jpg]]
 
 Nếu các bạn đọc hồi kí của các tướng lĩnh miền Bắc, các bạn sẽ thấy được
 họ mô tả cuộc đời mình ra sao, cách họ bào chữa cho việc phải đưa ra
@@ -1036,40 +1588,6 @@ thôi.
 
 50/ Em đòi anh hiểu em, thế mà em chẳng hiểu anh gì hết.
 
-** Chuyện tình của ông Nobi
-
-#+caption: Ong Nobi
-[[./assets/img/ong-bo-chuan-muc.jpg]]
-
-Ông Nobi là bố của Nobita, nhà nghèo, bố mẹ không có gì để lại cho con.
-Ông vẽ rất đẹp, có nhà giàu khi ấy muốn tài trợ ông ra nước ngoài học
-hỏi, nhưng họ cũng gài cái điều kiện, là hốt xác giùm đứa con gái chảnh
-chọe chưng diện của họ với, lỡ một mai họ mất rồi, còn có thằng có chút
-tài lẻ gánh nợ.
-
-Ông "say no", tự dặn trong lòng rằng Nobi này sống được thì cũng tiến
-thân được, ông ưng cô nữ sinh đầu tiên ông gặp sau khi từ nhà kia trở về
-(đàn ông phong tình như vậy trên đời dễ có mấy tay). Rốt cục đời ông
-chìm trong đen tối, không hành nghề vẽ vời đã đành, ông chỉ làm chân kế
-toán quèn, đi làm bằng tàu điện ngầm. Cô nữ sinh hiền thục giờ đã hiện
-nguyên hình là con sư tử, đẻ được có mỗi 1 đứa con, thằng đó lại hậu
-đậu, học dốt, ngoài bắn súng giỏi ra thì cái gì cũng về chót, lại thêm
-con mèo máy màu xanh vô nhà ăn chực, bày đủ trò quậy phá.
-
-Ông cân hết...
-
-P/S: mình đã từng suy nghĩ nhiều về chuyện tình của ông Nobi này, ai dè
-bữa nay gặp 1 tay khác đồng điệu
-
-[[https://redpillvn.com/ong-bo-chuan-muc/?fbclid=IwAR3IYZcFFQZEYVqaom1KoIuHDHgzIq6jC4jt4-KA29W9jH1Xvxib6jvu6So][Chuyện
-tình của ông Nobi - # Ông bố chuẩn mực - Redpill VN]]
-
-P/S: mình đã từng chứng kiến cảnh lao đầu ưng gái nhà giàu ngoài đời
-thực, đám cưới của nó ở Bình Dương, gia đình ngoài Quảng Ngãi không vô
-dự, bạn bè không đứa nào tới, chỉ có mình là người thân duy nhất đứng
-bên chú rể hôm ấy. Một năm sau, nó bỏ chạy trong đêm, theo đúng nghĩa
-đen.
-
 ** 9 sự kiện y học quan trọng của năm 2006
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-01-20 02:38:38 Z
@@ -1225,47 +1743,6 @@ hạ Nắng soi bên ấy lại bên này Đợi anh. Anh đến ? Anh không đ
 tắt, còn em đứng mãi đây! Em đứng trên cầu đợi anh Đứng một ngày đất lạ
 thành quen Đứng một đời em quen thành lạ Nước chảy... kìa anh, em đợi
 anh.
-
-** Tình yêu con người
-
-#+caption: Sach giai phau
-[[./assets/img/tinh_yeu_con_nguoi.jpg]]
-
-Thưở mới xa nhà, ý tôi là cái thời năm nhất đại học ấy, như bất kì đứa
-sinh viên y nào, tôi phải chọn cho mình một cuốn atlas giải phẫu. Do
-chẳng có anh chị nào để sách lại hay tư vấn gì, tôi đã ấn tượng và chọn
-cho mình cuốn giải phẫu của 2 ông người Nhật. Không giống tụi sinh viên
-khác thường chọn sách của Netter, toàn hình vẽ, sách của tôi là hình
-người thật, xác thật, thịt thật và xương thật, giá 400k (lương ba tôi
-gởi mỗi tháng hồi đó là 700k, huhu). Bà bán sách lúc đó cũng can ngăn,
-nói cuốn đó chỉ dành cho bác sĩ phẫu thuật thôi, sinh viên nên chọn mấy
-cuốn hình vẽ cho dễ hiểu, nhưng tôi không chịu.
-
-Rốt cục thì bà bán sách nói đúng thật, cuốn đó chẳng giúp ích gì được
-cho con đường học y khoa tăm tối của tôi. Học kì 1 năm đó, tôi đã thi
-lại môn giải phẫu, hic. Chỉ có một điều bổ ích, như cuốn sách đó nói, để
-tự biện minh cho sự tồn tại của một cuốn sách giải phẫu người thật trong
-một rừng sách hình vẽ: là tình yêu con người. Các tác giả hi vọng khi ta
-lật từng trang sách và tham quan thực tế cấu trúc cơ thể người được mổ
-xẻ tỉ mỉ qua từng lớp rõ ràng. Trong ta sẽ bừng lên tình yêu tinh khiết
-nhất với một sinh vật đang nằm trên bàn tiêu bản kia, và nó có tên gọi
-là con người. Bất chấp khi còn sống nó có làm gì đi nữa, nó xứng đáng
-được yêu, với tư cách là một sinh vật đã từng sống.
-
-Và những lời nói ấy trong cuốn sách đầu đời ấy thực sự thì nó có ám ảnh
-tôi thật. Nhất là khi tôi nhìn các em gái, ấn tượng đầu tiên không phải
-là ngoại hình, mà là tình yêu phổ quát của tôi đối với sinh vật đối diện
-đó.
-
-Và khi bắt đầu cầm máy ảnh, tôi đã có một dự án riêng cho mình, đặt tên
-nó là *"tình yêu con người"*, chuyên bắt những khuôn hình ngẫu nhiên
-nhất của những khuôn mặt người đang sống hết mình trong khoảnh khắc của
-chính họ.
-
-Và tình yêu đó vẫn tiếp diễn mỗi ngày...bất chấp những gì xảy ra đi
-nữa...
-
-P/S: mới mua cuốn sách giải phẫu nên dâng trào cảm hứng, hehe
 
 ** Tiếng đàn môi sau bờ rào đá
 :PROPERTIES:
@@ -1956,49 +2433,6 @@ JavaScript. Hàng loạt các thư viện Javascript khác như
 [[http://moofx.mad4milk.net/][moo.fx]] (tạo các hiệu ứng giao diện), hay
 [[http://dojotoolkit.org/][Dojo]] và [[http://jquery.com/][jQuery]]
 
-** Môn đồ và thánh đường
-:PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: 2022-02-25
-:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
-:END:
-
-Giá trị của một người đàn ông nằm ở điều anh ta sẵn sàng tranh đấu và
-chết vì nó. Anh ta sẵn sàng chết vì băng đảng, giá trị của anh là một
-tướng cướp. Anh ta tranh đấu cho đất nước, đó là một anh hùng. Còn khi
-anh ta dành toàn bộ tâm trí cho gia đình và người phụ nữ của mình, anh
-ta là một người tình, người chồng tốt.
-
-Người đàn ông càng nam tính, sự sẵn sàng tranh đấu vì niềm tin này càng
-cao, ngược lại ở cái giống loài ẻo lả, bạn sẽ thấy sự cam kết sống còn
-này rất yếu hoặc hay thay đổi. Cuộc đời của người đàn ông thực thụ,
-giống như cuộc đời của một môn đồ, tranh đấu cả đời cho chánh nghĩa của
-mình, dù người đời có nhìn nhận về nó ra sao, về băng đảng của anh, về
-cái đất nước hủ bại của anh, về người tình thiếu sắc của anh. Đàn ông
-đơn giản chỉ có vậy.
-
-Lẽ dĩ nhiên, người đàn ông khôn ngoan sẽ không đặt niềm tin cốt tử của
-mình vào những điều không chắc chắn và hay thay đổi. Một ví dụ thường
-gặp là đặt niềm tin vào người tình trẻ, những cô gái bồng bột ấy còn
-chưa biết chắc được hôm nay mình sẽ mặc gì ra đường, nói chi đến làm
-điểm tựa cho lý tưởng của một người đàn ông thực thụ.
-
-Phụ nữ nên biết điều này, người đàn ông của bạn có thể không đặt toàn
-tâm của mình vào bạn đâu. Đừng đòi hỏi điều sến súa phi lý mà truyền
-thông đang cài cắm vào bạn hàng ngày như thế. Trước khi gặp bạn, cuộc
-đời đã cho anh ta những điều tuyệt vời hơn bạn rất nhiều, và anh ta đã
-cam kết những điều còn sắt máu hơn cả cuộc hôn nhân của 2 người. Đó mới
-chính là người đàn ông tuyệt vời các bạn cần tìm.
-
-Như mọi thời, các bạn có biết tiêu chí lựa chọn đàn ông tệ nhất là gì
-không? Đó là lựa chọn chỉ đơn thuần vì tiền bạc. Trong thời đại ngày
-nay, nghèo khó chẳng khác gì một loại khuyết tật. Nhưng nếu phải ở với
-một người chẳng phải đàn ông, các bạn sẽ lãng phí cả một đời trong ảo
-ảnh tiện nghi, mà không một ngày nào thực sự sống, thực sự thấy mình là
-đàn bà.
-
-P/S: hãy thử áp dụng những điều trên vào Putin và chủ nghĩa cộng sản mà
-ông ta vẫn còn giữ trong tim.
-
 ** Ông Trăng Xuống Chơi - Phạm Duy
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2008-09-13 04:26:41 Z
@@ -2431,7 +2865,7 @@ chỉ là tác dụng phụ của quá trình đó mà thôi.
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
 
-[[./assets/img/hinhxuavangy.jpg]]
+[[/assets/img/hinhxuavangy.jpg]]
 
 Hãy nhìn bức ảnh này,
 
@@ -2959,7 +3393,7 @@ S01E07)
 #+end_quote
 
 #+caption: me
-[[./assets/img/me.jpeg]]
+[[/assets/img/me.jpeg]]
 
 ** Cyborg hay là một lối đi mới cho ngành vi phẫu
 :PROPERTIES:
@@ -3670,88 +4104,6 @@ Chiều nghiêng xanh một nét mây\\
 Chào em trang trọng tháng ngày\\
 `                                               đương xanh.
 
-** Tại sao Trung Cổ
-
-#+caption: The flower seller
-[[./assets/img/flowerseller.jpg]]
-
-Khi đọc về lịch sử trung cổ, tôi không khỏi đặt ra trong đầu một câu
-hỏi: tại sao thời kì này lại diễn ra, tại sao những người La Mã hùng
-mạnh lại chịu khuất phục và tình trạng trì trệ về kinh tế và khoa học
-kéo dài cả ngàn năm, mà người ta thường hay gọi là đêm trường Trung Cổ.
-Hay tại sao lịch sử lại diễn ra như vậy, sao không để cho kỉ nguyên của
-La Mã phát triển rực rỡ hơn nữa, mà thay vào đó bằng các quốc gia lãnh
-chúa cát cứ và con người chìm trong u tối.
-
-Nhưng thực ra, nếu nhìn kĩ, các tiến bộ khoa học vẫn diễn ra trong đêm
-trường ngàn năm ấy, dù rất chậm. Các công trình kiến trúc, đền đài, lâu
-đài vẫn nguy nga tráng lệ đâu thua kém gì thời kì trước kia. Chỉ khác
-nhau ở chỗ các công trình La Mã mang tính phô trương nhiều hơn và các
-công trình trung cổ mang đậm tính tôn giáo và phòng thủ giữa thời đại
-phong kiến cát cứ ấy. Đến đây thì tôi tự hỏi, liệu chúng ta lấy tiêu chí
-phát triển khoa học và kinh tế để đo độ phát triển của một xã hội liệu
-có đúng không? Liệu lịch sử có quan tâm gì đến việc chúng ta xây được
-đền Pathenon hay phóng tàu vũ trụ lên mặt trăng? Nếu xét trên các tiêu
-chí ấy thì thời trung cổ thua xa thời kì La Mã trước đó.
-
-Thế nhưng mạch đời vẫn trôi, con người vẫn sống và lịch sử vẫn tiếp
-diễn. Có bao giờ bạn tự hỏi, tại sao hầu hết các game đều lấy bối cảnh
-trung cổ, những phim truyền hình ăn khách nếu không phải bối cảnh hiện
-đại thì cũng là trung cổ? Tại sao những câu chuyện cổ tích mà bạn nghe,
-về ông vua và lâu đài, hiệp sĩ đi cứu công chúa, con rồng phun lửa, phù
-thủy làm phép và đủ thứ quái vật trong rừng sâu... đều là từ thời trung
-cổ không? Nếu xét về mặt thời gian, thời trung cổ nếu so với thời La Mã
-thì đâu có cổ xưa hơn. Đã bao giờ bạn nghe một câu chuyện cổ tích về
-thời La Mã chưa? Để ý sâu hơn, những câu chuyện về đế chế La Mã hay xa
-hơn nữa, đều là các câu chuyện thần thoại. Thứ thực sự sống trong câu
-chuyện đó là các thần, chứ không phải con người. Thần thoại có tác dụng
-hiệu triệu mọi người, tin vào một ý niệm chung, từ đó tạo nên một quốc
-gia hay một tổ chức làm việc cho một mục tiêu chung (thấy quen không, ở
-thời đại chúng ta có tư tưởng này, chủ nghĩa kia, văn hóa công ty, bla
-bla). Trong khi đó, những câu chuyện cổ tích, dù có rồng có rắn, đều là
-câu chuyện về con người, trong đó con người thực sự sống, thực sự yêu và
-thực sự đam mê chế cháo những điều phù thủy. Khi làm việc trong một tổ
-chức, chúng ta chỉ đóng một vai diễn của mình, diễn xong 8 tiếng rồi
-quay về chuồng, coi vài chương trình tivi rồi lên giường để rồi lại mai
-đóng tiếp vai đó. Đó là cuộc sống của người nô lệ La Mã, tin vào đủ điều
-thần thoại và xây dựng các công trình vĩ đại, những nghiên cứu vĩ đại,
-và những tư tưởng vĩ đại.
-
-Fuck tất cả những thứ vĩ đại!
-
-Ấy thế, xã hội càng phát triển, quyền quyết định chỉ phụ thuộc vào một
-vài người, rất ít người được chơi trò chơi toàn năng của mình, tất cả số
-đông còn lại đều phụ thuộc vào trò chơi ấy. Chẳng ai thực sự sống cả!
-Nếu con người không sống thì làm game, đóng phim truyền hình kể về con
-người thời La Mã liệu có ăn khách? Xét về khía cạnh nào đó, thời trung
-cổ tiên tiến hơn các thời đại trước đó? Câu trả lời cũng đã có người
-giải rồi, cái nước Bhutan ấy các bạn, người ta không coi trọng việc kinh
-tế hay khoa học, người ta lấy việc tối đa hóa chỉ số hạnh phúc của người
-dân làm kim chỉ nam.
-
---------------
-
-Có người so sánh trí tuệ con người chẳng khác gì cái lông của con chim
-công, nó chỉ để làm đẹp, và hấp dẫn bạn tình. Để rồi sau đó, cũng cái
-con chim công ấy phải lội vào vũng bùn để mổ thức ăn. Cái lông công tươi
-đẹp ấy có giúp được nó kiếm thức ăn nhiều hơn hay chỉ là để nó cảm thấy
-kiêu hãnh hơn các con vật khác, cũng trong vũng bùn?
-
-Đến một trình độ nhất định, thì trí tuệ của con người chẳng kiếm thêm
-được thức ăn và chả khác gì thứ làm cảnh, như lông con chim.
-
---------------
-
-Thời tôi còn chơi guitar, có một bài tập luyện ngón của Carulli, chơi
-một điệu rondo. Rondo là vũ khúc ngày mùa, sau khi nông dân thu hoạch
-lúa mì xong, họ cuộn các bó lúa mì lại, đốt một vài bó thành một đống
-lửa, tổ chức party và cùng nhau nhảy múa xung quanh đống lửa ấy.
-
-Nhiều lúc mệt mỏi quá, tôi tự hỏi liệu mình có muốn cuộc sống của mình
-diễn ra như thế này, hay tôi chỉ muốn như một anh nông dân lù khù trên
-đồng, dụ khi mấy cô thôn nữ trong bụi rơm và tới ngày mùa thì nhảy điệu
-rondo.
-
 ** Xuan Duong
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2005-03-31 09:06:00 Z
@@ -4219,19 +4571,6 @@ mà chúng ta không tôn thờ. Ai muốn chết như một anh hùng?
 chúng ta nhất thiết phải tự tìm ra con đường cho riêng mình...
 
 ...hay là chết.
-
-** Các phương trình của Maxwell
-
-Và Chúa phán
-
-\[ \nabla\cdotp D=\rho\\
-\nabla\cdot B=0\\
-\nabla\times E=-\frac{\partial B}{\partial t}\\
-\nabla\times H=J+\frac{\partial D}{\partial t}
-\]
-
-thế là ánh sáng\\
-lập tức xuất hiện
 
 ** Thien su chet
 :PROPERTIES:
@@ -5401,7 +5740,7 @@ Và em - người anh yêu, anh sẽ hát cho em nghe bài này./.( Who are u???
 :END:
 
 #+caption: Căn nhà màu vàng
-[[./assets/img/cannhamauvang.jpg]]
+[[/assets/img/cannhamauvang.jpg]]
 
 Đang ở đường sách Nguyễn Văn Bình, ở đây ngày nào cũng có các em gái
 chưng diện, rồi nhe răng ẹo người vào bất cứ góc hình nào mà họ thấy
@@ -6143,7 +6482,7 @@ còn bao mối dây gắn bó Em đi được với hắn không?
 
 ** Kurt Gödel và định lí bất toàn
 
-[[./assets/img/kurtgodel.png]]
+[[/assets/img/kurtgodel.png]]
 
 Mấy hôm nay mình đang chơi game Assasin's Creed Odyssey, đóng vai một
 anh hùng Hi Lạp cổ đại, là hậu duệ trực tiếp của người anh hùng Leonidas
@@ -6258,7 +6597,7 @@ cũng thật dễ chịu, vải nhẹ nhàng nhắc nhở khi nào ta đã ăn q
 
 ** Nhiều tiền để làm gì?
 
-[[./assets/img/sanktxquan8.jpg]]
+[[/assets/img/sanktxquan8.jpg]]
 
 **** Lịch sử bãi cỏ
 :PROPERTIES:
@@ -6386,7 +6725,7 @@ tôi hôm nay là tối nay tôi sẽ được ngủ chung với P.A, chỉ có 
 
 ** Chất men
 
-[[./assets/img/lqvvaxq.jpg]]
+[[/assets/img/lqvvaxq.jpg]]
 
 Lưu Quang Vũ là nhà thơ có chất nam tính cuối cùng của Việt Nam, còn lại
 phảng phất mùi pê đê hết
@@ -6597,120 +6936,6 @@ Khắp nẻo dâng đầy hoa cỏ may\\
 Lời yêu mỏng mảnh như màu khói\\
 Ai biết lòng anh có đổi thay?
 
-** Về Huyền Chip và tất cả các em chip chip
-:PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: 2013-10-04 12:47:10 Z
-:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
-:END:
-
-Lúc đầu cũng không định viết về Huyền Chip, nhưng bởi vì đã lỡ mua và lỡ
-đọc sách của em ấy rồi (cuốn tập 1, chỉ vì thấy bìa sách thiết kế ấn
-tượng, chứng tỏ tác giả có chú tâm biên tập tử tế vào cuốn sách của
-mình) và tôi thấy sự việc ngày càng nhuốm màu chính trị xã hội nên điều
-đó thúc giục tôi phải viết vài lời.
-
-Tôi ngờ rằng Huyền Chip đang là nạn nhân của một chiến dịch làm nhục và
-hạ uy tín cá nhân (trẻ trâu bây giờ gọi là "dìm hàng") một cách kinh
-điển nhất của Tổ Chức. Ban đầu sẽ là một bè lũ thiên lôi, ma quỷ không
-biết từ đâu xuất hiện moi móc từ câu từng chữ của đối tượng nhằm tìm ra
-cái sai, cái vô lí trong đó. Tất nhiên là ai cũng có đôi lúc sai, hoặc
-không nhất quán trong hành động và tư tưởng (nhất là đối với Huyền Chip,
-em ấy vừa mới chớm tuổi hai mươi, viết một cuốn sách dài cả mấy trăm
-trang như thế, chuyện sai sót là điều khó mà tránh khỏi, mà sách của em
-nó, em nó có quyền thêm thắt và lược bỏ). Từ những bới móc trên, chúng
-mở rộng ra công kích đời tư cá nhân vốn không liên quan gì đến sự việc,
-lôi kéo cả một cộng đồng rộng lớn vốn trước đây không biết đối tượng là
-người nào bu vào tấn công đánh hội đồng như ruồi bu mật (các bạn trước
-vụ này xảy ra có biết Huyền Chip là con khỉ gió nào chưa). Điều này có
-thể lôi kéo theo cả những người thân xung quanh đối tượng tham gia, họ
-vô tình hay cố ý sẽ có thái độ và hành động nghi ngờ và phủ nhận đối
-tượng, làm đối tượng bị cô lập thêm, sẽ rất đau khổ dằn vặt. Sau đó, một
-vài vị nào đó bước ra, tự xưng là người trí thức uy tín (giáo sư, tiến
-sĩ, viện sĩ...này nọ, tất nhiên cũng là người của Tổ Chức), vị này phán
-những lời như thôi rồi, viện dẫn ra những lí luận vô cùng uyên thâm và
-trừu tượng, sau đó nhân danh nhân dân cộng đồng phán rẳng đối tượng có
-tội cần phải xét xử, mà không cần phải qua tòa án xét xử (trong trường
-hợp này có thể là Foolbrighter Trần Ngọc Thịnh, tay này tự xưng là đi du
-học ở Mỹ về mà trong cách ăn nói không có lấy một chút Mỹ tính nào, toàn
-những lời giáo điều như từ trường chính trị bước ra, như là: "đất nước
-còn nghèo, thế hệ trẻ phải lo làm ăn và đóng thuế, không được đi du lịch
-này nọ, như vậy là hưởng thụ, là sống vị kỷ cá nhân"). Cuối cùng, một vị
-nào đó từ chính quyền hay Tổ Chức xuất hiện, cũng không phải thẩm phán
-hay quan tòa mà thực sự cũng không cần những người đó, vị này nói là vụ
-việc trên đã gây ảnh hưởng đến sự ổn định xã hội và sự an bình của nhân
-dân. Người này cũng không cần biết đối tượng đúng hay sai, nhưng chân lí
-thuộc về số đông, nhất là trên đất nước của nhân dân vì nhân dân này, vì
-vậy đối tượng sẽ phải vui lòng mà nhận tội. Đến đây, đối tượng sau bao
-nhiêu bão táp và cũng đã quá mệt mỏi vì bị đánh hội đồng, thường sẽ chịu
-nhận cho xong, coi như mình đã hi sinh vì nhân dân, còn nếu đối tượng
-vẫn ngoan cố thì sẽ dùng các chế tài bạo lực thực sự (nóng hoặc nguội).
-
-Vì sao Tổ Chức phải tốn công tốn sức tổ chức cả chiến dịch trên nhằm vào
-một con bé ham ăn, ham chơi vừa mới qua tuổi hai mươi? Bởi vì Tổ Chức
-vẫn còn rất ám ảnh với nạn thuyền nhân. Sau bao nhiêu năm đã trôi qua,
-sau bao nhiêu buổi chiều héo hắt trên quê hương, nạn thuyền nhân (hay
-chính xác là chảy máu nhân lực) vẫn luôn diễn ra, có chăng là bây giờ nó
-âm thầm hơn mà thôi, dưới hình thức du học, xuất khẩu lao động, cưới
-chồng nước ngoài, hay làm vận động viên đi du đấu rồi trốn luôn ở ngoại
-quốc. Với tư cách là một người đã từng đi bụi 14 ngày ở Trung Quốc chỉ
-với tổng cộng 14 triệu đồng, tôi xin khẳng định là không có nhiều sự
-khác nhau giữa người đi phượt như Huyền Chip và những người liều mình
-chèo con thuyền nan lao ra biển khơi mịt mù. Đó là cách làm thế nào để
-đi đến một nước khác, hòa nhập và tìm cách nhận sự giúp đỡ của cộng đồng
-sở tại, với một chi phí ban đầu rất khiêm tốn. Thực sự, Tổ Chức rất lo
-ngại phong trào đi phượt trong giới trẻ hiện nay, nhất là phượt ở nước
-ngoài. Đi phượt, không giống như du lịch cưỡi ngựa xem hoa với chi phí
-cao ngất ngưỡng, các bạn trẻ đi phượt với chi phí khiêm tốn, sẽ có cơ
-hội sống cùng với dân bản địa, tìm hiểu tư tưởng lối sống của họ, cũng
-như chế độ chính trị của các nước khác. Từ đó không tránh khỏi sự so
-sánh qua lại giữa nước ngoài và nước mình, rằng ở đâu mới đích thực là
-thiên đường trần thế và đi đến đó sống cũng không quá tốn kém như vẫn
-tưởng.
-
-Các bạn có thấy khi Ngô Thị Giáng Uyên viết "Ngón tay mình còn thơm mùi
-oải hương" hay Dương Thụy viết "Venise và những cuộc tình Gondola", cũng
-là dạng kí sự kể về những nơi đã đi qua, những người đã gặp và những kỉ
-niệm đã trải qua giống như Huyền Chip đã viết. Cũng có thể các cô này
-cũng có thêm thắt chút đỉnh cho sách của mình hoàn thiện hơn, vậy tại
-sao lúc đó không có phong trào đả kích này nọ. Tại vì các cô này may
-mắn? tại lúc đó chưa có mạng xã hội như bây giờ? Tại các cô này đẹp gái
-hơn Huyền Chip nên dễ lấy được thiện cảm hơn? Tôi cho rằng bởi vì châu
-Âu dưới ngòi bút của các cô này hiện ra như là một vùng đất thơ mộng,
-huyền ảo và thần tiên. Đọc các cuốn sách trên, người ta thường có một
-cảm giác lãng mạn lâng lâng, như là đọc truyện cổ tích, nhưng đọc xong
-rồi thôi, còn phải trở về với đời sống thường nhật. Châu Âu là châu Âu,
-cơm áo vẫn là cơm áo, cố gắng làm việc và đóng thuế để có ngày nào đó đủ
-tiền đi đến đó du lịch. Còn Huyền Chip đã viết rất cụ thể những gì đã
-trải qua, về cách cô ta xin chỗ ngủ qua đêm, bị bỏ rơi như thế nào, tìm
-sự giúp đỡ của những người bạn địa phương như thế nào và cả những cách
-kiếm tiền trên đường đi ra sao. Các bạn có để ý những nước Huyền Chip đã
-đi qua chưa bao giờ là châu Âu hay Bắc Mỹ không? Có thể là vì việc xin
-visa đối với một đứa đi bụi VN vào các nước đó rất khó khăn, mà không
-phải qua con đường du học như Dương Thụy đã làm, phần nữa là vì chi phí
-sinh hoạt đi lại ở đây khá đắt đỏ, dân mới đi phượt ít kinh nghiệm
-thường không chọn những nước này. Như vậy, thực ra Huyền Chip đã khá là
-chân thật trong cuốn sách của mình.
-
-#+begin_html
-  <blockquote>
-#+end_html
-
-Cuộc đời không phải là một bộ phim, vì vậy nó không cần phải mạch lạc,
-dễ hiểu và làm hài lòng số đông công chúng.
-
-#+begin_html
-  </blockquote>
-#+end_html
-
-Qua việc này, tôi cũng muốn có đôi lời gởi đến các bạn trẻ. Lẽ thường,
-làm người mới khó, chứ làm thú thì quá dễ. Thú thì có nhiều loại: cừu,
-sói, heo, chó, đại bàng, cánh cụt...Cha mẹ các bạn đã tốn bao khó nhọc
-sinh ra các bạn trong một đất nước độc lập, tự do, hạnh phúc này. Hãy
-sống như một con người độc lập và tự do, đừng cố gắng gán ghép mình trở
-thành một con thú nào đó. Lạy các bạn!
-
-thanhgo, đại bàng không biết bay
-
 ** Nói xấu vợ
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-01-25 04:08:06 Z
@@ -6779,96 +7004,6 @@ Cho đến tận bây giờ, tôi vẫn sẽ làm điều đó vì Helen, dù ch
 cảm thấy cần thiết hay không. Làm sao Helen biết được, dù không cần phải
 là một bác sĩ ngoại khoa, rằng bản năng sát thủ của tôi đã được đẩy lên
 đến mức độ nào.
-
-** Chánh niệm là đức hạnh duy nhất tồn tại
-:PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: 2023-08-26
-:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
-:END:
-
-#+caption: Sách "mang thai chánh niệm"
-[[./assets/img/mangthaichanhniem.JPG]]
-
-#+begin_quote
-Đức Phật đã nói, chánh niệm là đức hạnh duy nhất tồn tại
-#+end_quote
-
-Lúc sáng mình thấy cuốn sách này trên tiki, thoạt nhìn, mình nghĩ cái
-tựa đề sách gì mà kì khôi. Nhưng 5 phút sau, mình đã đặt mua cuốn sách.
-Nếu các lý thuyết của nhà Phật là đúng, thì quá trình mang thai là sự
-tiếp nhận chuyển sanh của một linh hồn khác vào chung sống với gia đình,
-thì khi đó, những đức hạnh của người mẹ trong lúc mang thai sẽ quyết
-định rất lớn đến tính cách và cuộc sống của đứa con sau này.
-
-P/S: vì sự hạn chế của ngôn ngữ, chữ "chánh niệm" rất dễ làm ta nghĩ đến
-những thứ phủ định của nó, ví dụ như "tà niệm". Nhưng thực sự không
-phải, chỉ có chánh niệm hay không có chánh niệm mà thôi.
-
-Chánh niệm là sự nhận thức về sự tồn tại của bản thân mình trong mọi
-khoảnh khắc của cuộc sống. Đó là điều duy nhất mà một sinh vật sống có ý
-thức có thể làm để cho cuộc đời mình có ý nghĩa. Vì vậy, đức Phật đã nói
-nó là đức hạnh duy nhất tồn tại.
-
-Nhiều người sẽ phản đối ý trên, sẽ nói là để làm cho cuộc sống có ý
-nghĩa, thì tôi phải kiếm được thật nhiều tiền, hay phải thật tài giỏi về
-mặt nào đó của cuộc sống. Thật ra thì không phải đâu, chắc hẳn các bạn
-sống đến tuổi trưởng thành ít nhiều cũng đã trải qua những cảm giác bất
-lực khi mình đã cố gắng hết mức có thể rồi, đã vái thần phật tứ phương
-rồi mà chẳng thể giàu hay chẳng thể giỏi bằng đứa bạn mình được. Có
-những người, sự thành công về mặt tiền bạc hay tri thức đến với họ thật
-nhẹ nhàng, chẳng bù cho ta đã phải cày cuốc hộc máu ra mà chẳng được gì.
-Và trong công cuộc tìm kiếm ảo ảnh tiền bạc hay tri thức đó, ta không
-thực sự sống, ta chỉ lao đầu đi trong một mục tiêu hẹp đã định trước.
-Không ít người khi đã lên đến thành công đỉnh cao, lại muốn quay đầu trở
-lại thời trẻ. Đó là vì họ đã cảm thấy cuộc sống của mình mất đi ý nghĩa
-từ rất lâu, vì họ đã không thực sống trong rất lâu rồi.
-
-Vì vậy, điều duy nhất một sinh vật có ý thức có thể làm để cảm thấy cuộc
-đời mình có ý nghĩa hay không, chính là bằng số lượng thời gian sinh vật
-đó thực sự cảm nhận được sự tồn tại của mình trên cuộc đời như một sinh
-vật tự chủ và tự do. Số lượng thời gian chánh niệm đó cũng rất dễ nhận
-ra bằng bản năng giao tiếp của con người, mà ta sẽ cảm nhận được ngay
-giá tri của người đối diện.
-
-Và đó là lý do tại sao, đức Phật đã nói chánh niệm là đức hạnh duy nhất
-tồn tại. (còn mọi thứ khác chỉ là trò chơi)
-:PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: 2020-07-30
-:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
-:END:
-
-Cách đây mấy tuần, do covid nên tôi rảnh rỗi sinh nông nổi, nộp đơn vô
-thi đầu vào cao học toán
-
-Thi gồm 3 phần, 1 phần toán thi viết, 1 phần toán vấn đáp và tiếng anh.
-Thi viết có các phần đại số tuyến tính, giải tích hàm và lý thuyết độ
-đo, toàn những thứ cơ bản cả. Vấn đáp là bàn luận về 1 tình huống tính
-lợi nhuận kinh doanh, trong đó có sử dụng khai triển Taylor để đơn giản
-hoá quá trình tính toán.
-
-Giám khảo của tôi lớn hơn tôi 2 tuổi, đã lên đến phó giáo sư, tỏ vẻ rất
-ngạc nhiên vì sao một bác sĩ đỡ đẻ lại có thể biết về khai triển Taylor,
-thậm chí hiểu rõ về bản chất xấp xỉ hàm tại điểm khai triển định trước.
-
-Như các bạn cũng biết, tên của tôi trong tiếng anh là Ringo. Nhưng các
-bạn để ý mới thấy họ của tôi là Stark. Đó là họ tôi mới đổi trong 3 năm
-trở lại đây thôi, do hâm mộ nàng Sansa của nhà Stark trong Game of
-Thrones, the true north - nơi đất lạnh nhưng tình nồng. Trước họ Stark,
-họ của tôi là Taylor, Ringo Taylor. Thường một người Việt lấy tên tiếng
-Anh, người ta sẽ chọn một cái tên sang chảnh như Sexton, Cato hay
-Maximilian... chẳng ai lại đi lựa chọn Smith (thợ rèn) hay Taylor
-(tailor: thợ may) cả.
-
-Đối với các bạn, khai triển Taylor chỉ là một nhúm kiến thức nữa trong
-hành trình toán học dài như vô tận, thậm chí các bạn chẳng còn nhớ hình
-thù nó như thế nào. Nhưng đối với một đứa trẻ học phổ thông, khai triển
-Taylor là một điểm giác ngộ nho nhỏ, nó đã làm tôi say mê trong nhiều
-ngày liền, và theo như tôi nhớ, sự thay đổi bản chất hàm của nó đã làm
-tôi có cảm giác như đã chạm đến bản chất của toán học.
-
-Như vậy, sau rất nhiều biến cố và đổi thay trong đời, Brook Taylor,
-người đàn ông tôi đã mang họ trong suốt mười mấy năm, đã đưa tôi trở lại
-con đường xưa. Còn chuyện gì đến sau đó, sẽ đến, whatever, who care?
 
 ** Giới hạn của ngôn ngữ
 :PROPERTIES:
@@ -7187,55 +7322,6 @@ Khuyến mãi thêm một bài nữa nè 13. Nắng vàng, biển xanh và anh -
 Nhung [audio
 http://www.freewebtown.com/binhthanhgo/audio/Nang%20vang,%20bien%20xanh%20va%20anh%20-%20Hong%20Nhung.MP3]
 
-** Chuyện một cái cây và viện triết học mùa hè
-
-[[./assets/img/myhomefront.jpg]]
-
-[Chuyện 1 cái cây]
-
-Khi bạn gái cũ mình nó về nhà lần đầu, nó đứng giữa căn bếp và nói "nhìn
-anh có vẻ biết hưởng thụ, nhưng căn nhà này thì không có sức sống"
-
-Trong khi thằng cha hàng xóm làm thợ hồ có 4 vợ và nuôi 1 bầy chó, thì
-trong nhà của tôi chỉ toàn máy móc và sách vở. Vậy là, tôi nghe lời em
-nó cuối tuần phải bỏ công bỏ việc, vô mấy cái nhà vườn tìm cây giống rồi
-hì hục đào đào lấp lấp. Tôi không ở căn nhà đó nữa, nên cái cây thường
-sẽ được tưới nước mưa, hoặc lòng thương của hàng xóm. Cũng may, nắng gió
-miền nam không quá khắc nghiệt nên cái cây đó ra hoa quanh năm và cái
-giống đó rụng lá dã man, làm cái sân nhỏ của tôi giờ dầy cả chục phân
-mùn lá. Năm nay, sau 1 đợt ngập lụt và tiết lạnh kéo dài, cái cây đó bị
-sâu ăn rất nặng. Cũng cha hàng xóm đó, thấy tội cho cái cây, trèo qua
-hàng rào và cắt bớt lá sâu. Hôm qua tôi về thì thấy em nó đã bị sâu làm
-tèo 1 nhánh lớn, hic
-
-[Viện triết học mùa hè]
-
-Nếu các bạn quen tôi lâu năm, có lẽ sẽ không lạ gì với danh từ này, mà
-tôi thường nhắc đi nhắc lại đôi lần. Ý tưởng này bắt đầu có lẽ từ khoảng
-2010 - 2011.
-
-Trong cuốn "Lời thú tội của một sát thủ kinh tế", John Perkins có đề cập
-về các viện "ngôn ngữ mùa hè" mà Mỹ đã xây dựng rải rác ở khắp châu Mỹ
-la tinh. Đó là một tổ chức phi chính phủ nhưng thực chất là một tổ chức
-gián điệp, mà nhiệm vụ chính là trao đổi ngôn ngữ với các sắc dân bản
-địa, mà thực chất chỉ là dạy tiếng Anh cho họ, nhằm xoá mòn bản sắc văn
-hoá địa phương, thao túng chính trị và gây ảnh hưởng lên các ngành kinh
-tế then chốt của quốc gia đó.
-
-Trung Cộng đã có một mô hình bắt chước và triển khai dưới các viện Khổng
-Tử. Nhưng bọn tàu thường cho mình là thâm nho, tuổi gì so với tây lông.
-Các viện Khổng Tử được thành lập ở khắp nơi trên thế giới, Hà Nội cũng
-có 1 cái, nhưng bị vạch trần và phản đối nhiều nhất ở Mỹ và Canada.
-
-Còn vì sao là triết học? Đó là bởi vì em ưa thích suy nghĩ hơn tất cả
-các hoạt động khác trên đời. Chỉ cần một suy nghĩ nền tảng khác đi, mọi
-thành quả chính trị và xã hội của ngày hôm qua sẽ trở thành thứ chẳng
-khác gì trò hề. Và vì ở phương Đông, kể cả từ thời Khổng Tử, người Á
-Châu chưa bao giờ có một hệ tư tưởng vững mạnh và xây dựng đầy đủ như
-Tây Phương. Chúng ta đi copy cũng được thôi, như Trung Cộng và Việt Cộng
-đã làm với Marx. Nhưng rồi, chính cái hệ tư tưởng đó quay trở lại làm
-thành một trở lực trong mọi điều phát triển.
-
 ** "Sống tháng năm bàn tay trắng trơn"
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-07-21 09:28:31 Z
@@ -7317,7 +7403,7 @@ Xem thêm bài viết của Đông Vy tại [[http://www.luanvy.com/dongvy.html]
 :END:
 
 #+caption: hoa cúc
-[[./assets/img/hoacuc.jpg]]
+[[/assets/img/hoacuc.jpg]]
 
 “Đường em về lận đận chuyến tàu trưa
 
@@ -7481,7 +7567,7 @@ hoặc tải về
 Đang ở Hội An nhưng lại có hứng kể chuyện xưa
 
 #+caption: The girl
-[[./assets/img/cogaitrunghoa2011.jpg]]
+[[/assets/img/cogaitrunghoa2011.jpg]]
 
 Đó là mùa xuân năm 2011, lúc tôi vừa nghỉ việc sau một thời gian ngắn
 mới ra trường và làm ở 115, mọi thứ còn đầy sắc màu và cái gì cũng có
@@ -7508,7 +7594,7 @@ mỗi người rốt cục vẫn rất khác nhau (y như cái câu "đồng sà
 nằm chung một giường nhưng mỗi người mơ một giấc mơ khác nhau)
 
 #+caption: Núi đôi sông Li, Quế Lâm
-[[./assets/img/nuidoiquelam2011.jpg]]
+[[/assets/img/nuidoiquelam2011.jpg]]
 
 P/S: tôi sẽ chỉ cho bạn 1 bí kíp, cách thu phục tiểu yêu. Như các chàng
 thợ săn trẻ cô đơn khi lang thang trong rừng, nếu muốn thu phục con tiểu
@@ -8522,7 +8608,7 @@ học y khoa TpHCM.
 [Đang ở Huế, cafe Gác Trịnh]
 
 #+caption: cafe Gac Trinh
-[[./assets/img/gactrinh2018.jpg]]
+[[/assets/img/gactrinh2018.jpg]]
 
 Có một câu hỏi tôi thường hay sử dụng để hỏi một cô gái mới quen, dưới
 hình thức này hay hình thức khác, đó là:** "em đã ở đâu khi anh trải qua
@@ -8554,7 +8640,7 @@ Steve giàu bao nhiêu thì thầy tôi ngược lại bấy nhiêu. Một ngh�
 nghĩa.
 
 #+caption: Dao Ánh
-[[./assets/img/daoanh.jpg]]
+[[/assets/img/daoanh.jpg]]
 
 Thời của Trịnh, ông bắt đầu với Dao Ánh bằng thư tình và âm nhạc và kết
 thúc với Hồng Nhung cũng bằng thư tình và âm nhạc. Trong thế giới đi
@@ -9061,52 +9147,6 @@ một khúc nhạc, khung cảnh, trang phục để diễn đạt, mà chỉ c�
 có thể múa trên sa mạc và múa trong im lặng, bởi múa vốn là một ngôn ngữ
 tự nó đã thỏa mãn đầy đủ mọi ý nghĩa.
 
-** Dự án thiên mệnh
-:PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: 2020-08-29
-:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
-:END:
-
-Đó là năm 2006, tôi lúc đó 20 tuổi. Sau một thất bại về chuyện tình cảm,
-tôi hiểu rằng với vẻ ngoài như vậy, với địa vị như vậy, tôi chẳng thể
-nào có được người phụ nữ mà tôi mong muốn. Tôi còn cả một cuộc đời phía
-trước, mọi thứ đều có thể xảy ra. Với tâm thế của một người tình cờ bước
-vào trường y, tôi lúc đó chưa sẵn sàng cho một cuộc đời y nghiệp. Tôi
-đặt ra cho mình một dự án, rằng trong 1 năm, tôi sẽ trả lời rằng tôi
-thực sự muốn làm gì.
-
-Tôi đặt tên là "dự án thiên mệnh" và thậm chí ghi câu motto trong sổ lâm
-sàng của tôi khi đó là "ta làm gì trong cả một cuộc đời dài?" (nếu các
-bạn chưa biết, mọi sinh viên y nghiêm túc đều có 1 cuốn sổ ghi chép các
-lần thăm bệnh, các kỉ niệm tại bệnh viện). Một cuộc đời thực sự không
-quá dài để làm tất cả mọi thứ, nhưng nó cũng không quá ngắn để chỉ thờ
-một vị thần duy nhất.
-
-Chính xác là trong năm đó tôi chẳng làm gì nhiều, tôi chỉ để câu hỏi đó
-lơ lửng trong đầu. Nó đi theo tôi trong mọi sinh hoạt. Tôi thả lòng mình
-theo nó để hiểu mình thực sự muốn gì trong đời. Đến hạn chót, tôi chẳng
-nhớ nổi dòng suy luận khi đó là gì, nhưng nó đã đưa tôi đến một kết
-luận: để sống một cuộc đời trọn vẹn, tôi sẽ dấn thân vào 4 ngành.
-
-Đó chỉ là suy nghĩ của một đứa trẻ 20, chưa từng trải sự đời, thậm chí
-chưa từng trải qua chuyện tình cảm nào sâu nặng. Tôi biết rõ như thế,
-nhưng thật lạ kì, trong những năm sau, tôi lại thực hiện đúng như bản kế
-hoạch mà chàng thanh niên 20 tuổi ấy vạch ra, bằng một sự cố chấp, ngoan
-cố và lì đòn đến mức tôi cũng phải ngạc nhiên với khả năng của mình.
-Thực hiện bản kế hoạch đó không phải là không có những chi phí cơ hội,
-thậm chí là lớn.
-
-Nếu bạn quen tôi đủ lâu, có lẽ bạn cũng đã nhận ra 4 ngành đó là gì và
-sự sắp xếp của nó không phải chỉ là đam mê. Và mọi thứ vẫn đang tiếp
-diễn...
-
-Điều tôi chỉ muốn nói ở đây là, hãy cẩn thận với điều bạn ước mơ. Liệu
-rằng bạn có thực sự muốn nó hay không. Bởi vì, chỉ cần bạn có năng lực,
-ước mơ đó bằng cách này hay cách khác, sẽ thành hiện thực. Và giấc mơ
-trở thành ác mộng khi nó thành hiện thực, rồi bạn chợt nhận ra rằng đó
-không phải là điều mình mong muốn, để gắn với nó cả quãng đời còn lại.
-Và lúc đó bạn chẳng đủ sức lực để quay lại nữa.
-
 ** Mưa
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-11-24 01:29:28 Z
@@ -9181,7 +9221,7 @@ thành những giọt nước mắt không hề có vị muối...!]
 Đang ở openshare nghe vài giai điệu tuổi trẻ...
 #+end_quote
 
-[[./assets/img/quaniopenshare2018.jpg]]
+[[/assets/img/quaniopenshare2018.jpg]]
 
 Người ta nói rằng đời người giống như những đốt tre, cứ đều đặn vài năm
 thì thay đổi qua một giai đoạn mới. Cổ nhân nói rằng chu kì đối với nam
@@ -10249,7 +10289,7 @@ này.
 :END:
 
 #+caption: Cô gái mặc áo choàng
-[[./assets/img/aochoang.jpeg]]
+[[/assets/img/aochoang.jpeg]]
 
 Tôi sẽ kể cho các bạn trải nghiệm du lịch đáng nhớ nhất trong chuyến du
 lịch Ấn Độ vừa rồi, và cũng là trải nghiệm đáng nhớ nhất trong năm nay,
@@ -10332,50 +10372,6 @@ này, nhắc bạn rằng mọi việc bạn làm điều phục vụ cho ý ch�
 mọi vinh quang đều thuộc về Chúa trời.
 
 P/S 2: lần sau, khi bạn ăn, hãy nhìn đến tâm tư của người nấu hôm ấy.
-
-** Bốn lần hôn nhân
-
-
-#+begin_quote
-Vì sao đất mẹ không thể nuôi nổi những đứa con của mình?
-#+end_quote
-
-Hàng xóm của tôi ở Bình Dương là một tay thợ hồ, 47 tuổi. Theo như hắn
-kể thì ngày xưa gia đình thuộc hàng đại gia ở Đà Nẵng, nên được hân hạnh
-bị đánh tư sản mại bản năm 1978. Sau lần đó, đại gia đình tứ tán khắp
-nơi, còn hắn lang bạt từ Đà Nẵng, Huế, Phan Thiết cho tới Sài Gòn, Bình
-Phước, Bình Dương. Cũng như theo hắn nói, hắn đã từng làm giáo viên,
-thầu xây dựng, thư kí cho chủ trang trại, quản lí khách sạn và bây giờ
-là thợ hồ theo kiểu người ta nhờ gì làm nấy.
-
-Khi tôi mới chân ướt chân ráo về Bình Dương, hàng xóm của tôi là bà vợ
-thứ 3 cùng 4 đứa con nhỏ, trong đó có 1 đứa con trai mới sanh. Còn hắn ở
-với bà vợ thứ 4, tuổi chắc còn nhỏ hơn đứa con trai đầu, cách đó khoảng
-1 km, cùng với đứa con gái, cũng mới sanh. Sau đó 2 năm, do hục hặc với
-bên bà kia, hắn dọn về ở luôn với bà thứ 3.
-
-Bà vợ đầu là một người hiền dịu, quen nhau từ thời học sinh, có chung
-với nhau 1 đứa con trai bằng tuổi tôi, li dị nhau lúc đứa con mới 2
-tuổi. Chị Thu, bà vợ thứ 3, kể với tôi, bà vợ đầu này mới bị bắt hồi đầu
-năm vì buôn bán thuốc nổ trái phép, làm hắn lo ảnh hưởng đến lí lịch của
-đứa con trai đầu (được cưng nhất nhà) đang làm đầu bếp tại Hàn Quốc.
-
-Bà thứ 2 là người Quảng Nam, đã mất vì ung thư vú, có với hắn 1 đứa con
-trai chưa bao giờ được nằm trong vòng tay của cha. Đứa này phải nói là
-du côn, làm đủ mọi chuyện trái khoáy. Khi say, cả 2 cha con đều dọa giết
-nhau.
-
-Có thể tôi chẳng thể hiểu được những người hàng xóm này, cũng như số
-mệnh của họ. Mà cũng có thể tôi chẳng thể hiểu nổi con người trong thời
-đại hiện nay và cả số mệnh của mình. Tuy thế, tôi biết rằng, một người
-sẽ làm những gì anh ta có thể cho đến khi vận số của anh ta được sáng
-tỏ!
-
-P/S: "Bốn lần hôn nhân" là một cuốn truyện lịch sử mà tôi đã từng đọc từ
-thời trẻ trâu, nói về những cuộc hôn nhân của Mao Trạch Đông và nghiệp
-chướng mà những bà vợ đã gây ra cho cách mạng cộng sản Trung Hoa. Nhưng
-điều trái khoáy là bìa cuốn sách lại để hình Mao ngồi một mình trên
-chiếc ghế mây, nhìn ra biển lớn
 
 ** Đừng vò nát thư em
 :PROPERTIES:
@@ -10490,7 +10486,7 @@ còn lịch sử thì đi đến chỗ cáo chung.
 :END:
 
 #+caption: nuoc va da
-[[./assets/img/nuocvada.jpg]]
+[[/assets/img/nuocvada.jpg]]
 
 Đây là bức tranh mình mới nhận, đặt hàng từ ý tưởng về hình ảnh một con
 sóng đánh vào ghềnh đá. Ông hoạ sĩ đã 70 tuổi, từng nhận giải thưởng mỹ
@@ -10580,67 +10576,3 @@ nhất em ơi Dẫu không hương sắc lại bằng mười sắc hương.
 trên. Tuy nhiên sợ mọi người không hiểu thâm ý của tác giả nên ghi thêm
 chú thích. (hehe)
 
-** Một kỉ niệm với Euler
-:PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: 2021-06-20 09:22:05
-:END:
-
-[[./assets/img/daiso2.jpg]]
-
-Như các bạn cũng biết, dạo này em có xách vở đi học ngành toán cao cấp.
-Nhưng các bác cũng biết, em làm 1 cái bv công, 1 cái bv tư, và 2 phòng
-khám để chạy vạy kiếm bữa mì tôm cho qua ngày đoạn tháng. Nên thời gian
-em có cho toán học bằng 0 ở hầu khắp nơi. Ông thầy dạy em môn đại số là
-thầy Bùi Xuân Hải, đang kẹt ở Pháp cả 2 năm nay vì COVID, nên thầy hay
-gởi bài tập cho đám đệ tử con nhang ở bên này, giúp cho thầy đỡ buồn
-những ngày cách ly bên xứ sở sông Seine. Thường thì em chẳng trả lời bài
-tập, em cùi mà, lở thêm nữa có sao đâu. Nhưng đến một ngày, ông thầy gởi
-bài tập chứng minh định lý về hàm phi Euler, một định lý về đồng dư mà
-tụi em đã học và chứng minh từ thời cấp 2, những chắc ông thầy không cần
-cái chứng minh sơ cấp kia đâu, lớn rồi ai làm vậy.
-
-Nếu các bác chưa biết, 2 công trình thời phổ thông của em là: mở rộng
-hàm Euler trong đánh dấu vị trí phần tử trong tập hợp (một cái hàm khác
-của Euler, ông này có nhiều hàm nên cạp đất nhiều vãi ra) và cái thứ hai
-là hàm modulo trên máy tính bỏ túi và những hệ quả của nó. Thực ra đọc
-cái đề xong, em biết lời giải nó nằm ở đâu. Các bác cũng biết, em già
-rồi, đầu óc không còn nhạy bén như xưa nữa, nhưng được cái em còn có trí
-nhớ cũng không tệ. Bài toán này nằm trong cuốn sách đại số 1 của
-Jean-Marie Monier mà em đã đọc cách đây 20 năm. Tức tốc chạy về Bình
-Dương, lao lên cái thư viện tìm cuốn sách, hi vọng không bị mọt gặm mất,
-rồi tỉ mẩn đánh latex và hí hửng gởi cho ông thầy.
-
-Thầy Hải chấm bài làm của em được 9.5 điểm, đương nhiên, sách làm mà chứ
-có phải em làm đâu. Thầy trừ em nửa điểm vì cái tội sử dụng kí hiệu toán
-quá cổ lổ sĩ. 20 năm, đối với toán học chỉ là cái nháy mắt, ngày nay bọn
-trẻ con vẫn đang vật lộn với cái định lý Pitago tìm ra cách đây hơn 2000
-năm. Nhưng 20 năm lại biến một trung niên ở tuổi 35 (số đẹp, hehe) trở
-thành một người tối cổ trong nền toán học hiện đại. Buồn!
-
-Thực ra thì, em đồ rằng, khi tìm ra định lý thú vị này, Euler chắc cũng
-chỉ chứng minh nó bằng cái cách mà tụi em đã làm những năm cấp 2, trong
-khi Euler vui thú điền viên cùng với mười mấy đứa con lóc nhóc của mình.
-Bởi vì sau Euler gần 100 năm, Galois mới khai sinh ra lý thuyết nhóm và
-ngành đại số hiện đại. Cách chứng minh em gởi cho ông thầy nó dựa nên
-những thành quả cơ bản nhất của cấu trúc đại số trên trường Z này. So
-với thời cấp 2 mông muội, cũng là cái định lý đó thôi, nhưng lần này ta
-đã tiến đến gần Chúa hơn một chút. Ta hiểu rằng cha nội tên là Chúa ấy,
-khi xây dựng hiện thực này, ông ấy đã sử dụng những công cụ nào. Điều đó
-cho ta cảm giác bình yên và chân phúc.
-
-P/S 1: vào những ngày cuối cùng của thời phổ thông, em có gặp thầy
-Nguyễn Minh Hà, ông này dạy chuyên toán ở ĐHSP Hà Nội, chuyên về hình
-học phẳng. Em có trình bày cho ông thầy vài khúc mắc sâu trong em lúc
-ấy, nhưng có lẽ cách trình bày của em không trôi chảy hay ông thầy không
-có cảm hứng lắm với câu hỏi của cậu học trò nhỏ. Ổng trả lời em rằng:
-"này cậu, hãy làm toán như những người đàn ông". Sau đó đời em rẽ ngang,
-em đi vào y khoa và chìm ngập trong đống phân đó một thời gian khá lâu.
-Cái câu "làm toán như những người đàn ông" ấy tưởng đã chìm sâu trong vô
-thức lại trỗi dậy và em đã cảm nhận sâu sắc rằng mình đã là 1 người đàn
-ông thực thụ chỉ sau khi được công nhận bằng điểm 9.5 bằng cái chứng
-minh hàm phi Euler ấy.
-
-P/S 2: toán học là mãi mãi, nó sẽ còn tồn tại khi chúng ta, lũ chó mèo,
-hươu nai, sử tử và gấu... không còn tồn tại trên đời. Nó thậm chí sẽ vẫn
-ở đó khi các định luật vật lý không còn chính xác. Nó là sự bắt chước
-ngôn ngữ của Chúa. Và đó là triết học của tôi!

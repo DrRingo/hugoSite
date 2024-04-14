@@ -6,7 +6,7 @@ canonifyurls = true
 relativeURLS = false
 
 theme = "diary"
-title = "Maximilian's blog"
+title = "Maximilian's writing"
 languageCode = "vi-vn"
 summaryLength = 42
 
