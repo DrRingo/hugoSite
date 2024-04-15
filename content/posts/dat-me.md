@@ -2,11 +2,11 @@
 title: "Đất mẹ không thể nuôi nổi những đứa con của mình"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2021-10-04
-lastmod: 2024-04-15T12:23:52+07:00
+lastmod: 2024-04-15T12:26:03+07:00
 tags: ["notes"]
 categories: ["think"]
 draft: false
-featured_image: ""
+featured_image: "http://helen.drbinhthanh.com/data/img/datme.jpg"
 ---
 
 {{< figure src="http://helen.drbinhthanh.com/data/img/datme.jpg" caption="<span class=\"figure-number\">Figure 1: </span>Đất mẹ" >}}

@@ -625,7 +625,7 @@ chiếc ghế mây, nhìn ra biển lớn
 ** Đất mẹ không thể nuôi nổi những đứa con của mình :notes:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2021-10-04
-:export_hugo_custom_front_matter: :featured_image [[http://helen.drbinhthanh.com/data/img/datme.jpg]]
+:export_hugo_custom_front_matter: :featured_image "http://helen.drbinhthanh.com/data/img/datme.jpg"
 :export_file_name: dat-me
 :END:
 # :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
