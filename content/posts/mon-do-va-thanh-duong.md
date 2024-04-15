@@ -2,7 +2,8 @@
 title: "Môn đồ và thánh đường"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2022-02-25
-lastmod: 2024-04-14T20:46:46+07:00
+lastmod: 2024-04-15T12:23:51+07:00
+tags: ["philosophy"]
 categories: ["think"]
 draft: false
 ---

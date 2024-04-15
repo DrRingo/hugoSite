@@ -1,0 +1,29 @@
+#+TITLE: Hướng dẫn blogging bằng =Hugo=, =orgmode=, =Cloudflare Pages= và =ox-hugo=
+#+AUTHOR: Maximilian de Cato
+#+DATE: \today
+#+COMMENT: 
+
+#+SETUPFILE: "../../assets/latex/report-main.org"
+
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE: vi
+
+#+EXCLUDE_TAGS: noexport
+
+* Các cài đặt =ox-hugo= để biên dịch sang =Hugo=
+:PROPERTIES:
+:CREATED: [2024-04-15 Mon 08:20]
+:END:
+
+* Cài đặt properties trong =orgmode= cho các nhu cầu cụ thể
+:PROPERTIES:
+:CREATED: [2024-04-15 Mon 08:21]
+:END:
+
+* Thiết đặt =Cloudflare Pages=
+:PROPERTIES:
+:CREATED: [2024-04-15 Mon 08:21]
+:END:
+
+

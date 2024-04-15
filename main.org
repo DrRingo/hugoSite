@@ -1,6 +1,7 @@
 #+DESCRIPTION: 
 #+KEYWORDS: 
 #+LANGUAGE: vi
+#+STARTUP: show2levels
 
 #+EXCLUDE_TAGS: noexport
 
@@ -14,11 +15,12 @@
 :properties:
 :export_hugo_section: posts
 :end:
+
 * Think :@think:
 :properties:
 :export_hugo_section: posts
 :end:
-** Cấu trúc của quyền lực
+** Cấu trúc của quyền lực :management:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2014-11-15 15:13:47 Z
 :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
@@ -93,7 +95,7 @@ nhân như tham nhũng, xóa bỏ cạnh tranh, độc quyền sản xuất, lã
 nguyên; những người cộng sản vẫn khăng khăng bảo vệ nó. Vì sao vậy? Bởi
 vì đó là một cột trụ quyền lực.
 
-** Tình yêu con người
+** Tình yêu con người :medicine:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2021-02-20 22:21:59
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/tinh_yeu_con_nguoi.jpg"
@@ -174,7 +176,7 @@ dự, bạn bè không đứa nào tới, chỉ có mình là người thân duy
 bên chú rể hôm ấy. Một năm sau, nó bỏ chạy trong đêm, theo đúng nghĩa
 đen.
 
-** Môn đồ và thánh đường
+** Môn đồ và thánh đường :philosophy:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2022-02-25
 :export_file_name: mon-do-va-thanh-duong
@@ -217,7 +219,7 @@ một người chẳng phải đàn ông, các bạn sẽ lãng phí cả một 
 P/S: hãy thử áp dụng những điều trên vào Putin và chủ nghĩa cộng sản mà
 ông ta vẫn còn giữ trong tim.
 
-** Tại sao Trung Cổ
+** Tại sao Trung Cổ :philosophy:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2019-02-05
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/flowerseller.jpg"
@@ -304,7 +306,7 @@ diễn ra như thế này, hay tôi chỉ muốn như một anh nông dân lù k
 đồng, dụ khi mấy cô thôn nữ trong bụi rơm và tới ngày mùa thì nhảy điệu
 rondo.
 
-** Về Huyền Chip và tất cả các em chip chip
+** Về Huyền Chip và tất cả các em chip chip :management:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2013-10-04 12:47:10 Z
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/huyenchip.webp"
@@ -419,7 +421,7 @@ thành một con thú nào đó. Lạy các bạn!
 
 thanhgo, đại bàng không biết bay
 
-** Chánh niệm là đức hạnh duy nhất tồn tại
+** Chánh niệm là đức hạnh duy nhất tồn tại :philosophy:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2023-08-26
 :export_file_name: chanh-niem
@@ -471,47 +473,7 @@ giá tri của người đối diện.
 Và đó là lý do tại sao, đức Phật đã nói chánh niệm là đức hạnh duy nhất
 tồn tại. (còn mọi thứ khác chỉ là trò chơi)
 
-** Ringo Taylor
-:PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: 2020-07-30
-:export_file_name: ringo-taylor
-:END:
-# :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
-
-Cách đây mấy tuần, do covid nên tôi rảnh rỗi sinh nông nổi, nộp đơn vô
-thi đầu vào cao học toán
-
-Thi gồm 3 phần, 1 phần toán thi viết, 1 phần toán vấn đáp và tiếng anh.
-Thi viết có các phần đại số tuyến tính, giải tích hàm và lý thuyết độ
-đo, toàn những thứ cơ bản cả. Vấn đáp là bàn luận về 1 tình huống tính
-lợi nhuận kinh doanh, trong đó có sử dụng khai triển Taylor để đơn giản
-hoá quá trình tính toán.
-
-Giám khảo của tôi lớn hơn tôi 2 tuổi, đã lên đến phó giáo sư, tỏ vẻ rất
-ngạc nhiên vì sao một bác sĩ đỡ đẻ lại có thể biết về khai triển Taylor,
-thậm chí hiểu rõ về bản chất xấp xỉ hàm tại điểm khai triển định trước.
-
-Như các bạn cũng biết, tên của tôi trong tiếng anh là Ringo. Nhưng các
-bạn để ý mới thấy họ của tôi là Stark. Đó là họ tôi mới đổi trong 3 năm
-trở lại đây thôi, do hâm mộ nàng Sansa của nhà Stark trong Game of
-Thrones, the true north - nơi đất lạnh nhưng tình nồng. Trước họ Stark,
-họ của tôi là Taylor, Ringo Taylor. Thường một người Việt lấy tên tiếng
-Anh, người ta sẽ chọn một cái tên sang chảnh như Sexton, Cato hay
-Maximilian... chẳng ai lại đi lựa chọn Smith (thợ rèn) hay Taylor
-(tailor: thợ may) cả.
-
-Đối với các bạn, khai triển Taylor chỉ là một nhúm kiến thức nữa trong
-hành trình toán học dài như vô tận, thậm chí các bạn chẳng còn nhớ hình
-thù nó như thế nào. Nhưng đối với một đứa trẻ học phổ thông, khai triển
-Taylor là một điểm giác ngộ nho nhỏ, nó đã làm tôi say mê trong nhiều
-ngày liền, và theo như tôi nhớ, sự thay đổi bản chất hàm của nó đã làm
-tôi có cảm giác như đã chạm đến bản chất của toán học.
-
-Như vậy, sau rất nhiều biến cố và đổi thay trong đời, Brook Taylor,
-người đàn ông tôi đã mang họ trong suốt mười mấy năm, đã đưa tôi trở lại
-con đường xưa. Còn chuyện gì đến sau đó, sẽ đến, whatever, who care?
-
-** Chuyện một cái cây và viện triết học mùa hè
+** Chuyện một cái cây và viện triết học mùa hè :philosophy:
 :properties:
 :EXPORT_HUGO_PUBLISHDATE: 2018-04-09
 :export_hugo_custom_front_matter: :featured_image "/assets/img/myhomefront.jpg"
@@ -563,12 +525,12 @@ Tây Phương. Chúng ta đi copy cũng được thôi, như Trung Cộng và Vi
 đã làm với Marx. Nhưng rồi, chính cái hệ tư tưởng đó quay trở lại làm
 thành một trở lực trong mọi điều phát triển.
 
-** Dự án thiên mệnh
+** Dự án thiên mệnh :philosophy:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-08-29
 :export_file_name: du-an-thien-menh
-:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
+# :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 
 Đó là năm 2006, tôi lúc đó 20 tuổi. Sau một thất bại về chuyện tình cảm,
 tôi hiểu rằng với vẻ ngoài như vậy, với địa vị như vậy, tôi chẳng thể
@@ -610,7 +572,7 @@ trở thành ác mộng khi nó thành hiện thực, rồi bạn chợt nhận 
 không phải là điều mình mong muốn, để gắn với nó cả quãng đời còn lại.
 Và lúc đó bạn chẳng đủ sức lực để quay lại nữa.
 
-** Bốn lần hôn nhân
+** Bốn lần hôn nhân :notes:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-08-29
 :export_file_name: bon-lan-hon-nhan
@@ -660,11 +622,70 @@ chiếc ghế mây, nhìn ra biển lớn
 :properties:
 :export_hugo_section: posts
 :end:
+** Đất mẹ không thể nuôi nổi những đứa con của mình :notes:
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-10-04
+:export_hugo_custom_front_matter: :featured_image [[http://helen.drbinhthanh.com/data/img/datme.jpg]]
+:export_file_name: dat-me
+:END:
+# :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+
+#+caption: Đất mẹ
+[[http://helen.drbinhthanh.com/data/img/datme.jpg]]
+
+Chuyện này ai cũng biết rồi, thế nên người ta mới bỏ xứ đi làm culi, đủ
+thể loại, mạt hạng hay cao cấp phòng lạnh thì cũng chỉ là culi. Thế nên
+những thứ con người ngày nay bỏ vào miệng, một phần không trực tiếp mọc
+lên từ đất mẹ, mà là đào lên theo đúng nghĩa đen.
+
+Miền tây trong ấn tượng của tôi là một mảnh đất trù phú, vì sự trù phú
+đó mà con người có cái chất giọng phỡn phỡn, còn như đứa con gái tôi
+quen thì lúc nào nó cũng cười, ngay cả khi tôi la nó bằng vẻ cáu kỉnh
+khó ở thường ngày của tôi. Thế nhưng không cần sống ở miền tây, tôi cũng
+biết ngay là vùng đất đó đã thay đổi. Chỉ bằng 2 tác giả viết về miền
+tây là Sơn Nam và Nguyễn Ngọc Tư. Tôi đọc Sơn Nam từ thời sinh viên, cái
+giọng văn của ông nó bàng bạc, như một người kể chuyện hơn là chăm chút
+vào trau chuốt câu từ. Ẩn sâu trong câu văn là một tâm hồn thảnh thơi,
+khoáng đạt, người đọc cảm nhận sự chân chất, vô ưu phiền dù câu chuyện
+Sơn Nam kể có là chuyện trai gái chia ly, giựt hụi hay bị cá sấu ăn thịt
+đi nữa.
+
+Nguyễn Ngọc Tư thì khác, cũng cái mảnh đất miền tây đó thôi, nhưng trong
+truyện của Nguyễn Ngọc Tư, nó đã nhỏ đi hơn rất nhiều, buồn bã và vô
+vọng. Nó vô vọng như hoàn cảnh của người nông dân ở xứ này, mong muốn
+phát triển nghề nghiệp và thịnh vượng cho gia đình mà chẳng đào đâu ra
+một cơ hội, cũng là cái vẻ bàng bạc, nhưng là sự bàng bạc trong cảm giác
+đang bị lãng quên. Trong câu văn của tác giả này, chỉ thở thôi cũng đã
+thấy mệt.
+
+Nói dài dòng như vậy, chỉ để nhắn các bạn rằng, cùng một đất mẹ, nhưng
+hoàn cảnh sinh trưởng của con người khác nhau thì sẽ tạo nên tính cách
+khác nhau. Tâm lý học đã chứng minh, nền tính cách của con người phát
+triển chỉ trong 3 năm đầu đời. Nếu bạn đã lỡ sanh con trong thời buổi
+dịch bệnh như thế này, thì phải che mắt chúng, đừng cho chúng thấy sự
+khắc nghiệt ngoài kia, khi chúng còn quá trẻ.
+
+P/S 1: người Mỹ thường thống kê thành công theo một thế hệ, họ chia nhóm
+thành thế hệ Vĩ đại (những người đã chiến đấu với Hitler và tái thiết
+đất nước), thế hệ Baby Boomer (con cái của những người sống sót qua
+chiến tranh, và hiện tại đang nắm giữ hầu hết tài sản của đất nước). Các
+bạn có biết thế hệ nào thất bại nhất không? Đó là những người sinh vào
+quãng thời gian Đại Suy Thoái năm 1929, cuộc đời của họ chẳng có gì nổi
+bật, khắc khổ và nghiệt ngã như cái năm họ đã sinh ra.
+
+P/S 2: năm 2016, tôi đi học 1 khóa về sản phụ khoa ở Trung Quốc, đón
+tiếp chúng tôi và giảng bài giảng đầu tiên là ông trưởng khoa ở đó. Sau
+một hồi giới thiệu mấy slide về sự vĩ đại của nước tàu, ông giáo sư hỏi
+chúng tôi 2 câu hỏi "Trung Quốc bây giờ là một nước cộng sản hay tư
+bản?" và "ở Quảng Châu này, các bạn có biết người ta ăn những gì để sống
+hay không?". Câu trả lời cho câu thứ 2 là: "mọi thứ, kể cả gián, chuột
+và sâu bọ". Ôi, đất mẹ!
+
 * Math  :@math:
 :properties:
 :export_hugo_section: posts
 :end:
-** Các phương trình của Maxwell
+** Các phương trình của Maxwell :mathnotes:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-01-01
 :export_file_name: maxwell-equations
@@ -682,7 +703,7 @@ Và Chúa phán
 thế là ánh sáng\\
 lập tức xuất hiện
 
-** Một kỉ niệm với Euler
+** Một kỉ niệm với Euler :mathnotes:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2021-06-20 09:22:05
 :export_hugo_custom_front_matter: :featured_image "/assets/img/daiso2.jpg"
@@ -747,6 +768,112 @@ P/S 2: toán học là mãi mãi, nó sẽ còn tồn tại khi chúng ta, lũ c
 hươu nai, sử tử và gấu... không còn tồn tại trên đời. Nó thậm chí sẽ vẫn
 ở đó khi các định luật vật lý không còn chính xác. Nó là sự bắt chước
 ngôn ngữ của Chúa. Và đó là triết học của tôi!
+** Ringo Taylor :mathnotes:
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2020-07-30
+:export_file_name: ringo-taylor
+:END:
+# :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
+
+Cách đây mấy tuần, do covid nên tôi rảnh rỗi sinh nông nổi, nộp đơn vô
+thi đầu vào cao học toán
+
+Thi gồm 3 phần, 1 phần toán thi viết, 1 phần toán vấn đáp và tiếng anh.
+Thi viết có các phần đại số tuyến tính, giải tích hàm và lý thuyết độ
+đo, toàn những thứ cơ bản cả. Vấn đáp là bàn luận về 1 tình huống tính
+lợi nhuận kinh doanh, trong đó có sử dụng khai triển Taylor để đơn giản
+hoá quá trình tính toán.
+
+Giám khảo của tôi lớn hơn tôi 2 tuổi, đã lên đến phó giáo sư, tỏ vẻ rất
+ngạc nhiên vì sao một bác sĩ đỡ đẻ lại có thể biết về khai triển Taylor,
+thậm chí hiểu rõ về bản chất xấp xỉ hàm tại điểm khai triển định trước.
+
+Như các bạn cũng biết, tên của tôi trong tiếng anh là Ringo. Nhưng các
+bạn để ý mới thấy họ của tôi là Stark. Đó là họ tôi mới đổi trong 3 năm
+trở lại đây thôi, do hâm mộ nàng Sansa của nhà Stark trong Game of
+Thrones, the true north - nơi đất lạnh nhưng tình nồng. Trước họ Stark,
+họ của tôi là Taylor, Ringo Taylor. Thường một người Việt lấy tên tiếng
+Anh, người ta sẽ chọn một cái tên sang chảnh như Sexton, Cato hay
+Maximilian... chẳng ai lại đi lựa chọn Smith (thợ rèn) hay Taylor
+(tailor: thợ may) cả.
+
+Đối với các bạn, khai triển Taylor chỉ là một nhúm kiến thức nữa trong
+hành trình toán học dài như vô tận, thậm chí các bạn chẳng còn nhớ hình
+thù nó như thế nào. Nhưng đối với một đứa trẻ học phổ thông, khai triển
+Taylor là một điểm giác ngộ nho nhỏ, nó đã làm tôi say mê trong nhiều
+ngày liền, và theo như tôi nhớ, sự thay đổi bản chất hàm của nó đã làm
+tôi có cảm giác như đã chạm đến bản chất của toán học.
+
+Như vậy, sau rất nhiều biến cố và đổi thay trong đời, Brook Taylor,
+người đàn ông tôi đã mang họ trong suốt mười mấy năm, đã đưa tôi trở lại
+con đường xưa. Còn chuyện gì đến sau đó, sẽ đến, whatever, who care?
+
+** Kurt Gödel và định lí bất toàn :mathnotes:
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: 2021-06-20 09:22:05
+:export_hugo_custom_front_matter: :featured_image "/assets/img/kurtgodel.png"
+:export_file_name: kurt-godel
+:END:
+
+Mấy hôm nay mình đang chơi game Assasin's Creed Odyssey, đóng vai một
+anh hùng Hi Lạp cổ đại, là hậu duệ trực tiếp của người anh hùng Leonidas
+xứ Sparta đang phải sống lưu lạc từ nhỏ, và giằng co trong cuộc nội
+chiến giữa 2 thành bang Athens và Sparta. Tối nay, game dẫn mình đến sự
+kiện khám phá ra thành phố huyền thoại Atlantis và người cha thực sự của
+mình là Pythagoras.
+
+Khá khen cho cái game đã khéo sắp đặt 2 cái tên Atlantis và Pythagoras
+đi cùng với nhau, dù nếu xét về những sự kiện xảy ra trong game, khi đó
+ắt hăn Pythagoras đã 150 tuổi. Cho đến bây giờ, thiên hạ vẫn nghi ngờ
+những phát kiến về số vô tỉ có phải từ Pythagoras hay không, hay là ông
+đã học hỏi nó từ một nền văn minh cổ xưa có trước khi loài người xuất
+hiện?
+
+Hãy bàn luận một chút để hiểu chuyện này. Nếu bạn sống như đang sống hay
+như một người cổ đại cắm mặt làm nông đã sống, bạn ắt hẳn sẽ có nhận
+định về thế giới vật chất xung quanh như thế này. Bạn cầm lên một nắm
+đất, tự đặt cho nó là 1 (đơn vị). Nếu bạn chia nắm đất đó ra làm 2, thì
+nó sẽ là 1/2, hay là bạn chia thêm nó ra làm 4, 5, 6... hay bất kì con
+số quái quỷ nào bạn nghĩ ra thì nó cũng sẽ chỉ là 1 số hữu tỉ. Cho đến
+khi nắm đất đó không thể chia nhỏ hơn được nữa thì nó là 1 nguyên tử
+(atom: có nghĩa là không thể chia nhỏ hơn). Khi đó bạn sẽ khá chắc chắn
+về cảm quan của mình về thế giới đã được hoàn thiện. Ấy thế mà, ngay
+trong cái thời kì mông muội ấy, Pythagoras đã chứng minh được rằng trên
+đời này có những con số mà ngay cả vật chất cũng không thể thể hiện
+được. Sẽ không có nắm đất nào có kích thước là căn 2 cả, bất kể bạn chia
+nó khéo léo đến đâu. Thật rùng mình! Nghĩa là dưới vòm trời này và trên
+mặt đất ta đang đứng, có những thế lực mà những gì ta đang thấy và đang
+cầm nắm cũng chẳng thế nào chạm tới được. Thế mới biết được cái sự thiên
+tài của Pythagoras.
+
+Thế rồi đến thế kỉ 20 xuất hiện 1 người nữa, để khi mà ở thế kỉ 45 hậu
+thế nhìn lại, họ sẽ chẳng biết Einstein hay Heisenberg là ai đâu, mà họ
+sẽ nhắc đến tên Kurt Gödel. Ông đã chứng minh được rằng CÓ NHỮNG THỨ
+TRÊN ĐỜI MÀ TRÍ TUỆ CON NGƯỜI CHỈ CÓ THỂ THỪA NHẬN LÀ ĐÚNG, CHỨ KHÔNG
+THỂ CHỨNG MÌNH ĐƯỢC. Ông đã đưa toàn bộ nền toán học và đại số Bool về
+các suy luận logic từ thời ông trở về trước trở thành những thứ chẳng
+khác gì trò hề. Tôi lần đầu tiên biết đến Godel và định lí bất toàn của
+ông là vào năm lớp 10 thông qua báo Toán học và Tuổi trẻ. Phản ứng đầu
+tiên của tôi là tự hỏi cái thứ quái dị gì đây, viết như thế này mà cũng
+được đăng báo ah, lại còn ca tụng nổi tiếng này nọ nữa chứ. Để rồi ngay
+5 phút sau, tôi cảm thấy hoảng sợ. Một hệ quả trực tiếp của nó là máy vi
+tính của chúng ta đang hoạt động trên hệ nhị phân 0 và 1. Sẽ có những
+bài toán mà cái máy đơn sơ đó (dù đã đưa nhiều người lên làm tỉ phú
+dollar) sẽ chẳng thể nào giải quyết được. Cảm giác của chúng ta về thế
+giới bây giờ y như Pythagoras thời đó. Chúng ta đã biết sẽ có những thứ
+vượt qua cả trí tuệ và trí tưởng tượng của con người, nhưng chúng ta
+không biết đó là gì. Pythagoras đã hoảng sợ đến mức lập cả 1 giáo phái
+để giấu nhẹm phát kiến đó đi. Phải mất cả ngàn năm sau con người mới sử
+dụng số vô tỉ như cơm bữa như ngày nay, và phải không dưới 1000 năm nữa,
+con người mới chứng kiến được những gì Kurt Gödel nói hôm qua.
+
+Đời người quả thật quá ngắn để sống cho trọn vẹn, và bạn có sự lựa chọn
+để sống như 1 nông dân thành Sparta rải nắm đất theo gió; hay gia nhập
+giáo phái của Pythagoras để tin rằng thế giới này không chỉ kì dị, mà nó
+còn kì dị hơn bất kì điều gì bạn có thể tưởng tượng.
+
+Các bạn xem thêm bài này để hiểu thêm về Kurt Gödel:
+[[https://www.prospectmagazine.co.uk/magazine/kurt-godel-and-the-romance-of-logic?fbclid=IwAR1MJFKufTb5YkdZfcvus5nFM4qBOHbLfJaMwPz8HybYYn8WyWPnv2IWhZ0][Kurt Gödel and the romance of logic]]
 * Legacy post
 :PROPERTIES:
 :export_hugo_section: legacy
@@ -6484,71 +6611,6 @@ em Hắn không phải là tấm hình trong sách Hắn chỉ là dãy phố ng
 Là con thuyền Luôn luôn kiếm tìm luôn luôn từ bỏ Với cuộc đời thường em
 còn bao mối dây gắn bó Em đi được với hắn không?
 
-** Kurt Gödel và định lí bất toàn
-
-[[/assets/img/kurtgodel.png]]
-
-Mấy hôm nay mình đang chơi game Assasin's Creed Odyssey, đóng vai một
-anh hùng Hi Lạp cổ đại, là hậu duệ trực tiếp của người anh hùng Leonidas
-xứ Sparta đang phải sống lưu lạc từ nhỏ, và giằng co trong cuộc nội
-chiến giữa 2 thành bang Athens và Sparta. Tối nay, game dẫn mình đến sự
-kiện khám phá ra thành phố huyền thoại Atlantis và người cha thực sự của
-mình là Pythagoras.
-
-Khá khen cho cái game đã khéo sắp đặt 2 cái tên Atlantis và Pythagoras
-đi cùng với nhau, dù nếu xét về những sự kiện xảy ra trong game, khi đó
-ắt hăn Pythagoras đã 150 tuổi. Cho đến bây giờ, thiên hạ vẫn nghi ngờ
-những phát kiến về số vô tỉ có phải từ Pythagoras hay không, hay là ông
-đã học hỏi nó từ một nền văn minh cổ xưa có trước khi loài người xuất
-hiện?
-
-Hãy bàn luận một chút để hiểu chuyện này. Nếu bạn sống như đang sống hay
-như một người cổ đại cắm mặt làm nông đã sống, bạn ắt hẳn sẽ có nhận
-định về thế giới vật chất xung quanh như thế này. Bạn cầm lên một nắm
-đất, tự đặt cho nó là 1 (đơn vị). Nếu bạn chia nắm đất đó ra làm 2, thì
-nó sẽ là 1/2, hay là bạn chia thêm nó ra làm 4, 5, 6... hay bất kì con
-số quái quỷ nào bạn nghĩ ra thì nó cũng sẽ chỉ là 1 số hữu tỉ. Cho đến
-khi nắm đất đó không thể chia nhỏ hơn được nữa thì nó là 1 nguyên tử
-(atom: có nghĩa là không thể chia nhỏ hơn). Khi đó bạn sẽ khá chắc chắn
-về cảm quan của mình về thế giới đã được hoàn thiện. Ấy thế mà, ngay
-trong cái thời kì mông muội ấy, Pythagoras đã chứng minh được rằng trên
-đời này có những con số mà ngay cả vật chất cũng không thể thể hiện
-được. Sẽ không có nắm đất nào có kích thước là căn 2 cả, bất kể bạn chia
-nó khéo léo đến đâu. Thật rùng mình! Nghĩa là dưới vòm trời này và trên
-mặt đất ta đang đứng, có những thế lực mà những gì ta đang thấy và đang
-cầm nắm cũng chẳng thế nào chạm tới được. Thế mới biết được cái sự thiên
-tài của Pythagoras.
-
-Thế rồi đến thế kỉ 20 xuất hiện 1 người nữa, để khi mà ở thế kỉ 45 hậu
-thế nhìn lại, họ sẽ chẳng biết Einstein hay Heisenberg là ai đâu, mà họ
-sẽ nhắc đến tên Kurt Gödel. Ông đã chứng minh được rằng CÓ NHỮNG THỨ
-TRÊN ĐỜI MÀ TRÍ TUỆ CON NGƯỜI CHỈ CÓ THỂ THỪA NHẬN LÀ ĐÚNG, CHỨ KHÔNG
-THỂ CHỨNG MÌNH ĐƯỢC. Ông đã đưa toàn bộ nền toán học và đại số Bool về
-các suy luận logic từ thời ông trở về trước trở thành những thứ chẳng
-khác gì trò hề. Tôi lần đầu tiên biết đến Godel và định lí bất toàn của
-ông là vào năm lớp 10 thông qua báo Toán học và Tuổi trẻ. Phản ứng đầu
-tiên của tôi là tự hỏi cái thứ quái dị gì đây, viết như thế này mà cũng
-được đăng báo ah, lại còn ca tụng nổi tiếng này nọ nữa chứ. Để rồi ngay
-5 phút sau, tôi cảm thấy hoảng sợ. Một hệ quả trực tiếp của nó là máy vi
-tính của chúng ta đang hoạt động trên hệ nhị phân 0 và 1. Sẽ có những
-bài toán mà cái máy đơn sơ đó (dù đã đưa nhiều người lên làm tỉ phú
-dollar) sẽ chẳng thể nào giải quyết được. Cảm giác của chúng ta về thế
-giới bây giờ y như Pythagoras thời đó. Chúng ta đã biết sẽ có những thứ
-vượt qua cả trí tuệ và trí tưởng tượng của con người, nhưng chúng ta
-không biết đó là gì. Pythagoras đã hoảng sợ đến mức lập cả 1 giáo phái
-để giấu nhẹm phát kiến đó đi. Phải mất cả ngàn năm sau con người mới sử
-dụng số vô tỉ như cơm bữa như ngày nay, và phải không dưới 1000 năm nữa,
-con người mới chứng kiến được những gì Kurt Gödel nói hôm qua.
-
-Đời người quả thật quá ngắn để sống cho trọn vẹn, và bạn có sự lựa chọn
-để sống như 1 nông dân thành Sparta rải nắm đất theo gió; hay gia nhập
-giáo phái của Pythagoras để tin rằng thế giới này không chỉ kì dị, mà nó
-còn kì dị hơn bất kì điều gì bạn có thể tưởng tượng.
-
-Các bạn xem thêm bài này để hiểu thêm về Kurt Gödel:
-[[https://www.prospectmagazine.co.uk/magazine/kurt-godel-and-the-romance-of-logic?fbclid=IwAR1MJFKufTb5YkdZfcvus5nFM4qBOHbLfJaMwPz8HybYYn8WyWPnv2IWhZ0][Kurt
-Gödel and the romance of logic]]
-
 ** Mùa vải
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2007-06-23 02:54:30 Z
@@ -7444,63 +7506,6 @@ bản thân mình. Nhiệm vụ duy nhất trên đời bạn làm là phải s�
 nghiệm cuộc đời qua thời gian ngắn ngủi của mình. Vậy tại sao bạn lại
 không có cảm giác gì khi một mốc thời gian đang đến (một thứ tương đối
 hiếm hoi, chỉ có vài chục lần trong đời)‎
-
-** Đất mẹ không thể nuôi nổi những đứa con của mình
-:PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: 2021-10-04
-:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
-:END:
-
-#+caption: Đất mẹ
-[[http://helen.drbinhthanh.com/data/img/datme.jpg]]
-
-Chuyện này ai cũng biết rồi, thế nên người ta mới bỏ xứ đi làm culi, đủ
-thể loại, mạt hạng hay cao cấp phòng lạnh thì cũng chỉ là culi. Thế nên
-những thứ con người ngày nay bỏ vào miệng, một phần không trực tiếp mọc
-lên từ đất mẹ, mà là đào lên theo đúng nghĩa đen.
-
-Miền tây trong ấn tượng của tôi là một mảnh đất trù phú, vì sự trù phú
-đó mà con người có cái chất giọng phỡn phỡn, còn như đứa con gái tôi
-quen thì lúc nào nó cũng cười, ngay cả khi tôi la nó bằng vẻ cáu kỉnh
-khó ở thường ngày của tôi. Thế nhưng không cần sống ở miền tây, tôi cũng
-biết ngay là vùng đất đó đã thay đổi. Chỉ bằng 2 tác giả viết về miền
-tây là Sơn Nam và Nguyễn Ngọc Tư. Tôi đọc Sơn Nam từ thời sinh viên, cái
-giọng văn của ông nó bàng bạc, như một người kể chuyện hơn là chăm chút
-vào trau chuốt câu từ. Ẩn sâu trong câu văn là một tâm hồn thảnh thơi,
-khoáng đạt, người đọc cảm nhận sự chân chất, vô ưu phiền dù câu chuyện
-Sơn Nam kể có là chuyện trai gái chia ly, giựt hụi hay bị cá sấu ăn thịt
-đi nữa.
-
-Nguyễn Ngọc Tư thì khác, cũng cái mảnh đất miền tây đó thôi, nhưng trong
-truyện của Nguyễn Ngọc Tư, nó đã nhỏ đi hơn rất nhiều, buồn bã và vô
-vọng. Nó vô vọng như hoàn cảnh của người nông dân ở xứ này, mong muốn
-phát triển nghề nghiệp và thịnh vượng cho gia đình mà chẳng đào đâu ra
-một cơ hội, cũng là cái vẻ bàng bạc, nhưng là sự bàng bạc trong cảm giác
-đang bị lãng quên. Trong câu văn của tác giả này, chỉ thở thôi cũng đã
-thấy mệt.
-
-Nói dài dòng như vậy, chỉ để nhắn các bạn rằng, cùng một đất mẹ, nhưng
-hoàn cảnh sinh trưởng của con người khác nhau thì sẽ tạo nên tính cách
-khác nhau. Tâm lý học đã chứng minh, nền tính cách của con người phát
-triển chỉ trong 3 năm đầu đời. Nếu bạn đã lỡ sanh con trong thời buổi
-dịch bệnh như thế này, thì phải che mắt chúng, đừng cho chúng thấy sự
-khắc nghiệt ngoài kia, khi chúng còn quá trẻ.
-
-P/S 1: người Mỹ thường thống kê thành công theo một thế hệ, họ chia nhóm
-thành thế hệ Vĩ đại (những người đã chiến đấu với Hitler và tái thiết
-đất nước), thế hệ Baby Boomer (con cái của những người sống sót qua
-chiến tranh, và hiện tại đang nắm giữ hầu hết tài sản của đất nước). Các
-bạn có biết thế hệ nào thất bại nhất không? Đó là những người sinh vào
-quãng thời gian Đại Suy Thoái năm 1929, cuộc đời của họ chẳng có gì nổi
-bật, khắc khổ và nghiệt ngã như cái năm họ đã sinh ra.
-
-P/S 2: năm 2016, tôi đi học 1 khóa về sản phụ khoa ở Trung Quốc, đón
-tiếp chúng tôi và giảng bài giảng đầu tiên là ông trưởng khoa ở đó. Sau
-một hồi giới thiệu mấy slide về sự vĩ đại của nước tàu, ông giáo sư hỏi
-chúng tôi 2 câu hỏi "Trung Quốc bây giờ là một nước cộng sản hay tư
-bản?" và "ở Quảng Châu này, các bạn có biết người ta ăn những gì để sống
-hay không?". Câu trả lời cho câu thứ 2 là: "mọi thứ, kể cả gián, chuột
-và sâu bọ". Ôi, đất mẹ!
 
 ** Vitamin Y
 :PROPERTIES:

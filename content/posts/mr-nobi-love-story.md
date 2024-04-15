@@ -2,7 +2,7 @@
 title: "Chuyện tình của ông Nobi"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2017-05-06
-lastmod: 2024-04-14T20:46:45+07:00
+lastmod: 2024-04-15T12:23:51+07:00
 categories: ["think"]
 draft: false
 featured_image: "/assets/img/ong-bo-chuan-muc.jpg"

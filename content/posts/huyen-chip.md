@@ -2,7 +2,8 @@
 title: "Về Huyền Chip và tất cả các em chip chip"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2013-10-04T12:47:00+07:00
-lastmod: 2024-04-14T20:46:46+07:00
+lastmod: 2024-04-15T12:23:51+07:00
+tags: ["management"]
 categories: ["think"]
 draft: false
 featured_image: "/assets/img/huyenchip.webp"
