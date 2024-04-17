@@ -2,7 +2,6 @@
 title: "Ringo Taylor"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2020-07-30
-lastmod: 2024-04-15T12:23:52+07:00
 tags: ["mathnotes"]
 categories: ["math"]
 draft: false

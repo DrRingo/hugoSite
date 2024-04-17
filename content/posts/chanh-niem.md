@@ -2,7 +2,6 @@
 title: "Chánh niệm là đức hạnh duy nhất tồn tại"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2023-08-26
-lastmod: 2024-04-15T12:23:51+07:00
 tags: ["philosophy"]
 categories: ["think"]
 draft: false

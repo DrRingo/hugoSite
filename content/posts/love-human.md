@@ -2,7 +2,6 @@
 title: "Tình yêu con người"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2021-02-20T22:21:00+07:00
-lastmod: 2024-04-15T12:23:51+07:00
 tags: ["medicine"]
 categories: ["think"]
 draft: false

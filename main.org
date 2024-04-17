@@ -7,7 +7,7 @@
 
 #+hugo_front_matter_format: yaml
 
-#+hugo_auto_set_lastmod: t
+# #+hugo_auto_set_lastmod: t
 #+hugo_base_dir: .
 #+hugo_section: .
 
@@ -15,7 +15,15 @@
 :properties:
 :export_hugo_section: posts
 :end:
+** TODO Bài viết mới về xử lý text - text processing in haskell
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: [2024-04-15 Mon 21:16]
+:EXPORT_FILE_NAME: text-processing-haskell
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/haskell.jpg"
+:END:
+# :EXPORT_HUGO_EXPIRYDATE: 
 
+Hiện tại chưa có nội dung cho vấn đề này
 * Think :@think:
 :properties:
 :export_hugo_section: posts
@@ -167,8 +175,7 @@ con mèo máy màu xanh vô nhà ăn chực, bày đủ trò quậy phá.
 P/S: mình đã từng suy nghĩ nhiều về chuyện tình của ông Nobi này, ai dè
 bữa nay gặp 1 tay khác đồng điệu
 
-[[https://redpillvn.com/ong-bo-chuan-muc/?fbclid=IwAR3IYZcFFQZEYVqaom1KoIuHDHgzIq6jC4jt4-KA29W9jH1Xvxib6jvu6So][Chuyện
-tình của ông Nobi - # Ông bố chuẩn mực - Redpill VN]]
+[[https://redpillvn.com/ong-bo-chuan-muc/?fbclid=IwAR3IYZcFFQZEYVqaom1KoIuHDHgzIq6jC4jt4-KA29W9jH1Xvxib6jvu6So][Chuyện tình của ông Nobi - # Ông bố chuẩn mực - Redpill VN]]
 
 P/S: mình đã từng chứng kiến cảnh lao đầu ưng gái nhà giàu ngoài đời
 thực, đám cưới của nó ở Bình Dương, gia đình ngoài Quảng Ngãi không vô
@@ -473,7 +480,7 @@ giá tri của người đối diện.
 Và đó là lý do tại sao, đức Phật đã nói chánh niệm là đức hạnh duy nhất
 tồn tại. (còn mọi thứ khác chỉ là trò chơi)
 
-** Chuyện một cái cây và viện triết học mùa hè :philosophy:
+** Chuyện một cái cây và viện triết học mùa hè
 :properties:
 :EXPORT_HUGO_PUBLISHDATE: 2018-04-09
 :export_hugo_custom_front_matter: :featured_image "/assets/img/myhomefront.jpg"
@@ -529,8 +536,8 @@ thành một trở lực trong mọi điều phát triển.
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2020-08-29
 :export_file_name: du-an-thien-menh
+:EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 :END:
-# :EXPORT_HUGO_EXPIRYDATE: 2024-01-01
 
 Đó là năm 2006, tôi lúc đó 20 tuổi. Sau một thất bại về chuyện tình cảm,
 tôi hiểu rằng với vẻ ngoài như vậy, với địa vị như vậy, tôi chẳng thể
@@ -619,9 +626,6 @@ chướng mà những bà vợ đã gây ra cho cách mạng cộng sản Trung 
 điều trái khoáy là bìa cuốn sách lại để hình Mao ngồi một mình trên
 chiếc ghế mây, nhìn ra biển lớn
 
-:properties:
-:export_hugo_section: posts
-:end:
 ** Đất mẹ không thể nuôi nổi những đứa con của mình :notes:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2021-10-04

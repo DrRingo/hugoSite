@@ -2,7 +2,6 @@
 title: "Bốn lần hôn nhân"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2020-08-29
-lastmod: 2024-04-15T12:23:52+07:00
 tags: ["notes"]
 categories: ["think"]
 draft: false
@@ -46,5 +45,3 @@ thời trẻ trâu, nói về những cuộc hôn nhân của Mao Trạch Đông
 chướng mà những bà vợ đã gây ra cho cách mạng cộng sản Trung Hoa. Nhưng
 điều trái khoáy là bìa cuốn sách lại để hình Mao ngồi một mình trên
 chiếc ghế mây, nhìn ra biển lớn
-
-:export_hugo_section: posts

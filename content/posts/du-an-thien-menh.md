@@ -2,7 +2,7 @@
 title: "Dự án thiên mệnh"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2020-08-29
-lastmod: 2024-04-15T12:23:52+07:00
+expiryDate: 2024-01-01
 tags: ["philosophy"]
 categories: ["think"]
 draft: false

@@ -2,7 +2,6 @@
 title: "Kurt Gödel và định lí bất toàn"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2021-06-20T09:22:00+07:00
-lastmod: 2024-04-15T12:23:52+07:00
 tags: ["mathnotes"]
 categories: ["math"]
 draft: false

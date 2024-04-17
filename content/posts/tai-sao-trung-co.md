@@ -2,7 +2,6 @@
 title: "Tại sao Trung Cổ"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2019-02-05
-lastmod: 2024-04-15T12:23:51+07:00
 tags: ["philosophy"]
 categories: ["think"]
 draft: false

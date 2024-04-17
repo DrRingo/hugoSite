@@ -2,7 +2,6 @@
 title: "Chuyện tình của ông Nobi"
 author: ["Nguyễn Bình Thành"]
 publishDate: 2017-05-06
-lastmod: 2024-04-15T12:23:51+07:00
 categories: ["think"]
 draft: false
 featured_image: "/assets/img/ong-bo-chuan-muc.jpg"
@@ -30,8 +29,7 @@ con mèo máy màu xanh vô nhà ăn chực, bày đủ trò quậy phá.
 P/S: mình đã từng suy nghĩ nhiều về chuyện tình của ông Nobi này, ai dè
 bữa nay gặp 1 tay khác đồng điệu
 
-[Chuyện
-tình của ông Nobi - # Ông bố chuẩn mực - Redpill VN](https://redpillvn.com/ong-bo-chuan-muc/?fbclid=IwAR3IYZcFFQZEYVqaom1KoIuHDHgzIq6jC4jt4-KA29W9jH1Xvxib6jvu6So)
+[Chuyện tình của ông Nobi - # Ông bố chuẩn mực - Redpill VN](https://redpillvn.com/ong-bo-chuan-muc/?fbclid=IwAR3IYZcFFQZEYVqaom1KoIuHDHgzIq6jC4jt4-KA29W9jH1Xvxib6jvu6So)
 
 P/S: mình đã từng chứng kiến cảnh lao đầu ưng gái nhà giàu ngoài đời
 thực, đám cưới của nó ở Bình Dương, gia đình ngoài Quảng Ngãi không vô
