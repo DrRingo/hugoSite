@@ -814,7 +814,7 @@ con đường xưa. Còn chuyện gì đến sau đó, sẽ đến, whatever, wh
 
 ** Kurt Gödel và định lí bất toàn :mathnotes:
 :PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: 2021-06-20 09:22:05
+:EXPORT_HUGO_PUBLISHDATE: 2019-05-20 09:22:05
 :export_hugo_custom_front_matter: :featured_image "/assets/img/kurtgodel.png"
 :export_file_name: kurt-godel
 :END:
