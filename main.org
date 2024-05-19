@@ -45,7 +45,6 @@ Get notes in
 :CREATED: [2024-05-07 Tue 07:48]
 :END:
 
-
 ** TODO Bài viết mới về xử lý text - text processing in haskell             :haskell:textprocessing:
 :PROPERTIES:
 :CREATED: [2024-04-15 Mon 21:16]
@@ -64,7 +63,7 @@ Hiện tại chưa có nội dung cho vấn đề này
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: [2024-05-19 Sun 19:06]
 :EXPORT_FILE_NAME: cau-chuyen-hanh-huong 
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/balaomahabodi.jpg"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/balaomahabodi.jpeg"
 :END:
 # :EXPORT_HUGO_EXPIRYDATE: 
 

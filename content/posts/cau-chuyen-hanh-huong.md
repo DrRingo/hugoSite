@@ -5,7 +5,7 @@ publishDate: 2024-05-19T19:06:00+07:00
 tags: ["budha"]
 categories: ["think"]
 draft: false
-featured_image: "/assets/img/balaomahabodi.jpg"
+featured_image: "/assets/img/balaomahabodi.jpeg"
 ---
 
 Mình sẽ bú chút fame, và nói về chuyện tu hành
