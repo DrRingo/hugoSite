@@ -15,11 +15,43 @@
 :properties:
 :export_hugo_section: posts
 :end:
-** TODO Bài viết mới về xử lý text - text processing in haskell
+** TODO Highlight and write note outer resource in =emacs= =org-mode= with =org-remark=         :emacs:orgmode:
 :PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: [2024-04-15 Mon 21:16]
+:CREATED: [2024-05-07 Tue 07:44]
+:EXPORT_HUGO_PUBLISHDATE: 
+:EXPORT_FILE_NAME: note-with-org-remark
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/"
+:END:
+# :EXPORT_HUGO_EXPIRYDATE: 
+
+*** Problem Intro
+:PROPERTIES:
+:CREATED: [2024-05-07 Tue 07:47]
+:END:
+
+Get notes in 
+- Website
+- Pdf file
+- Epub file
+- Text file
+
+*** Solution
+:PROPERTIES:
+:CREATED: [2024-05-07 Tue 07:47]
+:END:
+
+*** Get text from web with =trafilatura=
+:PROPERTIES:
+:CREATED: [2024-05-07 Tue 07:48]
+:END:
+
+
+** TODO Bài viết mới về xử lý text - text processing in haskell             :haskell:textprocessing:
+:PROPERTIES:
+:CREATED: [2024-04-15 Mon 21:16]
+:EXPORT_HUGO_PUBLISHDATE: 
 :EXPORT_FILE_NAME: text-processing-haskell
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/haskell.jpg"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/haskell.jpeg"
 :END:
 # :EXPORT_HUGO_EXPIRYDATE: 
 
@@ -28,6 +60,31 @@ Hiện tại chưa có nội dung cho vấn đề này
 :properties:
 :export_hugo_section: posts
 :end:
+** Câu chuyện hành hương
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: [2024-05-19 Sun 19:06]
+:EXPORT_FILE_NAME: cau-chuyen-hanh-huong 
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/balaomahabodi.jpg"
+:END:
+# :EXPORT_HUGO_EXPIRYDATE: 
+
+Mình sẽ bú chút fame, và nói về chuyện tu hành
+
+Các bạn chắc cũng biết năm ngoái mình đi vòng quanh Ấn Độ, và một trong những đích đến là ngôi chùa có cây bồ đề ngày xưa đức Phật đã ngồi để giác ngộ.
+
+Nếu theo tâm lý bình thường, con người thường có xu hướng chầu chực những gì họ tôn sùng, mà họ cho là bậc tôn sư. Đó là lý do vì sao người ta hay tìm về các cơ sở cách mạng trong rừng sâu, hoặc Hồi giáo khuyến khích tất cả các môn đồ phải quay về thánh địa Mecca ít nhất một lần trong đời. 
+
+Nhưng Phật giáo không như thế, đức Phật chẳng dạy dỗ gì cho ta cả, ngài chỉ ra một con đường và ai thích đi thì đi theo, không thì thôi, đức Phật don't care about you. Vì vậy, tìm về thánh địa của ngài cũng chẳng làm ta giác ngộ hơn. Mà đó chỉ là một hành động tạ ơn người đã dẫn lối, còn thực sự bước đi hay không là do ta hết.
+
+Phật tử hay đi thiền hành, đó là một hành động mang nhiều lợi ích cả về sinh học và nhận thức. Khi đi bộ xuyên một đất nước, bạn mới hiểu mình tự do đến mức nào. Cái này mình không thể diễn tả bằng vài lời được đâu.
+
+Hình dưới là ở ngay ngôi chùa giác ngộ Mahabodi ấy, mình sau khi tham quan mệt quá, ngồi nghỉ ở một bệ đá, cạnh một bà già. Tự nhiên bà già này nói chuyện rất nhiều, mình chẳng hiểu gì cả, nhưng có cảm giác như một người mẹ một người bà than phiền đứa con mình sao lâu chẳng trở về, than thở về nó suốt ngày. Mình ngồi nghe bà này nói cỡ 15 phút, rồi lạy tạ đi tiếp, bà cũng lạy mình như hình. Coi như là một duyên gặp gỡ.
+
+#+NAME: fig:laobabamahabodi
+#+CAPTION: Bà lão ở chùa Maha Bohdi
+#+ATTR_LaTeX: :height 5cm :placement [!htpb]
+[[file:/assets/img/laobabamahabodi.jpeg]]
+
 ** Cấu trúc của quyền lực :management:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2014-11-15 15:13:47 Z
