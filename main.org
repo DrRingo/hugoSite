@@ -60,7 +60,7 @@ Hiện tại chưa có nội dung cho vấn đề này
 :properties:
 :export_hugo_section: posts
 :end:
-** Câu chuyện hành hương
+** Câu chuyện hành hương :budha:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: [2024-05-19 Sun 19:06]
 :EXPORT_FILE_NAME: cau-chuyen-hanh-huong 
