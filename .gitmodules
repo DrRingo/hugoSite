@@ -1,3 +1,6 @@
 [submodule "themes/diary"]
 	path = themes/diary
 	url = https://github.com/AmazingRise/hugo-theme-diary.git
+[submodule "d"]
+	path = d
+	url = https://github.com/topaz/paste
