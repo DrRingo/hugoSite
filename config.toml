@@ -12,6 +12,8 @@ summaryLength = 42
 
 copyright = "Maximilian de Cato, writing with love, 2024"
 
+googleAnalytics = "G-QTXQ4E3BWF"
+
 [author]
 name = "Maximilian de Cato"
 
@@ -22,7 +24,9 @@ math = true
 enableLaTeX = true
 useIcon = true
 enableReadingTime = true
-walineServer = "https://waline-comment-jade-zeta.vercel.app/"
+favicon = "assets/ringochrysanthemum.ico"
+# walineServer = "https://waline-comment-jade-zeta.vercel.app/"
+
 # googleSearchCode = "83a0b058839eb4182"
 
 [outputFormats]
