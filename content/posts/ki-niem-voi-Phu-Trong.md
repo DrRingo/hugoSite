@@ -14,7 +14,7 @@ Số là năm ấy, trước linh cữu của chủ tịch nước Trần Đại
 
 <a id="figure--fig:nguyen-phu-trong-kim-cang-an"></a>
 
-{{< figure src="assets/img/nguyen-phu-trong-kim-cang-an.jpeg" caption="<span class=\"figure-number\">Figure 1: </span>Kim cang ấn thủ" >}}
+{{< figure src="/assets/img/nguyen-phu-trong-kim-cang-an.jpeg" caption="<span class=\"figure-number\">Figure 1: </span>Kim cang ấn thủ" >}}
 
 Vậy nên, mình cảm thấy không ngạc nhiên lắm, khi biết ngài tổng bí thư đã chọn trang trí bàn thờ của mình theo phong cách Phật giáo Tây Tạng. Có lẽ ngài cũng biết, thứ Phật giáo đại thừa mình đang quản lý nó là cái hạng gì, nên ở thời điểm quyết định của cuộc đời, ngài đã đưa ra lựa chọn khác.
 
