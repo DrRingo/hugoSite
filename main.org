@@ -2,7 +2,7 @@
 #+DESCRIPTION:
 #+KEYWORDS:
 #+LANGUAGE: vi
-#+STARTUP: show2levels
+#+STARTUP: overview
 
 #+EXCLUDE_TAGS: noexport
 
@@ -12,38 +12,21 @@
 #+hugo_base_dir: .
 #+hugo_section: .
 * temp
+** TODO Emacs LISP code for create and mathching heading entry, image, table and more (using =helm=)
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: [2024-12-18 Wed 21:32]
+:EXPORT_FILE_NAME: emacs-id-entry
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/emacs.jpg"
+:END:
+# :EXPORT_HUGO_EXPIRYDATE: 
 
+*** Problems
+Internal link in =org-mode= documents is hard
 * Shell                                                              :@shell:
 :properties:
 :export_hugo_section: posts
 :end:
-** TODO Highlight and write note outer resource in =emacs= =org-mode= with =org-remark= :emacs:orgmode:
-:PROPERTIES:
-:CREATED: [2024-05-07 Tue 07:44]
-:EXPORT_HUGO_PUBLISHDATE:
-:EXPORT_FILE_NAME: note-with-org-remark
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/"
-:END:
-# :EXPORT_HUGO_EXPIRYDATE:
-*** Problem Intro
-:PROPERTIES:
-:CREATED: [2024-05-07 Tue 07:47]
-:END:
-
-Get notes in
-- Website
-- Pdf file
-- Epub file
-- Text file
-*** Solution
-:PROPERTIES:
-:CREATED: [2024-05-07 Tue 07:47]
-:END:
-*** Get text from web with =trafilatura=
-:PROPERTIES:
-:CREATED: [2024-05-07 Tue 07:48]
-:END:
-** TODO Bài viết mới về xử lý text - text processing in haskell :haskell:textprocessing:
+** TODO Monadic text processing in haskell           :haskell:textprocessing:
 :PROPERTIES:
 :CREATED: [2024-04-15 Mon 21:16]
 :EXPORT_HUGO_PUBLISHDATE:
@@ -52,19 +35,57 @@ Get notes in
 :END:
 # :EXPORT_HUGO_EXPIRYDATE:
 
-Hiện tại chưa có nội dung cho vấn đề này
+Define monadic
+
+Define atom function
+*** Vấn đề
+Việc xử lý text là công việc phức tạp và có nhiều nhu cầu đa dạng. Vì vậy, chỉ một bộ công cụ nhiều khi không đáp ứng được tất cả các nhu cầu của thực tế. Ta cần một bộ hàm số (text -> text) tiêu chuẩn giống như bộ hàm của Excel để làm hộ công cụ riêng.
+
+Tuy nhiên, bên cạnh các hàm số sẵn có của các ngôn ngữ lập trình. Việc thiết kế các hàm đa dụng thực sự khó khăn, bởi vì phải tính đến hầu hết các trường hợp sử dụng hàng ngày của hàm số đó.
 * Think                                                              :@think:
 :properties:
 :export_hugo_section: posts
 :end:
 
-** Một kỉ niệm với Phú Trọng                :budha:
+** Chúa ở trong tôi
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: [2023-12-23 Sat]
+:EXPORT_FILE_NAME: chua-o-trong-toi
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "assets/img/aochoang.jpeg"
+:END:
+# :EXPORT_HUGO_EXPIRYDATE: s
+Tôi sẽ kể cho các bạn trải nghiệm du lịch đáng nhớ nhất trong chuyến du lịch Ấn Độ vừa rồi, và cũng là trải nghiệm đáng nhớ nhất trong năm nay, đó là trải nghiệm ăn McDonald ở Ấn Độ.
+
+Bên cạnh Coca-cola, có lẽ McDonald là công ty biểu hiện rõ nhất của chủ nghĩa tiêu dùng tư bản. Trong hàng thập kỉ, công ty này dùng mọi thứ nó có được: tiền, quyền, công nghệ, kể cả chèn ép nông dân để có được cái bánh hambuger ngon mắt và phê nhất để dọn lên bàn ăn của thực khách. Nếu có nguyên liệu tốt, bất kể ai cũng có thể làm được cái bánh hambuger ngon hơn, nhưng tôi đảm bảo không ai có thể làm được cái trải nghiệm ăn bánh vui thú trần tục hơn cái công ty này, không phê không lấy tiền. Đó cũng là chức năng cốt yếu của tư bản vậy.
+
+Nói thêm một chút về việc ăn. Bên cạnh cầu nguyện, có lẽ việc chúng ta ăn mỗi ngày là hành động gần Chúa nhất của con người. Ăn không chỉ giúp ta sống qua một ngày, nó còn là hành động dùng một tài nguyên khác của Chúa (sinh vật, rau cỏ) để nạp vào cơ thể ta. Vì vậy, ăn thường là một hoạt động thiêng liêng (thổ dân thường quỳ lạy con vật họ săn được, hay tín đồ cầu nguyện ngay trước bữa tối), và con người thường rất để ý đến người nấu cho mình ăn. Nếu ở nhà mẹ nấu, vợ nấu, ta thường cảm nhận ngay tính khí của người nội trợ gia đình ngày hôm đó thông qua bữa ăn. Nếu ăn ngoài đường, người ta cũng sẽ chọn những quán quen thuộc hoặc tạo cho mình cảm giác thân thuộc (chính xác là họ đang nhìn người nấu món để quyết định mình có ăn hay không).
+
+Vì vậy, quay lại chuyện cái bánh hambuger của McDonald, công ty này tước đi hết tất cả ý nghĩa thiêng liêng của bữa ăn (thậm chí nếu bạn biết nó nuôi những con bò để làm bánh trong những điều kiện nào, thì bạn sẽ không còn tin vào Chúa), McDonald chỉ để lại duy nhất một cảm giác ngon miệng, trải nghiệm phê pha hưởng thụ thuần túy.
+
+---
+
+Đó là câu chuyện của bánh McDonald, tôi sẽ quay qua một chút về con người Ấn và xã hội Ấn. Người Ấn từ tầng lớp trung lưu trở lên cũng giống như chúng ta, những con người hiện đại, mặc áo thun hay sơ mi, cầm điện thoại và đã quên gần hết cội nguồn của mình. Họ bận bịu với những ảo giác tiền tệ và giam mình trong sự tiện nghi của hiện đại. Những vị thần trong họ đã chết, vị thần tối cao duy nhất được thừa nhận chỉ còn là Benjamin Franklin.
+
+Người Ấn ở tầng lớp lao động thì khác, rất khác, tay cũng cầm một cái smartphone nhưng trang phục họ mặc, những thứ họ ăn, và cách họ nói chuyện vẫn mang đậm màu sắc tôn giáo. Tôi không rõ họ nghèo là vì họ cuồng tin vào tôn giáo của những vị cựu thần hơn là Benjamin Franklin như đám trung lưu ở trên, hay là vì tôn giáo là thứ giải thoát duy nhất cho cuộc sống vốn đã quá khổ sở của họ. Nhưng tôi biết chắc, chính truyền thống ăn chay, gia vị và cung cách cầu nguyện mỗi ngày, đã làm cho người lao động Ấn có một khuôn mặt nhìn rất thức thần: đôi mắt sáng ngời như đã thấu hiểu chân lý ở nhân gian, làn da rám nắng lộ rõ vẻ khỏe mạnh.
+
+Rất nhiều lần trên đường, tôi bắt gặp một người lao động khoác cái áo choàng ngang vai như cô gái ở trên hình, nhiều khi nó chỉ là một miếng vải rách, nhưng khoác lên vai theo cung cách ấy làm tôi không khỏi liên tưởng đến hình ảnh của đức Phật. Trong hàng ngàn năm, người Việt chúng ta thờ phụng và quỳ lạy một người đàn ông Ấn. Và tôi không khỏi nhận xét rằng, đức Phật có khuôn mặt của một người đàn ông Ấn trung bình, nghĩa là độ đập chai của ngài cũng ở mức tầm tầm so với người Ấn.
+
+---
+
+Khi đi du lịch tôi thường cố gắng ăn món địa phương, tôi chỉ ghé quán McDonald khi mình đã đói lả, và thường thì tôi gọi một phần BigMac kèm theo một ly Coca lớn. Và khi tôi nhìn lên, người hầu bàn chìa ra cho tôi phần ăn, với cái đôi mắt sâu như đã giác ngộ qua ngàn kiếp ấy, đến nỗi tôi phải thốt lên:
+- Ôi, Đức Phật, ngài đấy ư, ngài dọn cho con ăn cái thứ quái quỷ gì thế này?
+
+P/S 1: 24/12 không phải là ngày sinh của người đàn ông tên Jesus đâu, ngày này là ngày lễ của những tôn giáo đã có trước Thiên Chúa giáo. Nó chỉ là một cách để người ta bắt bạn phải nhớ, rằng trước khi mọi thứ bắt đầu lại từ đầu 1 tuần, bạn cần quay về với người đã sáng tạo ra thế giới này, nhắc bạn rằng mọi việc bạn làm điều phục vụ cho ý chí của ông ta và mọi vinh quang đều thuộc về Chúa trời.
+
+P/S 2: lần sau, khi bạn ăn, hãy nhìn đến tâm tư của người nấu hôm ấy.
+
+** Một kỉ niệm với Phú Trọng                                          :budha:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: [2024-07-23 Tue 10:18]
 :EXPORT_FILE_NAME: ki-niem-voi-Phu-Trong
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/kim-cang-thu-an.jpg"
 :END:
-# :EXPORT_HUGO_EXPIRYDATE: 
+# :EXPORT_HUGO_EXPIRYDATE:
 
 Thực ra thì mình với ông bác này đời sống cách xa nhau bắn tên lửa còn không tới, những gì mình quan tâm cũng chẳng liên quan đến công việc của ông bác. Nhưng cuộc đời đưa đẩy kiểu gì, có một mẩu nhỏ kinh nghiệm sống của mình liên quan nhẹ đến ngài tổng bí thư, nên nhân dịp này mình muốn viết đôi lời.
 
@@ -79,10 +100,10 @@ Vậy nên, mình cảm thấy không ngạc nhiên lắm, khi biết ngài tổ
 
 Mình xuất thân không phải bần hàn, nhưng bước vào đời ở tư thế một người không tiền, không quan hệ, chỉ với một nhúm kiến thức về y thuật và toán học. Mình đã trải qua những điều kiện sống khắc nghiệt về vật chất và tinh thần, mà nhiều khi nghĩ lại một người bình thường khó mà vượt qua nổi. Mỗi lần như thế, như một đứa con khóc lóc chạy về với mẹ, mình thường hay tìm kiếm giải pháp ở nơi mình cho là có lợi thế nhất, toán học. Và lần nào cũng vậy, nữ thần toán học luôn đáp lời mình, bằng cách này hay cách khác, lời giải luôn xuất hiện. Có thể nói, nữ thần đã đi cùng mình qua những đêm đen nhất của cuộc đời cho đến bây giờ, giữ cho tinh thần và niềm tin của mình chưa bao giờ sụp đổ, dù chỉ một ngày.
 
-Vậy nên, mình rất hiểu những người đã có mọi thứ trong tay. Nhưng đứng trước cơn sóng lũ của cuộc đời, mọi tiền bạc hay quan hệ vây cánh tất thảy đều vô nghĩa. Họ quay ra cầu nguyện, nhưng chẳng có vị thần nào đáp lời họ cả (một hệ quả trực tiếp của chủ nghĩa vô thần). Thế rồi, họ quay ra nương nhờ Đức Phật. Nhưng họ đâu biết rằng, Đức Phật đã chết từ lâu, và Đức Phật don’t care about you. 
+Vậy nên, mình rất hiểu những người đã có mọi thứ trong tay. Nhưng đứng trước cơn sóng lũ của cuộc đời, mọi tiền bạc hay quan hệ vây cánh tất thảy đều vô nghĩa. Họ quay ra cầu nguyện, nhưng chẳng có vị thần nào đáp lời họ cả (một hệ quả trực tiếp của chủ nghĩa vô thần). Thế rồi, họ quay ra nương nhờ Đức Phật. Nhưng họ đâu biết rằng, Đức Phật đã chết từ lâu, và Đức Phật don’t care about you.
 
 #+BEGIN_QUOTE
-  Đứng trước nhân quả, mọi sinh vật đều bình đẳng. 
+  Đứng trước nhân quả, mọi sinh vật đều bình đẳng.
 #+END_QUOTE
 
 Đức Phật không phải là một vị thần, và càng đọc càng tìm hiểu về ngài, mình càng nghĩ ngài chẳng có quyền năng gì sất. Ngài nên hiểu đúng hơn là có hình ảnh như một người thầy, chỉ đường cho ta đi tới, nhưng bước đi được hay không đều do ta hết. Hay nói theo cách để cho những người cộng sản hiểu được, Đức Phật có vai trò như Karl Marx, chỉ với vài cuốn sách, Marx đã chỉ ra con đường giải thoát cho một nhóm những người đang tuyệt vọng cả về vật chất lẫn tinh thần. Marx chỉ ra con đường phải đi, nhưng Lenin mới là người thực hiện nó. Và trong quá trình thực hiện, đấu tranh thế nào, bạo động hay không bạo động, hậu quả thế nào, tất cả đều do ta làm hết và nhận lấy hết.
@@ -90,7 +111,6 @@ Vậy nên, mình rất hiểu những người đã có mọi thứ trong tay. 
 P/S: hình ở dưới là tư thế kim cang thủ ấn mình thực hiện bằng bàn tay phải
 
 P/S 2: bạn không tin vào nhân quả cũng không sao, nhưng sống ở thời đại này, bạn nên tuân thủ theo 2 bộ luật: thứ nhất là các quy luật vật lý, thứ sẽ giúp bạn sống sót từ cú rơi ở độ cao 1000 mét; thứ hai là các quy luật thị trường, thứ sẽ giúp bạn sống sót qua mọi chế độ.
-
 ** Câu chuyện hành hương                                              :budha:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: [2024-05-19 Sun 19:06]
@@ -886,18 +906,17 @@ tôi có cảm giác như đã chạm đến bản chất của toán học.
 Như vậy, sau rất nhiều biến cố và đổi thay trong đời, Brook Taylor,
 người đàn ông tôi đã mang họ trong suốt mười mấy năm, đã đưa tôi trở lại
 con đường xưa. Còn chuyện gì đến sau đó, sẽ đến, whatever, who care?
-
-** Một kỉ niệm khác với Euler     :mathnotes:
+** Một kỉ niệm khác với Euler                                     :mathnotes:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: [2024-06-17 Mon 10:08]
 :EXPORT_FILE_NAME: euler-variational-method
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/taj-mahah.jpeg"
 :END:
-# :EXPORT_HUGO_EXPIRYDATE: 
+# :EXPORT_HUGO_EXPIRYDATE:
 
 Cách đây mấy năm, trong lúc đang tìm kiếm đề tài cho luận văn của mình, tôi đã thử tìm hiểu bộ môn giải tích biến phân. Đó là môn tôi chưa được học trong chương trình, nhưng mà nó hứa hẹn tôi về một phương pháp tối ưu, nên tôi đọc, thế thôi.
 
-Mày mò một hồi, tôi tự nhiên nhận ra rằng mình đã cảm được tinh thần của phép tính biến phân ấy. Mà khởi nguồn đầu tiên nhất, lại một lần nữa bắt đầu từ một người quen, Euler. Phương pháp Euler đã sử dụng để khai sinh ra phép tính biến phân thật kì lạ, nó không giống như bất kỳ điều gì tôi thấy trước đây. Nói cho mọi người dễ hiểu, thông thường làm toán hay làm bất kì điều gì khác, ta thường soi xét vật ta đang nghiên cứu, rồi đưa nó vào những tình huống cực hạn để nó bộc lộ ra những bản chất mà ta nghiên cứu, nói chung là phải có một lực từ ngoài vào, đối tượng mới tự biến đổi và thể hiện mình được. Nhưng Euler thì khác, ông chỉ quan sát sự thay đổi của các hàm số, gần như không tác động gì cả, từ đó, thông qua một vài phép biến đổi vi phân, Euler đã có được hàm số tối ưu mà gần như chẳng mất công sức nào. 
+Mày mò một hồi, tôi tự nhiên nhận ra rằng mình đã cảm được tinh thần của phép tính biến phân ấy. Mà khởi nguồn đầu tiên nhất, lại một lần nữa bắt đầu từ một người quen, Euler. Phương pháp Euler đã sử dụng để khai sinh ra phép tính biến phân thật kì lạ, nó không giống như bất kỳ điều gì tôi thấy trước đây. Nói cho mọi người dễ hiểu, thông thường làm toán hay làm bất kì điều gì khác, ta thường soi xét vật ta đang nghiên cứu, rồi đưa nó vào những tình huống cực hạn để nó bộc lộ ra những bản chất mà ta nghiên cứu, nói chung là phải có một lực từ ngoài vào, đối tượng mới tự biến đổi và thể hiện mình được. Nhưng Euler thì khác, ông chỉ quan sát sự thay đổi của các hàm số, gần như không tác động gì cả, từ đó, thông qua một vài phép biến đổi vi phân, Euler đã có được hàm số tối ưu mà gần như chẳng mất công sức nào.
 
 Điều đó không khác gì một sự giác ngộ, cứ như là nằm ở bên trong lõi của mọi sự vật trong tự nhiên, đã có sẵn một cấu trúc tối ưu, và mọi hành động của tự nhiên đều tuân theo một quy tắc tối ưu nào đó, và công việc của Euler đơn giản chỉ là gọi nó ra tờ giấy trắng mà thôi.
 
@@ -905,14 +924,13 @@ Mày mò một hồi, tôi tự nhiên nhận ra rằng mình đã cảm đượ
 
 Đây không phải là một ước muốn viển vông, đạt được điều này có nghĩa là từ các điều kiện ban đầu, và các ràng buộc ban đầu, với năng lực tính toán vừa đủ, ta sẽ biết được ngay lập tức đâu là đường đi tối ưu nhất dưới những điều kiện đó. Nó giống như bạn và đối thủ chuẩn bị chơi một ván cờ, nhưng bạn đã biết được các nước đi tối ưu, trước khi cả đối thủ đi nước đầu tiên.
 
-Đời không như là mơ, tôi thực sự đã mất cả năm để duy trì mối bận tâm suy nghĩ về cách giải symbolic cho phương trình Euler - Lagrange ấy, đọc qua cả chục thư viện CAS, nhưng rồi chỉ vì một vướng mắc kĩ thuật đã làm tôi phải dừng lại. 
+Đời không như là mơ, tôi thực sự đã mất cả năm để duy trì mối bận tâm suy nghĩ về cách giải symbolic cho phương trình Euler - Lagrange ấy, đọc qua cả chục thư viện CAS, nhưng rồi chỉ vì một vướng mắc kĩ thuật đã làm tôi phải dừng lại.
 
-Thế rồi, thời đại AI đã đến, và chúng có vẻ ngày càng chính xác hơn, người ta thậm chí còn viết một số phiên bản AI dùng cho những mục đích chuyên biệt, như khám chữa bệnh, giải toán,... và câu đầu tiên tôi hỏi AI, sau những câu test về độ chính xác của nó, là cách giải phương trình Euler - Lagrange này bằng symbolic. Rồi, từ từ đã chú em, chú mày đang viết cái gì thế này. Từ từ, để tao đọc đã, bên cạnh những câu lệnh bình thường, để giải quyết những vấn đề nhỏ nhặt bình thường của bài toán, thì có một câu lệnh không hiểu AI đã copy từ đâu mà tôi tìm kiếm mấy năm nay rồi không tìm được, nó đã sử dụng một cách rất sáng tạo các tài nguyên có sẵn để vượt qua vướng mắc kĩ thuật mà tôi đã dừng lại từ trước. 
+Thế rồi, thời đại AI đã đến, và chúng có vẻ ngày càng chính xác hơn, người ta thậm chí còn viết một số phiên bản AI dùng cho những mục đích chuyên biệt, như khám chữa bệnh, giải toán,... và câu đầu tiên tôi hỏi AI, sau những câu test về độ chính xác của nó, là cách giải phương trình Euler - Lagrange này bằng symbolic. Rồi, từ từ đã chú em, chú mày đang viết cái gì thế này. Từ từ, để tao đọc đã, bên cạnh những câu lệnh bình thường, để giải quyết những vấn đề nhỏ nhặt bình thường của bài toán, thì có một câu lệnh không hiểu AI đã copy từ đâu mà tôi tìm kiếm mấy năm nay rồi không tìm được, nó đã sử dụng một cách rất sáng tạo các tài nguyên có sẵn để vượt qua vướng mắc kĩ thuật mà tôi đã dừng lại từ trước.
 
 Và rồi, bùm, Euler - Lagrange căn bản đã được giải xong một cách tổng quát về mặt symbolic.
 
 Thực tế thì tôi đã không còn trẻ, những chuyện kì lạ trên đời tôi gặp cũng nhiều rồi, nhiều đến nỗi tôi thường nghĩ mình đã gần đến trạng thái "bất hoặc" - tức là không còn điều gì làm mình nghi ngờ nữa cả, bản chất cuộc sống nó sẽ vốn như thế thì sẽ diễn ra như thế. Những khoảnh khắc đốn ngộ về mặt nhận thức cũng đã rất xa, xa như từ thời phổ thông của tôi. Nhưng có lẽ Euler đã nói không, ông ấy vẫn cho tôi một cảm giác khai sáng mới mẻ về bản chất của thế giới này. Và tôi nghĩ mình đủ tư cách để thay lời Euler để nói thế này: bản chất thế giới này không giống như ta thấy hàng ngày, nó rất lạ, và nó thậm chí lạ hơn những gì một người có thể nghĩ ra.
-
 ** Kurt Gödel và định lí bất toàn                                 :mathnotes:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: 2019-05-20 09:22:05
