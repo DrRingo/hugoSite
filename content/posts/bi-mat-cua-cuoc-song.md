@@ -1,7 +1,7 @@
 ---
 title: "Bí mật của cuộc sống"
 author: ["Nguyễn Bình Thành"]
-publishDate: 2025-01-05T08:15:00+07:00
+publishDate: 2023-12-09T00:00:00+07:00
 categories: ["think"]
 draft: false
 featured_image: "/assets/img/gayaando.jpg"

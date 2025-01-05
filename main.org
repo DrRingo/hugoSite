@@ -48,7 +48,7 @@ Tuy nhiên, bên cạnh các hàm số sẵn có của các ngôn ngữ lập tr
 :end:
 ** Bí mật của cuộc sống
 :PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: [2025-01-05 Sun 08:15]
+:EXPORT_HUGO_PUBLISHDATE: [2023-12-09 Sat]
 :EXPORT_FILE_NAME: bi-mat-cua-cuoc-song
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/gayaando.jpg"
 :END:
