@@ -30,7 +30,7 @@ Internal link in =org-mode= documents is hard
 
 ** Giới thiệu bb-form: Công cụ tạo form terminal đẹp mắt với Clojure :clojure:
 :PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: [2024-12-18 Wed 21:32]
+:EXPORT_HUGO_PUBLISHDATE: [2025-07-18 Fri 21:32]
 :EXPORT_FILE_NAME: bb-form-clojure
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/fish/trigla-pini.jpg"
 :END:
@@ -277,7 +277,7 @@ Dự án đang phát triển tích cực với nhiều tính năng mới hấp d
 
 ** Org-mode Linking by ID: Giải pháp liên kết thông minh cho Emacs
 :PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: [2025-07-18 Sat 16:26]
+:EXPORT_HUGO_PUBLISHDATE: [2025-07-19 Sat 16:26]
 :EXPORT_FILE_NAME: orgmode-linked-by-id
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/fish/cyprinus-dobula.jpg"
 :END:

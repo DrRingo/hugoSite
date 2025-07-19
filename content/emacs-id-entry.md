@@ -5,3 +5,7 @@ publishDate: 2024-12-18T21:32:00+07:00
 draft: true
 featured_image: "/assets/img/emacs.jpg"
 ---
+
+## Problems {#problems}
+
+Internal link in `org-mode` documents is hard

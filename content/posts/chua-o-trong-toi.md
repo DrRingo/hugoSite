@@ -27,7 +27,7 @@ Rất nhiều lần trên đường, tôi bắt gặp một người lao động
 
 Khi đi du lịch tôi thường cố gắng ăn món địa phương, tôi chỉ ghé quán McDonald khi mình đã đói lả, và thường thì tôi gọi một phần BigMac kèm theo một ly Coca lớn. Và khi tôi nhìn lên, người hầu bàn chìa ra cho tôi phần ăn, với cái đôi mắt sâu như đã giác ngộ qua ngàn kiếp ấy, đến nỗi tôi phải thốt lên:
 
-    Ôi, Đức Phật, ngài đấy ư, ngài dọn cho con ăn cái thứ quái quỷ gì thế này?
+-   Ôi, Đức Phật, ngài đấy ư, ngài dọn cho con ăn cái thứ quái quỷ gì thế này?
 
 P/S 1: 24/12 không phải là ngày sinh của người đàn ông tên Jesus đâu, ngày này là ngày lễ của những tôn giáo đã có trước Thiên Chúa giáo. Nó chỉ là một cách để người ta bắt bạn phải nhớ, rằng trước khi mọi thứ bắt đầu lại từ đầu 1 tuần, bạn cần quay về với người đã sáng tạo ra thế giới này, nhắc bạn rằng mọi việc bạn làm điều phục vụ cho ý chí của ông ta và mọi vinh quang đều thuộc về Chúa trời.
 

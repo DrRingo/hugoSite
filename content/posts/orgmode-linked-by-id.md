@@ -1,67 +1,87 @@
 ---
 title: "Org-mode Linking by ID: Giải pháp liên kết thông minh cho Emacs"
 author: ["Nguyễn Bình Thành"]
-publishDate: 2025-07-18T22:32:00+07:00
-tags: ["elisp"]
+publishDate: 2025-07-19T16:26:00+07:00
 categories: ["shell"]
 draft: false
 featured_image: "/assets/img/fish/cyprinus-dobula.jpg"
 ---
 
-# Giới thiệu
+## Giới thiệu {#giới-thiệu}
 
-Khi làm việc với Org-mode trong Emacs, việc tạo liên kết chéo giữa các header là một nhu cầu thường xuyên. Tuy nhiên, các phương pháp truyền thống như sử dụng nội dung header hoặc CUSTOM_ID có những hạn chế đáng kể:
+Khi làm việc với Org-mode trong Emacs, việc tạo liên kết chéo giữa các
+header là một nhu cầu thường xuyên. Tuy nhiên, các phương pháp truyền
+thống như sử dụng nội dung header hoặc CUSTOM_ID có những hạn chế đáng
+kể:
 
-- **Liên kết theo nội dung header**: Khi header thay đổi, link sẽ bị hỏng
-- **CUSTOM_ID**: Đòi hỏi phải suy nghĩ và đặt tên cho ID, không tự nhiên
-- **Thiếu tính năng tìm kiếm**: Khó khăn khi tìm kiếm trong nhiều file
+-   **Liên kết theo nội dung header**: Khi header thay đổi, link sẽ bị hỏng
+-   **CUSTOM_ID**: Đòi hỏi phải suy nghĩ và đặt tên cho ID, không tự nhiên
+-   **Thiếu tính năng tìm kiếm**: Khó khăn khi tìm kiếm trong nhiều file
 
-Để giải quyết những vấn đề này, tôi đã phát triển extension **Org-mode Linking by ID** - một giải pháp thông minh cho việc tạo liên kết chéo trong Org-mode.
+Để giải quyết những vấn đề này, tôi đã phát triển extension **Org-mode
+Linking by ID** - một giải pháp thông minh cho việc tạo liên kết chéo
+trong Org-mode.
 
-# Mục đích và thiết kế
 
-## Tại sao sử dụng ID?
+## Mục đích và thiết kế {#mục-đích-và-thiết-kế}
 
-Extension này sử dụng ID tự động được tạo bởi `org-id-get-create` (phím tắt `SPC m I`) thay vì nội dung header. Điều này mang lại những lợi ích:
 
-1. **Tính ổn định**: ID không thay đổi khi nội dung header thay đổi
-2. **Tự động hóa**: Không cần suy nghĩ về việc đặt tên ID
-3. **Tính nhất quán**: Sử dụng cùng một hệ thống ID của Org-mode
+### Tại sao sử dụng ID? {#tại-sao-sử-dụng-id}
 
-## Kiến trúc thiết kế
+Extension này sử dụng ID tự động được tạo bởi `org-id-get-create` (phím
+tắt `SPC m I`) thay vì nội dung header. Điều này mang lại những lợi ích:
+
+1.  **Tính ổn định**: ID không thay đổi khi nội dung header thay đổi
+2.  **Tự động hóa**: Không cần suy nghĩ về việc đặt tên ID
+3.  **Tính nhất quán**: Sử dụng cùng một hệ thống ID của Org-mode
+
+
+### Kiến trúc thiết kế {#kiến-trúc-thiết-kế}
 
 Extension được chia thành 3 module chính:
 
-1. **Liên kết trong file hiện tại**: Tìm và liên kết headers trong file đang mở
-2. **Liên kết trong thư mục**: Tìm kiếm headers trong tất cả file .org trong thư mục
-3. **Liên kết đối tượng**: Liên kết đến hình ảnh, bảng có tên
+1.  **Liên kết trong file hiện tại**: Tìm và liên kết headers trong file
+    đang mở
+2.  **Liên kết trong thư mục**: Tìm kiếm headers trong tất cả file .org
+    trong thư mục
+3.  **Liên kết đối tượng**: Liên kết đến hình ảnh, bảng có tên
 
-# Cài đặt
 
-## Yêu cầu hệ thống
+## Cài đặt {#cài-đặt}
 
-- Emacs 26.1 trở lên
-- Org-mode
-- Ivy (cho fuzzy search)
-- Helm (cho tìm kiếm đối tượng)
 
-## Cách cài đặt
+### Yêu cầu hệ thống {#yêu-cầu-hệ-thống}
 
-### Phương pháp 1: Copy trực tiếp
+-   Emacs 26.1 trở lên
+-   Org-mode
+-   Ivy (cho fuzzy search)
+-   Helm (cho tìm kiếm đối tượng)
 
-1. Clone repository:
 
-```bash
+### Cách cài đặt {#cách-cài-đặt}
+
+
+#### Phương pháp 1: Copy trực tiếp {#phương-pháp-1-copy-trực-tiếp}
+
+1.  Clone repository:
+
+<!--listend-->
+
+```sh
 git clone https://github.com/drringo/orgmode-linked-by-id.git
 ```
 
-2. Thêm vào file config của bạn (`.emacs`, `init.el`, hoặc `config.el`):
+2.  Thêm vào file config của bạn (`.emacs`, `init.el`, hoặc
+    `config.el`):
+
+<!--listend-->
 
 ```elisp
 (load "~/path/to/orgmode-linked-by-id.lisp")
 ```
 
-### Phương pháp 2: Sử dụng use-package
+
+#### Phương pháp 2: Sử dụng use-package {#phương-pháp-2-sử-dụng-use-package}
 
 ```elisp
 (use-package orgmode-linked-by-id
@@ -70,30 +90,31 @@ git clone https://github.com/drringo/orgmode-linked-by-id.git
   (require 'orgmode-linked-by-id))
 ```
 
-### Phương pháp 3: Từ GitHub Gist
 
-1. Truy cập: https://gist.github.com/drringo/your-gist-id
-2. Copy nội dung file `orgmode-linked-by-id.lisp`
-3. Paste vào file config của bạn
+#### Phương pháp 3: Từ GitHub Gist {#phương-pháp-3-từ-github-gist}
 
-# Hướng dẫn sử dụng
+1.  Truy cập: <https://gist.github.com/drringo/your-gist-id>
+2.  Copy nội dung file `orgmode-linked-by-id.lisp`
+3.  Paste vào file config của bạn
 
-## Quy trình làm việc cơ bản
 
-1. **Tạo ID cho header**: `SPC m I`
-2. **Tạo liên kết**: Sử dụng các phím tắt tương ứng
-3. **Chọn header**: Từ danh sách được hiển thị
-4. **Tùy chỉnh**: Description của link nếu cần
+## Hướng dẫn sử dụng {#hướng-dẫn-sử-dụng}
 
-## Tính năng 1: Liên kết trong file hiện tại
+
+### Quy trình làm việc cơ bản {#quy-trình-làm-việc-cơ-bản}
+
+1.  **Tạo ID cho header**: `SPC m I`
+2.  **Tạo liên kết**: Sử dụng các phím tắt tương ứng
+3.  **Chọn header**: Từ danh sách được hiển thị
+4.  **Tùy chỉnh**: Description của link nếu cần
+
+
+### Tính năng 1: Liên kết trong file hiện tại {#tính-năng-1-liên-kết-trong-file-hiện-tại}
 
 **Phím tắt**: `C-c l i` hoặc `SPC l i`
 
-**Chức năng**:
-
-- Tìm tất cả headers có ID trong file đang mở
-- Hiển thị danh sách cho người dùng chọn
-- Chèn liên kết ID vào vị trí con trỏ
+**Chức năng**: - Tìm tất cả headers có ID trong file đang mở - Hiển thị
+danh sách cho người dùng chọn - Chèn liên kết ID vào vị trí con trỏ
 
 **Ví dụ sử dụng**:
 
@@ -111,31 +132,26 @@ git clone https://github.com/drringo/orgmode-linked-by-id.git
 Nội dung tham chiếu đến [[id:abc123][Header 1]].
 ```
 
-## Tính năng 2: Liên kết trong thư mục
+
+### Tính năng 2: Liên kết trong thư mục {#tính-năng-2-liên-kết-trong-thư-mục}
 
 **Phím tắt**: `C-c l f` hoặc `SPC l f`
 
-**Chức năng**:
+**Chức năng**: - Tìm headers có ID trong tất cả file .org trong thư mục -
+Sử dụng Ivy với fuzzy search để tìm kiếm dễ dàng - Không bao gồm thư mục
+con (để tránh tìm kiếm quá rộng)
 
-- Tìm headers có ID trong tất cả file .org trong thư mục
-- Sử dụng Ivy với fuzzy search để tìm kiếm dễ dàng
-- Không bao gồm thư mục con (để tránh tìm kiếm quá rộng)
+**Ưu điểm**: - Tìm kiếm nhanh với fuzzy matching - Chọn thư mục tương
+tác - Hiển thị tên file cùng với header
 
-**Ưu điểm**:
 
-- Tìm kiếm nhanh với fuzzy matching
-- Chọn thư mục tương tác
-- Hiển thị tên file cùng với header
-
-## Tính năng 3: Liên kết đối tượng (hình ảnh, bảng)
+### Tính năng 3: Liên kết đối tượng (hình ảnh, bảng) {#tính-năng-3-liên-kết-đối-tượng-hình-ảnh-bảng}
 
 **Phím tắt**: `C-c l c` hoặc `SPC l c`
 
-**Chức năng**:
-
-- Tìm các đối tượng có `#+NAME` và `#+CAPTION`
-- Hiển thị danh sách caption cho người dùng chọn
-- Cho phép tùy chỉnh description của link
+**Chức năng**: - Tìm các đối tượng có `#+NAME` và `#+CAPTION` - Hiển thị
+danh sách caption cho người dùng chọn - Cho phép tùy chỉnh description
+của link
 
 **Ví dụ sử dụng**:
 
@@ -147,10 +163,11 @@ Nội dung tham chiếu đến [[id:abc123][Header 1]].
 Liên kết đến [[my-image][Hình ảnh mẫu]].
 ```
 
-# Bảng phím tắt đầy đủ
+
+## Bảng phím tắt đầy đủ {#bảng-phím-tắt-đầy-đủ}
 
 | Phím tắt  | Chức năng                  | Mô tả                           |
-| --------- | -------------------------- | ------------------------------- |
+|-----------|----------------------------|---------------------------------|
 | `C-c l i` | Chèn ID link trong file    | Tìm headers trong file hiện tại |
 | `SPC l i` | Chèn ID link trong file    | (Doom Emacs)                    |
 | `C-c l f` | Chèn ID link trong thư mục | Tìm headers trong thư mục       |
@@ -158,9 +175,11 @@ Liên kết đến [[my-image][Hình ảnh mẫu]].
 | `C-c l c` | Chèn link đối tượng        | Tìm hình ảnh/bảng có tên        |
 | `SPC l c` | Chèn link đối tượng        | (Doom Emacs)                    |
 
-# Ví dụ thực tế
 
-## Kịch bản 1: Ghi chú học tập
+## Ví dụ thực tế {#ví-dụ-thực-tế}
+
+
+### Kịch bản 1: Ghi chú học tập {#kịch-bản-1-ghi-chú-học-tập}
 
 ```org
 * Môn học: Lập trình Python
@@ -182,7 +201,8 @@ Trong [[id:python-intro][Bài 1]], chúng ta đã học về cú pháp cơ bản
 Tiếp theo trong [[id:python-variables][Bài 2]], chúng ta sẽ tìm hiểu về biến.
 ```
 
-## Kịch bản 2: Quản lý dự án
+
+### Kịch bản 2: Quản lý dự án {#kịch-bản-2-quản-lý-dự-án}
 
 ```org
 * Dự án: Website công ty
@@ -203,59 +223,73 @@ Tiếp theo trong [[id:python-variables][Bài 2]], chúng ta sẽ tìm hiểu v�
 [[id:ui-design][Thiết kế UI]] cần hoàn thành trước khi bắt đầu [[id:backend-dev][phát triển backend]].
 ```
 
-# Lợi ích so với phương pháp truyền thống
 
-## So với liên kết theo nội dung header
+## Lợi ích so với phương pháp truyền thống {#lợi-ích-so-với-phương-pháp-truyền-thống}
+
+
+### So với liên kết theo nội dung header {#so-với-liên-kết-theo-nội-dung-header}
 
 | Phương pháp truyền thống        | Extension này                |
-| ------------------------------- | ---------------------------- |
+|---------------------------------|------------------------------|
 | `[[*Header name][Header name]]` | `[[id:abc123][Header name]]` |
 | Hỏng khi header thay đổi        | Vẫn hoạt động                |
 | Khó tìm kiếm                    | Tìm kiếm dễ dàng             |
 
-## So với CUSTOM_ID
+
+### So với CUSTOM_ID {#so-với-custom_id}
 
 | CUSTOM_ID            | ID tự động       |
-| -------------------- | ---------------- |
+|----------------------|------------------|
 | Cần suy nghĩ đặt tên | Tự động tạo      |
 | Có thể trùng lặp     | Đảm bảo duy nhất |
 | Khó quản lý          | Quản lý tự động  |
 
-# Kết luận
 
-Org-mode Linking by ID extension giải quyết hiệu quả các vấn đề thường gặp khi làm việc với liên kết trong Org-mode. Với thiết kế đơn giản nhưng mạnh mẽ, extension này:
+## Kết luận {#kết-luận}
 
-- **Tăng hiệu suất làm việc**: Tìm kiếm và tạo liên kết nhanh chóng
-- **Đảm bảo tính ổn định**: Liên kết không bị hỏng khi nội dung thay đổi
-- **Dễ sử dụng**: Giao diện trực quan với fuzzy search
-- **Linh hoạt**: Hỗ trợ nhiều loại liên kết khác nhau
+Org-mode Linking by ID extension giải quyết hiệu quả các vấn đề thường
+gặp khi làm việc với liên kết trong Org-mode. Với thiết kế đơn giản
+nhưng mạnh mẽ, extension này:
 
-# Hướng mở rộng
+-   **Tăng hiệu suất làm việc**: Tìm kiếm và tạo liên kết nhanh chóng
+-   **Đảm bảo tính ổn định**: Liên kết không bị hỏng khi nội dung thay đổi
+-   **Dễ sử dụng**: Giao diện trực quan với fuzzy search
+-   **Linh hoạt**: Hỗ trợ nhiều loại liên kết khác nhau
 
-## Tính năng có thể phát triển thêm
 
-1. **Liên kết đa cấp**: Tìm kiếm trong thư mục con
-2. **Lịch sử liên kết**: Theo dõi các liên kết đã tạo
-3. **Tự động cập nhật**: Cập nhật description khi header thay đổi
-4. **Export hỗ trợ**: Tối ưu cho việc export sang PDF/HTML
-5. **Tích hợp với Org-roam**: Hỗ trợ cho hệ thống note-taking
-6. **Giao diện đồ họa**: Tạo giao diện trực quan cho việc quản lý liên kết
+## Hướng mở rộng {#hướng-mở-rộng}
 
-## Đóng góp
 
-Dự án này được phát triển như một công cụ mã nguồn mở. Mọi đóng góp đều được chào đón:
+### Tính năng có thể phát triển thêm {#tính-năng-có-thể-phát-triển-thêm}
 
-- Báo cáo lỗi
-- Đề xuất tính năng mới
-- Cải thiện code
-- Viết tài liệu
+1.  **Liên kết đa cấp**: Tìm kiếm trong thư mục con
+2.  **Lịch sử liên kết**: Theo dõi các liên kết đã tạo
+3.  **Tự động cập nhật**: Cập nhật description khi header thay đổi
+4.  **Export hỗ trợ**: Tối ưu cho việc export sang PDF/HTML
+5.  **Tích hợp với Org-roam**: Hỗ trợ cho hệ thống note-taking
+6.  **Giao diện đồ họa**: Tạo giao diện trực quan cho việc quản lý liên kết
 
-## Liên kết
 
-- **Repository**: https://github.com/drringo/orgmode-linked-by-id
-- **Issues**: https://github.com/drringo/orgmode-linked-by-id/issues
-- **Discussions**: https://github.com/drringo/orgmode-linked-by-id/discussions
+### Đóng góp {#đóng-góp}
+
+Dự án này được phát triển như một công cụ mã nguồn mở. Mọi đóng góp đều
+được chào đón:
+
+-   Báo cáo lỗi
+-   Đề xuất tính năng mới
+-   Cải thiện code
+-   Viết tài liệu
+
+
+### Liên kết {#liên-kết}
+
+-   **Repository**: <https://github.com/drringo/orgmode-linked-by-id>
+-   **Issues**: <https://github.com/drringo/orgmode-linked-by-id/issues>
+-   **Discussions**:
+    <https://github.com/drringo/orgmode-linked-by-id/discussions>
 
 ---
 
-_Extension này được phát triển với mục đích cải thiện trải nghiệm làm việc với Org-mode. Hy vọng nó sẽ hữu ích cho cộng đồng Emacs và Org-mode._
+_Extension này được phát triển với mục đích cải thiện trải nghiệm làm
+việc với Org-mode. Hy vọng nó sẽ hữu ích cho cộng đồng Emacs và
+Org-mode._
