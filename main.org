@@ -27,102 +27,77 @@ Internal link in =org-mode= documents is hard
 :properties:
 :export_hugo_section: posts
 :end:
+
 ** Giới thiệu bb-form: Công cụ tạo form terminal đẹp mắt với Clojure :clojure:
 :PROPERTIES:
 :EXPORT_HUGO_PUBLISHDATE: [2024-12-18 Wed 21:32]
-:EXPORT_FILE_NAME: bb-form
+:EXPORT_FILE_NAME: bb-form-clojure
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/fish/trigla-pini.jpg"
 :END:
+# :EXPORT_HUGO_EXPIRYDATE:
 *** Mục đích sử dụng
-:PROPERTIES:
-:CUSTOM_ID: mục-đích-sử-dụng
-:END:
-*bb-form* là một công cụ mạnh mẽ được viết bằng Clojure và Babashka,
-giúp tạo ra những form thu thập dữ liệu đẹp mắt ngay trong terminal. Dự
-án này được thiết kế để giải quyết nhu cầu tạo giao diện người dùng thân
-thiện cho các ứng dụng command-line, đặc biệt hữu ích cho:
+
+*bb-form* là một công cụ mạnh mẽ được viết bằng Clojure và Babashka, giúp tạo ra những form thu thập dữ liệu đẹp mắt ngay trong terminal. Dự án này được thiết kế để giải quyết nhu cầu tạo giao diện người dùng thân thiện cho các ứng dụng command-line, đặc biệt hữu ích cho:
 
 - *Thu thập dữ liệu từ người dùng*: Tạo form đăng ký, khảo sát, cấu hình
 - *Tạo wizard cài đặt*: Hướng dẫn người dùng qua các bước cài đặt
-- *Thu thập thông tin cấu hình*: Tạo file config với giao diện thân
-  thiện
-- *Tạo form phân nhánh*: Hỗ trợ logic phức tạp với các câu hỏi có điều
-  kiện
+- *Thu thập thông tin cấu hình*: Tạo file config với giao diện thân thiện
+- *Tạo form phân nhánh*: Hỗ trợ logic phức tạp với các câu hỏi có điều kiện
 
 **** Điểm nổi bật của bb-form
-:PROPERTIES:
-:CUSTOM_ID: điểm-nổi-bật-của-bb-form
-:END:
-✨ *Giao diện đẹp mắt*: Sử dụng Charm-gum để tạo giao diện terminal hiện
-đại\\
-🎯 *Validation thông minh*: Kiểm tra dữ liệu real-time với thông báo lỗi
-rõ ràng\\
-🌳 *Hỗ trợ phân nhánh*: Tạo form phức tạp với logic có điều kiện\\
-⚡ *Hiệu suất cao*: Chạy nhanh với Clojure Babashka\\
-🔧 *Dễ tùy chỉnh*: Cấu hình JSON đơn giản, linh hoạt
+
+*Giao diện đẹp mắt*: Sử dụng Charm-gum để tạo giao diện terminal hiện đại
+*Validation thông minh*: Kiểm tra dữ liệu real-time với thông báo lỗi rõ ràng
+*Hỗ trợ phân nhánh*: Tạo form phức tạp với logic có điều kiện
+*Hiệu suất cao*: Chạy nhanh với Clojure Babashka
+*Dễ tùy chỉnh*: Cấu hình JSON đơn giản, linh hoạt
 
 *** Hướng dẫn cài đặt
-:PROPERTIES:
-:CUSTOM_ID: hướng-dẫn-cài-đặt
-:END:
+
 **** Yêu cầu hệ thống
-:PROPERTIES:
-:CUSTOM_ID: yêu-cầu-hệ-thống
-:END:
+
 Trước khi cài đặt bb-form, bạn cần có:
 
-- *[[https://babashka.org/][Clojure babashka]]* - Runtime Clojure nhanh
-- *[[https://github.com/charmbracelet/gum][Charm-gum]]* - Thư viện tạo
-  giao diện terminal đẹp
+- [[https://babashka.org/][Clojure babashka]] - Runtime Clojure nhanh
+- [[https://github.com/charmbracelet/gum][Charm-gum]] - Thư viện tạo giao diện terminal đẹp
 
 **** Cài đặt nhanh với bbin (Khuyến nghị)
-:PROPERTIES:
-:CUSTOM_ID: cài-đặt-nhanh-với-bbin-khuyến-nghị
-:END:
-Nếu bạn đã có [[https://github.com/babashka/bbin][bbin]] - công cụ quản
-lý script Clojure:
 
-#+begin_src sh
+Nếu bạn đã có [[https://github.com/babashka/bbin][bbin]] - công cụ quản lý script Clojure:
+
+#+BEGIN_SRC bash
 # Cài đặt từ GitHub
 bbin install io.github.drringo/bb-form
 
 # Hoặc cài đặt từ thư mục local (cho phát triển)
 bbin install .
-#+end_src
+#+END_SRC
 
 Sau khi cài đặt, bạn có thể sử dụng ngay:
 
-#+begin_src sh
+#+BEGIN_SRC bash
 bb-form form.json [--values values.json] [--out output.json] [field1:value1 ...]
-#+end_src
+#+END_SRC
 
 **** Cài đặt thủ công
-:PROPERTIES:
-:CUSTOM_ID: cài-đặt-thủ-công
-:END:
+
 Nếu không có bbin, bạn có thể chạy trực tiếp:
 
-#+begin_src sh
+#+BEGIN_SRC bash
 bb src/com/drbinhthanh/bb_form.clj form.json [--values values.json] [--out output.json] [field1:value1 ...]
-#+end_src
+#+END_SRC
 
 *** Hướng dẫn sử dụng
-:PROPERTIES:
-:CUSTOM_ID: hướng-dẫn-sử-dụng
-:END:
+
 **** Cách sử dụng cơ bản
-:PROPERTIES:
-:CUSTOM_ID: cách-sử-dụng-cơ-bản
-:END:
+
 1. *Tạo file form JSON*: Định nghĩa cấu trúc form của bạn
 2. *Chạy form*: Sử dụng lệnh bb-form với file config
 3. *Thu thập kết quả*: Dữ liệu được lưu vào file JSON
 
 **** Ví dụ sử dụng
-:PROPERTIES:
-:CUSTOM_ID: ví-dụ-sử-dụng
-:END:
-#+begin_src sh
+
+#+BEGIN_SRC bash
 # Chạy form cơ bản
 bb-form form_sample.json
 
@@ -134,15 +109,13 @@ bb-form form_sample.json --out my_result.json
 
 # Chạy form với giá trị từ command line
 bb-form form_sample.json name:"Nguyễn Văn A" age:25
-#+end_src
+#+END_SRC
 
 **** Tạo file form JSON
-:PROPERTIES:
-:CUSTOM_ID: tạo-file-form-json
-:END:
+
 Cấu trúc cơ bản của file form:
 
-#+begin_src json
+#+BEGIN_SRC json
 {
   "title": "Tiêu đề form",
   "description": "Mô tả form",
@@ -167,12 +140,10 @@ Cấu trúc cơ bản của file form:
     }
   ]
 }
-#+end_src
+#+END_SRC
 
 **** Các loại field hỗ trợ
-:PROPERTIES:
-:CUSTOM_ID: các-loại-field-hỗ-trợ
-:END:
+
 - *text*: Input văn bản (hỗ trợ regex validation)
 - *number*: Input số nguyên với validation
 - *date*: Input ngày tháng (format DD-MM-YYYY)
@@ -180,12 +151,10 @@ Cấu trúc cơ bản của file form:
 - *multiselect*: Chọn nhiều lựa chọn
 
 **** Ví dụ form thực tế
-:PROPERTIES:
-:CUSTOM_ID: ví-dụ-form-thực-tế
-:END:
+
 Dự án có sẵn ví dụ form tìm kiếm đài radio:
 
-#+begin_src json
+#+BEGIN_SRC json
 {
   "title": "Tùy chọn đài radio",
   "description": "Các phương thức để search ra đài radio phù hợp",
@@ -219,44 +188,34 @@ Dự án có sẵn ví dụ form tìm kiếm đài radio:
     }
   ]
 }
-#+end_src
+#+END_SRC
 
 *** Tính năng nổi bật
-:PROPERTIES:
-:CUSTOM_ID: tính-năng-nổi-bật
-:END:
+
 **** Giao diện người dùng tối ưu
-:PROPERTIES:
-:CUSTOM_ID: giao-diện-người-dùng-tối-ưu
-:END:
+
 - *Màn hình sạch sẽ*: Tự động xóa màn hình trước khi hiển thị form
 - *Dòng trạng thái cố định*: Hiển thị thông báo lỗi ở vị trí cố định
 - *Validation real-time*: Thông báo lỗi ngay lập tức khi nhập sai
 - *Giao diện nhất quán*: Thiết kế thống nhất trong suốt quá trình
 
 **** Tính năng phân nhánh mạnh mẽ
-:PROPERTIES:
-:CUSTOM_ID: tính-năng-phân-nhánh-mạnh-mẽ
-:END:
+
 - *Logic có điều kiện*: Hiển thị field con dựa trên lựa chọn
 - *Hỗ trợ nhiều cấp*: Có thể tạo phân nhánh phức tạp
 - *Tự động ẩn/hiện*: Field được quản lý thông minh
 
 **** Validation thông minh
-:PROPERTIES:
-:CUSTOM_ID: validation-thông-minh
-:END:
+
 - *Regex validation*: Hỗ trợ kiểm tra định dạng với regex
 - *Thông báo lỗi tùy chỉnh*: Tạo thông báo lỗi riêng cho từng field
 - *Validation đa dạng*: Số, ngày tháng, email, v.v.
 
 *** Kết quả đầu ra
-:PROPERTIES:
-:CUSTOM_ID: kết-quả-đầu-ra
-:END:
+
 Dữ liệu được lưu vào file JSON với cấu trúc rõ ràng:
 
-#+begin_src json
+#+BEGIN_SRC json
 {
   "selectedByUser": {
     "name": "Nguyễn Văn A",
@@ -283,30 +242,23 @@ Dữ liệu được lưu vào file JSON với cấu trúc rõ ràng:
     }
   }
 }
-#+end_src
+#+END_SRC
 
 *** Hứa hẹn tính năng mới
-:PROPERTIES:
-:CUSTOM_ID: hứa-hẹn-tính-năng-mới
-:END:
+
 **** Tính năng đang phát triển
-:PROPERTIES:
-:CUSTOM_ID: tính-năng-đang-phát-triển
-:END:
-🚀 *Tích hợp API*: Kết nối với các dịch vụ web để validate dữ liệu\\
-🎨 *Theme tùy chỉnh*: Cho phép thay đổi màu sắc và style giao diện\\
-📱 *Responsive design*: Tối ưu cho các terminal có kích thước khác
-nhau\\
-🔄 *Auto-save*: Tự động lưu tiến độ khi điền form dài\\
-📊 *Thống kê*: Hiển thị tiến độ và thời gian hoàn thành\\
-🔗 *Export đa dạng*: Xuất dữ liệu ra CSV, XML, YAML\\
-🌐 *Internationalization*: Hỗ trợ đa ngôn ngữ\\
-⚙️ *Plugin system*: Cho phép mở rộng với plugin tùy chỉnh
+
+*Tích hợp API*: Kết nối với các dịch vụ web để validate dữ liệu
+*Theme tùy chỉnh*: Cho phép thay đổi màu sắc và style giao diện
+*Responsive design*: Tối ưu cho các terminal có kích thước khác nhau
+*Auto-save*: Tự động lưu tiến độ khi điền form dài
+*Thống kê*: Hiển thị tiến độ và thời gian hoàn thành
+*Export đa dạng*: Xuất dữ liệu ra CSV, XML, YAML
+*Internationalization*: Hỗ trợ đa ngôn ngữ
+*Plugin system*: Cho phép mở rộng với plugin tùy chỉnh
 
 **** Tính năng dự kiến
-:PROPERTIES:
-:CUSTOM_ID: tính-năng-dự-kiến
-:END:
+
 - *Form builder GUI*: Tạo form bằng giao diện đồ họa
 - *Template library*: Thư viện form mẫu cho các trường hợp phổ biến
 - *Cloud sync*: Đồng bộ form và dữ liệu qua cloud
@@ -314,21 +266,333 @@ nhau\\
 - *Analytics*: Phân tích dữ liệu thu thập được
 
 *** Kết luận
+
+*bb-form* là một công cụ mạnh mẽ và linh hoạt cho việc tạo form trong terminal. Với giao diện đẹp mắt, tính năng phân nhánh thông minh và validation mạnh mẽ, nó là giải pháp hoàn hảo cho các nhà phát triển cần thu thập dữ liệu từ người dùng qua command-line.
+
+Dự án đang phát triển tích cực với nhiều tính năng mới hấp dẫn sắp được ra mắt. Hãy thử ngay và đóng góp ý kiến để giúp bb-form trở nên hoàn thiện hơn!
+
+---
+
+*bb-form - Tạo form terminal đẹp mắt với sức mạnh của Clojure*
+
+** Org-mode Linking by ID: Giải pháp liên kết thông minh cho Emacs
+:PROPERTIES:
+:EXPORT_HUGO_PUBLISHDATE: [2025-07-18 Sat 16:26]
+:EXPORT_FILE_NAME: orgmode-linked-by-id
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/fish/cyprinus-dobula.jpg"
+:END:
+# :EXPORT_HUGO_EXPIRYDATE: 
+
+*** Giới thiệu
+:PROPERTIES:
+:CUSTOM_ID: giới-thiệu
+:END:
+Khi làm việc với Org-mode trong Emacs, việc tạo liên kết chéo giữa các
+header là một nhu cầu thường xuyên. Tuy nhiên, các phương pháp truyền
+thống như sử dụng nội dung header hoặc CUSTOM_ID có những hạn chế đáng
+kể:
+
+- *Liên kết theo nội dung header*: Khi header thay đổi, link sẽ bị hỏng
+- *CUSTOM_ID*: Đòi hỏi phải suy nghĩ và đặt tên cho ID, không tự nhiên
+- *Thiếu tính năng tìm kiếm*: Khó khăn khi tìm kiếm trong nhiều file
+
+Để giải quyết những vấn đề này, tôi đã phát triển extension *Org-mode
+Linking by ID* - một giải pháp thông minh cho việc tạo liên kết chéo
+trong Org-mode.
+
+*** Mục đích và thiết kế
+:PROPERTIES:
+:CUSTOM_ID: mục-đích-và-thiết-kế
+:END:
+**** Tại sao sử dụng ID?
+:PROPERTIES:
+:CUSTOM_ID: tại-sao-sử-dụng-id
+:END:
+Extension này sử dụng ID tự động được tạo bởi =org-id-get-create= (phím
+tắt =SPC m I=) thay vì nội dung header. Điều này mang lại những lợi ích:
+
+1. *Tính ổn định*: ID không thay đổi khi nội dung header thay đổi
+2. *Tự động hóa*: Không cần suy nghĩ về việc đặt tên ID
+3. *Tính nhất quán*: Sử dụng cùng một hệ thống ID của Org-mode
+
+**** Kiến trúc thiết kế
+:PROPERTIES:
+:CUSTOM_ID: kiến-trúc-thiết-kế
+:END:
+Extension được chia thành 3 module chính:
+
+1. *Liên kết trong file hiện tại*: Tìm và liên kết headers trong file
+   đang mở
+2. *Liên kết trong thư mục*: Tìm kiếm headers trong tất cả file .org
+   trong thư mục
+3. *Liên kết đối tượng*: Liên kết đến hình ảnh, bảng có tên
+
+*** Cài đặt
+:PROPERTIES:
+:CUSTOM_ID: cài-đặt
+:END:
+**** Yêu cầu hệ thống
+:PROPERTIES:
+:CUSTOM_ID: yêu-cầu-hệ-thống
+:END:
+- Emacs 26.1 trở lên
+- Org-mode
+- Ivy (cho fuzzy search)
+- Helm (cho tìm kiếm đối tượng)
+
+**** Cách cài đặt
+:PROPERTIES:
+:CUSTOM_ID: cách-cài-đặt
+:END:
+***** Phương pháp 1: Copy trực tiếp
+:PROPERTIES:
+:CUSTOM_ID: phương-pháp-1-copy-trực-tiếp
+:END:
+1. Clone repository:
+
+#+begin_src sh
+git clone https://github.com/drringo/orgmode-linked-by-id.git
+#+end_src
+
+2. [@2] Thêm vào file config của bạn (=.emacs=, =init.el=, hoặc
+   =config.el=):
+
+#+begin_src elisp
+(load "~/path/to/orgmode-linked-by-id.lisp")
+#+end_src
+
+***** Phương pháp 2: Sử dụng use-package
+:PROPERTIES:
+:CUSTOM_ID: phương-pháp-2-sử-dụng-use-package
+:END:
+#+begin_src elisp
+(use-package orgmode-linked-by-id
+  :load-path "~/path/to/orgmode-linked-by-id"
+  :config
+  (require 'orgmode-linked-by-id))
+#+end_src
+
+***** Phương pháp 3: Từ GitHub Gist
+:PROPERTIES:
+:CUSTOM_ID: phương-pháp-3-từ-github-gist
+:END:
+1. Truy cập: https://gist.github.com/drringo/your-gist-id
+2. Copy nội dung file =orgmode-linked-by-id.lisp=
+3. Paste vào file config của bạn
+
+*** Hướng dẫn sử dụng
+:PROPERTIES:
+:CUSTOM_ID: hướng-dẫn-sử-dụng
+:END:
+**** Quy trình làm việc cơ bản
+:PROPERTIES:
+:CUSTOM_ID: quy-trình-làm-việc-cơ-bản
+:END:
+1. *Tạo ID cho header*: =SPC m I=
+2. *Tạo liên kết*: Sử dụng các phím tắt tương ứng
+3. *Chọn header*: Từ danh sách được hiển thị
+4. *Tùy chỉnh*: Description của link nếu cần
+
+**** Tính năng 1: Liên kết trong file hiện tại
+:PROPERTIES:
+:CUSTOM_ID: tính-năng-1-liên-kết-trong-file-hiện-tại
+:END:
+*Phím tắt*: =C-c l i= hoặc =SPC l i=
+
+*Chức năng*: - Tìm tất cả headers có ID trong file đang mở - Hiển thị
+danh sách cho người dùng chọn - Chèn liên kết ID vào vị trí con trỏ
+
+*Ví dụ sử dụng*:
+
+#+begin_src org
+,* Header 1
+:PROPERTIES:
+:ID: abc123
+:END:
+
+,* Header 2
+:PROPERTIES:
+:ID: def456
+:END:
+
+Nội dung tham chiếu đến [[id:abc123][Header 1]].
+#+end_src
+
+**** Tính năng 2: Liên kết trong thư mục
+:PROPERTIES:
+:CUSTOM_ID: tính-năng-2-liên-kết-trong-thư-mục
+:END:
+*Phím tắt*: =C-c l f= hoặc =SPC l f=
+
+*Chức năng*: - Tìm headers có ID trong tất cả file .org trong thư mục -
+Sử dụng Ivy với fuzzy search để tìm kiếm dễ dàng - Không bao gồm thư mục
+con (để tránh tìm kiếm quá rộng)
+
+*Ưu điểm*: - Tìm kiếm nhanh với fuzzy matching - Chọn thư mục tương
+tác - Hiển thị tên file cùng với header
+
+**** Tính năng 3: Liên kết đối tượng (hình ảnh, bảng)
+:PROPERTIES:
+:CUSTOM_ID: tính-năng-3-liên-kết-đối-tượng-hình-ảnh-bảng
+:END:
+*Phím tắt*: =C-c l c= hoặc =SPC l c=
+
+*Chức năng*: - Tìm các đối tượng có =#+NAME= và =#+CAPTION= - Hiển thị
+danh sách caption cho người dùng chọn - Cho phép tùy chỉnh description
+của link
+
+*Ví dụ sử dụng*:
+
+#+begin_src org
+,#+NAME: my-image
+,#+CAPTION: Hình ảnh mẫu
+[[file:image.png]]
+
+Liên kết đến [[my-image][Hình ảnh mẫu]].
+#+end_src
+
+*** Bảng phím tắt đầy đủ
+:PROPERTIES:
+:CUSTOM_ID: bảng-phím-tắt-đầy-đủ
+:END:
+| Phím tắt  | Chức năng                  | Mô tả                           |
+|-----------+----------------------------+---------------------------------|
+| =C-c l i= | Chèn ID link trong file    | Tìm headers trong file hiện tại |
+| =SPC l i= | Chèn ID link trong file    | (Doom Emacs)                    |
+| =C-c l f= | Chèn ID link trong thư mục | Tìm headers trong thư mục       |
+| =SPC l f= | Chèn ID link trong thư mục | (Doom Emacs)                    |
+| =C-c l c= | Chèn link đối tượng        | Tìm hình ảnh/bảng có tên        |
+| =SPC l c= | Chèn link đối tượng        | (Doom Emacs)                    |
+
+*** Ví dụ thực tế
+:PROPERTIES:
+:CUSTOM_ID: ví-dụ-thực-tế
+:END:
+**** Kịch bản 1: Ghi chú học tập
+:PROPERTIES:
+:CUSTOM_ID: kịch-bản-1-ghi-chú-học-tập
+:END:
+#+begin_src org
+,* Môn học: Lập trình Python
+:PROPERTIES:
+:ID: python-course
+:END:
+
+,* Bài 1: Giới thiệu Python
+:PROPERTIES:
+:ID: python-intro
+:END:
+
+,* Bài 2: Biến và kiểu dữ liệu
+:PROPERTIES:
+:ID: python-variables
+:END:
+
+Trong [[id:python-intro][Bài 1]], chúng ta đã học về cú pháp cơ bản.
+Tiếp theo trong [[id:python-variables][Bài 2]], chúng ta sẽ tìm hiểu về biến.
+#+end_src
+
+**** Kịch bản 2: Quản lý dự án
+:PROPERTIES:
+:CUSTOM_ID: kịch-bản-2-quản-lý-dự-án
+:END:
+#+begin_src org
+,* Dự án: Website công ty
+:PROPERTIES:
+:ID: company-website
+:END:
+
+,* Task: Thiết kế UI
+:PROPERTIES:
+:ID: ui-design
+:END:
+
+,* Task: Phát triển backend
+:PROPERTIES:
+:ID: backend-dev
+:END:
+
+[[id:ui-design][Thiết kế UI]] cần hoàn thành trước khi bắt đầu [[id:backend-dev][phát triển backend]].
+#+end_src
+
+*** Lợi ích so với phương pháp truyền thống
+:PROPERTIES:
+:CUSTOM_ID: lợi-ích-so-với-phương-pháp-truyền-thống
+:END:
+**** So với liên kết theo nội dung header
+:PROPERTIES:
+:CUSTOM_ID: so-với-liên-kết-theo-nội-dung-header
+:END:
+| Phương pháp truyền thống        | Extension này                |
+|---------------------------------+------------------------------|
+| =[[*Header name][Header name]]= | =[[id:abc123][Header name]]= |
+| Hỏng khi header thay đổi        | Vẫn hoạt động                |
+| Khó tìm kiếm                    | Tìm kiếm dễ dàng             |
+
+**** So với CUSTOM_ID
+:PROPERTIES:
+:CUSTOM_ID: so-với-custom_id
+:END:
+| CUSTOM_ID            | ID tự động       |
+|----------------------+------------------|
+| Cần suy nghĩ đặt tên | Tự động tạo      |
+| Có thể trùng lặp     | Đảm bảo duy nhất |
+| Khó quản lý          | Quản lý tự động  |
+
+*** Kết luận
 :PROPERTIES:
 :CUSTOM_ID: kết-luận
 :END:
-*bb-form* là một công cụ mạnh mẽ và linh hoạt cho việc tạo form trong
-terminal. Với giao diện đẹp mắt, tính năng phân nhánh thông minh và
-validation mạnh mẽ, nó là giải pháp hoàn hảo cho các nhà phát triển cần
-thu thập dữ liệu từ người dùng qua command-line.
+Org-mode Linking by ID extension giải quyết hiệu quả các vấn đề thường
+gặp khi làm việc với liên kết trong Org-mode. Với thiết kế đơn giản
+nhưng mạnh mẽ, extension này:
 
-Dự án đang phát triển tích cực với nhiều tính năng mới hấp dẫn sắp được
-ra mắt. Hãy thử ngay và đóng góp ý kiến để giúp bb-form trở nên hoàn
-thiện hơn!
+- *Tăng hiệu suất làm việc*: Tìm kiếm và tạo liên kết nhanh chóng
+- *Đảm bảo tính ổn định*: Liên kết không bị hỏng khi nội dung thay đổi
+- *Dễ sử dụng*: Giao diện trực quan với fuzzy search
+- *Linh hoạt*: Hỗ trợ nhiều loại liên kết khác nhau
+
+*** Hướng mở rộng
+:PROPERTIES:
+:CUSTOM_ID: hướng-mở-rộng
+:END:
+**** Tính năng có thể phát triển thêm
+:PROPERTIES:
+:CUSTOM_ID: tính-năng-có-thể-phát-triển-thêm
+:END:
+1. *Liên kết đa cấp*: Tìm kiếm trong thư mục con
+2. *Lịch sử liên kết*: Theo dõi các liên kết đã tạo
+3. *Tự động cập nhật*: Cập nhật description khi header thay đổi
+4. *Export hỗ trợ*: Tối ưu cho việc export sang PDF/HTML
+5. *Tích hợp với Org-roam*: Hỗ trợ cho hệ thống note-taking
+6. *Giao diện đồ họa*: Tạo giao diện trực quan cho việc quản lý liên kết
+
+**** Đóng góp
+:PROPERTIES:
+:CUSTOM_ID: đóng-góp
+:END:
+Dự án này được phát triển như một công cụ mã nguồn mở. Mọi đóng góp đều
+được chào đón:
+
+- Báo cáo lỗi
+- Đề xuất tính năng mới
+- Cải thiện code
+- Viết tài liệu
+
+**** Liên kết
+:PROPERTIES:
+:CUSTOM_ID: liên-kết
+:END:
+- *Repository*: https://github.com/drringo/orgmode-linked-by-id
+- *Issues*: https://github.com/drringo/orgmode-linked-by-id/issues
+- *Discussions*:
+  https://github.com/drringo/orgmode-linked-by-id/discussions
 
 --------------
 
-/bb-form - Tạo form terminal đẹp mắt với sức mạnh của Clojure/ ✨
+/Extension này được phát triển với mục đích cải thiện trải nghiệm làm
+việc với Org-mode. Hy vọng nó sẽ hữu ích cho cộng đồng Emacs và
+Org-mode./
 * Think                                                              :@think:
 :properties:
 :export_hugo_section: posts

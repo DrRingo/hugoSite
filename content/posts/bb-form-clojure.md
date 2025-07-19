@@ -1,14 +1,14 @@
 ---
 title: "Giới thiệu bb-form: Công cụ tạo form terminal đẹp mắt với Clojure"
 author: ["Nguyễn Bình Thành"]
-publishDate: 2025-07-19T01:32:00+07:00
+publishDate: 2024-12-18T21:32:00+07:00
 tags: ["clojure"]
 categories: ["shell"]
 draft: false
 featured_image: "/assets/img/fish/trigla-pini.jpg"
 ---
 
-## Mục đích sử dụng
+# Mục đích sử dụng
 
 **bb-form** là một công cụ mạnh mẽ được viết bằng Clojure và Babashka, giúp tạo ra những form thu thập dữ liệu đẹp mắt ngay trong terminal. Dự án này được thiết kế để giải quyết nhu cầu tạo giao diện người dùng thân thiện cho các ứng dụng command-line, đặc biệt hữu ích cho:
 
@@ -17,7 +17,7 @@ featured_image: "/assets/img/fish/trigla-pini.jpg"
 - **Thu thập thông tin cấu hình**: Tạo file config với giao diện thân thiện
 - **Tạo form phân nhánh**: Hỗ trợ logic phức tạp với các câu hỏi có điều kiện
 
-### Điểm nổi bật của bb-form
+## Điểm nổi bật của bb-form
 
 ✨ **Giao diện đẹp mắt**: Sử dụng Charm-gum để tạo giao diện terminal hiện đại  
 🎯 **Validation thông minh**: Kiểm tra dữ liệu real-time với thông báo lỗi rõ ràng  
@@ -25,16 +25,16 @@ featured_image: "/assets/img/fish/trigla-pini.jpg"
 ⚡ **Hiệu suất cao**: Chạy nhanh với Clojure Babashka  
 🔧 **Dễ tùy chỉnh**: Cấu hình JSON đơn giản, linh hoạt
 
-## Hướng dẫn cài đặt
+# Hướng dẫn cài đặt
 
-### Yêu cầu hệ thống
+## Yêu cầu hệ thống
 
 Trước khi cài đặt bb-form, bạn cần có:
 
 - **[Clojure babashka](https://babashka.org/)** - Runtime Clojure nhanh
 - **[Charm-gum](https://github.com/charmbracelet/gum)** - Thư viện tạo giao diện terminal đẹp
 
-### Cài đặt nhanh với bbin (Khuyến nghị)
+## Cài đặt nhanh với bbin (Khuyến nghị)
 
 Nếu bạn đã có [bbin](https://github.com/babashka/bbin) - công cụ quản lý script Clojure:
 
@@ -52,7 +52,7 @@ Sau khi cài đặt, bạn có thể sử dụng ngay:
 bb-form form.json [--values values.json] [--out output.json] [field1:value1 ...]
 ```
 
-### Cài đặt thủ công
+## Cài đặt thủ công
 
 Nếu không có bbin, bạn có thể chạy trực tiếp:
 
@@ -60,15 +60,15 @@ Nếu không có bbin, bạn có thể chạy trực tiếp:
 bb src/com/drbinhthanh/bb_form.clj form.json [--values values.json] [--out output.json] [field1:value1 ...]
 ```
 
-## Hướng dẫn sử dụng
+# Hướng dẫn sử dụng
 
-### Cách sử dụng cơ bản
+## Cách sử dụng cơ bản
 
 1. **Tạo file form JSON**: Định nghĩa cấu trúc form của bạn
 2. **Chạy form**: Sử dụng lệnh bb-form với file config
 3. **Thu thập kết quả**: Dữ liệu được lưu vào file JSON
 
-### Ví dụ sử dụng
+## Ví dụ sử dụng
 
 ```bash
 # Chạy form cơ bản
@@ -84,7 +84,7 @@ bb-form form_sample.json --out my_result.json
 bb-form form_sample.json name:"Nguyễn Văn A" age:25
 ```
 
-### Tạo file form JSON
+## Tạo file form JSON
 
 Cấu trúc cơ bản của file form:
 
@@ -115,7 +115,7 @@ Cấu trúc cơ bản của file form:
 }
 ```
 
-### Các loại field hỗ trợ
+## Các loại field hỗ trợ
 
 - **text**: Input văn bản (hỗ trợ regex validation)
 - **number**: Input số nguyên với validation
@@ -123,7 +123,7 @@ Cấu trúc cơ bản của file form:
 - **select**: Dropdown chọn một lựa chọn
 - **multiselect**: Chọn nhiều lựa chọn
 
-### Ví dụ form thực tế
+## Ví dụ form thực tế
 
 Dự án có sẵn ví dụ form tìm kiếm đài radio:
 
@@ -169,28 +169,28 @@ Dự án có sẵn ví dụ form tìm kiếm đài radio:
 }
 ```
 
-## Tính năng nổi bật
+# Tính năng nổi bật
 
-### Giao diện người dùng tối ưu
+## Giao diện người dùng tối ưu
 
 - **Màn hình sạch sẽ**: Tự động xóa màn hình trước khi hiển thị form
 - **Dòng trạng thái cố định**: Hiển thị thông báo lỗi ở vị trí cố định
 - **Validation real-time**: Thông báo lỗi ngay lập tức khi nhập sai
 - **Giao diện nhất quán**: Thiết kế thống nhất trong suốt quá trình
 
-### Tính năng phân nhánh mạnh mẽ
+## Tính năng phân nhánh mạnh mẽ
 
 - **Logic có điều kiện**: Hiển thị field con dựa trên lựa chọn
 - **Hỗ trợ nhiều cấp**: Có thể tạo phân nhánh phức tạp
 - **Tự động ẩn/hiện**: Field được quản lý thông minh
 
-### Validation thông minh
+## Validation thông minh
 
 - **Regex validation**: Hỗ trợ kiểm tra định dạng với regex
 - **Thông báo lỗi tùy chỉnh**: Tạo thông báo lỗi riêng cho từng field
 - **Validation đa dạng**: Số, ngày tháng, email, v.v.
 
-## Kết quả đầu ra
+# Kết quả đầu ra
 
 Dữ liệu được lưu vào file JSON với cấu trúc rõ ràng:
 
@@ -223,9 +223,9 @@ Dữ liệu được lưu vào file JSON với cấu trúc rõ ràng:
 }
 ```
 
-## Hứa hẹn tính năng mới
+# Hứa hẹn tính năng mới
 
-### Tính năng đang phát triển
+## Tính năng đang phát triển
 
 🚀 **Tích hợp API**: Kết nối với các dịch vụ web để validate dữ liệu  
 🎨 **Theme tùy chỉnh**: Cho phép thay đổi màu sắc và style giao diện  
@@ -236,7 +236,7 @@ Dữ liệu được lưu vào file JSON với cấu trúc rõ ràng:
 🌐 **Internationalization**: Hỗ trợ đa ngôn ngữ  
 ⚙️ **Plugin system**: Cho phép mở rộng với plugin tùy chỉnh
 
-### Tính năng dự kiến
+## Tính năng dự kiến
 
 - **Form builder GUI**: Tạo form bằng giao diện đồ họa
 - **Template library**: Thư viện form mẫu cho các trường hợp phổ biến
@@ -244,7 +244,7 @@ Dữ liệu được lưu vào file JSON với cấu trúc rõ ràng:
 - **Collaboration**: Chia sẻ và cộng tác trên form
 - **Analytics**: Phân tích dữ liệu thu thập được
 
-## Kết luận
+# Kết luận
 
 **bb-form** là một công cụ mạnh mẽ và linh hoạt cho việc tạo form trong terminal. Với giao diện đẹp mắt, tính năng phân nhánh thông minh và validation mạnh mẽ, nó là giải pháp hoàn hảo cho các nhà phát triển cần thu thập dữ liệu từ người dùng qua command-line.
 
