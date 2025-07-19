@@ -1,7 +1,7 @@
 ---
 title: "Org-mode Linking by ID: Giải pháp liên kết thông minh cho Emacs"
 author: ["Nguyễn Bình Thành"]
-publishDate: 2024-12-18T22:32:00+07:00
+publishDate: 2025-07-18T22:32:00+07:00
 tags: ["elisp"]
 categories: ["shell"]
 draft: false
