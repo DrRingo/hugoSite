@@ -12,17 +12,6 @@
 #+hugo_base_dir: .
 #+hugo_section: .
 * temp
-** TODO Emacs LISP code for create and mathching heading entry, image, table and more (using =helm=)
-:PROPERTIES:
-:EXPORT_HUGO_PUBLISHDATE: [2024-12-18 Wed 21:32]
-:EXPORT_FILE_NAME: emacs-id-entry
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/emacs.jpg"
-:END:
-# :EXPORT_HUGO_EXPIRYDATE: 
-
-*** Problems
-Internal link in =org-mode= documents is hard
-
 * Shell                                                              :@shell:
 :properties:
 :export_hugo_section: posts
@@ -282,195 +271,113 @@ Dự án đang phát triển tích cực với nhiều tính năng mới hấp d
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featured_image "/assets/img/fish/cyprinus-dobula.jpg"
 :END:
 # :EXPORT_HUGO_EXPIRYDATE: 
-
 *** Giới thiệu
 :PROPERTIES:
 :CUSTOM_ID: giới-thiệu
 :END:
-Khi làm việc với Org-mode trong Emacs, việc tạo liên kết chéo giữa các
-header là một nhu cầu thường xuyên. Tuy nhiên, các phương pháp truyền
-thống như sử dụng nội dung header hoặc CUSTOM_ID có những hạn chế đáng
-kể:
+*Orgmode-linked-by-id* là extension cho Emacs Org-mode giúp bạn tạo liên
+kết chéo bền vững giữa các tiêu đề, hình ảnh, bảng bằng ID thay vì tên
+tiêu đề. Điều này giải quyết triệt để vấn đề link bị hỏng khi đổi tên
+header, đồng thời giúp bạn dễ dàng tham chiếu đến bất kỳ mục nào trong
+ghi chú, kể cả khi tài liệu lớn hoặc nhiều file.
 
-- *Liên kết theo nội dung header*: Khi header thay đổi, link sẽ bị hỏng
-- *CUSTOM_ID*: Đòi hỏi phải suy nghĩ và đặt tên cho ID, không tự nhiên
-- *Thiếu tính năng tìm kiếm*: Khó khăn khi tìm kiếm trong nhiều file
-
-Để giải quyết những vấn đề này, tôi đã phát triển extension *Org-mode
-Linking by ID* - một giải pháp thông minh cho việc tạo liên kết chéo
-trong Org-mode.
-
-*** Mục đích và thiết kế
+*** Tại sao nên dùng liên kết bằng ID?
 :PROPERTIES:
-:CUSTOM_ID: mục-đích-và-thiết-kế
+:CUSTOM_ID: tại-sao-nên-dùng-liên-kết-bằng-id
 :END:
-**** Tại sao sử dụng ID?
+- *Ổn định:* Khi đổi tên tiêu đề, liên kết truyền thống sẽ hỏng, còn
+  liên kết theo ID luôn hoạt động.
+- *Tự động:* Không cần nghĩ tên ID thủ công, chỉ cần dùng
+  =org-id-get-create= (thường là =SPC m I=).
+- *Tìm kiếm nhanh:* Có thể tìm và chèn liên kết đến bất kỳ tiêu đề, hình
+  ảnh, bảng nào trong file hoặc thư mục với fuzzy search (Helm).
+
+*** Các tính năng chính
 :PROPERTIES:
-:CUSTOM_ID: tại-sao-sử-dụng-id
+:CUSTOM_ID: các-tính-năng-chính
 :END:
-Extension này sử dụng ID tự động được tạo bởi =org-id-get-create= (phím
-tắt =SPC m I=) thay vì nội dung header. Điều này mang lại những lợi ích:
-
-1. *Tính ổn định*: ID không thay đổi khi nội dung header thay đổi
-2. *Tự động hóa*: Không cần suy nghĩ về việc đặt tên ID
-3. *Tính nhất quán*: Sử dụng cùng một hệ thống ID của Org-mode
-
-**** Kiến trúc thiết kế
-:PROPERTIES:
-:CUSTOM_ID: kiến-trúc-thiết-kế
-:END:
-Extension được chia thành 3 module chính:
-
-1. *Liên kết trong file hiện tại*: Tìm và liên kết headers trong file
-   đang mở
-2. *Liên kết trong thư mục*: Tìm kiếm headers trong tất cả file .org
-   trong thư mục
-3. *Liên kết đối tượng*: Liên kết đến hình ảnh, bảng có tên
+1. *Liên kết header trong file hiện tại*
+   - Phím tắt: =C-c l i= (hoặc =SPC l i= với Doom)
+   - Tìm tất cả header có ID trong file đang mở, chọn từ danh sách và
+     chèn liên kết ID vào vị trí con trỏ.
+2. *Liên kết header trong thư mục*
+   - Phím tắt: =C-c l f= (hoặc =SPC l f=)
+   - Tìm header có ID trong tất cả file =.org= trong thư mục (không bao
+     gồm thư mục con), fuzzy search với Helm, chọn tương tác.
+3. *Liên kết đến hình ảnh/bảng có tên*
+   - Phím tắt: =C-c l c= (hoặc =SPC l c=)
+   - Tìm đối tượng có =#+NAME= và =#+CAPTION=, hiển thị danh sách
+     caption cho người dùng chọn, cho phép tuỳ chỉnh mô tả liên kết.
 
 *** Cài đặt
 :PROPERTIES:
 :CUSTOM_ID: cài-đặt
 :END:
-**** Yêu cầu hệ thống
+**** Doom Emacs
 :PROPERTIES:
-:CUSTOM_ID: yêu-cầu-hệ-thống
+:CUSTOM_ID: doom-emacs
 :END:
-- Emacs 26.1 trở lên
-- Org-mode
-- Ivy (cho fuzzy search)
-- Helm (cho tìm kiếm đối tượng)
+1. Thêm vào =~/.config/doom/packages.el=:
 
-**** Cách cài đặt
+   #+begin_src elisp
+   (package! orgmode-linked-by-id
+     :recipe (:host github :repo "drringo/orgmode-linked-by-id"))
+   #+end_src
+
+2. Chạy =doom sync= và khởi động lại Emacs.
+
+3. Thêm vào =~/.config/doom/config.el=:
+
+   #+begin_src elisp
+   (require 'orgmode-linked-by-id)
+   #+end_src
+
+4. (Tùy chọn) Nếu muốn dùng phím tắt kiểu Doom (=SPC l i=...), thêm:
+
+   #+begin_src elisp
+   (when (fboundp 'map!)
+     (map! :leader
+           (:prefix ("l" . "org link by id")
+            :desc "Insert ID in file"   "i" #'drringo/org-get-headers-with-ids
+            :desc "Insert ID in folder" "f" #'drringo/org-get-headers-with-ids-in-folder
+            :desc "Insert entity link"  "c" #'drringo/helm-insert-org-image-link-with-custom-caption)))
+   #+end_src
+
+**** Emacs thường
 :PROPERTIES:
-:CUSTOM_ID: cách-cài-đặt
+:CUSTOM_ID: emacs-thường
 :END:
-***** Phương pháp 1: Copy trực tiếp
-:PROPERTIES:
-:CUSTOM_ID: phương-pháp-1-copy-trực-tiếp
-:END:
-1. Clone repository:
+1. Clone repo:
 
-#+begin_src sh
-git clone https://github.com/drringo/orgmode-linked-by-id.git
-#+end_src
+   #+begin_src sh
+   git clone https://github.com/drringo/orgmode-linked-by-id.git ~/.emacs.d/lisp/orgmode-linked-by-id
+   #+end_src
 
-2. [@2] Thêm vào file config của bạn (=.emacs=, =init.el=, hoặc
-   =config.el=):
+2. Thêm vào =init.el= hoặc =.emacs=:
 
-#+begin_src elisp
-(load "~/path/to/orgmode-linked-by-id.lisp")
-#+end_src
-
-***** Phương pháp 2: Sử dụng use-package
-:PROPERTIES:
-:CUSTOM_ID: phương-pháp-2-sử-dụng-use-package
-:END:
-#+begin_src elisp
-(use-package orgmode-linked-by-id
-  :load-path "~/path/to/orgmode-linked-by-id"
-  :config
-  (require 'orgmode-linked-by-id))
-#+end_src
-
-***** Phương pháp 3: Từ GitHub Gist
-:PROPERTIES:
-:CUSTOM_ID: phương-pháp-3-từ-github-gist
-:END:
-1. Truy cập: https://gist.github.com/drringo/your-gist-id
-2. Copy nội dung file =orgmode-linked-by-id.lisp=
-3. Paste vào file config của bạn
+   #+begin_src elisp
+   (add-to-list 'load-path "~/.emacs.d/lisp/orgmode-linked-by-id")
+   (require 'orgmode-linked-by-id)
+   #+end_src
 
 *** Hướng dẫn sử dụng
 :PROPERTIES:
 :CUSTOM_ID: hướng-dẫn-sử-dụng
 :END:
-**** Quy trình làm việc cơ bản
+**** Quy trình cơ bản
 :PROPERTIES:
-:CUSTOM_ID: quy-trình-làm-việc-cơ-bản
+:CUSTOM_ID: quy-trình-cơ-bản
 :END:
-1. *Tạo ID cho header*: =SPC m I=
-2. *Tạo liên kết*: Sử dụng các phím tắt tương ứng
-3. *Chọn header*: Từ danh sách được hiển thị
-4. *Tùy chỉnh*: Description của link nếu cần
+1. *Tạo ID cho header:* Đặt con trỏ vào tiêu đề, dùng =SPC m I= (hoặc
+   =org-id-get-create=).
+2. *Chèn liên kết:* Dùng phím tắt tương ứng (=C-c l i=, =C-c l f=,
+   =C-c l c=).
+3. *Chọn header/đối tượng:* Từ danh sách hiển thị (Helm).
+4. *Tùy chỉnh mô tả:* Có thể sửa description trước khi chèn link.
 
-**** Tính năng 1: Liên kết trong file hiện tại
+**** Ví dụ
 :PROPERTIES:
-:CUSTOM_ID: tính-năng-1-liên-kết-trong-file-hiện-tại
-:END:
-*Phím tắt*: =C-c l i= hoặc =SPC l i=
-
-*Chức năng*: - Tìm tất cả headers có ID trong file đang mở - Hiển thị
-danh sách cho người dùng chọn - Chèn liên kết ID vào vị trí con trỏ
-
-*Ví dụ sử dụng*:
-
-#+begin_src org
-,* Header 1
-:PROPERTIES:
-:ID: abc123
-:END:
-
-,* Header 2
-:PROPERTIES:
-:ID: def456
-:END:
-
-Nội dung tham chiếu đến [[id:abc123][Header 1]].
-#+end_src
-
-**** Tính năng 2: Liên kết trong thư mục
-:PROPERTIES:
-:CUSTOM_ID: tính-năng-2-liên-kết-trong-thư-mục
-:END:
-*Phím tắt*: =C-c l f= hoặc =SPC l f=
-
-*Chức năng*: - Tìm headers có ID trong tất cả file .org trong thư mục -
-Sử dụng Ivy với fuzzy search để tìm kiếm dễ dàng - Không bao gồm thư mục
-con (để tránh tìm kiếm quá rộng)
-
-*Ưu điểm*: - Tìm kiếm nhanh với fuzzy matching - Chọn thư mục tương
-tác - Hiển thị tên file cùng với header
-
-**** Tính năng 3: Liên kết đối tượng (hình ảnh, bảng)
-:PROPERTIES:
-:CUSTOM_ID: tính-năng-3-liên-kết-đối-tượng-hình-ảnh-bảng
-:END:
-*Phím tắt*: =C-c l c= hoặc =SPC l c=
-
-*Chức năng*: - Tìm các đối tượng có =#+NAME= và =#+CAPTION= - Hiển thị
-danh sách caption cho người dùng chọn - Cho phép tùy chỉnh description
-của link
-
-*Ví dụ sử dụng*:
-
-#+begin_src org
-,#+NAME: my-image
-,#+CAPTION: Hình ảnh mẫu
-[[file:image.png]]
-
-Liên kết đến [[my-image][Hình ảnh mẫu]].
-#+end_src
-
-*** Bảng phím tắt đầy đủ
-:PROPERTIES:
-:CUSTOM_ID: bảng-phím-tắt-đầy-đủ
-:END:
-| Phím tắt  | Chức năng                  | Mô tả                           |
-|-----------+----------------------------+---------------------------------|
-| =C-c l i= | Chèn ID link trong file    | Tìm headers trong file hiện tại |
-| =SPC l i= | Chèn ID link trong file    | (Doom Emacs)                    |
-| =C-c l f= | Chèn ID link trong thư mục | Tìm headers trong thư mục       |
-| =SPC l f= | Chèn ID link trong thư mục | (Doom Emacs)                    |
-| =C-c l c= | Chèn link đối tượng        | Tìm hình ảnh/bảng có tên        |
-| =SPC l c= | Chèn link đối tượng        | (Doom Emacs)                    |
-
-*** Ví dụ thực tế
-:PROPERTIES:
-:CUSTOM_ID: ví-dụ-thực-tế
-:END:
-**** Kịch bản 1: Ghi chú học tập
-:PROPERTIES:
-:CUSTOM_ID: kịch-bản-1-ghi-chú-học-tập
+:CUSTOM_ID: ví-dụ
 :END:
 #+begin_src org
 ,* Môn học: Lập trình Python
@@ -483,45 +390,20 @@ Liên kết đến [[my-image][Hình ảnh mẫu]].
 :ID: python-intro
 :END:
 
-,* Bài 2: Biến và kiểu dữ liệu
-:PROPERTIES:
-:ID: python-variables
-:END:
-
-Trong [[id:python-intro][Bài 1]], chúng ta đã học về cú pháp cơ bản.
-Tiếp theo trong [[id:python-variables][Bài 2]], chúng ta sẽ tìm hiểu về biến.
+Nội dung tham chiếu đến [[id:python-intro][Bài 1]].
 #+end_src
 
-**** Kịch bản 2: Quản lý dự án
-:PROPERTIES:
-:CUSTOM_ID: kịch-bản-2-quản-lý-dự-án
-:END:
 #+begin_src org
-,* Dự án: Website công ty
-:PROPERTIES:
-:ID: company-website
-:END:
+,#+NAME: my-image
+,#+CAPTION: Hình ảnh mẫu
+[[file:image.png]]
 
-,* Task: Thiết kế UI
-:PROPERTIES:
-:ID: ui-design
-:END:
-
-,* Task: Phát triển backend
-:PROPERTIES:
-:ID: backend-dev
-:END:
-
-[[id:ui-design][Thiết kế UI]] cần hoàn thành trước khi bắt đầu [[id:backend-dev][phát triển backend]].
+Liên kết đến [[my-image][Hình ảnh mẫu]].
 #+end_src
 
-*** Lợi ích so với phương pháp truyền thống
+*** So sánh với phương pháp truyền thống
 :PROPERTIES:
-:CUSTOM_ID: lợi-ích-so-với-phương-pháp-truyền-thống
-:END:
-**** So với liên kết theo nội dung header
-:PROPERTIES:
-:CUSTOM_ID: so-với-liên-kết-theo-nội-dung-header
+:CUSTOM_ID: so-sánh-với-phương-pháp-truyền-thống
 :END:
 | Phương pháp truyền thống        | Extension này                |
 |---------------------------------+------------------------------|
@@ -529,70 +411,26 @@ Tiếp theo trong [[id:python-variables][Bài 2]], chúng ta sẽ tìm hiểu v�
 | Hỏng khi header thay đổi        | Vẫn hoạt động                |
 | Khó tìm kiếm                    | Tìm kiếm dễ dàng             |
 
-**** So với CUSTOM_ID
+*** Lưu ý
 :PROPERTIES:
-:CUSTOM_ID: so-với-custom_id
+:CUSTOM_ID: lưu-ý
 :END:
-| CUSTOM_ID            | ID tự động       |
-|----------------------+------------------|
-| Cần suy nghĩ đặt tên | Tự động tạo      |
-| Có thể trùng lặp     | Đảm bảo duy nhất |
-| Khó quản lý          | Quản lý tự động  |
+- Extension tương thích cả Doom Emacs và Emacs thường.
+- Không dùng =map!= trong file package, chỉ dùng trong config cá nhân
+  nếu bạn dùng Doom.
+- Tất cả phím tắt đều có sẵn qua =global-set-key=.
 
-*** Kết luận
+*** Đóng góp & Liên hệ
 :PROPERTIES:
-:CUSTOM_ID: kết-luận
+:CUSTOM_ID: đóng-góp-liên-hệ
 :END:
-Org-mode Linking by ID extension giải quyết hiệu quả các vấn đề thường
-gặp khi làm việc với liên kết trong Org-mode. Với thiết kế đơn giản
-nhưng mạnh mẽ, extension này:
-
-- *Tăng hiệu suất làm việc*: Tìm kiếm và tạo liên kết nhanh chóng
-- *Đảm bảo tính ổn định*: Liên kết không bị hỏng khi nội dung thay đổi
-- *Dễ sử dụng*: Giao diện trực quan với fuzzy search
-- *Linh hoạt*: Hỗ trợ nhiều loại liên kết khác nhau
-
-*** Hướng mở rộng
-:PROPERTIES:
-:CUSTOM_ID: hướng-mở-rộng
-:END:
-**** Tính năng có thể phát triển thêm
-:PROPERTIES:
-:CUSTOM_ID: tính-năng-có-thể-phát-triển-thêm
-:END:
-1. *Liên kết đa cấp*: Tìm kiếm trong thư mục con
-2. *Lịch sử liên kết*: Theo dõi các liên kết đã tạo
-3. *Tự động cập nhật*: Cập nhật description khi header thay đổi
-4. *Export hỗ trợ*: Tối ưu cho việc export sang PDF/HTML
-5. *Tích hợp với Org-roam*: Hỗ trợ cho hệ thống note-taking
-6. *Giao diện đồ họa*: Tạo giao diện trực quan cho việc quản lý liên kết
-
-**** Đóng góp
-:PROPERTIES:
-:CUSTOM_ID: đóng-góp
-:END:
-Dự án này được phát triển như một công cụ mã nguồn mở. Mọi đóng góp đều
-được chào đón:
-
-- Báo cáo lỗi
-- Đề xuất tính năng mới
-- Cải thiện code
-- Viết tài liệu
-
-**** Liên kết
-:PROPERTIES:
-:CUSTOM_ID: liên-kết
-:END:
-- *Repository*: https://github.com/drringo/orgmode-linked-by-id
-- *Issues*: https://github.com/drringo/orgmode-linked-by-id/issues
-- *Discussions*:
-  https://github.com/drringo/orgmode-linked-by-id/discussions
+- *Repository:* https://github.com/drringo/orgmode-linked-by-id
+- *Issues:* https://github.com/drringo/orgmode-linked-by-id/issues
 
 --------------
 
-/Extension này được phát triển với mục đích cải thiện trải nghiệm làm
-việc với Org-mode. Hy vọng nó sẽ hữu ích cho cộng đồng Emacs và
-Org-mode./
+/Extension này được phát triển để tối ưu trải nghiệm liên kết trong
+Org-mode. Mọi đóng góp, phản hồi đều được hoan nghênh!/
 * Think                                                              :@think:
 :properties:
 :export_hugo_section: posts
