@@ -453,7 +453,7 @@ Một phong cách sống không phải là thứ trang trí phù phiếm. Nó l�
 #+ATTR_LaTeX: :height 8cm :placement [!htpb]
 [[file:/assets/img/ca-te-bach-thach.png]]
 
-*Tại sao một phong cách sống lại cần thiết?*
+*** Tại sao một phong cách sống lại cần thiết?
 
 Nó không chỉ giúp tôi cảm thấy mình đang "sống" một cuộc đời có bản sắc, thay vì chỉ là một bản sao của người khác. Về mặt hệ thống, nó mang lại những lợi ích vô cùng thực tế:
 
@@ -463,7 +463,7 @@ Nó không chỉ giúp tôi cảm thấy mình đang "sống" một cuộc đờ
 
 3. Nó là Nguồn gốc của sự Tự tin và Chính danh: Khi hành động của bạn đồng nhất với phong cách sống bạn đã chọn, bạn sẽ hành động một cách tự tin hơn. Bạn không còn phải "diễn" hay liên tục nghi ngờ bản thân. Sự nhất quán này tạo ra một con người có "chính danh", đáng tin cậy trong mắt người khác và quan trọng hơn là trong mắt chính mình. Nó giúp ngăn chặn sự "rò rỉ cảm xúc" vì không còn xung đột nội tâm giữa con người bạn muốn trở thành và hành động thực tế của bạn.
 
-*Những gì xây dựng nên một phong cách sống?*
+*** Những gì xây dựng nên một phong cách sống?
 
 Phong cách sống không phải là thứ gì đó mơ hồ. Nó được xây dựng từ những thành phần cụ thể, những "cấu hình" mà ta chủ động lựa chọn và thực hành.
 
